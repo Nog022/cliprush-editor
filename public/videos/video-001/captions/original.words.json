@@ -1,0 +1,695 @@
+[
+  {
+    "text": " Novas",
+    "startMs": 1740,
+    "endMs": 2600,
+    "timestampMs": 2170,
+    "confidence": 0.77
+  },
+  {
+    "text": " notícias.",
+    "startMs": 2600,
+    "endMs": 3280,
+    "timestampMs": 2940,
+    "confidence": 0.9822
+  },
+  {
+    "text": " Amanhã",
+    "startMs": 3800,
+    "endMs": 4380,
+    "timestampMs": 4090,
+    "confidence": 0.9646
+  },
+  {
+    "text": " a",
+    "startMs": 4380,
+    "endMs": 4540,
+    "timestampMs": 4460,
+    "confidence": 0.6777
+  },
+  {
+    "text": " gente",
+    "startMs": 4540,
+    "endMs": 4640,
+    "timestampMs": 4590,
+    "confidence": 0.9981
+  },
+  {
+    "text": " pode",
+    "startMs": 4640,
+    "endMs": 4840,
+    "timestampMs": 4740,
+    "confidence": 0.9851
+  },
+  {
+    "text": " descobrir",
+    "startMs": 4840,
+    "endMs": 5300,
+    "timestampMs": 5070,
+    "confidence": 0.9909
+  },
+  {
+    "text": " novos",
+    "startMs": 5300,
+    "endMs": 5860,
+    "timestampMs": 5580,
+    "confidence": 0.9926
+  },
+  {
+    "text": " detalhes",
+    "startMs": 5860,
+    "endMs": 6380,
+    "timestampMs": 6120,
+    "confidence": 0.9927
+  },
+  {
+    "text": " de",
+    "startMs": 6380,
+    "endMs": 6560,
+    "timestampMs": 6470,
+    "confidence": 0.9799
+  },
+  {
+    "text": " GTA",
+    "startMs": 6560,
+    "endMs": 6880,
+    "timestampMs": 6720,
+    "confidence": 0.9613
+  },
+  {
+    "text": " 6",
+    "startMs": 6880,
+    "endMs": 7240,
+    "timestampMs": 7060,
+    "confidence": 0.5187
+  },
+  {
+    "text": " e",
+    "startMs": 7240,
+    "endMs": 7700,
+    "timestampMs": 7470,
+    "confidence": 0.6617
+  },
+  {
+    "text": " dessa",
+    "startMs": 7700,
+    "endMs": 7860,
+    "timestampMs": 7780,
+    "confidence": 0.7341
+  },
+  {
+    "text": " vez",
+    "startMs": 7860,
+    "endMs": 8160,
+    "timestampMs": 8010,
+    "confidence": 0.9977
+  },
+  {
+    "text": " não",
+    "startMs": 8160,
+    "endMs": 8460,
+    "timestampMs": 8310,
+    "confidence": 0.9803
+  },
+  {
+    "text": " é",
+    "startMs": 8460,
+    "endMs": 8600,
+    "timestampMs": 8530,
+    "confidence": 0.8966
+  },
+  {
+    "text": " vazamento.",
+    "startMs": 8600,
+    "endMs": 8960,
+    "timestampMs": 8780,
+    "confidence": 0.986
+  },
+  {
+    "text": " A",
+    "startMs": 11400,
+    "endMs": 11660,
+    "timestampMs": 11530,
+    "confidence": 0.9745
+  },
+  {
+    "text": " revista",
+    "startMs": 11660,
+    "endMs": 11980,
+    "timestampMs": 11820,
+    "confidence": 0.95
+  },
+  {
+    "text": " ED",
+    "startMs": 11980,
+    "endMs": 12300,
+    "timestampMs": 12140,
+    "confidence": 0.4971
+  },
+  {
+    "text": " anunciou",
+    "startMs": 12300,
+    "endMs": 12840,
+    "timestampMs": 12570,
+    "confidence": 0.9658
+  },
+  {
+    "text": " uma",
+    "startMs": 12840,
+    "endMs": 12960,
+    "timestampMs": 12900,
+    "confidence": 0.9984
+  },
+  {
+    "text": " edição",
+    "startMs": 12960,
+    "endMs": 13220,
+    "timestampMs": 13090,
+    "confidence": 0.9951
+  },
+  {
+    "text": " especial",
+    "startMs": 13220,
+    "endMs": 13680,
+    "timestampMs": 13450,
+    "confidence": 0.9859
+  },
+  {
+    "text": " de",
+    "startMs": 13680,
+    "endMs": 13980,
+    "timestampMs": 13830,
+    "confidence": 0.9885
+  },
+  {
+    "text": " GTA",
+    "startMs": 13980,
+    "endMs": 14220,
+    "timestampMs": 14100,
+    "confidence": 0.9957
+  },
+  {
+    "text": " 6",
+    "startMs": 14220,
+    "endMs": 14580,
+    "timestampMs": 14400,
+    "confidence": 0.982
+  },
+  {
+    "text": " com",
+    "startMs": 14580,
+    "endMs": 14800,
+    "timestampMs": 14690,
+    "confidence": 0.9329
+  },
+  {
+    "text": " 16",
+    "startMs": 14800,
+    "endMs": 15300,
+    "timestampMs": 15050,
+    "confidence": 0.9627
+  },
+  {
+    "text": " páginas",
+    "startMs": 15300,
+    "endMs": 15900,
+    "timestampMs": 15600,
+    "confidence": 0.9703
+  },
+  {
+    "text": " de",
+    "startMs": 15900,
+    "endMs": 16040,
+    "timestampMs": 15970,
+    "confidence": 0.9975
+  },
+  {
+    "text": " conteúdo",
+    "startMs": 16040,
+    "endMs": 16580,
+    "timestampMs": 16310,
+    "confidence": 0.9975
+  },
+  {
+    "text": " exclusivo.",
+    "startMs": 16580,
+    "endMs": 17880,
+    "timestampMs": 17230,
+    "confidence": 0.9312
+  },
+  {
+    "text": " E",
+    "startMs": 20680,
+    "endMs": 21100,
+    "timestampMs": 20890,
+    "confidence": 0.8832
+  },
+  {
+    "text": " olha",
+    "startMs": 21100,
+    "endMs": 21220,
+    "timestampMs": 21160,
+    "confidence": 0.9601
+  },
+  {
+    "text": " isso,",
+    "startMs": 21220,
+    "endMs": 21580,
+    "timestampMs": 21400,
+    "confidence": 0.9893
+  },
+  {
+    "text": " o",
+    "startMs": 21860,
+    "endMs": 21980,
+    "timestampMs": 21920,
+    "confidence": 0.7187
+  },
+  {
+    "text": " jornalista",
+    "startMs": 21980,
+    "endMs": 22360,
+    "timestampMs": 22170,
+    "confidence": 0.997
+  },
+  {
+    "text": " foram",
+    "startMs": 22360,
+    "endMs": 22660,
+    "timestampMs": 22510,
+    "confidence": 0.8438
+  },
+  {
+    "text": " até",
+    "startMs": 22660,
+    "endMs": 22980,
+    "timestampMs": 22820,
+    "confidence": 0.9842
+  },
+  {
+    "text": " a",
+    "startMs": 22980,
+    "endMs": 23220,
+    "timestampMs": 23100,
+    "confidence": 0.8642
+  },
+  {
+    "text": " sede",
+    "startMs": 23220,
+    "endMs": 23260,
+    "timestampMs": 23240,
+    "confidence": 0.9753
+  },
+  {
+    "text": " da",
+    "startMs": 23260,
+    "endMs": 23440,
+    "timestampMs": 23350,
+    "confidence": 0.9545
+  },
+  {
+    "text": " Rockstar",
+    "startMs": 23440,
+    "endMs": 23860,
+    "timestampMs": 23650,
+    "confidence": 0.7612
+  },
+  {
+    "text": " na",
+    "startMs": 23860,
+    "endMs": 24360,
+    "timestampMs": 24110,
+    "confidence": 0.5368
+  },
+  {
+    "text": " Escócia",
+    "startMs": 24360,
+    "endMs": 24920,
+    "timestampMs": 24640,
+    "confidence": 0.9519
+  },
+  {
+    "text": " para",
+    "startMs": 24920,
+    "endMs": 25200,
+    "timestampMs": 25060,
+    "confidence": 0.9812
+  },
+  {
+    "text": " entrevistar",
+    "startMs": 25200,
+    "endMs": 25720,
+    "timestampMs": 25460,
+    "confidence": 0.9903
+  },
+  {
+    "text": " os",
+    "startMs": 25720,
+    "endMs": 25860,
+    "timestampMs": 25790,
+    "confidence": 0.9915
+  },
+  {
+    "text": " próprios",
+    "startMs": 25860,
+    "endMs": 26420,
+    "timestampMs": 26140,
+    "confidence": 0.9981
+  },
+  {
+    "text": " desenvolvedores",
+    "startMs": 26760,
+    "endMs": 27120,
+    "timestampMs": 26940,
+    "confidence": 0.9946
+  },
+  {
+    "text": " do",
+    "startMs": 27120,
+    "endMs": 27300,
+    "timestampMs": 27210,
+    "confidence": 0.9902
+  },
+  {
+    "text": " jogo.",
+    "startMs": 27300,
+    "endMs": 27660,
+    "timestampMs": 27480,
+    "confidence": 0.9981
+  },
+  {
+    "text": " A",
+    "startMs": 31560,
+    "endMs": 31720,
+    "timestampMs": 31640,
+    "confidence": 0.9943
+  },
+  {
+    "text": " reportagem",
+    "startMs": 31720,
+    "endMs": 32300,
+    "timestampMs": 32010,
+    "confidence": 0.9907
+  },
+  {
+    "text": " vai",
+    "startMs": 32300,
+    "endMs": 32440,
+    "timestampMs": 32370,
+    "confidence": 0.985
+  },
+  {
+    "text": " trazer",
+    "startMs": 32440,
+    "endMs": 32620,
+    "timestampMs": 32530,
+    "confidence": 0.9979
+  },
+  {
+    "text": " entrevistas",
+    "startMs": 32620,
+    "endMs": 33440,
+    "timestampMs": 33030,
+    "confidence": 0.9958
+  },
+  {
+    "text": " e",
+    "startMs": 33440,
+    "endMs": 33960,
+    "timestampMs": 33700,
+    "confidence": 0.9726
+  },
+  {
+    "text": " imagens",
+    "startMs": 33960,
+    "endMs": 34480,
+    "timestampMs": 34220,
+    "confidence": 0.9952
+  },
+  {
+    "text": " exclusivas",
+    "startMs": 34480,
+    "endMs": 35320,
+    "timestampMs": 34900,
+    "confidence": 0.9969
+  },
+  {
+    "text": " e",
+    "startMs": 35320,
+    "endMs": 35700,
+    "timestampMs": 35510,
+    "confidence": 0.8373
+  },
+  {
+    "text": " o",
+    "startMs": 35700,
+    "endMs": 35800,
+    "timestampMs": 35750,
+    "confidence": 0.9969
+  },
+  {
+    "text": " conteúdo",
+    "startMs": 35800,
+    "endMs": 36060,
+    "timestampMs": 35930,
+    "confidence": 0.9935
+  },
+  {
+    "text": " também",
+    "startMs": 36060,
+    "endMs": 36320,
+    "timestampMs": 36190,
+    "confidence": 0.0037
+  },
+  {
+    "text": " será",
+    "startMs": 36320,
+    "endMs": 36580,
+    "timestampMs": 36450,
+    "confidence": 0.962
+  },
+  {
+    "text": " publicado",
+    "startMs": 36580,
+    "endMs": 37160,
+    "timestampMs": 36870,
+    "confidence": 0.99
+  },
+  {
+    "text": " gratuitamente",
+    "startMs": 37160,
+    "endMs": 38200,
+    "timestampMs": 37680,
+    "confidence": 0.9905
+  },
+  {
+    "text": " na",
+    "startMs": 38200,
+    "endMs": 38500,
+    "timestampMs": 38350,
+    "confidence": 0.9766
+  },
+  {
+    "text": " GamesRadar.",
+    "startMs": 38500,
+    "endMs": 39520,
+    "timestampMs": 39010,
+    "confidence": 0.7053
+  },
+  {
+    "text": " Ainda",
+    "startMs": 43640,
+    "endMs": 44020,
+    "timestampMs": 43830,
+    "confidence": 0.9655
+  },
+  {
+    "text": " não",
+    "startMs": 44020,
+    "endMs": 44220,
+    "timestampMs": 44120,
+    "confidence": 0.996
+  },
+  {
+    "text": " sabemos",
+    "startMs": 44220,
+    "endMs": 44540,
+    "timestampMs": 44380,
+    "confidence": 0.9884
+  },
+  {
+    "text": " se",
+    "startMs": 44540,
+    "endMs": 44960,
+    "timestampMs": 44750,
+    "confidence": 0.9943
+  },
+  {
+    "text": " vão",
+    "startMs": 44960,
+    "endMs": 45120,
+    "timestampMs": 45040,
+    "confidence": 0.993
+  },
+  {
+    "text": " revelar",
+    "startMs": 45120,
+    "endMs": 45460,
+    "timestampMs": 45290,
+    "confidence": 0.9941
+  },
+  {
+    "text": " novas",
+    "startMs": 45460,
+    "endMs": 45760,
+    "timestampMs": 45610,
+    "confidence": 0.9922
+  },
+  {
+    "text": " mecânicas,",
+    "startMs": 45760,
+    "endMs": 46300,
+    "timestampMs": 46030,
+    "confidence": 0.9923
+  },
+  {
+    "text": " mas",
+    "startMs": 46680,
+    "endMs": 46920,
+    "timestampMs": 46800,
+    "confidence": 0.9971
+  },
+  {
+    "text": " me",
+    "startMs": 46920,
+    "endMs": 47060,
+    "timestampMs": 46990,
+    "confidence": 0.9956
+  },
+  {
+    "text": " diz",
+    "startMs": 47060,
+    "endMs": 47240,
+    "timestampMs": 47150,
+    "confidence": 0.9797
+  },
+  {
+    "text": " o",
+    "startMs": 47240,
+    "endMs": 47740,
+    "timestampMs": 47490,
+    "confidence": 0.7813
+  },
+  {
+    "text": " que",
+    "startMs": 47740,
+    "endMs": 47840,
+    "timestampMs": 47790,
+    "confidence": 0.9956
+  },
+  {
+    "text": " você",
+    "startMs": 47840,
+    "endMs": 48080,
+    "timestampMs": 47960,
+    "confidence": 0.9763
+  },
+  {
+    "text": " mais",
+    "startMs": 48080,
+    "endMs": 48260,
+    "timestampMs": 48170,
+    "confidence": 0.9944
+  },
+  {
+    "text": " quer",
+    "startMs": 48260,
+    "endMs": 48400,
+    "timestampMs": 48330,
+    "confidence": 0.9959
+  },
+  {
+    "text": " descobrir,",
+    "startMs": 48400,
+    "endMs": 48780,
+    "timestampMs": 48590,
+    "confidence": 0.987
+  },
+  {
+    "text": " o",
+    "startMs": 49280,
+    "endMs": 49340,
+    "timestampMs": 49310,
+    "confidence": 0.9734
+  },
+  {
+    "text": " mapa,",
+    "startMs": 49340,
+    "endMs": 49720,
+    "timestampMs": 49530,
+    "confidence": 0.9607
+  },
+  {
+    "text": " o",
+    "startMs": 50200,
+    "endMs": 50220,
+    "timestampMs": 50210,
+    "confidence": 0.9621
+  },
+  {
+    "text": " gameplay",
+    "startMs": 50220,
+    "endMs": 50600,
+    "timestampMs": 50410,
+    "confidence": 0.9607
+  },
+  {
+    "text": " ou",
+    "startMs": 50600,
+    "endMs": 51200,
+    "timestampMs": 50900,
+    "confidence": 0.7441
+  },
+  {
+    "text": " a",
+    "startMs": 51200,
+    "endMs": 51280,
+    "timestampMs": 51240,
+    "confidence": 0.9856
+  },
+  {
+    "text": " história",
+    "startMs": 51280,
+    "endMs": 51600,
+    "timestampMs": 51440,
+    "confidence": 0.9909
+  },
+  {
+    "text": " envolvendo",
+    "startMs": 51600,
+    "endMs": 52060,
+    "timestampMs": 51830,
+    "confidence": 0.9518
+  },
+  {
+    "text": " Jason",
+    "startMs": 52060,
+    "endMs": 52440,
+    "timestampMs": 52250,
+    "confidence": 0.8853
+  },
+  {
+    "text": " e",
+    "startMs": 52440,
+    "endMs": 52820,
+    "timestampMs": 52630,
+    "confidence": 0.9949
+  },
+  {
+    "text": " Lucia.",
+    "startMs": 52820,
+    "endMs": 53240,
+    "timestampMs": 53030,
+    "confidence": 0.8828
+  }
+]

@@ -1,0 +1,851 @@
+import { AbsoluteFill, Sequence, Track } from "remotion";
+import { NeonCaptions } from "../../components/NeonCaptions";
+import {
+  Opening,
+  EdgeStory,
+  RockstarStory,
+  ReportStory,
+  Closing,
+} from "./Scenes";
+import { Brand, Progress, Stage } from "./Visuals";
+
+// 30 fps; every shot shares its original source clock with its captions.
+// Only pauses are removed. No time stretching or changes to spoken content.
+export const ClipRushVideo001 = () => (
+  <AbsoluteFill
+    style={{
+      backgroundColor: "#050610",
+      color: "white",
+      fontFamily: "Arial, sans-serif",
+      overflow: "hidden",
+    }}
+  >
+    <Stage />
+    <Track name="Rush · narração, vídeo e legendas">
+      <Sequence
+        name="Gancho · GTA VI"
+        trimBefore={42}
+        durationInFrames={237}
+      >
+        <Opening />
+        <NeonCaptions
+          name="Legendas · Opening"
+          style={{ zIndex: 6 }}
+          captions={[
+            {
+              text: " Novas",
+              startMs: 1740,
+              endMs: 2560,
+              timestampMs: 2150,
+              confidence: 0.865,
+            },
+            {
+              text: " notícias!",
+              startMs: 2560,
+              endMs: 3220,
+              timestampMs: 2890,
+              confidence: 0.9966,
+              pageBreakAfter: true,
+            },
+            {
+              text: " Amanhã",
+              startMs: 3740,
+              endMs: 4340,
+              timestampMs: 4040,
+              confidence: 0.9981,
+            },
+            {
+              text: " a",
+              startMs: 4340,
+              endMs: 4440,
+              timestampMs: 4390,
+              confidence: 0.971,
+            },
+            {
+              text: " gente",
+              startMs: 4440,
+              endMs: 4600,
+              timestampMs: 4520,
+              confidence: 1.0,
+            },
+            {
+              text: " pode",
+              startMs: 4600,
+              endMs: 4800,
+              timestampMs: 4700,
+              confidence: 0.9938,
+              pageBreakAfter: true,
+            },
+            {
+              text: " descobrir",
+              startMs: 4800,
+              endMs: 5200,
+              timestampMs: 5000,
+              confidence: 0.9998,
+            },
+            {
+              text: " novos",
+              startMs: 5200,
+              endMs: 5800,
+              timestampMs: 5500,
+              confidence: 0.9978,
+            },
+            {
+              text: " detalhes",
+              startMs: 5800,
+              endMs: 6360,
+              timestampMs: 6080,
+              confidence: 0.9999,
+            },
+            {
+              text: " de",
+              startMs: 6360,
+              endMs: 6520,
+              timestampMs: 6440,
+              confidence: 0.9992,
+              pageBreakAfter: true,
+            },
+            {
+              text: " GTA",
+              startMs: 6520,
+              endMs: 6780,
+              timestampMs: 6650,
+              confidence: 0.9998,
+            },
+            {
+              text: " 6",
+              startMs: 6780,
+              endMs: 7120,
+              timestampMs: 6950,
+              confidence: 0.4748,
+            },
+            {
+              text: " e",
+              startMs: 7120,
+              endMs: 7580,
+              timestampMs: 7350,
+              confidence: 0.6864,
+            },
+            {
+              text: " dessa",
+              startMs: 7580,
+              endMs: 7800,
+              timestampMs: 7690,
+              confidence: 0.8621,
+              pageBreakAfter: true,
+            },
+            {
+              text: " vez",
+              startMs: 7800,
+              endMs: 8060,
+              timestampMs: 7930,
+              confidence: 1.0,
+            },
+            {
+              text: " não",
+              startMs: 8060,
+              endMs: 8340,
+              timestampMs: 8200,
+              confidence: 0.9876,
+            },
+            {
+              text: " é",
+              startMs: 8340,
+              endMs: 8480,
+              timestampMs: 8410,
+              confidence: 0.949,
+            },
+            {
+              text: " vazamento.",
+              startMs: 8480,
+              endMs: 8820,
+              timestampMs: 8650,
+              confidence: 0.9996,
+              pageBreakAfter: true,
+            },
+          ]}
+        />
+      </Sequence>
+      <Sequence
+        name="EDGE · edição especial"
+        from={237}
+        trimBefore={330}
+        durationInFrames={219}
+      >
+        <EdgeStory />
+        <NeonCaptions
+          name="Legendas · EdgeStory"
+          style={{ zIndex: 6 }}
+          captions={[
+            {
+              text: " A",
+              startMs: 11260,
+              endMs: 11560,
+              timestampMs: 11410,
+              confidence: 0.9998,
+            },
+            {
+              text: " revista",
+              startMs: 11560,
+              endMs: 11980,
+              timestampMs: 11770,
+              confidence: 0.9997,
+            },
+            {
+              text: " Edge",
+              startMs: 11980,
+              endMs: 12220,
+              timestampMs: 12100,
+              confidence: 0.6224,
+            },
+            {
+              text: " anunciou",
+              startMs: 12220,
+              endMs: 12820,
+              timestampMs: 12520,
+              confidence: 0.9954,
+              pageBreakAfter: true,
+            },
+            {
+              text: " uma",
+              startMs: 12820,
+              endMs: 12880,
+              timestampMs: 12850,
+              confidence: 0.9999,
+            },
+            {
+              text: " edição",
+              startMs: 12880,
+              endMs: 13200,
+              timestampMs: 13040,
+              confidence: 1.0,
+            },
+            {
+              text: " especial",
+              startMs: 13200,
+              endMs: 13600,
+              timestampMs: 13400,
+              confidence: 0.9998,
+            },
+            {
+              text: " de",
+              startMs: 13600,
+              endMs: 13940,
+              timestampMs: 13770,
+              confidence: 0.9999,
+              pageBreakAfter: true,
+            },
+            {
+              text: " GTA",
+              startMs: 13940,
+              endMs: 14140,
+              timestampMs: 14040,
+              confidence: 1.0,
+            },
+            {
+              text: " 6",
+              startMs: 14140,
+              endMs: 14480,
+              timestampMs: 14310,
+              confidence: 0.9996,
+            },
+            {
+              text: " com",
+              startMs: 14480,
+              endMs: 14740,
+              timestampMs: 14610,
+              confidence: 0.9995,
+            },
+            {
+              text: " 16",
+              startMs: 14740,
+              endMs: 15020,
+              timestampMs: 14880,
+              confidence: 0.9998,
+              pageBreakAfter: true,
+            },
+            {
+              text: " páginas",
+              startMs: 15020,
+              endMs: 15920,
+              timestampMs: 15470,
+              confidence: 0.9999,
+            },
+            {
+              text: " de",
+              startMs: 15920,
+              endMs: 15980,
+              timestampMs: 15950,
+              confidence: 0.9999,
+            },
+            {
+              text: " conteúdo",
+              startMs: 15980,
+              endMs: 16360,
+              timestampMs: 16170,
+              confidence: 0.9999,
+            },
+            {
+              text: " exclusivo.",
+              startMs: 16360,
+              endMs: 17820,
+              timestampMs: 17090,
+              confidence: 0.9994,
+              pageBreakAfter: true,
+            },
+          ]}
+        />
+      </Sequence>
+      <Sequence
+        name="Rockstar · visita dos jornalistas"
+        from={456}
+        trimBefore={606}
+        durationInFrames={237}
+      >
+        <RockstarStory />
+        <NeonCaptions
+          name="Legendas · RockstarStory"
+          style={{ zIndex: 6 }}
+          captions={[
+            {
+              text: " E",
+              startMs: 20400,
+              endMs: 21000,
+              timestampMs: 20700,
+              confidence: 0.9997,
+            },
+            {
+              text: " olha",
+              startMs: 21000,
+              endMs: 21180,
+              timestampMs: 21090,
+              confidence: 0.9999,
+            },
+            {
+              text: " isso,",
+              startMs: 21180,
+              endMs: 21420,
+              timestampMs: 21300,
+              confidence: 0.9999,
+              pageBreakAfter: true,
+            },
+            {
+              text: " os",
+              startMs: 21640,
+              endMs: 21940,
+              timestampMs: 21790,
+              confidence: 0.9982,
+            },
+            {
+              text: " jornalistas",
+              startMs: 21940,
+              endMs: 22340,
+              timestampMs: 22140,
+              confidence: 1.0,
+            },
+            {
+              text: " foram",
+              startMs: 22340,
+              endMs: 22580,
+              timestampMs: 22460,
+              confidence: 1.0,
+            },
+            {
+              text: " até",
+              startMs: 22580,
+              endMs: 22860,
+              timestampMs: 22720,
+              confidence: 0.9999,
+              pageBreakAfter: true,
+            },
+            {
+              text: " a",
+              startMs: 22860,
+              endMs: 23060,
+              timestampMs: 22960,
+              confidence: 0.9998,
+            },
+            {
+              text: " sede",
+              startMs: 23060,
+              endMs: 23240,
+              timestampMs: 23150,
+              confidence: 0.9998,
+            },
+            {
+              text: " da",
+              startMs: 23240,
+              endMs: 23400,
+              timestampMs: 23320,
+              confidence: 1.0,
+            },
+            {
+              text: " Rockstar",
+              startMs: 23400,
+              endMs: 23780,
+              timestampMs: 23590,
+              confidence: 0.9997,
+              pageBreakAfter: true,
+            },
+            {
+              text: " na",
+              startMs: 23780,
+              endMs: 24260,
+              timestampMs: 24020,
+              confidence: 0.944,
+            },
+            {
+              text: " Escócia",
+              startMs: 24260,
+              endMs: 24860,
+              timestampMs: 24560,
+              confidence: 0.9995,
+            },
+            {
+              text: " para",
+              startMs: 24860,
+              endMs: 25120,
+              timestampMs: 24990,
+              confidence: 0.9998,
+            },
+            {
+              text: " entrevistar",
+              startMs: 25120,
+              endMs: 25660,
+              timestampMs: 25390,
+              confidence: 0.9999,
+              pageBreakAfter: true,
+            },
+            {
+              text: " os",
+              startMs: 25660,
+              endMs: 25780,
+              timestampMs: 25720,
+              confidence: 0.9999,
+            },
+            {
+              text: " próprios",
+              startMs: 25780,
+              endMs: 26400,
+              timestampMs: 26090,
+              confidence: 0.9998,
+            },
+            {
+              text: " desenvolvedores",
+              startMs: 26400,
+              endMs: 27080,
+              timestampMs: 26740,
+              confidence: 0.9999,
+            },
+            {
+              text: " do",
+              startMs: 27080,
+              endMs: 27220,
+              timestampMs: 27150,
+              confidence: 0.9996,
+              pageBreakAfter: true,
+            },
+            {
+              text: " jogo.",
+              startMs: 27220,
+              endMs: 27520,
+              timestampMs: 27370,
+              confidence: 0.9998,
+              pageBreakAfter: true,
+            },
+          ]}
+        />
+      </Sequence>
+      <Sequence
+        name="Reportagem · entrevistas e GamesRadar"
+        from={693}
+        trimBefore={939}
+        durationInFrames={258}
+      >
+        <ReportStory />
+        <NeonCaptions
+          name="Legendas · ReportStory"
+          style={{ zIndex: 6 }}
+          captions={[
+            {
+              text: " A",
+              startMs: 31560,
+              endMs: 31720,
+              timestampMs: 31640,
+              confidence: 0.3023,
+            },
+            {
+              text: " reportagem",
+              startMs: 31720,
+              endMs: 32240,
+              timestampMs: 31980,
+              confidence: 0.9783,
+            },
+            {
+              text: " vai",
+              startMs: 32240,
+              endMs: 32380,
+              timestampMs: 32310,
+              confidence: 0.9853,
+            },
+            {
+              text: " trazer",
+              startMs: 32380,
+              endMs: 32640,
+              timestampMs: 32510,
+              confidence: 0.9983,
+              pageBreakAfter: true,
+            },
+            {
+              text: " entrevistas",
+              startMs: 32640,
+              endMs: 33480,
+              timestampMs: 33060,
+              confidence: 0.9952,
+            },
+            {
+              text: " e",
+              startMs: 33480,
+              endMs: 33720,
+              timestampMs: 33600,
+              confidence: 0.9895,
+            },
+            {
+              text: " imagens",
+              startMs: 33720,
+              endMs: 34440,
+              timestampMs: 34080,
+              confidence: 0.9993,
+            },
+            {
+              text: " exclusivas",
+              startMs: 34440,
+              endMs: 35280,
+              timestampMs: 34860,
+              confidence: 0.998,
+              pageBreakAfter: true,
+            },
+            {
+              text: " e",
+              startMs: 35280,
+              endMs: 35580,
+              timestampMs: 35430,
+              confidence: 0.5512,
+            },
+            {
+              text: " o",
+              startMs: 35580,
+              endMs: 35700,
+              timestampMs: 35640,
+              confidence: 0.9989,
+            },
+            {
+              text: " conteúdo",
+              startMs: 35700,
+              endMs: 36000,
+              timestampMs: 35850,
+              confidence: 0.9988,
+            },
+            {
+              text: " também",
+              startMs: 36000,
+              endMs: 36280,
+              timestampMs: 36140,
+              confidence: 0.9933,
+              pageBreakAfter: true,
+            },
+            {
+              text: " será",
+              startMs: 36280,
+              endMs: 36500,
+              timestampMs: 36390,
+              confidence: 0.996,
+            },
+            {
+              text: " publicado",
+              startMs: 36500,
+              endMs: 37120,
+              timestampMs: 36810,
+              confidence: 0.9995,
+            },
+            {
+              text: " gratuitamente",
+              startMs: 37120,
+              endMs: 38180,
+              timestampMs: 37650,
+              confidence: 0.9979,
+            },
+            {
+              text: " na",
+              startMs: 38180,
+              endMs: 38420,
+              timestampMs: 38300,
+              confidence: 0.9965,
+              pageBreakAfter: true,
+            },
+            {
+              text: " GamesRadar.",
+              startMs: 38420,
+              endMs: 39400,
+              timestampMs: 38910,
+              confidence: 0.8207,
+              pageBreakAfter: true,
+            },
+          ]}
+        />
+      </Sequence>
+      <Sequence
+        name="Pergunta · mapa, gameplay ou história"
+        from={951}
+        trimBefore={1296}
+        durationInFrames={366}
+      >
+        <Closing />
+        <NeonCaptions
+          name="Legendas · Closing"
+          style={{ zIndex: 6 }}
+          captions={[
+            {
+              text: " Ainda",
+              startMs: 43420,
+              endMs: 43980,
+              timestampMs: 43700,
+              confidence: 0.9944,
+            },
+            {
+              text: " não",
+              startMs: 43980,
+              endMs: 44120,
+              timestampMs: 44050,
+              confidence: 0.9997,
+            },
+            {
+              text: " sabemos",
+              startMs: 44120,
+              endMs: 44500,
+              timestampMs: 44310,
+              confidence: 0.9987,
+            },
+            {
+              text: " se",
+              startMs: 44500,
+              endMs: 44860,
+              timestampMs: 44680,
+              confidence: 0.9996,
+              pageBreakAfter: true,
+            },
+            {
+              text: " vão",
+              startMs: 44860,
+              endMs: 45040,
+              timestampMs: 44950,
+              confidence: 0.9967,
+            },
+            {
+              text: " revelar",
+              startMs: 45040,
+              endMs: 45420,
+              timestampMs: 45230,
+              confidence: 0.9995,
+            },
+            {
+              text: " novas",
+              startMs: 45420,
+              endMs: 45720,
+              timestampMs: 45570,
+              confidence: 0.9988,
+            },
+            {
+              text: " mecânicas,",
+              startMs: 45720,
+              endMs: 46260,
+              timestampMs: 45990,
+              confidence: 0.9989,
+              pageBreakAfter: true,
+            },
+            {
+              text: " mas",
+              startMs: 46380,
+              endMs: 46820,
+              timestampMs: 46600,
+              confidence: 0.9986,
+            },
+            {
+              text: " me",
+              startMs: 46820,
+              endMs: 46960,
+              timestampMs: 46890,
+              confidence: 0.9986,
+            },
+            {
+              text: " diz,",
+              startMs: 46960,
+              endMs: 47180,
+              timestampMs: 47070,
+              confidence: 0.9993,
+              pageBreakAfter: true,
+            },
+            {
+              text: " o",
+              startMs: 47340,
+              endMs: 47640,
+              timestampMs: 47490,
+              confidence: 0.9996,
+            },
+            {
+              text: " que",
+              startMs: 47640,
+              endMs: 47740,
+              timestampMs: 47690,
+              confidence: 0.9999,
+            },
+            {
+              text: " você",
+              startMs: 47740,
+              endMs: 48000,
+              timestampMs: 47870,
+              confidence: 0.9988,
+            },
+            {
+              text: " mais",
+              startMs: 48000,
+              endMs: 48200,
+              timestampMs: 48100,
+              confidence: 0.9996,
+              pageBreakAfter: true,
+            },
+            {
+              text: " quer",
+              startMs: 48200,
+              endMs: 48360,
+              timestampMs: 48280,
+              confidence: 0.9999,
+            },
+            {
+              text: " descobrir?",
+              startMs: 48360,
+              endMs: 48720,
+              timestampMs: 48540,
+              confidence: 0.9996,
+              pageBreakAfter: true,
+            },
+            {
+              text: " O",
+              startMs: 48960,
+              endMs: 49240,
+              timestampMs: 49100,
+              confidence: 0.9988,
+            },
+            {
+              text: " mapa,",
+              startMs: 49240,
+              endMs: 49620,
+              timestampMs: 49430,
+              confidence: 0.9995,
+              pageBreakAfter: true,
+            },
+            {
+              text: " o",
+              startMs: 49900,
+              endMs: 50120,
+              timestampMs: 50010,
+              confidence: 0.999,
+            },
+            {
+              text: " gameplay",
+              startMs: 50120,
+              endMs: 50400,
+              timestampMs: 50260,
+              confidence: 0.9996,
+            },
+            {
+              text: " ou",
+              startMs: 50400,
+              endMs: 51080,
+              timestampMs: 50740,
+              confidence: 0.9832,
+            },
+            {
+              text: " a",
+              startMs: 51080,
+              endMs: 51240,
+              timestampMs: 51160,
+              confidence: 0.9999,
+              pageBreakAfter: true,
+            },
+            {
+              text: " história",
+              startMs: 51240,
+              endMs: 51560,
+              timestampMs: 51400,
+              confidence: 0.9998,
+            },
+            {
+              text: " envolvendo",
+              startMs: 51560,
+              endMs: 52000,
+              timestampMs: 51780,
+              confidence: 0.9999,
+            },
+            {
+              text: " Jason",
+              startMs: 52000,
+              endMs: 52320,
+              timestampMs: 52160,
+              confidence: 0.9813,
+            },
+            {
+              text: " e",
+              startMs: 52320,
+              endMs: 52660,
+              timestampMs: 52490,
+              confidence: 0.9999,
+              pageBreakAfter: true,
+            },
+            {
+              text: " Lucia?",
+              startMs: 52660,
+              endMs: 53100,
+              timestampMs: 52880,
+              confidence: 0.9676,
+              pageBreakAfter: true,
+            },
+            {
+              text: " Conte",
+              startMs: 54020,
+              endMs: 54580,
+              timestampMs: 54300,
+              confidence: 0.9988,
+            },
+            {
+              text: " para",
+              startMs: 54580,
+              endMs: 54680,
+              timestampMs: 54630,
+              confidence: 0.8389,
+            },
+            {
+              text: " a",
+              startMs: 54680,
+              endMs: 54760,
+              timestampMs: 54720,
+              confidence: 0.9971,
+            },
+            {
+              text: " gente!",
+              startMs: 54760,
+              endMs: 54940,
+              timestampMs: 54850,
+              confidence: 1.0,
+              pageBreakAfter: true,
+            },
+          ]}
+        />
+      </Sequence>
+    </Track>
+    <AbsoluteFill style={{ zIndex: 10, pointerEvents: "none" }}>
+      <Brand />
+      <Progress />
+    </AbsoluteFill>
+  </AbsoluteFill>
+);

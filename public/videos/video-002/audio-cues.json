@@ -1,0 +1,22 @@
+{
+  "fps": 30,
+  "status": "visual-only-no-audio-files",
+  "events": [
+    { "frame": 0, "event": "first-pixel" },
+    { "frame": 24, "event": "assembly" },
+    { "frame": 32, "event": "hook" },
+    { "frame": 154, "event": "jump" },
+    { "frame": 195, "event": "pickup" },
+    { "frame": 270, "event": "portal" },
+    { "frame": 312, "event": "crossing" },
+    { "frame": 324, "event": "fragmentation" },
+    { "frame": 354, "event": "depth" },
+    { "frame": 402, "event": "lighting" },
+    { "frame": 450, "event": "reveal" },
+    { "frame": 480, "event": "comparison" },
+    { "frame": 720, "event": "future" },
+    { "frame": 787, "event": "question" },
+    { "frame": 870, "event": "collapse" },
+    { "frame": 899, "event": "loop" }
+  ]
+}

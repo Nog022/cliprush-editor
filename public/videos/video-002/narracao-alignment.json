@@ -1,0 +1,489 @@
+{
+  "source": "videos/video-002/narracao.mp3",
+  "method": "faster-whisper large-v3, local cache",
+  "segments": [
+    {
+      "startMs": 0,
+      "endMs": 3440,
+      "text": "Você já parou para pensar como os games chegaram até aqui?",
+      "words": [
+        {
+          "text": " Você",
+          "startMs": 0,
+          "endMs": 220,
+          "timestampMs": 110,
+          "confidence": 0.9594
+        },
+        {
+          "text": " já",
+          "startMs": 220,
+          "endMs": 400,
+          "timestampMs": 310,
+          "confidence": 0.9927
+        },
+        {
+          "text": " parou",
+          "startMs": 400,
+          "endMs": 720,
+          "timestampMs": 560,
+          "confidence": 0.9991
+        },
+        {
+          "text": " para",
+          "startMs": 720,
+          "endMs": 820,
+          "timestampMs": 770,
+          "confidence": 0.4585
+        },
+        {
+          "text": " pensar",
+          "startMs": 820,
+          "endMs": 1200,
+          "timestampMs": 1010,
+          "confidence": 0.9982
+        },
+        {
+          "text": " como",
+          "startMs": 1200,
+          "endMs": 1900,
+          "timestampMs": 1550,
+          "confidence": 0.6328
+        },
+        {
+          "text": " os",
+          "startMs": 1900,
+          "endMs": 2120,
+          "timestampMs": 2010,
+          "confidence": 0.9961
+        },
+        {
+          "text": " games",
+          "startMs": 2120,
+          "endMs": 2440,
+          "timestampMs": 2280,
+          "confidence": 0.9766
+        },
+        {
+          "text": " chegaram",
+          "startMs": 2440,
+          "endMs": 3060,
+          "timestampMs": 2750,
+          "confidence": 0.9988
+        },
+        {
+          "text": " até",
+          "startMs": 3060,
+          "endMs": 3180,
+          "timestampMs": 3120,
+          "confidence": 0.9889
+        },
+        {
+          "text": " aqui?",
+          "startMs": 3180,
+          "endMs": 3440,
+          "timestampMs": 3310,
+          "confidence": 0.9975
+        }
+      ]
+    },
+    {
+      "startMs": 3680,
+      "endMs": 7980,
+      "text": "No começo, eram pixels, mundos simples e muita imaginação.",
+      "words": [
+        {
+          "text": " No",
+          "startMs": 3680,
+          "endMs": 4100,
+          "timestampMs": 3890,
+          "confidence": 0.9875
+        },
+        {
+          "text": " começo,",
+          "startMs": 4100,
+          "endMs": 4640,
+          "timestampMs": 4370,
+          "confidence": 0.9987
+        },
+        {
+          "text": " eram",
+          "startMs": 4680,
+          "endMs": 5000,
+          "timestampMs": 4840,
+          "confidence": 0.9871
+        },
+        {
+          "text": " pixels,",
+          "startMs": 5000,
+          "endMs": 5440,
+          "timestampMs": 5220,
+          "confidence": 0.9423
+        },
+        {
+          "text": " mundos",
+          "startMs": 5840,
+          "endMs": 6240,
+          "timestampMs": 6040,
+          "confidence": 0.9957
+        },
+        {
+          "text": " simples",
+          "startMs": 6240,
+          "endMs": 6620,
+          "timestampMs": 6430,
+          "confidence": 0.9987
+        },
+        {
+          "text": " e",
+          "startMs": 6620,
+          "endMs": 6920,
+          "timestampMs": 6770,
+          "confidence": 0.9885
+        },
+        {
+          "text": " muita",
+          "startMs": 6920,
+          "endMs": 7360,
+          "timestampMs": 7140,
+          "confidence": 0.9637
+        },
+        {
+          "text": " imaginação.",
+          "startMs": 7360,
+          "endMs": 7980,
+          "timestampMs": 7670,
+          "confidence": 0.9969
+        }
+      ]
+    },
+    {
+      "startMs": 8240,
+      "endMs": 12480,
+      "text": "Mas então, tudo mudou. Os jogos ganharam uma nova dimensão.",
+      "words": [
+        {
+          "text": " Mas",
+          "startMs": 8240,
+          "endMs": 8660,
+          "timestampMs": 8450,
+          "confidence": 0.9923
+        },
+        {
+          "text": " então,",
+          "startMs": 8660,
+          "endMs": 8920,
+          "timestampMs": 8790,
+          "confidence": 0.9328
+        },
+        {
+          "text": " tudo",
+          "startMs": 9140,
+          "endMs": 9560,
+          "timestampMs": 9350,
+          "confidence": 0.9953
+        },
+        {
+          "text": " mudou.",
+          "startMs": 9560,
+          "endMs": 10120,
+          "timestampMs": 9840,
+          "confidence": 0.9997
+        },
+        {
+          "text": " Os",
+          "startMs": 10180,
+          "endMs": 10480,
+          "timestampMs": 10330,
+          "confidence": 0.9957
+        },
+        {
+          "text": " jogos",
+          "startMs": 10480,
+          "endMs": 10760,
+          "timestampMs": 10620,
+          "confidence": 0.9992
+        },
+        {
+          "text": " ganharam",
+          "startMs": 10760,
+          "endMs": 11320,
+          "timestampMs": 11040,
+          "confidence": 0.9984
+        },
+        {
+          "text": " uma",
+          "startMs": 11320,
+          "endMs": 11400,
+          "timestampMs": 11360,
+          "confidence": 0.995
+        },
+        {
+          "text": " nova",
+          "startMs": 11400,
+          "endMs": 11760,
+          "timestampMs": 11580,
+          "confidence": 0.9986
+        },
+        {
+          "text": " dimensão.",
+          "startMs": 11760,
+          "endMs": 12480,
+          "timestampMs": 12120,
+          "confidence": 0.9995
+        }
+      ]
+    },
+    {
+      "startMs": 12620,
+      "endMs": 17420,
+      "text": "Saímos de cenários pixelados para mundos gigantes, cheios de detalhes e vida.",
+      "words": [
+        {
+          "text": " Saímos",
+          "startMs": 12620,
+          "endMs": 13220,
+          "timestampMs": 12920,
+          "confidence": 0.9992
+        },
+        {
+          "text": " de",
+          "startMs": 13220,
+          "endMs": 13340,
+          "timestampMs": 13280,
+          "confidence": 0.997
+        },
+        {
+          "text": " cenários",
+          "startMs": 13340,
+          "endMs": 13760,
+          "timestampMs": 13550,
+          "confidence": 0.9994
+        },
+        {
+          "text": " pixelados",
+          "startMs": 13760,
+          "endMs": 14500,
+          "timestampMs": 14130,
+          "confidence": 0.9987
+        },
+        {
+          "text": " para",
+          "startMs": 14500,
+          "endMs": 14720,
+          "timestampMs": 14610,
+          "confidence": 0.9939
+        },
+        {
+          "text": " mundos",
+          "startMs": 14720,
+          "endMs": 15100,
+          "timestampMs": 14910,
+          "confidence": 0.9995
+        },
+        {
+          "text": " gigantes,",
+          "startMs": 15100,
+          "endMs": 15700,
+          "timestampMs": 15400,
+          "confidence": 0.9998
+        },
+        {
+          "text": " cheios",
+          "startMs": 15700,
+          "endMs": 16260,
+          "timestampMs": 15980,
+          "confidence": 0.9985
+        },
+        {
+          "text": " de",
+          "startMs": 16260,
+          "endMs": 16420,
+          "timestampMs": 16340,
+          "confidence": 0.9995
+        },
+        {
+          "text": " detalhes",
+          "startMs": 16420,
+          "endMs": 16960,
+          "timestampMs": 16690,
+          "confidence": 0.9998
+        },
+        {
+          "text": " e",
+          "startMs": 16960,
+          "endMs": 17080,
+          "timestampMs": 17020,
+          "confidence": 0.9993
+        },
+        {
+          "text": " vida.",
+          "startMs": 17080,
+          "endMs": 17420,
+          "timestampMs": 17250,
+          "confidence": 0.9994
+        }
+      ]
+    },
+    {
+      "startMs": 17640,
+      "endMs": 21540,
+      "text": "E se a evolução já foi tão absurda, imagina o que vem por aí.",
+      "words": [
+        {
+          "text": " E",
+          "startMs": 17640,
+          "endMs": 17960,
+          "timestampMs": 17800,
+          "confidence": 0.9976
+        },
+        {
+          "text": " se",
+          "startMs": 17960,
+          "endMs": 18060,
+          "timestampMs": 18010,
+          "confidence": 0.9953
+        },
+        {
+          "text": " a",
+          "startMs": 18060,
+          "endMs": 18160,
+          "timestampMs": 18110,
+          "confidence": 0.9983
+        },
+        {
+          "text": " evolução",
+          "startMs": 18160,
+          "endMs": 18580,
+          "timestampMs": 18370,
+          "confidence": 0.9997
+        },
+        {
+          "text": " já",
+          "startMs": 18580,
+          "endMs": 18780,
+          "timestampMs": 18680,
+          "confidence": 0.9988
+        },
+        {
+          "text": " foi",
+          "startMs": 18780,
+          "endMs": 18960,
+          "timestampMs": 18870,
+          "confidence": 0.9998
+        },
+        {
+          "text": " tão",
+          "startMs": 18960,
+          "endMs": 19280,
+          "timestampMs": 19120,
+          "confidence": 0.9994
+        },
+        {
+          "text": " absurda,",
+          "startMs": 19280,
+          "endMs": 19960,
+          "timestampMs": 19620,
+          "confidence": 0.9998
+        },
+        {
+          "text": " imagina",
+          "startMs": 20040,
+          "endMs": 20900,
+          "timestampMs": 20470,
+          "confidence": 0.9623
+        },
+        {
+          "text": " o",
+          "startMs": 20900,
+          "endMs": 20960,
+          "timestampMs": 20930,
+          "confidence": 0.9999
+        },
+        {
+          "text": " que",
+          "startMs": 20960,
+          "endMs": 21060,
+          "timestampMs": 21010,
+          "confidence": 0.9999
+        },
+        {
+          "text": " vem",
+          "startMs": 21060,
+          "endMs": 21180,
+          "timestampMs": 21120,
+          "confidence": 0.9989
+        },
+        {
+          "text": " por",
+          "startMs": 21180,
+          "endMs": 21320,
+          "timestampMs": 21250,
+          "confidence": 0.9996
+        },
+        {
+          "text": " aí.",
+          "startMs": 21320,
+          "endMs": 21540,
+          "timestampMs": 21430,
+          "confidence": 0.9968
+        }
+      ]
+    },
+    {
+      "startMs": 21700,
+      "endMs": 23780,
+      "text": "Qual será o próximo salto dos games?",
+      "words": [
+        {
+          "text": " Qual",
+          "startMs": 21700,
+          "endMs": 22100,
+          "timestampMs": 21900,
+          "confidence": 0.9985
+        },
+        {
+          "text": " será",
+          "startMs": 22100,
+          "endMs": 22360,
+          "timestampMs": 22230,
+          "confidence": 0.9992
+        },
+        {
+          "text": " o",
+          "startMs": 22360,
+          "endMs": 22540,
+          "timestampMs": 22450,
+          "confidence": 0.9996
+        },
+        {
+          "text": " próximo",
+          "startMs": 22540,
+          "endMs": 22900,
+          "timestampMs": 22720,
+          "confidence": 0.9998
+        },
+        {
+          "text": " salto",
+          "startMs": 22900,
+          "endMs": 23440,
+          "timestampMs": 23170,
+          "confidence": 0.9977
+        },
+        {
+          "text": " dos",
+          "startMs": 23440,
+          "endMs": 23540,
+          "timestampMs": 23490,
+          "confidence": 0.9992
+        },
+        {
+          "text": " games?",
+          "startMs": 23540,
+          "endMs": 23780,
+          "timestampMs": 23660,
+          "confidence": 0.999
+        }
+      ]
+    }
+  ]
+}

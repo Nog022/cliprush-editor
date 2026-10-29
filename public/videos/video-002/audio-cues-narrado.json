@@ -1,0 +1,34 @@
+{
+  "source": "videos/video-002/narracao.mp3",
+  "fps": 30,
+  "referenceDurationSeconds": 24.346063,
+  "originalCues": "audio-cues.json",
+  "note": "O arquivo original usa a montagem silenciosa de 30 s. Seus eventos foram reaproveitados como referências visuais e reposicionados pela fala; os timestamps originais não são timestamps da narração.",
+  "segments": [
+    { "startSeconds": 0, "endSeconds": 3.44, "scene": "gancho" },
+    { "startSeconds": 3.68, "endSeconds": 7.98, "scene": "pixels" },
+    { "startSeconds": 8.24, "endSeconds": 12.48, "scene": "nova dimensão" },
+    { "startSeconds": 12.62, "endSeconds": 17.42, "scene": "mundos e detalhes" },
+    { "startSeconds": 17.64, "endSeconds": 21.54, "scene": "futuro" },
+    { "startSeconds": 21.7, "endSeconds": 23.78, "scene": "pergunta final" }
+  ],
+  "events": [
+    { "event": "first-pixel", "seconds": 0, "sourceFrame": 0 },
+    { "event": "assembly", "seconds": 0.65, "sourceFrame": 24 },
+    { "event": "hook", "seconds": 1.2, "sourceFrame": 32 },
+    { "event": "jump", "seconds": 5.1, "sourceFrame": 154 },
+    { "event": "pickup", "seconds": 6.5, "sourceFrame": 195 },
+    { "event": "portal", "seconds": 8.2, "sourceFrame": 270 },
+    { "event": "crossing", "seconds": 9.56, "sourceFrame": 312 },
+    { "event": "fragmentation", "seconds": 9.9, "sourceFrame": 324 },
+    { "event": "depth", "seconds": 10.76, "sourceFrame": 354 },
+    { "event": "lighting", "seconds": 11.76, "sourceFrame": 402 },
+    { "event": "reveal", "seconds": 12.48, "sourceFrame": 450 },
+    { "event": "comparison", "seconds": 12.6, "sourceFrame": 480 },
+    { "event": "future", "seconds": 17.6, "sourceFrame": 720 },
+    { "event": "question", "seconds": 21.7, "sourceFrame": 787 },
+    { "event": "collapse", "seconds": 23.78, "sourceFrame": 870 },
+    { "event": "loop", "seconds": 24.346063, "sourceFrame": 899 }
+  ],
+  "runtimeMapping": "src/videos/video-002/narrado/timing.ts"
+}

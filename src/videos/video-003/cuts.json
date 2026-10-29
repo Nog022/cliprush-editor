@@ -1,0 +1,36 @@
+{
+  "fps": 30,
+  "durationInFrames": 1445,
+  "clips": [
+    {
+      "sourceStart": 32,
+      "sourceEnd": 197,
+      "from": 0,
+      "duration": 165
+    },
+    {
+      "sourceStart": 245,
+      "sourceEnd": 494,
+      "from": 165,
+      "duration": 249
+    },
+    {
+      "sourceStart": 520,
+      "sourceEnd": 827,
+      "from": 414,
+      "duration": 307
+    },
+    {
+      "sourceStart": 922,
+      "sourceEnd": 1242,
+      "from": 721,
+      "duration": 320
+    },
+    {
+      "sourceStart": 1368,
+      "sourceEnd": 1772,
+      "from": 1041,
+      "duration": 404
+    }
+  ]
+}
