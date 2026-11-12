@@ -1,0 +1,1974 @@
+{
+  "fps": 30,
+  "durationInFrames": 1840,
+  "audioDuration": 61.309375,
+  "scenes": [
+    {
+      "order": 1,
+      "from": 0,
+      "duration": 221,
+      "count": 106,
+      "sourceStart": "00:01:03:16",
+      "sourceEnd": "00:01:07:02",
+      "title": [
+        "OLHA ESSE",
+        "CELULAR"
+      ],
+      "proofTitle": [
+        "A TELA",
+        "CONTINUA ACESA"
+      ],
+      "reveal": 151,
+      "zoom": 1.26,
+      "cropWidth": 800,
+      "track": [
+        [
+          0,
+          0.51,
+          0.32
+        ],
+        [
+          21,
+          0.51,
+          0.32
+        ],
+        [
+          42,
+          0.49,
+          0.34
+        ],
+        [
+          53,
+          0.47,
+          0.41
+        ],
+        [
+          63,
+          0.455,
+          0.55
+        ],
+        [
+          84,
+          0.445,
+          0.57
+        ],
+        [
+          105,
+          0.445,
+          0.585
+        ]
+      ],
+      "passes": [
+        {
+          "from": 0,
+          "duration": 106,
+          "source": 0,
+          "rate": 1,
+          "mode": "context",
+          "label": "CONTEXTO · 1×"
+        },
+        {
+          "from": 106,
+          "duration": 106,
+          "source": 0,
+          "rate": 1,
+          "mode": "focus",
+          "label": "REPLAY · TELA DO CELULAR"
+        },
+        {
+          "from": 212,
+          "duration": 9,
+          "source": 105,
+          "rate": 0,
+          "mode": "focus",
+          "label": "PAUSA · TELA ACESA"
+        }
+      ],
+      "captions": [
+        [
+          {
+            "text": " Olha",
+            "startMs": 0,
+            "endMs": 180,
+            "timestampMs": null,
+            "confidence": 0.942
+          },
+          {
+            "text": " esse",
+            "startMs": 180,
+            "endMs": 340,
+            "timestampMs": null,
+            "confidence": 0.981
+          },
+          {
+            "text": " celular",
+            "startMs": 340,
+            "endMs": 760,
+            "timestampMs": null,
+            "confidence": 0.997
+          },
+          {
+            "text": " em",
+            "startMs": 760,
+            "endMs": 1060,
+            "timestampMs": null,
+            "confidence": 0.997
+          }
+        ],
+        [
+          {
+            "text": " GTA",
+            "startMs": 1060,
+            "endMs": 1460,
+            "timestampMs": null,
+            "confidence": 0.995
+          },
+          {
+            "text": " 6.",
+            "startMs": 1460,
+            "endMs": 1900,
+            "timestampMs": null,
+            "confidence": 0.511
+          }
+        ],
+        [
+          {
+            "text": " Quando",
+            "startMs": 2200,
+            "endMs": 2680,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " o",
+            "startMs": 2680,
+            "endMs": 2780,
+            "timestampMs": null,
+            "confidence": 0.997
+          },
+          {
+            "text": " personagem",
+            "startMs": 2780,
+            "endMs": 3060,
+            "timestampMs": null,
+            "confidence": 1.0
+          },
+          {
+            "text": " afasta",
+            "startMs": 3060,
+            "endMs": 3740,
+            "timestampMs": null,
+            "confidence": 0.999
+          }
+        ],
+        [
+          {
+            "text": " o",
+            "startMs": 3740,
+            "endMs": 3800,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " aparelho,",
+            "startMs": 3800,
+            "endMs": 4340,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " a",
+            "startMs": 4360,
+            "endMs": 4520,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " tela",
+            "startMs": 4520,
+            "endMs": 4740,
+            "timestampMs": null,
+            "confidence": 1.0
+          }
+        ],
+        [
+          {
+            "text": " continua",
+            "startMs": 4740,
+            "endMs": 5040,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " acesa.",
+            "startMs": 5040,
+            "endMs": 5820,
+            "timestampMs": null,
+            "confidence": 1.0
+          }
+        ],
+        [
+          {
+            "text": " Conseguiu",
+            "startMs": 5920,
+            "endMs": 6480,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " perceber?",
+            "startMs": 6480,
+            "endMs": 6620,
+            "timestampMs": null,
+            "confidence": 0.999
+          }
+        ]
+      ],
+      "risk": "Confirmar visualmente o brilho da tela e o frame exato da mudança; sem inferir mecânica jogável."
+    },
+    {
+      "order": 2,
+      "from": 221,
+      "duration": 213,
+      "count": 83,
+      "sourceStart": "00:14:17:00",
+      "sourceEnd": "00:14:19:23",
+      "title": [
+        "OLHA A",
+        "JANELA"
+      ],
+      "proofTitle": [
+        "DISPARO DA",
+        "VIATURA"
+      ],
+      "reveal": 120,
+      "zoom": 1.24,
+      "cropWidth": 960,
+      "track": [
+        [
+          0,
+          0.72,
+          0.4
+        ],
+        [
+          12,
+          0.56,
+          0.36
+        ],
+        [
+          16,
+          0.51,
+          0.34
+        ],
+        [
+          33,
+          0.5,
+          0.36
+        ],
+        [
+          41,
+          0.48,
+          0.37
+        ],
+        [
+          49,
+          0.44,
+          0.39
+        ],
+        [
+          66,
+          0.52,
+          0.4
+        ],
+        [
+          82,
+          0.69,
+          0.49
+        ]
+      ],
+      "passes": [
+        {
+          "from": 0,
+          "duration": 83,
+          "source": 0,
+          "rate": 1,
+          "mode": "context",
+          "label": "CONTEXTO · 1×"
+        },
+        {
+          "from": 83,
+          "duration": 27,
+          "source": 41,
+          "rate": 0,
+          "mode": "focus",
+          "label": "PAUSA · JANELA DA VIATURA"
+        },
+        {
+          "from": 110,
+          "duration": 83,
+          "source": 0,
+          "rate": 1,
+          "mode": "focus",
+          "label": "REPLAY · OLHE A JANELA"
+        },
+        {
+          "from": 193,
+          "duration": 20,
+          "source": 49,
+          "rate": 0,
+          "mode": "focus",
+          "label": "PAUSA · DETALHE"
+        }
+      ],
+      "captions": [
+        [
+          {
+            "text": " Agora",
+            "startMs": 7350,
+            "endMs": 7710,
+            "timestampMs": null,
+            "confidence": 0.954
+          },
+          {
+            "text": " repara",
+            "startMs": 7710,
+            "endMs": 8230,
+            "timestampMs": null,
+            "confidence": 0.978
+          },
+          {
+            "text": " no",
+            "startMs": 8230,
+            "endMs": 8310,
+            "timestampMs": null,
+            "confidence": 0.978
+          },
+          {
+            "text": " policial",
+            "startMs": 8310,
+            "endMs": 8810,
+            "timestampMs": null,
+            "confidence": 0.999
+          }
+        ],
+        [
+          {
+            "text": " disparando",
+            "startMs": 8810,
+            "endMs": 9430,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " de",
+            "startMs": 9430,
+            "endMs": 9570,
+            "timestampMs": null,
+            "confidence": 0.993
+          },
+          {
+            "text": " dentro",
+            "startMs": 9570,
+            "endMs": 9910,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " da",
+            "startMs": 9910,
+            "endMs": 10110,
+            "timestampMs": null,
+            "confidence": 0.998
+          }
+        ],
+        [
+          {
+            "text": " viatura.",
+            "startMs": 10110,
+            "endMs": 10550,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " Olha",
+            "startMs": 10690,
+            "endMs": 11230,
+            "timestampMs": null,
+            "confidence": 0.08
+          },
+          {
+            "text": " a",
+            "startMs": 11230,
+            "endMs": 11390,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " arma",
+            "startMs": 11390,
+            "endMs": 11630,
+            "timestampMs": null,
+            "confidence": 0.999
+          }
+        ],
+        [
+          {
+            "text": " saindo",
+            "startMs": 11630,
+            "endMs": 11970,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " pela",
+            "startMs": 11970,
+            "endMs": 12110,
+            "timestampMs": null,
+            "confidence": 0.993
+          },
+          {
+            "text": " janela",
+            "startMs": 12110,
+            "endMs": 12690,
+            "timestampMs": null,
+            "confidence": 1.0
+          },
+          {
+            "text": " enquanto",
+            "startMs": 12690,
+            "endMs": 12870,
+            "timestampMs": null,
+            "confidence": 0.985
+          }
+        ],
+        [
+          {
+            "text": " o",
+            "startMs": 12870,
+            "endMs": 13070,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " carro",
+            "startMs": 13070,
+            "endMs": 13290,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " se",
+            "startMs": 13290,
+            "endMs": 13450,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " movimenta.",
+            "startMs": 13450,
+            "endMs": 14090,
+            "timestampMs": null,
+            "confidence": 1.0
+          }
+        ]
+      ],
+      "risk": "Não confundir disparo com gesto do policial; confirmar evento no vídeo-fonte."
+    },
+    {
+      "order": 3,
+      "from": 434,
+      "duration": 234,
+      "count": 54,
+      "sourceStart": "00:11:50:24",
+      "sourceEnd": "00:11:52:18",
+      "title": [
+        "JASON E",
+        "LUCIA"
+      ],
+      "proofTitle": [
+        "ELE LEVANTA",
+        "A ARMA"
+      ],
+      "reveal": 78,
+      "zoom": 1.3,
+      "cropWidth": 1500,
+      "track": [
+        [
+          0,
+          0.45,
+          0.56
+        ],
+        [
+          12,
+          0.46,
+          0.53
+        ],
+        [
+          27,
+          0.42,
+          0.54
+        ],
+        [
+          40,
+          0.44,
+          0.53
+        ],
+        [
+          53,
+          0.47,
+          0.57
+        ]
+      ],
+      "passes": [
+        {
+          "from": 0,
+          "duration": 76,
+          "source": 0,
+          "rate": 0,
+          "mode": "context",
+          "label": "PAUSA · LOCALIZE OS DOIS"
+        },
+        {
+          "from": 76,
+          "duration": 54,
+          "source": 0,
+          "rate": 1,
+          "mode": "context",
+          "label": "CONTEXTO · 1×"
+        },
+        {
+          "from": 130,
+          "duration": 21,
+          "source": 27,
+          "rate": 0,
+          "mode": "focus",
+          "label": "PAUSA · ARMA ERGUIDA"
+        },
+        {
+          "from": 151,
+          "duration": 54,
+          "source": 0,
+          "rate": 1,
+          "mode": "focus",
+          "label": "REPLAY · JASON E LUCIA"
+        },
+        {
+          "from": 205,
+          "duration": 29,
+          "source": 27,
+          "rate": 0,
+          "mode": "focus",
+          "label": "PAUSA · OBSERVE O GESTO"
+        }
+      ],
+      "captions": [
+        [
+          {
+            "text": " Mas",
+            "startMs": 14450,
+            "endMs": 14790,
+            "timestampMs": null,
+            "confidence": 0.931
+          },
+          {
+            "text": " esse",
+            "startMs": 14790,
+            "endMs": 15150,
+            "timestampMs": null,
+            "confidence": 0.972
+          },
+          {
+            "text": " é",
+            "startMs": 15150,
+            "endMs": 15390,
+            "timestampMs": null,
+            "confidence": 0.962
+          },
+          {
+            "text": " ainda",
+            "startMs": 15390,
+            "endMs": 15650,
+            "timestampMs": null,
+            "confidence": 0.992
+          }
+        ],
+        [
+          {
+            "text": " mais",
+            "startMs": 15650,
+            "endMs": 16010,
+            "timestampMs": null,
+            "confidence": 0.995
+          },
+          {
+            "text": " impressionante:",
+            "startMs": 16010,
+            "endMs": 16910,
+            "timestampMs": null,
+            "confidence": 0.999
+          }
+        ],
+        [
+          {
+            "text": " Jason",
+            "startMs": 17010,
+            "endMs": 17590,
+            "timestampMs": null,
+            "confidence": 0.975
+          },
+          {
+            "text": " levanta",
+            "startMs": 17590,
+            "endMs": 18270,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " a",
+            "startMs": 18270,
+            "endMs": 18290,
+            "timestampMs": null,
+            "confidence": 0.991
+          },
+          {
+            "text": " arma",
+            "startMs": 18290,
+            "endMs": 18590,
+            "timestampMs": null,
+            "confidence": 0.998
+          }
+        ],
+        [
+          {
+            "text": " quando",
+            "startMs": 18590,
+            "endMs": 18790,
+            "timestampMs": null,
+            "confidence": 0.991
+          },
+          {
+            "text": " Lucia",
+            "startMs": 18790,
+            "endMs": 19150,
+            "timestampMs": null,
+            "confidence": 0.642
+          },
+          {
+            "text": " passa",
+            "startMs": 19150,
+            "endMs": 19370,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " na",
+            "startMs": 19370,
+            "endMs": 19590,
+            "timestampMs": null,
+            "confidence": 0.991
+          }
+        ],
+        [
+          {
+            "text": " frente,",
+            "startMs": 19590,
+            "endMs": 19910,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " como",
+            "startMs": 20110,
+            "endMs": 20330,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " se",
+            "startMs": 20330,
+            "endMs": 20470,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " evitasse",
+            "startMs": 20470,
+            "endMs": 21010,
+            "timestampMs": null,
+            "confidence": 0.997
+          }
+        ],
+        [
+          {
+            "text": " apontar",
+            "startMs": 21010,
+            "endMs": 21490,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " para",
+            "startMs": 21490,
+            "endMs": 21590,
+            "timestampMs": null,
+            "confidence": 0.258
+          },
+          {
+            "text": " ela.",
+            "startMs": 21590,
+            "endMs": 21850,
+            "timestampMs": null,
+            "confidence": 0.994
+          }
+        ]
+      ],
+      "risk": "O motivo \"evitando apontar\" é interpretação da encenação; se não evidente, narrar apenas o gesto observado. Não cortar Lucia."
+    },
+    {
+      "order": 4,
+      "from": 668,
+      "duration": 231,
+      "count": 99,
+      "sourceStart": "00:00:08:27",
+      "sourceEnd": "00:00:12:06",
+      "title": [
+        "REPARA NO",
+        "TECIDO"
+      ],
+      "proofTitle": [
+        "A BLUSA",
+        "SE AJUSTA"
+      ],
+      "reveal": 84,
+      "zoom": 1.24,
+      "cropWidth": 1080,
+      "track": [
+        [
+          0,
+          0.47,
+          0.64
+        ],
+        [
+          25,
+          0.49,
+          0.64
+        ],
+        [
+          49,
+          0.5,
+          0.65
+        ],
+        [
+          74,
+          0.51,
+          0.65
+        ],
+        [
+          98,
+          0.5,
+          0.65
+        ]
+      ],
+      "passes": [
+        {
+          "from": 0,
+          "duration": 99,
+          "source": 0,
+          "rate": 1,
+          "mode": "context",
+          "label": "CONTEXTO · 1×"
+        },
+        {
+          "from": 99,
+          "duration": 12,
+          "source": 49,
+          "rate": 0,
+          "mode": "focus",
+          "label": "PAUSA · OLHE O TRONCO"
+        },
+        {
+          "from": 111,
+          "duration": 99,
+          "source": 0,
+          "rate": 1,
+          "mode": "focus",
+          "label": "REPLAY · DOBRAS DO TECIDO"
+        },
+        {
+          "from": 210,
+          "duration": 21,
+          "source": 80,
+          "rate": 0,
+          "mode": "focus",
+          "label": "PAUSA · TECIDO"
+        }
+      ],
+      "captions": [
+        [
+          {
+            "text": " E",
+            "startMs": 22250,
+            "endMs": 22490,
+            "timestampMs": null,
+            "confidence": 0.931
+          },
+          {
+            "text": " a",
+            "startMs": 22490,
+            "endMs": 22570,
+            "timestampMs": null,
+            "confidence": 0.993
+          },
+          {
+            "text": " roupa?",
+            "startMs": 22570,
+            "endMs": 22990,
+            "timestampMs": null,
+            "confidence": 0.999
+          }
+        ],
+        [
+          {
+            "text": " Enquanto",
+            "startMs": 22990,
+            "endMs": 23730,
+            "timestampMs": null,
+            "confidence": 0.995
+          },
+          {
+            "text": " Jason",
+            "startMs": 23730,
+            "endMs": 23930,
+            "timestampMs": null,
+            "confidence": 0.888
+          },
+          {
+            "text": " caminha,",
+            "startMs": 23930,
+            "endMs": 24530,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " a",
+            "startMs": 24610,
+            "endMs": 24730,
+            "timestampMs": null,
+            "confidence": 0.997
+          }
+        ],
+        [
+          {
+            "text": " blusa",
+            "startMs": 24730,
+            "endMs": 25050,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " dobra",
+            "startMs": 25050,
+            "endMs": 25570,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " e",
+            "startMs": 25570,
+            "endMs": 25690,
+            "timestampMs": null,
+            "confidence": 0.992
+          },
+          {
+            "text": " se",
+            "startMs": 25690,
+            "endMs": 25790,
+            "timestampMs": null,
+            "confidence": 0.996
+          }
+        ],
+        [
+          {
+            "text": " ajusta",
+            "startMs": 25790,
+            "endMs": 26350,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " ao",
+            "startMs": 26350,
+            "endMs": 26350,
+            "timestampMs": null,
+            "confidence": 0.997
+          },
+          {
+            "text": " movimento.",
+            "startMs": 26350,
+            "endMs": 26670,
+            "timestampMs": null,
+            "confidence": 0.999
+          }
+        ],
+        [
+          {
+            "text": " Repara",
+            "startMs": 27010,
+            "endMs": 27670,
+            "timestampMs": null,
+            "confidence": 0.988
+          },
+          {
+            "text": " no",
+            "startMs": 27670,
+            "endMs": 27770,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " tecido,",
+            "startMs": 27770,
+            "endMs": 28370,
+            "timestampMs": null,
+            "confidence": 1.0
+          },
+          {
+            "text": " não",
+            "startMs": 28410,
+            "endMs": 28770,
+            "timestampMs": null,
+            "confidence": 0.998
+          }
+        ],
+        [
+          {
+            "text": " no",
+            "startMs": 28770,
+            "endMs": 28950,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " personagem.",
+            "startMs": 28950,
+            "endMs": 29290,
+            "timestampMs": null,
+            "confidence": 1.0
+          }
+        ]
+      ],
+      "risk": "Não atribuir essa dobra à física simulada sem confirmação técnica; preservar resolução do crop."
+    },
+    {
+      "order": 5,
+      "from": 899,
+      "duration": 202,
+      "count": 77,
+      "sourceStart": "00:14:03:16",
+      "sourceEnd": "00:14:06:03",
+      "title": [
+        "OLHA AS",
+        "ÁRVORES"
+      ],
+      "proofTitle": [
+        "AS FOLHAS",
+        "BALANÇAM"
+      ],
+      "reveal": 121,
+      "zoom": 1.2,
+      "cropWidth": 1280,
+      "track": [
+        [
+          0,
+          0.83,
+          0.44
+        ],
+        [
+          15,
+          0.83,
+          0.46
+        ],
+        [
+          30,
+          0.81,
+          0.55
+        ],
+        [
+          46,
+          0.8,
+          0.65
+        ],
+        [
+          61,
+          0.84,
+          0.72
+        ],
+        [
+          76,
+          0.84,
+          0.76
+        ]
+      ],
+      "passes": [
+        {
+          "from": 0,
+          "duration": 77,
+          "source": 0,
+          "rate": 1,
+          "mode": "context",
+          "label": "CONTEXTO · 1×"
+        },
+        {
+          "from": 77,
+          "duration": 22,
+          "source": 30,
+          "rate": 0,
+          "mode": "focus",
+          "label": "PAUSA · OLHE AS FOLHAS"
+        },
+        {
+          "from": 99,
+          "duration": 77,
+          "source": 0,
+          "rate": 1,
+          "mode": "focus",
+          "label": "REPLAY · COPA DAS ÁRVORES"
+        },
+        {
+          "from": 176,
+          "duration": 26,
+          "source": 61,
+          "rate": 0,
+          "mode": "focus",
+          "label": "PAUSA · FOLHAS"
+        }
+      ],
+      "captions": [
+        [
+          {
+            "text": " Quando",
+            "startMs": 29950,
+            "endMs": 30250,
+            "timestampMs": null,
+            "confidence": 0.941
+          },
+          {
+            "text": " o",
+            "startMs": 30250,
+            "endMs": 30350,
+            "timestampMs": null,
+            "confidence": 0.995
+          },
+          {
+            "text": " helicóptero",
+            "startMs": 30350,
+            "endMs": 30850,
+            "timestampMs": null,
+            "confidence": 0.997
+          },
+          {
+            "text": " passa,",
+            "startMs": 30850,
+            "endMs": 31010,
+            "timestampMs": null,
+            "confidence": 0.998
+          }
+        ],
+        [
+          {
+            "text": " presta",
+            "startMs": 31330,
+            "endMs": 31770,
+            "timestampMs": null,
+            "confidence": 0.985
+          },
+          {
+            "text": " atenção",
+            "startMs": 31770,
+            "endMs": 32050,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " nas",
+            "startMs": 32050,
+            "endMs": 32310,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " árvores",
+            "startMs": 32310,
+            "endMs": 32850,
+            "timestampMs": null,
+            "confidence": 0.999
+          }
+        ],
+        [
+          {
+            "text": " ao",
+            "startMs": 32850,
+            "endMs": 32990,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " lado.",
+            "startMs": 32990,
+            "endMs": 33270,
+            "timestampMs": null,
+            "confidence": 0.999
+          }
+        ],
+        [
+          {
+            "text": " As",
+            "startMs": 33430,
+            "endMs": 33750,
+            "timestampMs": null,
+            "confidence": 0.996
+          },
+          {
+            "text": " folhas",
+            "startMs": 33750,
+            "endMs": 34070,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " balançam",
+            "startMs": 34070,
+            "endMs": 34730,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " durante",
+            "startMs": 34730,
+            "endMs": 34910,
+            "timestampMs": null,
+            "confidence": 0.998
+          }
+        ],
+        [
+          {
+            "text": " a",
+            "startMs": 34910,
+            "endMs": 35090,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " cena.",
+            "startMs": 35090,
+            "endMs": 35430,
+            "timestampMs": null,
+            "confidence": 1.0
+          }
+        ],
+        [
+          {
+            "text": " Olha",
+            "startMs": 35510,
+            "endMs": 35910,
+            "timestampMs": null,
+            "confidence": 0.703
+          },
+          {
+            "text": " de",
+            "startMs": 35910,
+            "endMs": 36030,
+            "timestampMs": null,
+            "confidence": 0.997
+          },
+          {
+            "text": " novo.",
+            "startMs": 36030,
+            "endMs": 36270,
+            "timestampMs": null,
+            "confidence": 1.0
+          }
+        ]
+      ],
+      "risk": "Não afirmar que o vento do helicóptero causa o balanço sem evidência; mostrar apenas a coincidência visual."
+    },
+    {
+      "order": 6,
+      "from": 1101,
+      "duration": 218,
+      "count": 127,
+      "sourceStart": "00:07:17:23",
+      "sourceEnd": "00:07:22:00",
+      "title": [
+        "OLHA A",
+        "GELADEIRA"
+      ],
+      "proofTitle": [
+        "A LUZ",
+        "ACENDE"
+      ],
+      "reveal": 121,
+      "zoom": 1.27,
+      "cropWidth": 1200,
+      "track": [
+        [
+          0,
+          0.64,
+          0.57
+        ],
+        [
+          25,
+          0.66,
+          0.58
+        ],
+        [
+          42,
+          0.67,
+          0.64
+        ],
+        [
+          63,
+          0.72,
+          0.68
+        ],
+        [
+          82,
+          0.69,
+          0.7
+        ],
+        [
+          101,
+          0.69,
+          0.73
+        ],
+        [
+          126,
+          0.69,
+          0.62
+        ]
+      ],
+      "passes": [
+        {
+          "from": 0,
+          "duration": 127,
+          "source": 0,
+          "rate": 1,
+          "mode": "context",
+          "label": "CONTEXTO · 1×"
+        },
+        {
+          "from": 127,
+          "duration": 65,
+          "source": 25,
+          "rate": 1,
+          "mode": "focus",
+          "label": "REPLAY · ABERTURA E LUZ"
+        },
+        {
+          "from": 192,
+          "duration": 26,
+          "source": 70,
+          "rate": 0,
+          "mode": "focus",
+          "label": "PAUSA · INTERIOR ILUMINADO"
+        }
+      ],
+      "captions": [
+        [
+          {
+            "text": " Agora,",
+            "startMs": 36700,
+            "endMs": 37360,
+            "timestampMs": null,
+            "confidence": 0.978
+          },
+          {
+            "text": " a",
+            "startMs": 37460,
+            "endMs": 37560,
+            "timestampMs": null,
+            "confidence": 0.996
+          },
+          {
+            "text": " geladeira:",
+            "startMs": 37560,
+            "endMs": 38200,
+            "timestampMs": null,
+            "confidence": 0.994
+          }
+        ],
+        [
+          {
+            "text": " Jason",
+            "startMs": 38240,
+            "endMs": 38840,
+            "timestampMs": null,
+            "confidence": 0.958
+          },
+          {
+            "text": " abre",
+            "startMs": 38840,
+            "endMs": 39180,
+            "timestampMs": null,
+            "confidence": 0.997
+          },
+          {
+            "text": " a",
+            "startMs": 39180,
+            "endMs": 39300,
+            "timestampMs": null,
+            "confidence": 0.997
+          },
+          {
+            "text": " porta",
+            "startMs": 39300,
+            "endMs": 39700,
+            "timestampMs": null,
+            "confidence": 0.999
+          }
+        ],
+        [
+          {
+            "text": " e",
+            "startMs": 39700,
+            "endMs": 39920,
+            "timestampMs": null,
+            "confidence": 0.927
+          },
+          {
+            "text": " a",
+            "startMs": 39920,
+            "endMs": 40020,
+            "timestampMs": null,
+            "confidence": 0.99
+          },
+          {
+            "text": " luz",
+            "startMs": 40020,
+            "endMs": 40260,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " de",
+            "startMs": 40260,
+            "endMs": 40380,
+            "timestampMs": null,
+            "confidence": 0.994
+          }
+        ],
+        [
+          {
+            "text": " dentro",
+            "startMs": 40380,
+            "endMs": 40700,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " acende.",
+            "startMs": 40700,
+            "endMs": 41280,
+            "timestampMs": null,
+            "confidence": 0.997
+          }
+        ],
+        [
+          {
+            "text": " Percebe",
+            "startMs": 41340,
+            "endMs": 42020,
+            "timestampMs": null,
+            "confidence": 0.995
+          },
+          {
+            "text": " o",
+            "startMs": 42020,
+            "endMs": 42060,
+            "timestampMs": null,
+            "confidence": 0.992
+          },
+          {
+            "text": " momento",
+            "startMs": 42060,
+            "endMs": 42260,
+            "timestampMs": null,
+            "confidence": 0.997
+          },
+          {
+            "text": " exato",
+            "startMs": 42260,
+            "endMs": 42900,
+            "timestampMs": null,
+            "confidence": 0.998
+          }
+        ],
+        [
+          {
+            "text": " da",
+            "startMs": 42900,
+            "endMs": 43000,
+            "timestampMs": null,
+            "confidence": 0.995
+          },
+          {
+            "text": " iluminação?",
+            "startMs": 43000,
+            "endMs": 43460,
+            "timestampMs": null,
+            "confidence": 0.999
+          }
+        ]
+      ],
+      "risk": "Verificar o momento exato da luz e evitar filtros que falsifiquem o fenômeno."
+    },
+    {
+      "order": 7,
+      "from": 1319,
+      "duration": 195,
+      "count": 102,
+      "sourceStart": "00:14:08:22",
+      "sourceEnd": "00:14:12:04",
+      "title": [
+        "REPARA NO",
+        "PNEU"
+      ],
+      "proofTitle": [
+        "O PNEU",
+        "É ATINGIDO"
+      ],
+      "reveal": 137,
+      "zoom": 1.3,
+      "cropWidth": 1300,
+      "track": [
+        [
+          0,
+          0.64,
+          0.57
+        ],
+        [
+          20,
+          0.6,
+          0.58
+        ],
+        [
+          40,
+          0.62,
+          0.57
+        ],
+        [
+          51,
+          0.52,
+          0.55
+        ],
+        [
+          61,
+          0.49,
+          0.48
+        ],
+        [
+          74,
+          0.48,
+          0.38
+        ],
+        [
+          81,
+          0.36,
+          0.4
+        ],
+        [
+          101,
+          0.17,
+          0.45
+        ]
+      ],
+      "passes": [
+        {
+          "from": 0,
+          "duration": 102,
+          "source": 0,
+          "rate": 1,
+          "mode": "context",
+          "label": "CONTEXTO · 1×"
+        },
+        {
+          "from": 102,
+          "duration": 74,
+          "source": 0,
+          "rate": 1,
+          "mode": "focus",
+          "label": "REPLAY · ACOMPANHE A RODA"
+        },
+        {
+          "from": 176,
+          "duration": 19,
+          "source": 51,
+          "rate": 0,
+          "mode": "focus",
+          "label": "PAUSA · RODA ATINGIDA"
+        }
+      ],
+      "captions": [
+        [
+          {
+            "text": " E",
+            "startMs": 43950,
+            "endMs": 44170,
+            "timestampMs": null,
+            "confidence": 0.937
+          },
+          {
+            "text": " na",
+            "startMs": 44170,
+            "endMs": 44250,
+            "timestampMs": null,
+            "confidence": 0.994
+          },
+          {
+            "text": " troca",
+            "startMs": 44250,
+            "endMs": 44570,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " de",
+            "startMs": 44570,
+            "endMs": 44610,
+            "timestampMs": null,
+            "confidence": 0.997
+          }
+        ],
+        [
+          {
+            "text": " tiros,",
+            "startMs": 44610,
+            "endMs": 45170,
+            "timestampMs": null,
+            "confidence": 0.996
+          },
+          {
+            "text": " repara",
+            "startMs": 45170,
+            "endMs": 45790,
+            "timestampMs": null,
+            "confidence": 0.983
+          },
+          {
+            "text": " no",
+            "startMs": 45790,
+            "endMs": 45870,
+            "timestampMs": null,
+            "confidence": 0.993
+          },
+          {
+            "text": " pneu",
+            "startMs": 45870,
+            "endMs": 46310,
+            "timestampMs": null,
+            "confidence": 0.998
+          }
+        ],
+        [
+          {
+            "text": " da",
+            "startMs": 46310,
+            "endMs": 46390,
+            "timestampMs": null,
+            "confidence": 0.994
+          },
+          {
+            "text": " viatura:",
+            "startMs": 46390,
+            "endMs": 46790,
+            "timestampMs": null,
+            "confidence": 0.995
+          }
+        ],
+        [
+          {
+            "text": " Jason",
+            "startMs": 47030,
+            "endMs": 47490,
+            "timestampMs": null,
+            "confidence": 0.964
+          },
+          {
+            "text": " dispara",
+            "startMs": 47490,
+            "endMs": 48250,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " e",
+            "startMs": 48250,
+            "endMs": 48310,
+            "timestampMs": null,
+            "confidence": 0.893
+          },
+          {
+            "text": " ele",
+            "startMs": 48310,
+            "endMs": 48490,
+            "timestampMs": null,
+            "confidence": 0.954
+          }
+        ],
+        [
+          {
+            "text": " estoura",
+            "startMs": 48490,
+            "endMs": 48870,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " praticamente",
+            "startMs": 48870,
+            "endMs": 49250,
+            "timestampMs": null,
+            "confidence": 0.974
+          },
+          {
+            "text": " na",
+            "startMs": 49250,
+            "endMs": 49730,
+            "timestampMs": null,
+            "confidence": 0.996
+          },
+          {
+            "text": " hora.",
+            "startMs": 49730,
+            "endMs": 49970,
+            "timestampMs": null,
+            "confidence": 0.999
+          }
+        ]
+      ],
+      "risk": "Confirmar que o pneu estoura visualmente; não adicionar efeito inexistente nem inventar o dano."
+    },
+    {
+      "order": 8,
+      "from": 1514,
+      "duration": 326,
+      "count": 206,
+      "sourceStart": "00:22:23:24",
+      "sourceEnd": "00:22:30:20",
+      "title": [
+        "CARTÃO",
+        "E PÓ"
+      ],
+      "proofTitle": [
+        "O MATERIAL",
+        "ACOMPANHA"
+      ],
+      "reveal": 186,
+      "zoom": 1.32,
+      "cropWidth": 680,
+      "track": [
+        [
+          0,
+          0.625,
+          0.53
+        ],
+        [
+          41,
+          0.635,
+          0.535
+        ],
+        [
+          82,
+          0.635,
+          0.54
+        ],
+        [
+          123,
+          0.63,
+          0.54
+        ],
+        [
+          164,
+          0.63,
+          0.55
+        ],
+        [
+          205,
+          0.625,
+          0.56
+        ]
+      ],
+      "passes": [
+        {
+          "from": 0,
+          "duration": 206,
+          "source": 0,
+          "rate": 1,
+          "mode": "adaptive",
+          "label": "CONTEXTO → MÃOS E MESA"
+        },
+        {
+          "from": 206,
+          "duration": 101,
+          "source": 80,
+          "rate": 1,
+          "mode": "focus",
+          "label": "REPLAY · CARTÃO E MATERIAL"
+        },
+        {
+          "from": 307,
+          "duration": 19,
+          "source": 160,
+          "rate": 0,
+          "mode": "focus",
+          "label": "PAUSA · QUAL PASSOU BATIDO?"
+        }
+      ],
+      "captions": [
+        [
+          {
+            "text": " Só",
+            "startMs": 50450,
+            "endMs": 50790,
+            "timestampMs": null,
+            "confidence": 0.931
+          },
+          {
+            "text": " que",
+            "startMs": 50790,
+            "endMs": 50930,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " o",
+            "startMs": 50930,
+            "endMs": 50970,
+            "timestampMs": null,
+            "confidence": 0.992
+          },
+          {
+            "text": " último",
+            "startMs": 50970,
+            "endMs": 51330,
+            "timestampMs": null,
+            "confidence": 0.991
+          }
+        ],
+        [
+          {
+            "text": " é",
+            "startMs": 51330,
+            "endMs": 51630,
+            "timestampMs": null,
+            "confidence": 0.974
+          },
+          {
+            "text": " meu",
+            "startMs": 51630,
+            "endMs": 51790,
+            "timestampMs": null,
+            "confidence": 0.931
+          },
+          {
+            "text": " favorito.",
+            "startMs": 51790,
+            "endMs": 52530,
+            "timestampMs": null,
+            "confidence": 0.999
+          }
+        ],
+        [
+          {
+            "text": " Um",
+            "startMs": 52670,
+            "endMs": 53050,
+            "timestampMs": null,
+            "confidence": 0.986
+          },
+          {
+            "text": " NPC",
+            "startMs": 53050,
+            "endMs": 53410,
+            "timestampMs": null,
+            "confidence": 0.974
+          },
+          {
+            "text": " usa",
+            "startMs": 53410,
+            "endMs": 53990,
+            "timestampMs": null,
+            "confidence": 0.995
+          },
+          {
+            "text": " um",
+            "startMs": 53990,
+            "endMs": 54110,
+            "timestampMs": null,
+            "confidence": 0.996
+          }
+        ],
+        [
+          {
+            "text": " cartão",
+            "startMs": 54110,
+            "endMs": 54610,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " para",
+            "startMs": 54610,
+            "endMs": 54710,
+            "timestampMs": null,
+            "confidence": 0.566
+          },
+          {
+            "text": " mexer",
+            "startMs": 54710,
+            "endMs": 55070,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " num",
+            "startMs": 55070,
+            "endMs": 55190,
+            "timestampMs": null,
+            "confidence": 0.927
+          }
+        ],
+        [
+          {
+            "text": " pó",
+            "startMs": 55190,
+            "endMs": 55430,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " sobre",
+            "startMs": 55430,
+            "endMs": 55710,
+            "timestampMs": null,
+            "confidence": 0.993
+          },
+          {
+            "text": " a",
+            "startMs": 55710,
+            "endMs": 55830,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " mesa,",
+            "startMs": 55830,
+            "endMs": 56150,
+            "timestampMs": null,
+            "confidence": 1.0
+          }
+        ],
+        [
+          {
+            "text": " e",
+            "startMs": 56210,
+            "endMs": 56490,
+            "timestampMs": null,
+            "confidence": 0.997
+          },
+          {
+            "text": " o",
+            "startMs": 56490,
+            "endMs": 56570,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " material",
+            "startMs": 56570,
+            "endMs": 56890,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " acompanha",
+            "startMs": 56890,
+            "endMs": 57710,
+            "timestampMs": null,
+            "confidence": 0.999
+          }
+        ],
+        [
+          {
+            "text": " o",
+            "startMs": 57710,
+            "endMs": 57750,
+            "timestampMs": null,
+            "confidence": 0.997
+          },
+          {
+            "text": " movimento.",
+            "startMs": 57750,
+            "endMs": 57990,
+            "timestampMs": null,
+            "confidence": 1.0
+          }
+        ],
+        [
+          {
+            "text": " Qual",
+            "startMs": 58410,
+            "endMs": 58930,
+            "timestampMs": null,
+            "confidence": 0.995
+          },
+          {
+            "text": " desses",
+            "startMs": 58930,
+            "endMs": 59090,
+            "timestampMs": null,
+            "confidence": 0.987
+          },
+          {
+            "text": " detalhes",
+            "startMs": 59090,
+            "endMs": 59710,
+            "timestampMs": null,
+            "confidence": 1.0
+          },
+          {
+            "text": " você",
+            "startMs": 59710,
+            "endMs": 59910,
+            "timestampMs": null,
+            "confidence": 0.998
+          }
+        ],
+        [
+          {
+            "text": " nunca",
+            "startMs": 59910,
+            "endMs": 60310,
+            "timestampMs": null,
+            "confidence": 0.999
+          },
+          {
+            "text": " tinha",
+            "startMs": 60310,
+            "endMs": 60530,
+            "timestampMs": null,
+            "confidence": 0.998
+          },
+          {
+            "text": " visto?",
+            "startMs": 60530,
+            "endMs": 60850,
+            "timestampMs": null,
+            "confidence": 1.0
+          }
+        ]
+      ],
+      "risk": "Não concluir implementação de física real ou gameplay apenas pela imagem; evitar zoom que corte mão, cartão ou pó."
+    }
+  ]
+}

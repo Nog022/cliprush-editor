@@ -1,0 +1,86 @@
+CLIPRUSH — CENAS REAIS RETORNADAS EM 11/11/2026 POR buscar_cenas_gta6.py
+
+COMANDO:
+python scripts/buscar_cenas_gta6.py "assalto|roubo" "policia|tiroteio" "fuga|perseguicao" "Jason|Lucia"
+
+FONTE: saída de catálogo colada pelo usuário. Os timecodes abaixo são da MÍDIA ORIGINAL, NÃO da timeline final.
+CUIDADO: descrições de IA feitas a partir de frames estáticos. Revisar miniaturas/trechos. A palavra "assalto" na consulta NÃO valida que há um roubo visível.
+
+BUSCA assalto|roubo: 2 correspondências
+
+[216] USAR PREFERENCIALMENTE NO GANCHO ou como APOIO ILUSTRATIVO DO CRIME
+arquivo: public/videos/biblioteca/gta6/videos/gta6-extended.mp4
+origem: 00:23:16.200 -> 00:23:19.400 (3.200s)
+scene: 216; trecho: 0
+descricao: Três homens vestindo macacões brancos e máscaras faciais em local escuro com luz azulada, segurando armas de assalto.
+miniatura: public/videos/biblioteca/catalogo/gta6/gta6-extended/miniaturas/gta6-extended-Scene-216-01.webp
+checagem: confirmar no vídeo se existe ação; não inferir disparos, mortes ou roubo em loja.
+
+[223] USAR COMO CONTRASTE B (COMPORTAMENTO ILUSTRATIVO), NÃO COMO PROVA DE ATACAR
+arquivo: public/videos/biblioteca/gta6/videos/gta6-extended.mp4
+origem: 00:23:59.567 -> 00:24:01.867 (2.300s)
+scene: 223; trecho: 0
+descricao: Homem com casaco branco, óculos de proteção e rifle, com pouca visibilidade em ambiente escuro.
+miniatura: public/videos/biblioteca/catalogo/gta6/gta6-extended/miniaturas/gta6-extended-Scene-223-01.webp
+checagem: frame mostra arma, não comprova tiro nem ataque.
+
+BUSCA policia|tiroteio: 5 correspondências
+
+[140-1] USAR NO EXPLAINER SOBRE MUNDO REAGINDO (APENAS AMBIENTAÇÃO)
+arquivo: public/videos/biblioteca/gta6/videos/gta6-extended.mp4
+origem: 00:15:43.067 -> 00:15:52.256 (9.189s)
+scene: 140; trecho: 1
+descricao: helicóptero voando para direita, viatura preta na rua, prédios altos e palmeiras.
+miniatura: public/videos/biblioteca/catalogo/gta6/gta6-extended/miniaturas-extras/gta6-extended-Scene-140-Trecho-01.webp
+revisar: SUBTRECHO DE CENA LONGA
+checagem: não é demonstração de consequência do Perfil Criminal.
+
+[172] RESERVA (PLANO DE PAUSA/CORTE)
+arquivo: public/videos/biblioteca/gta6/videos/gta6-extended.mp4
+origem: 00:18:43.433 -> 00:18:48.567 (5.134s)
+scene: 172; trecho: 0
+descricao: carro policial azul parado em estacionamento escuro e objetos no chão.
+miniatura: public/videos/biblioteca/catalogo/gta6/gta6-extended/miniaturas/gta6-extended-Scene-172-01.webp
+checagem: não usar para ilustrar uma perseguição.
+
+[41] ACENTO VISUAL PARA ADMIRAÇÃO/CONSEQUÊNCIA
+arquivo: public/videos/biblioteca/gta6/videos/Launch Trailer.mp4
+origem: 00:01:10.200 -> 00:01:11.400 (1.200s)
+scene: 41; trecho: 0
+descricao: viatura com luzes acesas e faíscas em ambiente noturno com árvores.
+miniatura: public/videos/biblioteca/catalogo/gta6/Launch Trailer/miniaturas/Launch Trailer-Scene-041-01.webp
+checagem: plano curto; não prolongar/repetir artificialmente.
+
+[16] PLANO MAIS CALMO PARA "MAS CALMA" / INTRODUÇÃO AO PERFIL
+arquivo: public/videos/biblioteca/gta6/videos/Trailer 2 GTA VI.mp4
+origem: 00:00:45.267 -> 00:00:49.833 (4.566s)
+scene: 16; trecho: 0
+descricao: carro preto em frente a grafite colorido com uma viatura policial próxima.
+miniatura: public/videos/biblioteca/catalogo/gta6/Trailer 2 GTA VI/miniaturas/Trailer 2 GTA VI-Scene-016-01.webp
+revisar: CONFERIR OBJETO/CONTEXTO ESPECÍFICO
+checagem: confirmar contexto, especialmente movimento e enquadramento 9:16.
+
+[75] RESERVA OPCIONAL, EVITAR SE CONFUNDIR O TEMA
+arquivo: public/videos/biblioteca/gta6/videos/Trailer 2 GTA VI.mp4
+origem: 00:02:27.300 -> 00:02:28.233 (0.933s)
+scene: 75; trecho: 0
+descricao: barco rápido e helicóptero policial em ambiente aquático.
+miniatura: public/videos/biblioteca/catalogo/gta6/Trailer 2 GTA VI/miniaturas/Trailer 2 GTA VI-Scene-075-01.webp
+revisar: CONFERIR OBJETO/CONTEXTO ESPECÍFICO
+checagem: vídeo curto e contexto distinto; opcional descartar.
+
+BUSCA fuga|perseguicao: 0 correspondências
+BUSCA Jason|Lucia: 0 correspondências
+NÃO inventar mídia para preencher estas buscas. Procure novas palavras no catálogo, apenas se faltar um plano.
+
+MARCAÇÕES HISTÓRICAS DO STORYBOARD ANTERIOR (NÃO CONSTAM DO COMANDO ACIMA; EXIGEM REVISÃO NO MP4):
+- gta6-extended.mp4 14:02,260 -> 14:12,050: candidato a tiroteio de Jason para gancho.
+- gta6-extended.mp4 18:01,110 -> 18:08,130: candidato a assalto para Jogador A.
+- gta6-extended.mp4 16:24,180 -> 16:29,040: HUD de procurado, NÃO Perfil Criminal.
+
+RDR2: buscar arquivo original com barra de honra; sem dados de timestamp confirmados.
+GTA5: opcional somente para apoio se o jogo for identificado no vídeo.
+
+VALIDAÇÃO FINAL PELO CODEX PARA CADA CORTE UTILIZADO:
+- arquivo real, sourceStart, sourceEnd, movimento/objeto confirmado, x/y focal verificado,
+  tempo de exibição, frase associada, intenção, qualidade do corte, rótulo de ilustração.

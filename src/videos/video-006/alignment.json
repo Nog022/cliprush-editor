@@ -1,0 +1,775 @@
+{
+  "method": "faster-whisper large-v3, cached CPU int8; automatic estimates",
+  "segments": [
+    {
+      "startMs": 0,
+      "endMs": 3340,
+      "text": " GTA VI evoluiu mesmo. Ou só ficou mais bonito?",
+      "words": [
+        {
+          "text": " GTA",
+          "startMs": 0,
+          "endMs": 300,
+          "timestampMs": 150,
+          "confidence": 0.9546705484390259
+        },
+        {
+          "text": " VI",
+          "startMs": 300,
+          "endMs": 700,
+          "timestampMs": 500,
+          "confidence": 0.5353332161903381
+        },
+        {
+          "text": " evoluiu",
+          "startMs": 700,
+          "endMs": 1340,
+          "timestampMs": 1020,
+          "confidence": 0.9970041712125143
+        },
+        {
+          "text": " mesmo.",
+          "startMs": 1340,
+          "endMs": 1700,
+          "timestampMs": 1520,
+          "confidence": 0.9779146909713745
+        },
+        {
+          "text": " Ou",
+          "startMs": 1940,
+          "endMs": 2260,
+          "timestampMs": 2100,
+          "confidence": 0.8348493576049805
+        },
+        {
+          "text": " só",
+          "startMs": 2260,
+          "endMs": 2600,
+          "timestampMs": 2430,
+          "confidence": 0.9271546602249146
+        },
+        {
+          "text": " ficou",
+          "startMs": 2600,
+          "endMs": 2840,
+          "timestampMs": 2720,
+          "confidence": 0.9947054982185364
+        },
+        {
+          "text": " mais",
+          "startMs": 2840,
+          "endMs": 3040,
+          "timestampMs": 2940,
+          "confidence": 0.9960212111473083
+        },
+        {
+          "text": " bonito?",
+          "startMs": 3040,
+          "endMs": 3340,
+          "timestampMs": 3190,
+          "confidence": 0.9990994930267334
+        }
+      ]
+    },
+    {
+      "startMs": 3680,
+      "endMs": 5860,
+      "text": " A última comparação muda tudo!",
+      "words": [
+        {
+          "text": " A",
+          "startMs": 3680,
+          "endMs": 4040,
+          "timestampMs": 3860,
+          "confidence": 0.9727547764778137
+        },
+        {
+          "text": " última",
+          "startMs": 4040,
+          "endMs": 4360,
+          "timestampMs": 4200,
+          "confidence": 0.9792896509170532
+        },
+        {
+          "text": " comparação",
+          "startMs": 4360,
+          "endMs": 5140,
+          "timestampMs": 4750,
+          "confidence": 0.998102605342865
+        },
+        {
+          "text": " muda",
+          "startMs": 5140,
+          "endMs": 5560,
+          "timestampMs": 5350,
+          "confidence": 0.9882512986660004
+        },
+        {
+          "text": " tudo!",
+          "startMs": 5560,
+          "endMs": 5860,
+          "timestampMs": 5710,
+          "confidence": 0.9338290691375732
+        }
+      ]
+    },
+    {
+      "startMs": 6440,
+      "endMs": 10740,
+      "text": " as ruas. Compara Los Santos com a movimentação de Vice City.",
+      "words": [
+        {
+          "text": " as",
+          "startMs": 6440,
+          "endMs": 6980,
+          "timestampMs": 6710,
+          "confidence": 0.2271132618188858
+        },
+        {
+          "text": " ruas.",
+          "startMs": 6980,
+          "endMs": 7880,
+          "timestampMs": 7430,
+          "confidence": 0.9843203127384186
+        },
+        {
+          "text": " Compara",
+          "startMs": 7900,
+          "endMs": 8460,
+          "timestampMs": 8180,
+          "confidence": 0.9945081770420074
+        },
+        {
+          "text": " Los",
+          "startMs": 8460,
+          "endMs": 8620,
+          "timestampMs": 8540,
+          "confidence": 0.9671781659126282
+        },
+        {
+          "text": " Santos",
+          "startMs": 8620,
+          "endMs": 8960,
+          "timestampMs": 8790,
+          "confidence": 0.9948716163635254
+        },
+        {
+          "text": " com",
+          "startMs": 8960,
+          "endMs": 9220,
+          "timestampMs": 9090,
+          "confidence": 0.9973994493484497
+        },
+        {
+          "text": " a",
+          "startMs": 9220,
+          "endMs": 9320,
+          "timestampMs": 9270,
+          "confidence": 0.9914233088493347
+        },
+        {
+          "text": " movimentação",
+          "startMs": 9320,
+          "endMs": 9960,
+          "timestampMs": 9640,
+          "confidence": 0.9988166888554891
+        },
+        {
+          "text": " de",
+          "startMs": 9960,
+          "endMs": 10180,
+          "timestampMs": 10070,
+          "confidence": 0.9867486953735352
+        },
+        {
+          "text": " Vice",
+          "startMs": 10180,
+          "endMs": 10400,
+          "timestampMs": 10290,
+          "confidence": 0.9978657364845276
+        },
+        {
+          "text": " City.",
+          "startMs": 10400,
+          "endMs": 10740,
+          "timestampMs": 10570,
+          "confidence": 0.9959961175918579
+        }
+      ]
+    },
+    {
+      "startMs": 11200,
+      "endMs": 17460,
+      "text": " as praias. GTA V já tinha vida, mas olha as multidões nos trailers de GTA VI.",
+      "words": [
+        {
+          "text": " as",
+          "startMs": 11200,
+          "endMs": 11840,
+          "timestampMs": 11520,
+          "confidence": 0.8346987366676331
+        },
+        {
+          "text": " praias.",
+          "startMs": 11840,
+          "endMs": 12700,
+          "timestampMs": 12270,
+          "confidence": 0.9989775717258453
+        },
+        {
+          "text": " GTA",
+          "startMs": 12920,
+          "endMs": 13320,
+          "timestampMs": 13120,
+          "confidence": 0.999009370803833
+        },
+        {
+          "text": " V",
+          "startMs": 13320,
+          "endMs": 13620,
+          "timestampMs": 13470,
+          "confidence": 0.9807159900665283
+        },
+        {
+          "text": " já",
+          "startMs": 13620,
+          "endMs": 13880,
+          "timestampMs": 13750,
+          "confidence": 0.9975903034210205
+        },
+        {
+          "text": " tinha",
+          "startMs": 13880,
+          "endMs": 14100,
+          "timestampMs": 13990,
+          "confidence": 0.9972002506256104
+        },
+        {
+          "text": " vida,",
+          "startMs": 14100,
+          "endMs": 14380,
+          "timestampMs": 14240,
+          "confidence": 0.997569739818573
+        },
+        {
+          "text": " mas",
+          "startMs": 14580,
+          "endMs": 14840,
+          "timestampMs": 14710,
+          "confidence": 0.9952717423439026
+        },
+        {
+          "text": " olha",
+          "startMs": 14840,
+          "endMs": 15120,
+          "timestampMs": 14980,
+          "confidence": 0.8647971749305725
+        },
+        {
+          "text": " as",
+          "startMs": 15120,
+          "endMs": 15260,
+          "timestampMs": 15190,
+          "confidence": 0.9798616170883179
+        },
+        {
+          "text": " multidões",
+          "startMs": 15260,
+          "endMs": 16100,
+          "timestampMs": 15680,
+          "confidence": 0.9945956667264303
+        },
+        {
+          "text": " nos",
+          "startMs": 16100,
+          "endMs": 16280,
+          "timestampMs": 16190,
+          "confidence": 0.9808064699172974
+        },
+        {
+          "text": " trailers",
+          "startMs": 16280,
+          "endMs": 16600,
+          "timestampMs": 16440,
+          "confidence": 0.9967930912971497
+        },
+        {
+          "text": " de",
+          "startMs": 16600,
+          "endMs": 16840,
+          "timestampMs": 16720,
+          "confidence": 0.9945797920227051
+        },
+        {
+          "text": " GTA",
+          "startMs": 16840,
+          "endMs": 17080,
+          "timestampMs": 16960,
+          "confidence": 0.9991206526756287
+        },
+        {
+          "text": " VI.",
+          "startMs": 17080,
+          "endMs": 17460,
+          "timestampMs": 17270,
+          "confidence": 0.9848207831382751
+        }
+      ]
+    },
+    {
+      "startMs": 18040,
+      "endMs": 22500,
+      "text": " a noite. Repara nos carros, nas luzes e nos reflexos.",
+      "words": [
+        {
+          "text": " a",
+          "startMs": 18040,
+          "endMs": 18680,
+          "timestampMs": 18360,
+          "confidence": 0.6746153235435486
+        },
+        {
+          "text": " noite.",
+          "startMs": 18680,
+          "endMs": 19240,
+          "timestampMs": 18960,
+          "confidence": 0.9985659718513489
+        },
+        {
+          "text": " Repara",
+          "startMs": 19540,
+          "endMs": 20040,
+          "timestampMs": 19790,
+          "confidence": 0.9893273115158081
+        },
+        {
+          "text": " nos",
+          "startMs": 20040,
+          "endMs": 20180,
+          "timestampMs": 20110,
+          "confidence": 0.997806966304779
+        },
+        {
+          "text": " carros,",
+          "startMs": 20180,
+          "endMs": 20760,
+          "timestampMs": 20470,
+          "confidence": 0.9992163479328156
+        },
+        {
+          "text": " nas",
+          "startMs": 20820,
+          "endMs": 20940,
+          "timestampMs": 20880,
+          "confidence": 0.9923151135444641
+        },
+        {
+          "text": " luzes",
+          "startMs": 20940,
+          "endMs": 21560,
+          "timestampMs": 21250,
+          "confidence": 0.9989133477210999
+        },
+        {
+          "text": " e",
+          "startMs": 21560,
+          "endMs": 21660,
+          "timestampMs": 21610,
+          "confidence": 0.9763689041137695
+        },
+        {
+          "text": " nos",
+          "startMs": 21660,
+          "endMs": 21800,
+          "timestampMs": 21730,
+          "confidence": 0.9961877465248108
+        },
+        {
+          "text": " reflexos.",
+          "startMs": 21800,
+          "endMs": 22500,
+          "timestampMs": 22150,
+          "confidence": 0.9993909597396851
+        }
+      ]
+    },
+    {
+      "startMs": 22800,
+      "endMs": 27920,
+      "text": " os celulares. Vídeos e redes sociais estão por toda parte em GTA VI.",
+      "words": [
+        {
+          "text": " os",
+          "startMs": 22800,
+          "endMs": 23440,
+          "timestampMs": 23120,
+          "confidence": 0.8948245644569397
+        },
+        {
+          "text": " celulares.",
+          "startMs": 23440,
+          "endMs": 24240,
+          "timestampMs": 23840,
+          "confidence": 0.99903604388237
+        },
+        {
+          "text": " Vídeos",
+          "startMs": 24560,
+          "endMs": 25180,
+          "timestampMs": 24870,
+          "confidence": 0.9937101304531097
+        },
+        {
+          "text": " e",
+          "startMs": 25180,
+          "endMs": 25240,
+          "timestampMs": 25210,
+          "confidence": 0.9974155426025391
+        },
+        {
+          "text": " redes",
+          "startMs": 25240,
+          "endMs": 25380,
+          "timestampMs": 25310,
+          "confidence": 0.9964736104011536
+        },
+        {
+          "text": " sociais",
+          "startMs": 25380,
+          "endMs": 25760,
+          "timestampMs": 25570,
+          "confidence": 0.9990065693855286
+        },
+        {
+          "text": " estão",
+          "startMs": 25760,
+          "endMs": 26160,
+          "timestampMs": 25960,
+          "confidence": 0.9983817338943481
+        },
+        {
+          "text": " por",
+          "startMs": 26160,
+          "endMs": 26360,
+          "timestampMs": 26260,
+          "confidence": 0.9940428137779236
+        },
+        {
+          "text": " toda",
+          "startMs": 26360,
+          "endMs": 26700,
+          "timestampMs": 26530,
+          "confidence": 0.9947309494018555
+        },
+        {
+          "text": " parte",
+          "startMs": 26700,
+          "endMs": 27180,
+          "timestampMs": 26940,
+          "confidence": 0.7180197834968567
+        },
+        {
+          "text": " em",
+          "startMs": 27180,
+          "endMs": 27340,
+          "timestampMs": 27260,
+          "confidence": 0.998114824295044
+        },
+        {
+          "text": " GTA",
+          "startMs": 27340,
+          "endMs": 27540,
+          "timestampMs": 27440,
+          "confidence": 0.9994527697563171
+        },
+        {
+          "text": " VI.",
+          "startMs": 27540,
+          "endMs": 27920,
+          "timestampMs": 27730,
+          "confidence": 0.994841992855072
+        }
+      ]
+    },
+    {
+      "startMs": 27920,
+      "endMs": 31400,
+      "text": " mas a maior evolução não está nos gráficos.",
+      "words": [
+        {
+          "text": " mas",
+          "startMs": 27920,
+          "endMs": 28600,
+          "timestampMs": 28260,
+          "confidence": 0.1696915328502655
+        },
+        {
+          "text": " a",
+          "startMs": 28600,
+          "endMs": 28760,
+          "timestampMs": 28680,
+          "confidence": 0.9967381358146667
+        },
+        {
+          "text": " maior",
+          "startMs": 28760,
+          "endMs": 29060,
+          "timestampMs": 28910,
+          "confidence": 0.9971367120742798
+        },
+        {
+          "text": " evolução",
+          "startMs": 29060,
+          "endMs": 29680,
+          "timestampMs": 29370,
+          "confidence": 0.9975347816944122
+        },
+        {
+          "text": " não",
+          "startMs": 29680,
+          "endMs": 30260,
+          "timestampMs": 29970,
+          "confidence": 0.9899157285690308
+        },
+        {
+          "text": " está",
+          "startMs": 30260,
+          "endMs": 30520,
+          "timestampMs": 30390,
+          "confidence": 0.9968534111976624
+        },
+        {
+          "text": " nos",
+          "startMs": 30520,
+          "endMs": 30740,
+          "timestampMs": 30630,
+          "confidence": 0.9970967769622803
+        },
+        {
+          "text": " gráficos.",
+          "startMs": 30740,
+          "endMs": 31400,
+          "timestampMs": 31070,
+          "confidence": 0.9995441734790802
+        }
+      ]
+    },
+    {
+      "startMs": 31520,
+      "endMs": 36980,
+      "text": " GTA V tinha cerca de 55 mil animações de NPCs. GTA VI?",
+      "words": [
+        {
+          "text": " GTA",
+          "startMs": 31520,
+          "endMs": 32080,
+          "timestampMs": 31800,
+          "confidence": 0.9918760061264038
+        },
+        {
+          "text": " V",
+          "startMs": 32080,
+          "endMs": 32400,
+          "timestampMs": 32240,
+          "confidence": 0.903192400932312
+        },
+        {
+          "text": " tinha",
+          "startMs": 32400,
+          "endMs": 32780,
+          "timestampMs": 32590,
+          "confidence": 0.9968986511230469
+        },
+        {
+          "text": " cerca",
+          "startMs": 32780,
+          "endMs": 33100,
+          "timestampMs": 32940,
+          "confidence": 0.9990319013595581
+        },
+        {
+          "text": " de",
+          "startMs": 33100,
+          "endMs": 33340,
+          "timestampMs": 33220,
+          "confidence": 0.9992032647132874
+        },
+        {
+          "text": " 55",
+          "startMs": 33340,
+          "endMs": 34000,
+          "timestampMs": 33670,
+          "confidence": 0.9963321089744568
+        },
+        {
+          "text": " mil",
+          "startMs": 34000,
+          "endMs": 34620,
+          "timestampMs": 34310,
+          "confidence": 0.9452687501907349
+        },
+        {
+          "text": " animações",
+          "startMs": 34620,
+          "endMs": 35300,
+          "timestampMs": 34960,
+          "confidence": 0.9986931383609772
+        },
+        {
+          "text": " de",
+          "startMs": 35300,
+          "endMs": 35440,
+          "timestampMs": 35370,
+          "confidence": 0.9993417859077454
+        },
+        {
+          "text": " NPCs.",
+          "startMs": 35440,
+          "endMs": 36120,
+          "timestampMs": 35780,
+          "confidence": 0.9940136969089508
+        },
+        {
+          "text": " GTA",
+          "startMs": 36140,
+          "endMs": 36600,
+          "timestampMs": 36370,
+          "confidence": 0.9942224621772766
+        },
+        {
+          "text": " VI?",
+          "startMs": 36600,
+          "endMs": 36980,
+          "timestampMs": 36790,
+          "confidence": 0.9874045848846436
+        }
+      ]
+    },
+    {
+      "startMs": 37240,
+      "endMs": 39180,
+      "text": " Cerca de 600 mil!",
+      "words": [
+        {
+          "text": " Cerca",
+          "startMs": 37240,
+          "endMs": 37820,
+          "timestampMs": 37530,
+          "confidence": 0.9836097657680511
+        },
+        {
+          "text": " de",
+          "startMs": 37820,
+          "endMs": 37940,
+          "timestampMs": 37880,
+          "confidence": 0.9990266561508179
+        },
+        {
+          "text": " 600",
+          "startMs": 37940,
+          "endMs": 38420,
+          "timestampMs": 38180,
+          "confidence": 0.9991999268531799
+        },
+        {
+          "text": " mil!",
+          "startMs": 38420,
+          "endMs": 39180,
+          "timestampMs": 38800,
+          "confidence": 0.9881486296653748
+        }
+      ]
+    },
+    {
+      "startMs": 39460,
+      "endMs": 43060,
+      "text": " Será que Vice City vai parecer uma cidade de verdade? Comenta aí!",
+      "words": [
+        {
+          "text": " Será",
+          "startMs": 39460,
+          "endMs": 39820,
+          "timestampMs": 39640,
+          "confidence": 0.9983265995979309
+        },
+        {
+          "text": " que",
+          "startMs": 39820,
+          "endMs": 39980,
+          "timestampMs": 39900,
+          "confidence": 0.9997853636741638
+        },
+        {
+          "text": " Vice",
+          "startMs": 39980,
+          "endMs": 40220,
+          "timestampMs": 40100,
+          "confidence": 0.9979965090751648
+        },
+        {
+          "text": " City",
+          "startMs": 40220,
+          "endMs": 40580,
+          "timestampMs": 40400,
+          "confidence": 0.9998123049736023
+        },
+        {
+          "text": " vai",
+          "startMs": 40580,
+          "endMs": 40780,
+          "timestampMs": 40680,
+          "confidence": 0.999545156955719
+        },
+        {
+          "text": " parecer",
+          "startMs": 40780,
+          "endMs": 41100,
+          "timestampMs": 40940,
+          "confidence": 0.9966809153556824
+        },
+        {
+          "text": " uma",
+          "startMs": 41100,
+          "endMs": 41300,
+          "timestampMs": 41200,
+          "confidence": 0.999382495880127
+        },
+        {
+          "text": " cidade",
+          "startMs": 41300,
+          "endMs": 41580,
+          "timestampMs": 41440,
+          "confidence": 0.9996366500854492
+        },
+        {
+          "text": " de",
+          "startMs": 41580,
+          "endMs": 41840,
+          "timestampMs": 41710,
+          "confidence": 0.9994919300079346
+        },
+        {
+          "text": " verdade?",
+          "startMs": 41840,
+          "endMs": 42100,
+          "timestampMs": 41970,
+          "confidence": 0.999903678894043
+        },
+        {
+          "text": " Comenta",
+          "startMs": 42380,
+          "endMs": 42920,
+          "timestampMs": 42650,
+          "confidence": 0.9983987510204315
+        },
+        {
+          "text": " aí!",
+          "startMs": 42920,
+          "endMs": 43060,
+          "timestampMs": 42990,
+          "confidence": 0.9983311295509338
+        }
+      ]
+    }
+  ]
+}

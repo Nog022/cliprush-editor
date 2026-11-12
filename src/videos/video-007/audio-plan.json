@@ -1,0 +1,39 @@
+{
+  "events": [
+    [
+      0,
+      "hit"
+    ],
+    [
+      9.86,
+      "metal"
+    ],
+    [
+      18.76,
+      "stamp"
+    ],
+    [
+      22.98,
+      "hit"
+    ],
+    [
+      26.68,
+      "radio"
+    ],
+    [
+      30.55,
+      "radio"
+    ],
+    [
+      34.46,
+      "radio"
+    ],
+    [
+      37.48,
+      "hit"
+    ]
+  ],
+  "score": "original deterministic synthesis, no samples",
+  "voice": "original intact; gain 0.92; no retiming",
+  "captionMethod": "cached faster-whisper large-v3 word estimates; progressive reveal; no invented transcript"
+}

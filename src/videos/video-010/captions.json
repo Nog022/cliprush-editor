@@ -1,0 +1,779 @@
+[
+  {
+    "text": " GTA",
+    "startMs": 0,
+    "endMs": 380,
+    "timestampMs": 190,
+    "confidence": 0.8786988258361816
+  },
+  {
+    "text": " 6",
+    "startMs": 380,
+    "endMs": 740,
+    "timestampMs": 560,
+    "confidence": 0.47257906198501587
+  },
+  {
+    "text": " vai",
+    "startMs": 740,
+    "endMs": 1000,
+    "timestampMs": 870,
+    "confidence": 0.9886460304260254
+  },
+  {
+    "text": " superar",
+    "startMs": 1000,
+    "endMs": 1720,
+    "timestampMs": 1360,
+    "confidence": 0.9982743561267853
+  },
+  {
+    "text": " a",
+    "startMs": 1720,
+    "endMs": 1780,
+    "timestampMs": 1750,
+    "confidence": 0.9908889532089233
+  },
+  {
+    "text": " vida",
+    "startMs": 1780,
+    "endMs": 1920,
+    "timestampMs": 1850,
+    "confidence": 0.9826578497886658
+  },
+  {
+    "text": " selvagem",
+    "startMs": 1920,
+    "endMs": 2560,
+    "timestampMs": 2240,
+    "confidence": 0.9994882941246033
+  },
+  {
+    "text": " de",
+    "startMs": 2560,
+    "endMs": 2700,
+    "timestampMs": 2630,
+    "confidence": 0.9932043552398682
+  },
+  {
+    "text": " Red",
+    "startMs": 2700,
+    "endMs": 2940,
+    "timestampMs": 2820,
+    "confidence": 0.9842748045921326
+  },
+  {
+    "text": " Dead",
+    "startMs": 2940,
+    "endMs": 3120,
+    "timestampMs": 3030,
+    "confidence": 0.9992634654045105
+  },
+  {
+    "text": " 2?",
+    "startMs": 3120,
+    "endMs": 3420,
+    "timestampMs": 3270,
+    "confidence": 0.9933661818504333
+  },
+  {
+    "text": " Em",
+    "startMs": 4224,
+    "endMs": 4259,
+    "timestampMs": 4241,
+    "confidence": 0.9868116974830627
+  },
+  {
+    "text": " Red",
+    "startMs": 4259,
+    "endMs": 4440,
+    "timestampMs": 4349,
+    "confidence": 0.9968256950378418
+  },
+  {
+    "text": " Dead",
+    "startMs": 4440,
+    "endMs": 4600,
+    "timestampMs": 4520,
+    "confidence": 0.997323215007782
+  },
+  {
+    "text": " 2,",
+    "startMs": 4600,
+    "endMs": 4900,
+    "timestampMs": 4750,
+    "confidence": 0.9991992115974426
+  },
+  {
+    "text": " são",
+    "startMs": 5020,
+    "endMs": 5200,
+    "timestampMs": 5110,
+    "confidence": 0.9923475980758667
+  },
+  {
+    "text": " quase",
+    "startMs": 5200,
+    "endMs": 5500,
+    "timestampMs": 5350,
+    "confidence": 0.999108612537384
+  },
+  {
+    "text": " 200",
+    "startMs": 5500,
+    "endMs": 5960,
+    "timestampMs": 5730,
+    "confidence": 0.9893680214881897
+  },
+  {
+    "text": " espécies.",
+    "startMs": 5960,
+    "endMs": 6860,
+    "timestampMs": 6410,
+    "confidence": 0.9997459053993225
+  },
+  {
+    "text": " Lobos",
+    "startMs": 7463,
+    "endMs": 7780,
+    "timestampMs": 7621,
+    "confidence": 0.9740271270275116
+  },
+  {
+    "text": " caçam",
+    "startMs": 7780,
+    "endMs": 8180,
+    "timestampMs": 7980,
+    "confidence": 0.9983868797620138
+  },
+  {
+    "text": " em",
+    "startMs": 8180,
+    "endMs": 8220,
+    "timestampMs": 8200,
+    "confidence": 0.9968589544296265
+  },
+  {
+    "text": " grupo.",
+    "startMs": 8220,
+    "endMs": 8480,
+    "timestampMs": 8350,
+    "confidence": 0.9918491840362549
+  },
+  {
+    "text": " E",
+    "startMs": 9032,
+    "endMs": 9067,
+    "timestampMs": 9049,
+    "confidence": 0.39538756012916565
+  },
+  {
+    "text": " gambás",
+    "startMs": 9067,
+    "endMs": 9480,
+    "timestampMs": 9273,
+    "confidence": 0.957381546497345
+  },
+  {
+    "text": " até",
+    "startMs": 9480,
+    "endMs": 9680,
+    "timestampMs": 9580,
+    "confidence": 0.9716948866844177
+  },
+  {
+    "text": " fingem",
+    "startMs": 9680,
+    "endMs": 10340,
+    "timestampMs": 10010,
+    "confidence": 0.9974753558635712
+  },
+  {
+    "text": " de",
+    "startMs": 10340,
+    "endMs": 10480,
+    "timestampMs": 10410,
+    "confidence": 0.964961588382721
+  },
+  {
+    "text": " mortos.",
+    "startMs": 10480,
+    "endMs": 11060,
+    "timestampMs": 10770,
+    "confidence": 0.9978314340114594
+  },
+  {
+    "text": " Agora",
+    "startMs": 11598,
+    "endMs": 11700,
+    "timestampMs": 11649,
+    "confidence": 0.6368260979652405
+  },
+  {
+    "text": " olha",
+    "startMs": 11700,
+    "endMs": 12080,
+    "timestampMs": 11890,
+    "confidence": 0.5670984983444214
+  },
+  {
+    "text": " o",
+    "startMs": 12080,
+    "endMs": 12200,
+    "timestampMs": 12140,
+    "confidence": 0.9966404438018799
+  },
+  {
+    "text": " que",
+    "startMs": 12200,
+    "endMs": 12320,
+    "timestampMs": 12260,
+    "confidence": 0.9990658164024353
+  },
+  {
+    "text": " a",
+    "startMs": 12320,
+    "endMs": 12355,
+    "timestampMs": 12337,
+    "confidence": 0.9911948442459106
+  },
+  {
+    "text": " Rockstar",
+    "startMs": 12355,
+    "endMs": 12740,
+    "timestampMs": 12547,
+    "confidence": 0.9957249164581299
+  },
+  {
+    "text": " mostrou",
+    "startMs": 12740,
+    "endMs": 13220,
+    "timestampMs": 12980,
+    "confidence": 0.9980009496212006
+  },
+  {
+    "text": " em",
+    "startMs": 13220,
+    "endMs": 13340,
+    "timestampMs": 13280,
+    "confidence": 0.9940173625946045
+  },
+  {
+    "text": " GTA",
+    "startMs": 13340,
+    "endMs": 13600,
+    "timestampMs": 13470,
+    "confidence": 0.996437668800354
+  },
+  {
+    "text": " 6.",
+    "startMs": 13600,
+    "endMs": 13980,
+    "timestampMs": 13790,
+    "confidence": 0.6438339352607727
+  },
+  {
+    "text": " Tem",
+    "startMs": 14599,
+    "endMs": 14634,
+    "timestampMs": 14616,
+    "confidence": 0.848246157169342
+  },
+  {
+    "text": " cervos",
+    "startMs": 14634,
+    "endMs": 15240,
+    "timestampMs": 14937,
+    "confidence": 0.9625488519668579
+  },
+  {
+    "text": " perto",
+    "startMs": 15240,
+    "endMs": 15460,
+    "timestampMs": 15350,
+    "confidence": 0.9973467588424683
+  },
+  {
+    "text": " de",
+    "startMs": 15460,
+    "endMs": 15700,
+    "timestampMs": 15580,
+    "confidence": 0.9961734414100647
+  },
+  {
+    "text": " Jason",
+    "startMs": 15700,
+    "endMs": 16020,
+    "timestampMs": 15860,
+    "confidence": 0.974912703037262
+  },
+  {
+    "text": " e",
+    "startMs": 16020,
+    "endMs": 16200,
+    "timestampMs": 16110,
+    "confidence": 0.9976563453674316
+  },
+  {
+    "text": " Lúcia.",
+    "startMs": 16200,
+    "endMs": 16620,
+    "timestampMs": 16410,
+    "confidence": 0.7070611119270325
+  },
+  {
+    "text": " E,",
+    "startMs": 17000,
+    "endMs": 17080,
+    "timestampMs": 17040,
+    "confidence": 0.6521991491317749
+  },
+  {
+    "text": " na",
+    "startMs": 17120,
+    "endMs": 17300,
+    "timestampMs": 17210,
+    "confidence": 0.9992873072624207
+  },
+  {
+    "text": " floresta,",
+    "startMs": 17300,
+    "endMs": 17920,
+    "timestampMs": 17610,
+    "confidence": 0.9979997078577677
+  },
+  {
+    "text": " um",
+    "startMs": 17980,
+    "endMs": 18220,
+    "timestampMs": 18100,
+    "confidence": 0.9974768757820129
+  },
+  {
+    "text": " puma",
+    "startMs": 18220,
+    "endMs": 18680,
+    "timestampMs": 18450,
+    "confidence": 0.9780787527561188
+  },
+  {
+    "text": " aparece",
+    "startMs": 18680,
+    "endMs": 19080,
+    "timestampMs": 18880,
+    "confidence": 0.9989084005355835
+  },
+  {
+    "text": " à",
+    "startMs": 19080,
+    "endMs": 19320,
+    "timestampMs": 19200,
+    "confidence": 0.9895173907279968
+  },
+  {
+    "text": " espreita.",
+    "startMs": 19320,
+    "endMs": 19820,
+    "timestampMs": 19570,
+    "confidence": 0.9993817607561747
+  },
+  {
+    "text": " Mas",
+    "startMs": 20317,
+    "endMs": 20352,
+    "timestampMs": 20334,
+    "confidence": 0.999582827091217
+  },
+  {
+    "text": " a",
+    "startMs": 20352,
+    "endMs": 20480,
+    "timestampMs": 20416,
+    "confidence": 0.9985156655311584
+  },
+  {
+    "text": " natureza",
+    "startMs": 20480,
+    "endMs": 20980,
+    "timestampMs": 20730,
+    "confidence": 0.9994217753410339
+  },
+  {
+    "text": " não",
+    "startMs": 20980,
+    "endMs": 21180,
+    "timestampMs": 21080,
+    "confidence": 0.9995031356811523
+  },
+  {
+    "text": " para",
+    "startMs": 21180,
+    "endMs": 21500,
+    "timestampMs": 21340,
+    "confidence": 0.9866378307342529
+  },
+  {
+    "text": " por",
+    "startMs": 21500,
+    "endMs": 21680,
+    "timestampMs": 21590,
+    "confidence": 0.99974125623703
+  },
+  {
+    "text": " aí.",
+    "startMs": 21680,
+    "endMs": 21900,
+    "timestampMs": 21790,
+    "confidence": 0.998712420463562
+  },
+  {
+    "text": " Nos",
+    "startMs": 22434,
+    "endMs": 22469,
+    "timestampMs": 22451,
+    "confidence": 0.9989290833473206
+  },
+  {
+    "text": " pântanos,",
+    "startMs": 22469,
+    "endMs": 23040,
+    "timestampMs": 22754,
+    "confidence": 0.9996334910392761
+  },
+  {
+    "text": " jacarés",
+    "startMs": 23160,
+    "endMs": 23760,
+    "timestampMs": 23460,
+    "confidence": 0.9796796441078186
+  },
+  {
+    "text": " surgem",
+    "startMs": 23760,
+    "endMs": 24300,
+    "timestampMs": 24030,
+    "confidence": 0.999308168888092
+  },
+  {
+    "text": " no",
+    "startMs": 24300,
+    "endMs": 24360,
+    "timestampMs": 24330,
+    "confidence": 0.9992510676383972
+  },
+  {
+    "text": " meio",
+    "startMs": 24360,
+    "endMs": 24700,
+    "timestampMs": 24530,
+    "confidence": 0.9998915195465088
+  },
+  {
+    "text": " da",
+    "startMs": 24700,
+    "endMs": 24840,
+    "timestampMs": 24770,
+    "confidence": 0.9982007741928101
+  },
+  {
+    "text": " água.",
+    "startMs": 24840,
+    "endMs": 25160,
+    "timestampMs": 25000,
+    "confidence": 0.9998984336853027
+  },
+  {
+    "text": " E",
+    "startMs": 25612,
+    "endMs": 25647,
+    "timestampMs": 25629,
+    "confidence": 0.9992252588272095
+  },
+  {
+    "text": " no",
+    "startMs": 25647,
+    "endMs": 25700,
+    "timestampMs": 25673,
+    "confidence": 0.9374741911888123
+  },
+  {
+    "text": " fundo",
+    "startMs": 25700,
+    "endMs": 26020,
+    "timestampMs": 25860,
+    "confidence": 0.9998519420623779
+  },
+  {
+    "text": " do",
+    "startMs": 26020,
+    "endMs": 26140,
+    "timestampMs": 26080,
+    "confidence": 0.999826967716217
+  },
+  {
+    "text": " mar,",
+    "startMs": 26140,
+    "endMs": 26340,
+    "timestampMs": 26240,
+    "confidence": 0.9999161958694458
+  },
+  {
+    "text": " até",
+    "startMs": 26810,
+    "endMs": 26960,
+    "timestampMs": 26885,
+    "confidence": 0.9991094470024109
+  },
+  {
+    "text": " um",
+    "startMs": 26960,
+    "endMs": 27140,
+    "timestampMs": 27050,
+    "confidence": 0.9995430707931519
+  },
+  {
+    "text": " peixe-leão.",
+    "startMs": 27140,
+    "endMs": 28000,
+    "timestampMs": 27570,
+    "confidence": 0.9998130202293396
+  },
+  {
+    "text": " Só",
+    "startMs": 28591,
+    "endMs": 28626,
+    "timestampMs": 28608,
+    "confidence": 0.9992411136627197
+  },
+  {
+    "text": " que",
+    "startMs": 28626,
+    "endMs": 28720,
+    "timestampMs": 28673,
+    "confidence": 0.9997592568397522
+  },
+  {
+    "text": " tem",
+    "startMs": 28720,
+    "endMs": 28900,
+    "timestampMs": 28810,
+    "confidence": 0.9993076324462891
+  },
+  {
+    "text": " um",
+    "startMs": 28900,
+    "endMs": 28980,
+    "timestampMs": 28940,
+    "confidence": 0.9999438524246216
+  },
+  {
+    "text": " detalhe.",
+    "startMs": 28980,
+    "endMs": 29520,
+    "timestampMs": 29250,
+    "confidence": 0.9999775886535645
+  },
+  {
+    "text": " Mostrar",
+    "startMs": 29927,
+    "endMs": 30280,
+    "timestampMs": 30103,
+    "confidence": 0.999775618314743
+  },
+  {
+    "text": " esses",
+    "startMs": 30280,
+    "endMs": 30480,
+    "timestampMs": 30380,
+    "confidence": 0.9974178075790405
+  },
+  {
+    "text": " animais",
+    "startMs": 30480,
+    "endMs": 31020,
+    "timestampMs": 30750,
+    "confidence": 0.9999520778656006
+  },
+  {
+    "text": " não",
+    "startMs": 31020,
+    "endMs": 31240,
+    "timestampMs": 31130,
+    "confidence": 0.9996964931488037
+  },
+  {
+    "text": " prova",
+    "startMs": 31240,
+    "endMs": 31600,
+    "timestampMs": 31420,
+    "confidence": 0.9988352656364441
+  },
+  {
+    "text": " que",
+    "startMs": 31600,
+    "endMs": 31820,
+    "timestampMs": 31710,
+    "confidence": 0.9999141693115234
+  },
+  {
+    "text": " sejam",
+    "startMs": 31820,
+    "endMs": 32200,
+    "timestampMs": 32010,
+    "confidence": 0.9997595548629761
+  },
+  {
+    "text": " mais",
+    "startMs": 32200,
+    "endMs": 32360,
+    "timestampMs": 32280,
+    "confidence": 0.9996247291564941
+  },
+  {
+    "text": " inteligentes.",
+    "startMs": 32360,
+    "endMs": 33040,
+    "timestampMs": 32700,
+    "confidence": 0.9999772906303406
+  },
+  {
+    "text": " Será",
+    "startMs": 33557,
+    "endMs": 33660,
+    "timestampMs": 33608,
+    "confidence": 0.999678373336792
+  },
+  {
+    "text": " que",
+    "startMs": 33660,
+    "endMs": 33820,
+    "timestampMs": 33740,
+    "confidence": 0.9999594688415527
+  },
+  {
+    "text": " GTA",
+    "startMs": 33820,
+    "endMs": 34060,
+    "timestampMs": 33940,
+    "confidence": 0.9974274039268494
+  },
+  {
+    "text": " VI",
+    "startMs": 34060,
+    "endMs": 34460,
+    "timestampMs": 34260,
+    "confidence": 0.6958073973655701
+  },
+  {
+    "text": " vai",
+    "startMs": 34460,
+    "endMs": 34680,
+    "timestampMs": 34570,
+    "confidence": 0.999901533126831
+  },
+  {
+    "text": " conseguir",
+    "startMs": 34680,
+    "endMs": 34940,
+    "timestampMs": 34810,
+    "confidence": 0.9996943473815918
+  },
+  {
+    "text": " criar",
+    "startMs": 34940,
+    "endMs": 35320,
+    "timestampMs": 35130,
+    "confidence": 0.9995920062065125
+  },
+  {
+    "text": " um",
+    "startMs": 35320,
+    "endMs": 35500,
+    "timestampMs": 35410,
+    "confidence": 0.9997636675834656
+  },
+  {
+    "text": " mundo",
+    "startMs": 35500,
+    "endMs": 35740,
+    "timestampMs": 35620,
+    "confidence": 0.9997404217720032
+  },
+  {
+    "text": " mais",
+    "startMs": 35740,
+    "endMs": 36020,
+    "timestampMs": 35880,
+    "confidence": 0.9997394680976868
+  },
+  {
+    "text": " vivo",
+    "startMs": 36020,
+    "endMs": 36460,
+    "timestampMs": 36240,
+    "confidence": 0.9995032548904419
+  },
+  {
+    "text": " que",
+    "startMs": 36460,
+    "endMs": 36660,
+    "timestampMs": 36560,
+    "confidence": 0.9990302324295044
+  },
+  {
+    "text": " Red",
+    "startMs": 36660,
+    "endMs": 36860,
+    "timestampMs": 36760,
+    "confidence": 0.996690034866333
+  },
+  {
+    "text": " Dead",
+    "startMs": 36860,
+    "endMs": 37080,
+    "timestampMs": 36970,
+    "confidence": 0.9996792078018188
+  },
+  {
+    "text": " 2?",
+    "startMs": 37080,
+    "endMs": 37320,
+    "timestampMs": 37200,
+    "confidence": 0.942797839641571
+  },
+  {
+    "text": " Comenta",
+    "startMs": 37951,
+    "endMs": 38300,
+    "timestampMs": 38125,
+    "confidence": 0.9982995092868805
+  },
+  {
+    "text": " em",
+    "startMs": 38300,
+    "endMs": 38360,
+    "timestampMs": 38330,
+    "confidence": 0.9996756315231323
+  },
+  {
+    "text": " qual",
+    "startMs": 38360,
+    "endMs": 38540,
+    "timestampMs": 38450,
+    "confidence": 0.9998506307601929
+  },
+  {
+    "text": " você",
+    "startMs": 38540,
+    "endMs": 38800,
+    "timestampMs": 38670,
+    "confidence": 0.9998914003372192
+  },
+  {
+    "text": " aposta.",
+    "startMs": 38800,
+    "endMs": 39320,
+    "timestampMs": 39060,
+    "confidence": 0.9997478425502777
+  }
+]

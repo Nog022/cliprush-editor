@@ -1,0 +1,31 @@
+{
+  "original": "public/videos/biblioteca/gta6/videos/gta6-extended.mp4",
+  "reason": "HEVC incompatible with Studio; only user-specified intervals transcoded",
+  "cuts": [
+    {
+      "file": "corte-01-h264.mp4",
+      "sourceStart": 842.26,
+      "sourceEnd": 852.05
+    },
+    {
+      "file": "corte-02-h264.mp4",
+      "sourceStart": 952.02,
+      "sourceEnd": 959.17
+    },
+    {
+      "file": "corte-03-h264.mp4",
+      "sourceStart": 984.18,
+      "sourceEnd": 989.04
+    },
+    {
+      "file": "corte-04-h264.mp4",
+      "sourceStart": 1072.12,
+      "sourceEnd": 1080.18
+    },
+    {
+      "file": "corte-05-h264.mp4",
+      "sourceStart": 1081.11,
+      "sourceEnd": 1088.13
+    }
+  ]
+}

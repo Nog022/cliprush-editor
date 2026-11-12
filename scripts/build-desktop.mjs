@@ -1,0 +1,112 @@
+import { build } from "esbuild";
+import {
+  mkdir,
+  readFile,
+  readdir,
+  stat,
+  writeFile,
+  copyFile,
+} from "node:fs/promises";
+import { createRequire } from "node:module";
+import path from "node:path";
+
+await mkdir("dist/desktop", { recursive: true });
+await mkdir("dist/ui", { recursive: true });
+await build({
+  entryPoints: ["desktop/main.ts", "desktop/preload.ts"],
+  outdir: "dist/desktop",
+  outExtension: { ".js": ".cjs" },
+  bundle: true,
+  platform: "node",
+  format: "cjs",
+  external: ["electron"],
+  target: "node22",
+  sourcemap: true,
+});
+await build({
+  entryPoints: { app: "studio/index.tsx" },
+  outdir: "dist/ui",
+  bundle: true,
+  splitting: true,
+  format: "esm",
+  platform: "browser",
+  target: "chrome134",
+  jsx: "automatic",
+  define: { "process.env.NODE_ENV": '"production"' },
+  minify: true,
+  sourcemap: true,
+});
+await copyFile("studio/index.html", "dist/ui/index.html");
+await build({
+  entryPoints: ["studio/legacy.tsx"],
+  outfile: "dist/legacy-catalog.cjs",
+  bundle: true,
+  platform: "node",
+  format: "cjs",
+  target: "node22",
+  jsx: "automatic",
+});
+const require = createRequire(import.meta.url);
+const { legacyCompositions } = require(path.resolve("dist/legacy-catalog.cjs"));
+const manifest = [];
+for (const {
+  id,
+  name,
+  width,
+  height,
+  fps,
+  durationInFrames,
+} of legacyCompositions) {
+  const match = id.match(/(\d{3})/);
+  let thumbnail, createdAt, updatedAt;
+  if (match) {
+    const folder = `videos/video-${match[1]}`;
+    const files = await readdir(`public/${folder}`, { recursive: true });
+    const first = files.find((file) =>
+      /\.(png|jpg|jpeg|webp|jfif)$/i.test(file),
+    );
+    if (first)
+      thumbnail =
+        "/" +
+        `${folder}/${first.split(path.sep).join("/")}`
+          .split("/")
+          .map(encodeURIComponent)
+          .join("/");
+    const info = await stat(`src/${folder}`);
+    createdAt = info.birthtime.toISOString();
+    updatedAt = info.mtime.toISOString();
+  }
+  manifest.push({
+    id,
+    name,
+    width,
+    height,
+    fps,
+    durationInFrames,
+    thumbnail,
+    createdAt,
+    updatedAt,
+  });
+}
+await writeFile("dist/ui/legacy.json", JSON.stringify(manifest, null, 2));
+const pkg = JSON.parse(await readFile("package.json", "utf8"));
+// Self-contained app package: runtime JS is bundled; no dev node_modules in the executable.
+await writeFile(
+  "dist/package.json",
+  JSON.stringify(
+    {
+      name: "cliprush-editor-studio",
+      productName: "ClipRush Editor Studio",
+      version: pkg.version,
+      description: "Estúdio audiovisual local ClipRush",
+      author: "ClipRush",
+      main: "desktop/main.cjs",
+      dependencies: {},
+    },
+    null,
+    2,
+  ),
+);
+console.log(
+  `Desktop build ready. ${manifest.length} original compositions preserved.`,
+);

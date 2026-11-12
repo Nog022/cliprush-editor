@@ -1,0 +1,5 @@
+No cliprush-editor, revise o vídeo do Perfil Criminal usando a pasta roteiro/ atualizada, sobretudo storyboard.md, marcacoes.txt e cenas_selecionadas.json, seguindo AGENTS.md e skills locais.
+
+Mantenha a narração/áudio 100% intactos. Use os timestamps reais retornados pelo buscar_cenas_gta6.py; confira somente os candidatos selecionados. As cenas 216 e 223 mostram pessoas armadas, NÃO comprovam roubo, fuga ou tiros. Para RDR2, localize a barra de honra real ou rotule gráfico ilustrativo.
+
+Monte os dois perfis como comparação hipotética, com cortes na ação, continuidade, transições limpas e sem repetição para preencher. Ajuste o tempo ao áudio; preserve MyComp e vídeos antigos. Valide 9:16, legendas, som, início/meio/fim e ausência de frames pretos. Relate testes e arquivos modificados.

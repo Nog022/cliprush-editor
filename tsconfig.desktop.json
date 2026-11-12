@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["node", "react", "react-dom"],
+    "resolveJsonModule": true
+  },
+  "include": [
+    "desktop/**/*.ts",
+    "shared/**/*.ts",
+    "studio/**/*.tsx",
+    "tests/desktop/**/*.ts"
+  ],
+  "exclude": ["node_modules", "dist", "out"]
+}

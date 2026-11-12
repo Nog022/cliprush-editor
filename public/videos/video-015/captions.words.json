@@ -1,0 +1,793 @@
+[
+  {
+    "text": " A",
+    "startMs": 0,
+    "endMs": 120,
+    "timestampMs": null,
+    "confidence": 0.902
+  },
+  {
+    "text": " Rockstar",
+    "startMs": 120,
+    "endMs": 480,
+    "timestampMs": null,
+    "confidence": 0.997
+  },
+  {
+    "text": " mudou",
+    "startMs": 480,
+    "endMs": 1060,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " a",
+    "startMs": 1060,
+    "endMs": 1120,
+    "timestampMs": null,
+    "confidence": 0.99
+  },
+  {
+    "text": " animação",
+    "startMs": 1120,
+    "endMs": 1520,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " do",
+    "startMs": 1520,
+    "endMs": 1700,
+    "timestampMs": null,
+    "confidence": 0.986
+  },
+  {
+    "text": " mortal",
+    "startMs": 1700,
+    "endMs": 1920,
+    "timestampMs": null,
+    "confidence": 0.037
+  },
+  {
+    "text": " do",
+    "startMs": 1920,
+    "endMs": 2160,
+    "timestampMs": null,
+    "confidence": 0.967
+  },
+  {
+    "text": " Jason",
+    "startMs": 2160,
+    "endMs": 2480,
+    "timestampMs": null,
+    "confidence": 0.726
+  },
+  {
+    "text": " em",
+    "startMs": 2480,
+    "endMs": 2720,
+    "timestampMs": null,
+    "confidence": 0.989
+  },
+  {
+    "text": " GTA",
+    "startMs": 2720,
+    "endMs": 2980,
+    "timestampMs": null,
+    "confidence": 0.977
+  },
+  {
+    "text": " 6?",
+    "startMs": 2980,
+    "endMs": 3600,
+    "timestampMs": null,
+    "confidence": 0.57
+  },
+  {
+    "text": " No",
+    "startMs": 3900,
+    "endMs": 4060,
+    "timestampMs": null,
+    "confidence": 0.943
+  },
+  {
+    "text": " vídeo",
+    "startMs": 4060,
+    "endMs": 4220,
+    "timestampMs": null,
+    "confidence": 0.976
+  },
+  {
+    "text": " estendido,",
+    "startMs": 4220,
+    "endMs": 4980,
+    "timestampMs": null,
+    "confidence": 0.993
+  },
+  {
+    "text": " Jason",
+    "startMs": 4980,
+    "endMs": 5320,
+    "timestampMs": null,
+    "confidence": 0.969
+  },
+  {
+    "text": " pula",
+    "startMs": 5320,
+    "endMs": 5800,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " na",
+    "startMs": 5800,
+    "endMs": 5920,
+    "timestampMs": null,
+    "confidence": 0.997
+  },
+  {
+    "text": " água",
+    "startMs": 5920,
+    "endMs": 6260,
+    "timestampMs": null,
+    "confidence": 0.994
+  },
+  {
+    "text": " dando",
+    "startMs": 6260,
+    "endMs": 6440,
+    "timestampMs": null,
+    "confidence": 0.976
+  },
+  {
+    "text": " um",
+    "startMs": 6440,
+    "endMs": 6620,
+    "timestampMs": null,
+    "confidence": 0.959
+  },
+  {
+    "text": " mortal",
+    "startMs": 6620,
+    "endMs": 6920,
+    "timestampMs": null,
+    "confidence": 0.952
+  },
+  {
+    "text": " que",
+    "startMs": 6920,
+    "endMs": 7280,
+    "timestampMs": null,
+    "confidence": 0.941
+  },
+  {
+    "text": " chamou",
+    "startMs": 7280,
+    "endMs": 7640,
+    "timestampMs": null,
+    "confidence": 0.997
+  },
+  {
+    "text": " bastante",
+    "startMs": 7640,
+    "endMs": 8100,
+    "timestampMs": null,
+    "confidence": 0.992
+  },
+  {
+    "text": " atenção…",
+    "startMs": 8100,
+    "endMs": 8860,
+    "timestampMs": null,
+    "confidence": 0.453
+  },
+  {
+    "text": " mas",
+    "startMs": 8860,
+    "endMs": 9420,
+    "timestampMs": null,
+    "confidence": 0.632
+  },
+  {
+    "text": " não",
+    "startMs": 9420,
+    "endMs": 9780,
+    "timestampMs": null,
+    "confidence": 0.983
+  },
+  {
+    "text": " pelos",
+    "startMs": 9780,
+    "endMs": 10100,
+    "timestampMs": null,
+    "confidence": 0.987
+  },
+  {
+    "text": " motivos",
+    "startMs": 10100,
+    "endMs": 10640,
+    "timestampMs": null,
+    "confidence": 1.0
+  },
+  {
+    "text": " certos!",
+    "startMs": 10640,
+    "endMs": 11180,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " Muitos",
+    "startMs": 11450,
+    "endMs": 11830,
+    "timestampMs": null,
+    "confidence": 0.973
+  },
+  {
+    "text": " jogadores",
+    "startMs": 11830,
+    "endMs": 12310,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " acharam",
+    "startMs": 12310,
+    "endMs": 12770,
+    "timestampMs": null,
+    "confidence": 0.986
+  },
+  {
+    "text": " o",
+    "startMs": 12770,
+    "endMs": 12850,
+    "timestampMs": null,
+    "confidence": 0.919
+  },
+  {
+    "text": " movimento",
+    "startMs": 12850,
+    "endMs": 13110,
+    "timestampMs": null,
+    "confidence": 0.997
+  },
+  {
+    "text": " estranho,",
+    "startMs": 13110,
+    "endMs": 13950,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " porque",
+    "startMs": 13950,
+    "endMs": 14170,
+    "timestampMs": null,
+    "confidence": 0.96
+  },
+  {
+    "text": " ele",
+    "startMs": 14170,
+    "endMs": 14350,
+    "timestampMs": null,
+    "confidence": 0.986
+  },
+  {
+    "text": " só",
+    "startMs": 14350,
+    "endMs": 14550,
+    "timestampMs": null,
+    "confidence": 0.997
+  },
+  {
+    "text": " começa",
+    "startMs": 14550,
+    "endMs": 14910,
+    "timestampMs": null,
+    "confidence": 0.996
+  },
+  {
+    "text": " a",
+    "startMs": 14910,
+    "endMs": 15170,
+    "timestampMs": null,
+    "confidence": 0.991
+  },
+  {
+    "text": " girar",
+    "startMs": 15170,
+    "endMs": 15550,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " depois",
+    "startMs": 15550,
+    "endMs": 15770,
+    "timestampMs": null,
+    "confidence": 0.993
+  },
+  {
+    "text": " de",
+    "startMs": 15770,
+    "endMs": 16210,
+    "timestampMs": null,
+    "confidence": 0.987
+  },
+  {
+    "text": " sair",
+    "startMs": 16210,
+    "endMs": 16410,
+    "timestampMs": null,
+    "confidence": 0.997
+  },
+  {
+    "text": " do",
+    "startMs": 16410,
+    "endMs": 16590,
+    "timestampMs": null,
+    "confidence": 0.996
+  },
+  {
+    "text": " píer.",
+    "startMs": 16590,
+    "endMs": 17030,
+    "timestampMs": null,
+    "confidence": 0.343
+  },
+  {
+    "text": " Só",
+    "startMs": 17200,
+    "endMs": 17460,
+    "timestampMs": null,
+    "confidence": 0.874
+  },
+  {
+    "text": " que",
+    "startMs": 17460,
+    "endMs": 17560,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " agora,",
+    "startMs": 17560,
+    "endMs": 18060,
+    "timestampMs": null,
+    "confidence": 0.987
+  },
+  {
+    "text": " em",
+    "startMs": 18060,
+    "endMs": 18240,
+    "timestampMs": null,
+    "confidence": 0.989
+  },
+  {
+    "text": " um",
+    "startMs": 18240,
+    "endMs": 18360,
+    "timestampMs": null,
+    "confidence": 0.99
+  },
+  {
+    "text": " novo",
+    "startMs": 18360,
+    "endMs": 18660,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " trailer,",
+    "startMs": 18660,
+    "endMs": 19220,
+    "timestampMs": null,
+    "confidence": 0.991
+  },
+  {
+    "text": " a",
+    "startMs": 19220,
+    "endMs": 19480,
+    "timestampMs": null,
+    "confidence": 0.991
+  },
+  {
+    "text": " Rockstar",
+    "startMs": 19480,
+    "endMs": 19860,
+    "timestampMs": null,
+    "confidence": 0.989
+  },
+  {
+    "text": " mostrou",
+    "startMs": 19860,
+    "endMs": 20320,
+    "timestampMs": null,
+    "confidence": 0.995
+  },
+  {
+    "text": " um",
+    "startMs": 20320,
+    "endMs": 20360,
+    "timestampMs": null,
+    "confidence": 0.978
+  },
+  {
+    "text": " personagem",
+    "startMs": 20360,
+    "endMs": 20780,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " fazendo",
+    "startMs": 20780,
+    "endMs": 21220,
+    "timestampMs": null,
+    "confidence": 0.99
+  },
+  {
+    "text": " um",
+    "startMs": 21220,
+    "endMs": 21420,
+    "timestampMs": null,
+    "confidence": 0.847
+  },
+  {
+    "text": " mortal",
+    "startMs": 21420,
+    "endMs": 21700,
+    "timestampMs": null,
+    "confidence": 0.639
+  },
+  {
+    "text": " muito",
+    "startMs": 21700,
+    "endMs": 22180,
+    "timestampMs": null,
+    "confidence": 0.975
+  },
+  {
+    "text": " mais",
+    "startMs": 22180,
+    "endMs": 22580,
+    "timestampMs": null,
+    "confidence": 0.99
+  },
+  {
+    "text": " natural",
+    "startMs": 22580,
+    "endMs": 22940,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " e",
+    "startMs": 22940,
+    "endMs": 23160,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " fluido!",
+    "startMs": 23160,
+    "endMs": 23680,
+    "timestampMs": null,
+    "confidence": 0.941
+  },
+  {
+    "text": " E",
+    "startMs": 23900,
+    "endMs": 24100,
+    "timestampMs": null,
+    "confidence": 0.775
+  },
+  {
+    "text": " olha",
+    "startMs": 24100,
+    "endMs": 24340,
+    "timestampMs": null,
+    "confidence": 0.973
+  },
+  {
+    "text": " a",
+    "startMs": 24340,
+    "endMs": 24480,
+    "timestampMs": null,
+    "confidence": 0.995
+  },
+  {
+    "text": " diferença",
+    "startMs": 24480,
+    "endMs": 24740,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " entre",
+    "startMs": 24740,
+    "endMs": 25200,
+    "timestampMs": null,
+    "confidence": 0.995
+  },
+  {
+    "text": " os",
+    "startMs": 25200,
+    "endMs": 25360,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " dois!",
+    "startMs": 25360,
+    "endMs": 25740,
+    "timestampMs": null,
+    "confidence": 0.989
+  },
+  {
+    "text": " Mas",
+    "startMs": 26000,
+    "endMs": 26240,
+    "timestampMs": null,
+    "confidence": 0.841
+  },
+  {
+    "text": " será",
+    "startMs": 26240,
+    "endMs": 26380,
+    "timestampMs": null,
+    "confidence": 0.994
+  },
+  {
+    "text": " que",
+    "startMs": 26380,
+    "endMs": 26560,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " a",
+    "startMs": 26560,
+    "endMs": 26600,
+    "timestampMs": null,
+    "confidence": 0.977
+  },
+  {
+    "text": " Rockstar",
+    "startMs": 26600,
+    "endMs": 26980,
+    "timestampMs": null,
+    "confidence": 0.996
+  },
+  {
+    "text": " realmente",
+    "startMs": 26980,
+    "endMs": 27300,
+    "timestampMs": null,
+    "confidence": 0.996
+  },
+  {
+    "text": " melhorou",
+    "startMs": 27300,
+    "endMs": 28180,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " essa",
+    "startMs": 28180,
+    "endMs": 28320,
+    "timestampMs": null,
+    "confidence": 0.991
+  },
+  {
+    "text": " animação",
+    "startMs": 28320,
+    "endMs": 28780,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " depois",
+    "startMs": 28780,
+    "endMs": 29000,
+    "timestampMs": null,
+    "confidence": 0.993
+  },
+  {
+    "text": " das",
+    "startMs": 29000,
+    "endMs": 29200,
+    "timestampMs": null,
+    "confidence": 0.995
+  },
+  {
+    "text": " críticas?",
+    "startMs": 29200,
+    "endMs": 29780,
+    "timestampMs": null,
+    "confidence": 0.991
+  },
+  {
+    "text": " Ou",
+    "startMs": 30050,
+    "endMs": 30290,
+    "timestampMs": null,
+    "confidence": 0.779
+  },
+  {
+    "text": " será",
+    "startMs": 30290,
+    "endMs": 30590,
+    "timestampMs": null,
+    "confidence": 0.988
+  },
+  {
+    "text": " que",
+    "startMs": 30590,
+    "endMs": 30750,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " estamos",
+    "startMs": 30750,
+    "endMs": 30950,
+    "timestampMs": null,
+    "confidence": 0.994
+  },
+  {
+    "text": " comparando",
+    "startMs": 30950,
+    "endMs": 31690,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " uma",
+    "startMs": 31690,
+    "endMs": 31790,
+    "timestampMs": null,
+    "confidence": 0.996
+  },
+  {
+    "text": " animação",
+    "startMs": 31790,
+    "endMs": 32250,
+    "timestampMs": null,
+    "confidence": 0.996
+  },
+  {
+    "text": " de",
+    "startMs": 32250,
+    "endMs": 32410,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " gameplay",
+    "startMs": 32410,
+    "endMs": 32690,
+    "timestampMs": null,
+    "confidence": 0.949
+  },
+  {
+    "text": " com",
+    "startMs": 32690,
+    "endMs": 33250,
+    "timestampMs": null,
+    "confidence": 0.98
+  },
+  {
+    "text": " uma",
+    "startMs": 33250,
+    "endMs": 33470,
+    "timestampMs": null,
+    "confidence": 0.992
+  },
+  {
+    "text": " cena",
+    "startMs": 33470,
+    "endMs": 33710,
+    "timestampMs": null,
+    "confidence": 0.997
+  },
+  {
+    "text": " cinematográfica?",
+    "startMs": 33710,
+    "endMs": 34950,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " E",
+    "startMs": 35150,
+    "endMs": 35330,
+    "timestampMs": null,
+    "confidence": 0.927
+  },
+  {
+    "text": " você,",
+    "startMs": 35330,
+    "endMs": 35730,
+    "timestampMs": null,
+    "confidence": 0.996
+  },
+  {
+    "text": " acha",
+    "startMs": 35730,
+    "endMs": 36230,
+    "timestampMs": null,
+    "confidence": 0.992
+  },
+  {
+    "text": " que",
+    "startMs": 36230,
+    "endMs": 36410,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " a",
+    "startMs": 36410,
+    "endMs": 36450,
+    "timestampMs": null,
+    "confidence": 0.987
+  },
+  {
+    "text": " Rockstar",
+    "startMs": 36450,
+    "endMs": 36790,
+    "timestampMs": null,
+    "confidence": 0.963
+  },
+  {
+    "text": " corrigiu",
+    "startMs": 36790,
+    "endMs": 37410,
+    "timestampMs": null,
+    "confidence": 0.984
+  },
+  {
+    "text": " o",
+    "startMs": 37410,
+    "endMs": 37430,
+    "timestampMs": null,
+    "confidence": 0.989
+  },
+  {
+    "text": " mortal",
+    "startMs": 37430,
+    "endMs": 37690,
+    "timestampMs": null,
+    "confidence": 0.647
+  },
+  {
+    "text": " ou",
+    "startMs": 37690,
+    "endMs": 38190,
+    "timestampMs": null,
+    "confidence": 0.793
+  },
+  {
+    "text": " é",
+    "startMs": 38190,
+    "endMs": 38370,
+    "timestampMs": null,
+    "confidence": 0.978
+  },
+  {
+    "text": " só",
+    "startMs": 38370,
+    "endMs": 38570,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " coincidência?",
+    "startMs": 38570,
+    "endMs": 39430,
+    "timestampMs": null,
+    "confidence": 0.991
+  }
+]

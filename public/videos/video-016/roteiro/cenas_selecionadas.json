@@ -1,0 +1,133 @@
+{
+  "source": "Resposta do comando scripts/buscar_cenas_gta6.py fornecida pelo usuário nesta conversa",
+  "command": "python scripts/buscar_cenas_gta6.py \"assalto|roubo\" \"policia|tiroteio\" \"fuga|perseguicao\" \"Jason|Lucia\"",
+  "timestamp_type": "source_video_not_short_timeline",
+  "validated_by_video_review": false,
+  "matched_counts": {
+    "assalto|roubo": 2,
+    "policia|tiroteio": 5,
+    "fuga|perseguicao": 0,
+    "Jason|Lucia": 0
+  },
+  "candidates": [
+    {
+      "id": "gta6-216",
+      "file": "public/videos/biblioteca/gta6/videos/gta6-extended.mp4",
+      "scene": 216,
+      "segment": 0,
+      "start": "00:23:16.200",
+      "end": "00:23:19.400",
+      "duration_seconds": 3.2,
+      "description": "Três homens de macacão branco e máscaras seguram armas em ambiente escuro com iluminação azulada.",
+      "thumbnail": "public/videos/biblioteca/catalogo/gta6/gta6-extended/miniaturas/gta6-extended-Scene-216-01.webp",
+      "proposed_use": "Gancho e/ou apoio ao exemplo do Jogador A",
+      "status": "candidato_ia_frame_estatico",
+      "risk": "Não comprova tiro, morte, loja, dinheiro ou fuga"
+    },
+    {
+      "id": "gta6-223",
+      "file": "public/videos/biblioteca/gta6/videos/gta6-extended.mp4",
+      "scene": 223,
+      "segment": 0,
+      "start": "00:23:59.567",
+      "end": "00:24:01.867",
+      "duration_seconds": 2.3,
+      "description": "Homem com casaco branco e rifle em local escuro.",
+      "thumbnail": "public/videos/biblioteca/catalogo/gta6/gta6-extended/miniaturas/gta6-extended-Scene-223-01.webp",
+      "proposed_use": "Ilustrar o Jogador B como contraste hipotético",
+      "status": "candidato_ia_frame_estatico",
+      "risk": "Não comprova disparo ou ataque"
+    },
+    {
+      "id": "gta6-140-1",
+      "file": "public/videos/biblioteca/gta6/videos/gta6-extended.mp4",
+      "scene": 140,
+      "segment": 1,
+      "start": "00:15:43.067",
+      "end": "00:15:52.256",
+      "duration_seconds": 9.189,
+      "description": "Helicóptero, carro policial preto, prédios e palmeiras.",
+      "thumbnail": "public/videos/biblioteca/catalogo/gta6/gta6-extended/miniaturas-extras/gta6-extended-Scene-140-Trecho-01.webp",
+      "proposed_use": "Fundo para explicar o impacto possível do Perfil Criminal",
+      "status": "candidato_ia_subtrecho_cena_longa",
+      "risk": "Mostra polícia, NÃO prova reação do Perfil Criminal"
+    },
+    {
+      "id": "gta6-172",
+      "file": "public/videos/biblioteca/gta6/videos/gta6-extended.mp4",
+      "scene": 172,
+      "segment": 0,
+      "start": "00:18:43.433",
+      "end": "00:18:48.567",
+      "duration_seconds": 5.134,
+      "description": "Viatura azul estacionada à noite.",
+      "thumbnail": "public/videos/biblioteca/catalogo/gta6/gta6-extended/miniaturas/gta6-extended-Scene-172-01.webp",
+      "proposed_use": "Reserva como plano atmosférico",
+      "status": "candidato_ia_frame_estatico",
+      "risk": "Não mostra perseguição"
+    },
+    {
+      "id": "launch-41",
+      "file": "public/videos/biblioteca/gta6/videos/Launch Trailer.mp4",
+      "scene": 41,
+      "segment": 0,
+      "start": "00:01:10.200",
+      "end": "00:01:11.400",
+      "duration_seconds": 1.2,
+      "description": "Viatura com luzes e faíscas em ambiente noturno.",
+      "thumbnail": "public/videos/biblioteca/catalogo/gta6/Launch Trailer/miniaturas/Launch Trailer-Scene-041-01.webp",
+      "proposed_use": "Acento visual curto no clímax/descoberta",
+      "status": "candidato_ia_frame_estatico",
+      "risk": "Plano curto: não prolongar para preencher"
+    },
+    {
+      "id": "trailer2-16",
+      "file": "public/videos/biblioteca/gta6/videos/Trailer 2 GTA VI.mp4",
+      "scene": 16,
+      "segment": 0,
+      "start": "00:00:45.267",
+      "end": "00:00:49.833",
+      "duration_seconds": 4.566,
+      "description": "Carro preto junto a grafite e viatura.",
+      "thumbnail": "public/videos/biblioteca/catalogo/gta6/Trailer 2 GTA VI/miniaturas/Trailer 2 GTA VI-Scene-016-01.webp",
+      "proposed_use": "Pausa visual para Mas calma e explicação da mecânica",
+      "status": "candidato_ia_revisar_contexto",
+      "risk": "Confirmar contexto e enquadramento da cena"
+    },
+    {
+      "id": "trailer2-75",
+      "file": "public/videos/biblioteca/gta6/videos/Trailer 2 GTA VI.mp4",
+      "scene": 75,
+      "segment": 0,
+      "start": "00:02:27.300",
+      "end": "00:02:28.233",
+      "duration_seconds": 0.933,
+      "description": "Barco em movimento com helicóptero policial.",
+      "thumbnail": "public/videos/biblioteca/catalogo/gta6/Trailer 2 GTA VI/miniaturas/Trailer 2 GTA VI-Scene-075-01.webp",
+      "proposed_use": "Reserva opcional somente se contexto fizer sentido",
+      "status": "candidato_ia_revisar_contexto",
+      "risk": "Curto e pode desviar assunto"
+    }
+  ],
+  "historical_unverified": [
+    {
+      "file": "gta6-extended.mp4",
+      "start": "00:14:02.260",
+      "end": "00:14:12.050",
+      "topic": "Tiroteio Jason em storyboard antigo"
+    },
+    {
+      "file": "gta6-extended.mp4",
+      "start": "00:18:01.110",
+      "end": "00:18:08.130",
+      "topic": "Assalto em storyboard antigo"
+    },
+    {
+      "file": "gta6-extended.mp4",
+      "start": "00:16:24.180",
+      "end": "00:16:29.040",
+      "topic": "HUD de procurado; não prova de Criminal Profile"
+    }
+  ],
+  "editing_rule": "Narração intocável. Conferir 1–3 trechos, não inventar movimento/atos, ilustrar o que não aparece."
+}

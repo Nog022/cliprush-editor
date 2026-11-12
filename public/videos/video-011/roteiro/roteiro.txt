@@ -1,0 +1,49 @@
+CLIPRUSH — RELEITURA: 7 DETALHES ESCONDIDOS NO GTA 6
+Referência visual: Video by leonidaoculta [Dfcj36tDB7h].mp4 (51,57 s, 1080x1920, 30fps)
+Status: cenas ainda NÃO localizadas nos MP4 originais; integração ao Remotion NÃO comprovada.
+
+OBJETIVO
+Manter a sequência dos 7 detalhes do vídeo de referência, mas produzir narração, zooms, efeitos e identidade visual próprios do ClipRush. Recuperar cenas limpas de vídeos originais pelo catálogo. O MP4 do Instagram serve SOMENTE como referência, jamais como material de imagem final.
+
+NARRAÇÃO — ELEVENLABS (ajustar os tempos após gerar o áudio)
+O nível de detalhe do GTA 6 é assustador!
+
+Repara nos NPCs quando Jason e Lucia invadem o lugar. Dá pra ver o medo estampado no rosto deles!
+
+E olha esse quadro no apartamento. Ele lembra a garota da capa do Vice City clássico!
+
+Agora presta atenção nesse carro: o porta-malas tem marcas de uso, como se tivesse sido aberto várias vezes.
+
+Na geladeira do Jason aparece a foto de um cachorro. Será uma pista de que teremos pets?
+
+E a física impressiona: os brincos da Lucia, os cordões da roupa e até uma mochila balançam com o movimento.
+
+O líquido dentro da garrafa de molotov também se mexe!
+
+Mas o detalhe mais escondido está aqui: olha o ratinho embaixo da máquina de vendas!
+
+Qual desses você nunca tinha visto? Segue o ClipRush pra descobrir mais!
+
+MAPA VISUAL — TEMPOS DO INSTAGRAM (NÃO SÃO TIMESTAMPS DOS VÍDEOS ORIGINAIS)
+01 | 00:00–00:07 | Gancho + reação de medo de NPCs na invasão; foco no homem de boné/barba e outro NPC. Buscar: npc|homem|barbudo; invasao|assalto|jason. Edição: aproximar os rostos.
+02 | 00:07–00:14 | Quadro de mulher no apartamento, parecido com capa de Vice City (2002). Buscar: quadro|poster|pintura; apartamento|quarto. Edição: zoom no quadro; comparação só com asset autorizado, não presente necessariamente na biblioteca.
+03 | 00:14–00:20 | Traseira de carro conversível alaranjado; borda do porta-malas aparentemente marcada pelo uso. Buscar: carro|conversivel|veiculo; porta-malas|traseira. Edição: macrozoom no detalhe.
+04 | 00:20–00:26 | Jason abre geladeira com ímãs e fotografia de cachorro. Buscar: geladeira|cozinha; cachorro|cao|pet. Edição: destaque na foto. Pets = hipótese, não recurso confirmado.
+05 | 00:26–00:36 | Física: brincos de Lucia; cordões de roupa; mochila balançando nas costas de personagem com camisa Marcus. Buscar: lucia|mulher; brinco|roupa; mochila|costas. Edição: 3 cortes em ritmo acelerado.
+06 | 00:36–00:40 | Garrafa/molotov em movimento com líquido dentro. Buscar: molotov|garrafa; liquido|arma. Edição: aproximar garrafa e acompanhar movimento.
+07 | 00:40–00:48 | Máquina de venda de lanches, com RATO escondido na parte inferior. Buscar: maquina|venda; rato|roedor|animal. Edição: primeiro plano aberto, depois revelação em zoom.
+08 | 00:48–00:51.57 | CTA; criar arte própria do ClipRush, sem copiar logo/arte do Instagram.
+
+DIRETRIZES ESPECÍFICAS DESTA PRODUÇÃO
+- Seguir AGENTS.md como fonte permanente de regras e usar o áudio final para definir duração e timing. Os tempos REF só orientam a identificação visual.
+- Usar primeiro assets locais da NOVA pasta public/videos/video-NNN/. Se faltarem, consultar scripts/buscar_cenas_gta6.py e public/videos/biblioteca/catalogo/gta6/cenas-descritas.json.
+- Buscar poucas palavras por assunto; examinar no máximo 5 candidatos e conferir apenas os melhores 1–2, via miniatura ou trecho curto. Não reexecutar Ollama/PySceneDetect nem reprocessar 491 cenas.
+- Para cada cena escolhida, obter MP4 original + timestamps ORIGINAIS do catálogo e inserir o intervalo no Remotion. Nunca usar timestamp REF como se fosse do arquivo original.
+- Se a busca não confirmar um detalhe, reportar CENA_NAO_ENCONTRADA; não inventar correspondências, caminhos ou cenas. Verificar se a fonte comparativa de Vice City existe à parte.
+- Não alterar projetos antigos. Validar uma cena completa no Remotion antes da renderização final. Indicar sucintamente cenas localizadas, falhas e testes efetivamente feitos.
+
+PRÉ-REQUISITOS DA PRODUÇÃO
+[ ] Criar video-NNN, copiar este roteiro.txt e o áudio final ElevenLabs.
+[ ] Guardar o vídeo Instagram separadamente, apenas para consulta.
+[ ] Rodar a busca local e conferir se os detalhes desejados estão realmente no catálogo.
+[ ] Fazer um teste mínimo busca -> MP4 original + timestamps -> Remotion.

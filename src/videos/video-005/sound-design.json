@@ -1,0 +1,112 @@
+{
+  "method": "Original additive synthesis, seeded noise, 72 BPM, phrase automation + measured RMS ducking",
+  "seed": 5005,
+  "events": [
+    [
+      0.03,
+      "impact",
+      0.045
+    ],
+    [
+      1.48,
+      "hit",
+      0.042
+    ],
+    [
+      2.4,
+      "air",
+      0.012
+    ],
+    [
+      9.47,
+      "paper",
+      0.016
+    ],
+    [
+      11.96,
+      "tick",
+      0.012
+    ],
+    [
+      15.96,
+      "ping",
+      0.016
+    ],
+    [
+      25.78,
+      "riser",
+      0.022
+    ],
+    [
+      28.6,
+      "air",
+      0.02
+    ],
+    [
+      30.35,
+      "hit",
+      0.045
+    ],
+    [
+      32.2,
+      "resolve",
+      0.045
+    ],
+    [
+      35.1,
+      "air",
+      0.018
+    ]
+  ],
+  "measuredStates": [
+    {
+      "state": "curiosity",
+      "start": 0.05,
+      "end": 1.9,
+      "voiceRmsDb": -18.6,
+      "musicRmsDb": -39.51
+    },
+    {
+      "state": "first-whisper",
+      "start": 6.69,
+      "end": 9.12,
+      "voiceRmsDb": -29.97,
+      "musicRmsDb": -52.29
+    },
+    {
+      "state": "investigation",
+      "start": 9.62,
+      "end": 16.56,
+      "voiceRmsDb": -19.25,
+      "musicRmsDb": -40.05
+    },
+    {
+      "state": "serious",
+      "start": 16.97,
+      "end": 21.32,
+      "voiceRmsDb": -18.16,
+      "musicRmsDb": -43.67
+    },
+    {
+      "state": "decisive-whisper",
+      "start": 21.79,
+      "end": 25.44,
+      "voiceRmsDb": -28.12,
+      "musicRmsDb": -60.08
+    },
+    {
+      "state": "reveal",
+      "start": 28.76,
+      "end": 32.76,
+      "voiceRmsDb": -16.95,
+      "musicRmsDb": -39.5
+    },
+    {
+      "state": "closing",
+      "start": 35.16,
+      "end": 38.8,
+      "voiceRmsDb": -16.63,
+      "musicRmsDb": -36.34
+    }
+  ]
+}

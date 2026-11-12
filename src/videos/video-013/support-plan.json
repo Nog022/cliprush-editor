@@ -1,0 +1,18 @@
+[
+  {"id":"abertura-praia","from":33,"duration":36,"video":"Trailer 1 GTA VI.mp4","sourceStart":654,"rate":1,"label":"MULTIDÃO · PRAIA"},
+  {"id":"abertura-balada","from":63,"duration":37,"video":"Trailer 2 GTA VI.mp4","sourceStart":3027,"rate":1,"label":"LUZES · BALADA"},
+  {"id":"promessa-cidade","from":92,"duration":70,"video":"gta6-extended.mp4","sourceStart":14380,"rate":1,"label":"AMBIENTAÇÃO URBANA"},
+  {"id":"promessa-acao","from":154,"duration":50,"video":"Launch Trailer.mp4","sourceStart":1398,"rate":1,"label":"AÇÃO URBANA"},
+  {"id":"promessa-carros","from":196,"duration":54,"video":"Trailer 1 GTA VI.mp4","sourceStart":824,"rate":0.82,"label":"CARROS · AMBIENTAÇÃO"},
+  {"id":"acrobacia-contexto","from":418,"duration":83,"video":"Trailer 1 GTA VI.mp4","sourceStart":331,"rate":1,"label":"AMBIENTAÇÃO · PRAIA"},
+  {"id":"policia-pergunta","from":706,"duration":43,"video":"Launch Trailer.mp4","sourceStart":2107,"rate":0.8,"label":"APOIO VISUAL · VIATURA"},
+  {"id":"policia-tensao-urbana","from":741,"duration":67,"video":"Launch Trailer.mp4","sourceStart":895,"rate":1,"label":"APOIO VISUAL · TENSÃO URBANA"},
+  {"id":"ambientes-por-do-sol","from":800,"duration":57,"video":"Trailer 2 GTA VI.mp4","sourceStart":2494,"rate":1,"label":"VARIEDADE DE AMBIENTES"},
+  {"id":"ambientes-iate","from":849,"duration":48,"video":"Trailer 2 GTA VI.mp4","sourceStart":2885,"rate":0.85,"label":"APOIO VISUAL · IATE","fadeOut":6},
+  {"id":"neon-contexto","from":1045,"duration":46,"video":"Trailer 1 GTA VI.mp4","sourceStart":980,"rate":0.9,"label":"RUAS ILUMINADAS"},
+  {"id":"montagem-festa","from":1083,"duration":34,"video":"Trailer 1 GTA VI.mp4","sourceStart":870,"rate":0.85,"label":"FESTA"},
+  {"id":"montagem-iate","from":1109,"duration":42,"video":"Trailer 2 GTA VI.mp4","sourceStart":2887,"rate":0.9,"label":"IATE"},
+  {"id":"montagem-balada","from":1143,"duration":42,"video":"Trailer 2 GTA VI.mp4","sourceStart":3028,"rate":0.85,"label":"BALADA"},
+  {"id":"pergunta-ambientacao","from":1177,"duration":59,"video":"gta6-extended.mp4","sourceStart":17218,"rate":0.96,"label":"AMBIENTAÇÃO · TERRAÇO"},
+  {"id":"cta-praia-continuo","from":1228,"duration":132,"video":"Trailer 1 GTA VI.mp4","sourceStart":331,"rate":0.75,"label":"ENCERRAMENTO · PRAIA"}
+]

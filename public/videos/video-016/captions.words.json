@@ -1,0 +1,765 @@
+[
+  {
+    "text": " GTA",
+    "startMs": 0,
+    "endMs": 420,
+    "timestampMs": null,
+    "confidence": 0.987
+  },
+  {
+    "text": " 6",
+    "startMs": 420,
+    "endMs": 800,
+    "timestampMs": null,
+    "confidence": 0.56
+  },
+  {
+    "text": " vai",
+    "startMs": 800,
+    "endMs": 1100,
+    "timestampMs": null,
+    "confidence": 0.987
+  },
+  {
+    "text": " te",
+    "startMs": 1100,
+    "endMs": 1200,
+    "timestampMs": null,
+    "confidence": 0.997
+  },
+  {
+    "text": " punir",
+    "startMs": 1200,
+    "endMs": 1860,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " se",
+    "startMs": 1860,
+    "endMs": 1960,
+    "timestampMs": null,
+    "confidence": 0.99
+  },
+  {
+    "text": " você",
+    "startMs": 1960,
+    "endMs": 2140,
+    "timestampMs": null,
+    "confidence": 0.997
+  },
+  {
+    "text": " matar",
+    "startMs": 2140,
+    "endMs": 2480,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " sem",
+    "startMs": 2480,
+    "endMs": 2740,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " motivo!",
+    "startMs": 2740,
+    "endMs": 3160,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " Mas",
+    "startMs": 3650,
+    "endMs": 3850,
+    "timestampMs": null,
+    "confidence": 0.942
+  },
+  {
+    "text": " calma!",
+    "startMs": 3850,
+    "endMs": 4410,
+    "timestampMs": null,
+    "confidence": 0.981
+  },
+  {
+    "text": " Não",
+    "startMs": 4410,
+    "endMs": 4790,
+    "timestampMs": null,
+    "confidence": 0.972
+  },
+  {
+    "text": " é",
+    "startMs": 4790,
+    "endMs": 4970,
+    "timestampMs": null,
+    "confidence": 0.996
+  },
+  {
+    "text": " uma",
+    "startMs": 4970,
+    "endMs": 5110,
+    "timestampMs": null,
+    "confidence": 0.968
+  },
+  {
+    "text": " punição",
+    "startMs": 5110,
+    "endMs": 5610,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " a",
+    "startMs": 5610,
+    "endMs": 5710,
+    "timestampMs": null,
+    "confidence": 0.986
+  },
+  {
+    "text": " cada",
+    "startMs": 5710,
+    "endMs": 5870,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " tiro.",
+    "startMs": 5870,
+    "endMs": 6370,
+    "timestampMs": null,
+    "confidence": 0.997
+  },
+  {
+    "text": " A",
+    "startMs": 6600,
+    "endMs": 6780,
+    "timestampMs": null,
+    "confidence": 0.864
+  },
+  {
+    "text": " Rockstar",
+    "startMs": 6780,
+    "endMs": 7180,
+    "timestampMs": null,
+    "confidence": 0.996
+  },
+  {
+    "text": " criou",
+    "startMs": 7180,
+    "endMs": 7660,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " o",
+    "startMs": 7660,
+    "endMs": 7680,
+    "timestampMs": null,
+    "confidence": 0.994
+  },
+  {
+    "text": " Perfil",
+    "startMs": 7680,
+    "endMs": 8200,
+    "timestampMs": null,
+    "confidence": 0.79
+  },
+  {
+    "text": " Criminal,",
+    "startMs": 8200,
+    "endMs": 8860,
+    "timestampMs": null,
+    "confidence": 0.996
+  },
+  {
+    "text": " um",
+    "startMs": 8860,
+    "endMs": 9220,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " sistema",
+    "startMs": 9220,
+    "endMs": 9680,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " que",
+    "startMs": 9680,
+    "endMs": 9840,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " observa",
+    "startMs": 9840,
+    "endMs": 10400,
+    "timestampMs": null,
+    "confidence": 1.0
+  },
+  {
+    "text": " como",
+    "startMs": 10400,
+    "endMs": 10640,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " você",
+    "startMs": 10640,
+    "endMs": 11000,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " costuma",
+    "startMs": 11000,
+    "endMs": 11460,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " agir.",
+    "startMs": 11460,
+    "endMs": 11800,
+    "timestampMs": null,
+    "confidence": 1.0
+  },
+  {
+    "text": " Imagina",
+    "startMs": 12100,
+    "endMs": 12640,
+    "timestampMs": null,
+    "confidence": 0.966
+  },
+  {
+    "text": " dois",
+    "startMs": 12640,
+    "endMs": 12860,
+    "timestampMs": null,
+    "confidence": 0.959
+  },
+  {
+    "text": " jogadores:",
+    "startMs": 12860,
+    "endMs": 13600,
+    "timestampMs": null,
+    "confidence": 1.0
+  },
+  {
+    "text": " um",
+    "startMs": 13600,
+    "endMs": 14060,
+    "timestampMs": null,
+    "confidence": 0.783
+  },
+  {
+    "text": " assalta",
+    "startMs": 14060,
+    "endMs": 14620,
+    "timestampMs": null,
+    "confidence": 0.976
+  },
+  {
+    "text": " uma",
+    "startMs": 14620,
+    "endMs": 14740,
+    "timestampMs": null,
+    "confidence": 0.989
+  },
+  {
+    "text": " loja,",
+    "startMs": 14740,
+    "endMs": 15220,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " pega",
+    "startMs": 15220,
+    "endMs": 15520,
+    "timestampMs": null,
+    "confidence": 0.992
+  },
+  {
+    "text": " o",
+    "startMs": 15520,
+    "endMs": 15660,
+    "timestampMs": null,
+    "confidence": 0.982
+  },
+  {
+    "text": " dinheiro",
+    "startMs": 15660,
+    "endMs": 15900,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " e",
+    "startMs": 15900,
+    "endMs": 16200,
+    "timestampMs": null,
+    "confidence": 0.963
+  },
+  {
+    "text": " foge.",
+    "startMs": 16200,
+    "endMs": 16700,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " O",
+    "startMs": 16950,
+    "endMs": 17150,
+    "timestampMs": null,
+    "confidence": 0.811
+  },
+  {
+    "text": " outro",
+    "startMs": 17150,
+    "endMs": 17450,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " faz",
+    "startMs": 17450,
+    "endMs": 17670,
+    "timestampMs": null,
+    "confidence": 0.995
+  },
+  {
+    "text": " o",
+    "startMs": 17670,
+    "endMs": 17830,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " mesmo,",
+    "startMs": 17830,
+    "endMs": 18290,
+    "timestampMs": null,
+    "confidence": 1.0
+  },
+  {
+    "text": " mas",
+    "startMs": 18290,
+    "endMs": 18590,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " sai",
+    "startMs": 18590,
+    "endMs": 18790,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " atacando",
+    "startMs": 18790,
+    "endMs": 19250,
+    "timestampMs": null,
+    "confidence": 1.0
+  },
+  {
+    "text": " todo",
+    "startMs": 19250,
+    "endMs": 19550,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " mundo",
+    "startMs": 19550,
+    "endMs": 19890,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " sem",
+    "startMs": 19890,
+    "endMs": 20230,
+    "timestampMs": null,
+    "confidence": 0.987
+  },
+  {
+    "text": " necessidade!",
+    "startMs": 20230,
+    "endMs": 20890,
+    "timestampMs": null,
+    "confidence": 1.0
+  },
+  {
+    "text": " E",
+    "startMs": 21300,
+    "endMs": 21540,
+    "timestampMs": null,
+    "confidence": 0.804
+  },
+  {
+    "text": " essa",
+    "startMs": 21540,
+    "endMs": 21700,
+    "timestampMs": null,
+    "confidence": 0.99
+  },
+  {
+    "text": " diferença",
+    "startMs": 21700,
+    "endMs": 21960,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " importa!",
+    "startMs": 21960,
+    "endMs": 22940,
+    "timestampMs": null,
+    "confidence": 0.989
+  },
+  {
+    "text": " Em",
+    "startMs": 23200,
+    "endMs": 23460,
+    "timestampMs": null,
+    "confidence": 0.917
+  },
+  {
+    "text": " Red",
+    "startMs": 23460,
+    "endMs": 23640,
+    "timestampMs": null,
+    "confidence": 0.96
+  },
+  {
+    "text": " Dead",
+    "startMs": 23640,
+    "endMs": 23820,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " 2,",
+    "startMs": 23820,
+    "endMs": 24260,
+    "timestampMs": null,
+    "confidence": 0.97
+  },
+  {
+    "text": " suas",
+    "startMs": 24260,
+    "endMs": 24620,
+    "timestampMs": null,
+    "confidence": 0.995
+  },
+  {
+    "text": " escolhas",
+    "startMs": 24620,
+    "endMs": 25160,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " afetavam",
+    "startMs": 25160,
+    "endMs": 25680,
+    "timestampMs": null,
+    "confidence": 0.997
+  },
+  {
+    "text": " a",
+    "startMs": 25680,
+    "endMs": 25840,
+    "timestampMs": null,
+    "confidence": 0.996
+  },
+  {
+    "text": " honra.",
+    "startMs": 25840,
+    "endMs": 26320,
+    "timestampMs": null,
+    "confidence": 0.997
+  },
+  {
+    "text": " Já",
+    "startMs": 26500,
+    "endMs": 26800,
+    "timestampMs": null,
+    "confidence": 0.873
+  },
+  {
+    "text": " em",
+    "startMs": 26800,
+    "endMs": 26940,
+    "timestampMs": null,
+    "confidence": 0.993
+  },
+  {
+    "text": " GTA",
+    "startMs": 26940,
+    "endMs": 27140,
+    "timestampMs": null,
+    "confidence": 0.995
+  },
+  {
+    "text": " 6,",
+    "startMs": 27140,
+    "endMs": 27680,
+    "timestampMs": null,
+    "confidence": 0.517
+  },
+  {
+    "text": " seu",
+    "startMs": 27680,
+    "endMs": 28000,
+    "timestampMs": null,
+    "confidence": 0.995
+  },
+  {
+    "text": " comportamento",
+    "startMs": 28000,
+    "endMs": 28720,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " pode",
+    "startMs": 28720,
+    "endMs": 28880,
+    "timestampMs": null,
+    "confidence": 0.995
+  },
+  {
+    "text": " mudar",
+    "startMs": 28880,
+    "endMs": 29240,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " como",
+    "startMs": 29240,
+    "endMs": 29540,
+    "timestampMs": null,
+    "confidence": 0.993
+  },
+  {
+    "text": " as",
+    "startMs": 29540,
+    "endMs": 29680,
+    "timestampMs": null,
+    "confidence": 0.993
+  },
+  {
+    "text": " pessoas",
+    "startMs": 29680,
+    "endMs": 29960,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " reagem",
+    "startMs": 29960,
+    "endMs": 30560,
+    "timestampMs": null,
+    "confidence": 0.993
+  },
+  {
+    "text": " e",
+    "startMs": 30560,
+    "endMs": 30740,
+    "timestampMs": null,
+    "confidence": 0.943
+  },
+  {
+    "text": " até",
+    "startMs": 30740,
+    "endMs": 31020,
+    "timestampMs": null,
+    "confidence": 0.991
+  },
+  {
+    "text": " influenciar",
+    "startMs": 31020,
+    "endMs": 31780,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " a",
+    "startMs": 31780,
+    "endMs": 31860,
+    "timestampMs": null,
+    "confidence": 0.995
+  },
+  {
+    "text": " história!",
+    "startMs": 31860,
+    "endMs": 32400,
+    "timestampMs": null,
+    "confidence": 0.984
+  },
+  {
+    "text": " A",
+    "startMs": 32650,
+    "endMs": 32850,
+    "timestampMs": null,
+    "confidence": 0.825
+  },
+  {
+    "text": " Rockstar",
+    "startMs": 32850,
+    "endMs": 33250,
+    "timestampMs": null,
+    "confidence": 0.964
+  },
+  {
+    "text": " pensou",
+    "startMs": 33250,
+    "endMs": 33730,
+    "timestampMs": null,
+    "confidence": 0.978
+  },
+  {
+    "text": " até",
+    "startMs": 33730,
+    "endMs": 33950,
+    "timestampMs": null,
+    "confidence": 0.981
+  },
+  {
+    "text": " no",
+    "startMs": 33950,
+    "endMs": 34170,
+    "timestampMs": null,
+    "confidence": 0.992
+  },
+  {
+    "text": " jeito",
+    "startMs": 34170,
+    "endMs": 34450,
+    "timestampMs": null,
+    "confidence": 0.994
+  },
+  {
+    "text": " que",
+    "startMs": 34450,
+    "endMs": 34710,
+    "timestampMs": null,
+    "confidence": 0.963
+  },
+  {
+    "text": " você",
+    "startMs": 34710,
+    "endMs": 34890,
+    "timestampMs": null,
+    "confidence": 0.988
+  },
+  {
+    "text": " comete",
+    "startMs": 34890,
+    "endMs": 35350,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " crimes!",
+    "startMs": 35350,
+    "endMs": 35810,
+    "timestampMs": null,
+    "confidence": 0.991
+  },
+  {
+    "text": " E",
+    "startMs": 36100,
+    "endMs": 36300,
+    "timestampMs": null,
+    "confidence": 0.954
+  },
+  {
+    "text": " aí,",
+    "startMs": 36300,
+    "endMs": 36540,
+    "timestampMs": null,
+    "confidence": 0.969
+  },
+  {
+    "text": " você",
+    "startMs": 36540,
+    "endMs": 37040,
+    "timestampMs": null,
+    "confidence": 0.997
+  },
+  {
+    "text": " vai",
+    "startMs": 37040,
+    "endMs": 37200,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " ser",
+    "startMs": 37200,
+    "endMs": 37360,
+    "timestampMs": null,
+    "confidence": 1.0
+  },
+  {
+    "text": " um",
+    "startMs": 37360,
+    "endMs": 37500,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " criminoso",
+    "startMs": 37500,
+    "endMs": 37940,
+    "timestampMs": null,
+    "confidence": 0.999
+  },
+  {
+    "text": " profissional",
+    "startMs": 37940,
+    "endMs": 38460,
+    "timestampMs": null,
+    "confidence": 1.0
+  },
+  {
+    "text": " ou",
+    "startMs": 38460,
+    "endMs": 38900,
+    "timestampMs": null,
+    "confidence": 0.965
+  },
+  {
+    "text": " causar",
+    "startMs": 38900,
+    "endMs": 39380,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " o",
+    "startMs": 39380,
+    "endMs": 39480,
+    "timestampMs": null,
+    "confidence": 0.998
+  },
+  {
+    "text": " caos?",
+    "startMs": 39480,
+    "endMs": 39960,
+    "timestampMs": null,
+    "confidence": 1.0
+  }
+]

@@ -1,0 +1,38 @@
+CLIPRUSH — NOVO SISTEMA POLICIAL DO GTA 6
+FONTE DE CORTE: gta6-extended.mp4
+Os tempos abaixo são do arquivo-fonte ORIGINAL, NÃO da timeline do Short.
+Formato interpretado: MM:SS,mmm (minutos, segundos, milissegundos).
+
+01 — JASON / COMBATE E HUD
+Início: 14:02,260
+Fim:    14:12,050
+Duração aproximada: 9,790 s
+Foco: Jason atirando nos policiais. Tracking no personagem; inserir ampliação do HUD quando o texto mencionar os indicadores. Não perder a ação.
+
+02 — LUCIA / ÍCONE DO VEÍCULO
+Início: 15:52,020
+Fim:    15:59,170
+Duração aproximada: 7,150 s
+Foco: canto superior direito; mostrar claramente o indicador do carro desaparecendo quando Lucia sai do veículo. Replay curto com antes/depois, sem fabricar ou apagar ícones.
+
+03 — ESTRELAS VERMELHAS
+Início: 16:24,180
+Fim:    16:29,040
+Duração aproximada: 4,860 s
+Foco: estrelas vermelhas no canto superior direito. Ampliar HUD; manter contexto da perseguição no fundo.
+
+04 — ROSTO DE LUCIA / PORTA
+Início: 17:52,120
+Fim:    18:00,180
+Duração aproximada: 8,060 s
+Foco: acompanhar Lucia até ficar diante da porta; depois aproximar suavemente o rosto, sem ocultá-lo com legendas.
+
+05 — ASSALTO / CÂMERAS
+Início: 18:01,110
+Fim:    18:08,130
+Duração aproximada: 7,020 s
+Foco: ação do assalto; destacar indicadores de câmera/identificação APENAS se realmente visíveis. Não inventar câmera na cena.
+
+SOMA DOS INTERVALOS: ~36,88 s de material-fonte (sem contar reaproveitamento ou efeitos).
+Para vídeo de ~45–50 s, pode usar replays curtos, freeze-frame e ampliação real do HUD; nunca preencher com tela parada sem propósito.
+Validar tempos/fps e enquadramentos no original antes de implementar.

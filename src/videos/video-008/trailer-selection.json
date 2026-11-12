@@ -1,0 +1,10 @@
+{
+  "verified": false,
+  "startSeconds": 27.666666666666668,
+  "freezeSourceFrame": 927,
+  "still": "images/trailer-frame-0927-review.webp",
+  "sourceFps": 30,
+  "sourceVideoDurationSeconds": 90,
+  "requestedWindowSeconds": [28, 31],
+  "status": "User corrected the location to lower-right at 30-31 seconds in this same file. Inspected that region at source frames 895-933 in two-frame steps, including gamma-lifted review crops; dog still not visually identified. See out/video-008/right-corner-review.jpg. Preview includes actual source frames 830-927 and exact still 927 (30.9 s), explicitly marked under review. Do not export as final until dog is identified."
+}

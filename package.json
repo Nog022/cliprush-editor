@@ -1,7 +1,7 @@
 {
   "name": "cliprush-editor",
   "version": "1.0.0",
-  "description": "My Remotion video",
+  "description": "ClipRush Editor Studio — produção audiovisual local com Remotion",
   "repository": {},
   "license": "UNLICENSED",
   "engines": {
@@ -9,17 +9,25 @@
   },
   "private": true,
   "dependencies": {
+    "@remotion/bundler": "4.0.539",
     "@remotion/captions": "4.0.539",
     "@remotion/cli": "4.0.539",
     "@remotion/media": "4.0.539",
+    "@remotion/player": "4.0.539",
+    "@remotion/renderer": "4.0.539",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remotion": "4.0.539"
   },
   "devDependencies": {
+    "@playwright/test": "1.64.1",
     "@remotion/eslint-config-flat": "4.0.539",
     "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
     "@types/web": "0.0.166",
+    "electron": "45.2.3",
+    "electron-builder": "26.18.0",
+    "esbuild": "0.28.2",
     "eslint": "9.39.5",
     "prettier": "3.8.1",
     "typescript": "5.9.3"
@@ -28,9 +36,19 @@
     "dev": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "desktop:build": "node scripts/build-desktop.mjs",
+    "desktop:dev": "npm run desktop:build && node scripts/start-desktop.mjs",
+    "desktop:start": "node scripts/start-desktop.mjs",
+    "desktop:typecheck": "tsc --project tsconfig.desktop.json",
+    "desktop:lint": "eslint desktop studio shared && tsc --project tsconfig.desktop.json",
+    "desktop:package": "npm run desktop:build && electron-builder --dir --win --config electron-builder.yml",
+    "desktop:installer": "npm run desktop:build && electron-builder --win nsis --config electron-builder.yml",
+    "desktop:test": "node scripts/test-desktop.mjs",
+    "desktop:e2e": "playwright test --config playwright.desktop.config.ts"
   },
   "allowScripts": {
     "esbuild": false
-  }
+  },
+  "main": "dist/desktop/main.cjs"
 }

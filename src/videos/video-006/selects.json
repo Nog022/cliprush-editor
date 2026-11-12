@@ -1,0 +1,92 @@
+[
+  {
+    "id": "traffic",
+    "source": "videos-complementares/Trailer 2 GTA VI.mp4",
+    "sourceIn": 34,
+    "sourceOut": 37.8,
+    "file": "footage/traffic.mp4",
+    "game": "GTA 6",
+    "audio": "removed",
+    "crop": "1920:864:0:108 (encoded letterbox only)"
+  },
+  {
+    "id": "beach-gym",
+    "source": "videos-complementares/Trailer 2 GTA VI.mp4",
+    "sourceIn": 38,
+    "sourceOut": 42,
+    "file": "footage/beach-gym.mp4",
+    "game": "GTA 6",
+    "audio": "removed",
+    "crop": "1920:864:0:108 (encoded letterbox only)"
+  },
+  {
+    "id": "street",
+    "source": "videos-complementares/Trailer 2 GTA VI.mp4",
+    "sourceIn": 45.3,
+    "sourceOut": 48.8,
+    "file": "footage/street.mp4",
+    "game": "GTA 6",
+    "audio": "removed",
+    "crop": "1920:864:0:108 (encoded letterbox only)"
+  },
+  {
+    "id": "bar",
+    "source": "videos-complementares/Trailer 2 GTA VI.mp4",
+    "sourceIn": 90,
+    "sourceOut": 95.6,
+    "file": "footage/bar.mp4",
+    "game": "GTA 6",
+    "audio": "removed",
+    "crop": "1920:864:0:108 (encoded letterbox only)"
+  },
+  {
+    "id": "promenade",
+    "source": "videos-complementares/Trailer 2 GTA VI.mp4",
+    "sourceIn": 125.4,
+    "sourceOut": 128.0,
+    "file": "footage/promenade.mp4",
+    "game": "GTA 6",
+    "audio": "removed",
+    "crop": "1920:864:0:108 (encoded letterbox only)"
+  },
+  {
+    "id": "club",
+    "source": "videos-complementares/Trailer 2 GTA VI.mp4",
+    "sourceIn": 128.1,
+    "sourceOut": 130.5,
+    "file": "footage/club.mp4",
+    "game": "GTA 6",
+    "audio": "removed",
+    "crop": "1920:864:0:108 (encoded letterbox only)"
+  },
+  {
+    "id": "water",
+    "source": "videos-complementares/Trailer 2 GTA VI.mp4",
+    "sourceIn": 139.3,
+    "sourceOut": 142.1,
+    "file": "footage/water.mp4",
+    "game": "GTA 6",
+    "audio": "removed",
+    "crop": "1920:864:0:108 (encoded letterbox only)"
+  },
+  {
+    "id": "city",
+    "source": "videos-complementares/Trailer 2 GTA VI.mp4",
+    "sourceIn": 153,
+    "sourceOut": 155.8,
+    "file": "footage/city.mp4",
+    "game": "GTA 6",
+    "audio": "removed",
+    "crop": "1920:864:0:108 (encoded letterbox only)"
+  },
+  {
+    "id": "gesture",
+    "source": "videos-complementares/Trailer 2 GTA VI.mp4",
+    "sourceIn": 12.4,
+    "sourceOut": 15.9,
+    "file": "footage/gesture.mp4",
+    "game": "GTA 6",
+    "audio": "removed",
+    "crop": "1920:864:0:108 (encoded letterbox only)"
+  }
+]

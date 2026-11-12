@@ -1,0 +1,31 @@
+{
+  "voice": "unaltered file, full duration; playback gain 0.88 for mix headroom",
+  "music": "local original synthesis copied from video-003; no external samples",
+  "effects": [
+    [
+      0,
+      "hit"
+    ],
+    [
+      9.57,
+      "whoosh"
+    ],
+    [
+      14.82,
+      "whoosh"
+    ],
+    [
+      22.99,
+      "click"
+    ],
+    [
+      30.24,
+      "riser"
+    ],
+    [
+      38.18,
+      "hit"
+    ]
+  ],
+  "captions": "Phrase-level ASR; global +240ms observed drift corrected, phrase onsets anchored to measured silence. No karaoke; raw ASR retained."
+}

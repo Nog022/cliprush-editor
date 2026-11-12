@@ -1,0 +1,93 @@
+CLIPRUSH — GTA 6: 3 DETALHES QUE VOCÊ NÃO VIU
+Tema: pré-carregamento liberado + análise de três cenas do novo vídeo Rockstar
+Fonte: Grand Theft Auto VI： Pré-carregue agora [sXCiA142w8Y].webm
+Formato final: 9:16 | 1080x1920 | 30 FPS | alvo ~45s (ajustar ao áudio final)
+IMPORTANTE: origem em MM:SS:FF, em que FF = quadros de vídeo, NÃO centésimos.
+
+OBJETIVO DE STORYTELLING
+Gancho de notícia nos primeiros 2–3s; promessa visual de três detalhes; revelar
+um por vez (mortal, equipe armada, variedade de ambientes); fechar com pergunta
+e animação de seguir o ClipRush. Curiosidade forte sem inventar recursos confirmados.
+
+ROTEIRO CRONOMETRADO (estimativa anterior à gravação)
+
+[00:00–00:03] GANCHO
+Narração: “O pré-carregamento de GTA 6 JÁ FOI LIBERADO!”
+Imagem: trecho do próprio vídeo com “PRÉ-CARREGUE AGORA” (aprox. 00:15–00:16).
+Edição: impacto com zoom e título “PRÉ-CARREGAMENTO LIBERADO!”
+Observação: isso NÃO significa que o jogo já foi lançado.
+
+[00:03–00:07] PROMESSA DE CURIOSIDADE
+Narração: “E no novo vídeo, a Rockstar mostrou TRÊS detalhes que você provavelmente não viu!”
+Imagem: teaser em três cortes curtos: mortal -> passarela -> rua de Vice City.
+Edição: três flashes com contagem 1, 2, 3 e SFX pontuais; não revelar tudo.
+Texto: “3 DETALHES QUE VOCÊ PERDEU”.
+
+[00:07–00:16] DETALHE 1 — ACROBACIA
+Narração: “Primeiro: olha esse mortal! Um cara faz uma acrobacia diante de uma roda-gigante. A cena dura menos de dois segundos!”
+Origem EXATA: 00:04:16–00:06:02 | frames 136–182 (inclusivos).
+Edição: passagem normal -> rebobinar -> replay em velocidade reduzida,
+zoom no acrobata e realce discreto da roda-gigante; manter cena inteira visível
+em algum momento antes de aproximar.
+Texto: “OLHA ESSE MORTAL!” -> “MENOS DE 2 SEGUNDOS”.
+
+[00:16–00:27] DETALHE 2 — EQUIPE ARMADA
+Narração: “Segundo: PAUSA AQUI! Uma equipe armada aparece numa passarela escura, com luzes vermelhas e azuis piscando. Será uma operação policial? O vídeo não explica!”
+Origem EXATA: 00:13:14–00:14:20 | frames 404–440 (inclusivos).
+Edição: congelar no frame com o grupo, iluminar com cuidado, zoom/pan
+lento nos integrantes, destacar a luz vermelha/azul e retornar ao plano aberto.
+Texto: “QUEM SÃO ELES?” -> “OPERAÇÃO POLICIAL?”.
+Nota: não afirmar IA policial avançada ou ação jogável; é uma pergunta,
+não uma confirmação.
+
+[00:27–00:31] DETALHE 3.1 — BALADA
+Narração: “E terceiro: olha como Vice City muda de cenário! Tem balada cheia de luzes...”
+Origem EXATA: 00:02:01–00:04:15 | frames 61–135 (inclusivos).
+Edição: movimentar câmera sobre a dançarina de roupa brilhante, valorizar neon
+e multidão, sem identificar a personagem como Lucia sem prova.
+Texto: “VIDA NOTURNA”.
+
+[00:31–00:34] DETALHE 3.2 — IATE
+Narração: “...um iate de luxo...”
+Origem EXATA: 00:10:16–00:11:28 | frames 316–358 (inclusivos).
+Edição: priorizar os frames da embarcação (a faixa começa com trecho de outra cena),
+mostrar proporção do barco e reflexos de sol, com transição de movimento.
+Texto: “IATE DE LUXO”.
+
+[00:34–00:39] DETALHE 3.3 — RUA + RECOMPENSA
+Narração: “...e ruas movimentadas, tomadas por neon. Tudo isso em um vídeo de só TRINTA SEGUNDOS!”
+Origem EXATA: 00:17:27–00:18:27 | frames 537–567 (inclusivos).
+Edição: priorizar a avenida noturna, que entra depois do começo do corte;
+zoom progressivo no trânsito/neon, seguido de montagem 3-em-1 com as
+cenas já vistas e lettering “30 SEGUNDOS!”.
+
+[00:39–00:45] PERGUNTA + CTA CLIPRUSH
+Narração: “Qual detalhe passou batido? Segue o ClipRush pra descobrir os próximos segredos de GTA 6!”
+Imagem: flashes curtos dos três detalhes no fundo; escurecer. Centralizar
+CLIPRUSH em tipografia forte e botão SEGUIR com clique e animação de confirmação.
+Edição: logo/texto entra por impacto, glow sutil, pulso no clique; não usar
+mascote/personagem Rush. Encerrar com logo por alguns frames.
+
+VERSÃO LIMPA PARA NARRAÇÃO
+-------------------------
+O pré-carregamento de GTA 6 JÁ FOI LIBERADO! E no novo vídeo, a Rockstar mostrou TRÊS detalhes que você provavelmente não viu!
+
+Primeiro: olha esse mortal! Um cara faz uma acrobacia diante de uma roda-gigante. A cena dura menos de dois segundos!
+
+Segundo: PAUSA AQUI! Uma equipe armada aparece numa passarela escura, com luzes vermelhas e azuis piscando. Será uma operação policial? O vídeo não explica!
+
+E terceiro: olha como Vice City muda de cenário! Tem balada cheia de luzes, um iate de luxo e ruas movimentadas, tomadas por neon.
+
+Tudo isso em um vídeo de só TRINTA SEGUNDOS!
+
+Qual detalhe passou batido? Segue o ClipRush pra descobrir os próximos segredos de GTA 6!
+
+
+NOTAS PARA EDIÇÃO
+- O áudio final manda: medir a duração real e ajustar TODOS os intervalos.
+- Não inventar conteúdo fora dos frames; destacar apenas o que está visível.
+- Não prolongar 1s de origem até 10s sem replays, recortes e movimentos.
+- Os intervalos 00:10:16–00:11:28 e 00:17:27–00:18:27 atravessam
+  transições; o Codex pode selecionar subtrechos dentro deles, sem expandir
+  as janelas fornecidas.
+- Preservar vídeos anteriores; projeto atual sem personagem Rush na tela.

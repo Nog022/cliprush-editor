@@ -1,0 +1,19 @@
+{
+  "videoId": "video-XXX",
+  "fps": 30,
+  "scene": {
+    "startSec": 12.4,
+    "endSec": 15.1,
+    "asset": "SUBSTITUIR_PELO_CAMINHO_REAL.mp4",
+    "sourceStartSec": 42.8,
+    "spokenCue": "repare na mão dele",
+    "evidence": "mão visível no clipe original",
+    "visualTargetAfterCrop": {"x": 0.72, "y": 0.42},
+    "primaryEffect": "focusZoom",
+    "zoomScale": 1.26,
+    "marker": {"type": "circle", "startSec": 13.1, "durationSec": 1.0},
+    "perceptionHoldSec": 0.6,
+    "caption": {"text": "REPARA NA MÃO", "highlight": "MÃO"},
+    "status": "EXEMPLO: não usar timecodes/assets sem conferir"
+  }
+}

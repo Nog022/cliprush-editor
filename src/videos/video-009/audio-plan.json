@@ -1,0 +1,187 @@
+{
+  "events": [
+    {
+      "seconds": 0,
+      "kind": "impact"
+    },
+    {
+      "seconds": 5.5,
+      "kind": "impact"
+    },
+    {
+      "seconds": 10.133,
+      "kind": "impact"
+    },
+    {
+      "seconds": 18.4,
+      "kind": "impact"
+    },
+    {
+      "seconds": 33.02,
+      "kind": "impact"
+    },
+    {
+      "seconds": 6.9,
+      "kind": "whoosh"
+    },
+    {
+      "seconds": 7.93,
+      "kind": "whoosh"
+    },
+    {
+      "seconds": 8.96,
+      "kind": "whoosh"
+    },
+    {
+      "seconds": 12.8,
+      "kind": "whoosh"
+    },
+    {
+      "seconds": 13.667,
+      "kind": "whoosh"
+    },
+    {
+      "seconds": 16.067,
+      "kind": "whoosh"
+    },
+    {
+      "seconds": 20.567,
+      "kind": "whoosh"
+    },
+    {
+      "seconds": 25.533,
+      "kind": "whoosh"
+    },
+    {
+      "seconds": 28.067,
+      "kind": "whoosh"
+    },
+    {
+      "seconds": 35.733,
+      "kind": "whoosh"
+    },
+    {
+      "seconds": 38.033,
+      "kind": "whoosh"
+    },
+    {
+      "seconds": 5.5,
+      "kind": "tick"
+    },
+    {
+      "seconds": 5.95,
+      "kind": "tick"
+    },
+    {
+      "seconds": 6.4,
+      "kind": "tick"
+    },
+    {
+      "seconds": 6.8500000000000005,
+      "kind": "tick"
+    },
+    {
+      "seconds": 7.300000000000001,
+      "kind": "tick"
+    },
+    {
+      "seconds": 7.750000000000001,
+      "kind": "tick"
+    },
+    {
+      "seconds": 8.200000000000001,
+      "kind": "tick"
+    },
+    {
+      "seconds": 8.650000000000002,
+      "kind": "tick"
+    },
+    {
+      "seconds": 9.100000000000001,
+      "kind": "tick"
+    },
+    {
+      "seconds": 9.55,
+      "kind": "tick"
+    },
+    {
+      "seconds": 13.67,
+      "kind": "tick"
+    },
+    {
+      "seconds": 13.85,
+      "kind": "tick"
+    },
+    {
+      "seconds": 14.03,
+      "kind": "tick"
+    },
+    {
+      "seconds": 14.209999999999999,
+      "kind": "tick"
+    },
+    {
+      "seconds": 14.389999999999999,
+      "kind": "tick"
+    },
+    {
+      "seconds": 14.569999999999999,
+      "kind": "tick"
+    },
+    {
+      "seconds": 14.749999999999998,
+      "kind": "tick"
+    },
+    {
+      "seconds": 14.929999999999998,
+      "kind": "tick"
+    },
+    {
+      "seconds": 15.109999999999998,
+      "kind": "tick"
+    },
+    {
+      "seconds": 15.289999999999997,
+      "kind": "tick"
+    },
+    {
+      "seconds": 15.469999999999997,
+      "kind": "tick"
+    },
+    {
+      "seconds": 15.649999999999997,
+      "kind": "tick"
+    },
+    {
+      "seconds": 15.829999999999997,
+      "kind": "tick"
+    },
+    {
+      "seconds": 16.1,
+      "kind": "tick"
+    },
+    {
+      "seconds": 17.1,
+      "kind": "tick"
+    },
+    {
+      "seconds": 18.1,
+      "kind": "tick"
+    },
+    {
+      "seconds": 30.66,
+      "kind": "stop"
+    },
+    {
+      "seconds": 31.7,
+      "kind": "riser"
+    },
+    {
+      "seconds": 41.38,
+      "kind": "finish"
+    }
+  ],
+  "narration": "Original full MP3, 42.840813s, gain .92, no retiming or edits",
+  "synthesis": "Original deterministic synthesis, seed 9009; no external samples",
+  "transcription": "Existing cached faster-whisper large-v3, estimated word timings"
+}

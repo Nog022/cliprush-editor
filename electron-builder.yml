@@ -1,0 +1,24 @@
+appId: studio.cliprush.editor
+productName: ClipRush Editor Studio
+directories:
+  app: dist
+  output: out/desktop-release
+files:
+  - desktop/**
+  - ui/**
+  - package.json
+  - "!node_modules/**/*"
+extraResources:
+  - from: public/videos
+    to: legacy-public/videos
+    filter:
+      - "**/*"
+asar: true
+win:
+  target: dir
+  signAndEditExecutable: false
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true

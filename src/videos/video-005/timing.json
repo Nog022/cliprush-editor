@@ -1,0 +1,98 @@
+{
+  "fps": 30,
+  "audioDuration": 39.000813,
+  "durationInFrames": 1171,
+  "scenes": [
+    {
+      "id": "hook",
+      "from": 0,
+      "to": 72,
+      "state": "curiosity",
+      "label": "Por que a prisão?"
+    },
+    {
+      "id": "trailer",
+      "from": 72,
+      "to": 284,
+      "state": "curiosity-to-whisper",
+      "label": "O trailer não explica"
+    },
+    {
+      "id": "investigation",
+      "from": 284,
+      "to": 504,
+      "state": "investigation",
+      "label": "As pistas do passado"
+    },
+    {
+      "id": "destiny",
+      "from": 504,
+      "to": 648,
+      "state": "serious",
+      "label": "Mudar o destino"
+    },
+    {
+      "id": "choice",
+      "from": 648,
+      "to": 771,
+      "state": "whisper",
+      "label": "Uma escolha"
+    },
+    {
+      "id": "source",
+      "from": 771,
+      "to": 858,
+      "state": "building",
+      "label": "A fonte oficial"
+    },
+    {
+      "id": "reveal",
+      "from": 858,
+      "to": 1050,
+      "state": "revelation",
+      "label": "Lutou pela família"
+    },
+    {
+      "id": "closing",
+      "from": 1050,
+      "to": 1171,
+      "state": "energetic",
+      "label": "Mais segredos"
+    }
+  ],
+  "whispers": [
+    [
+      6.5,
+      9.45
+    ],
+    [
+      21.6,
+      25.7
+    ]
+  ],
+  "suspensePauses": [
+    [
+      7.239456,
+      7.614444
+    ],
+    [
+      23.868844,
+      24.305351
+    ],
+    [
+      30.587642,
+      30.924444
+    ]
+  ],
+  "emphasis": {
+    "prison": 1.48,
+    "past": 10.9,
+    "liberty": 15.96,
+    "destiny": 20.78,
+    "choice": 22.56,
+    "fight": 30.35,
+    "family": 32.2,
+    "cta": 35.166
+  },
+  "alignmentNotes": "Whisper word boundaries refined against waveform and silence edges; 180ms interior alignment correction; leading words moved off silence; raw ASR retained."
+}
