@@ -20,7 +20,7 @@ export function scene(value: unknown, duration: number): Scene {
   const s = record(value);
   const from = number(s.from, 0, duration - 1);
   if (!["circle", "square", "none"].includes(String(s.shape)) || !["fade", "zoom", "slide", "none"].includes(String(s.animation))) throw new Error("Animação ou objeto inválido.");
-  return { id: id(s.id), name: text(s.name, "Cena"), from, durationInFrames: number(s.durationInFrames, 1, duration - from), title: text(s.title, "Texto da cena", 500), subtitle: s.subtitle === "" ? "" : text(s.subtitle, "Subtítulo", 500), background: color(s.background), accent: color(s.accent), shape: s.shape as Scene["shape"], animation: s.animation as Scene["animation"] };
+  return { id: id(s.id), name: text(s.name, "Cena"), from, durationInFrames: number(s.durationInFrames, 1, duration - from), title: s.title === "" ? "" : text(s.title, "Texto da cena", 500), subtitle: s.subtitle === "" ? "" : text(s.subtitle, "Subtítulo", 500), background: color(s.background), accent: color(s.accent), shape: s.shape as Scene["shape"], animation: s.animation as Scene["animation"] };
 }
 
 export function record(value: unknown): Record<string, unknown> {
@@ -116,6 +116,7 @@ export function project(value: unknown): Project {
         ? {}
         : { thumbnail: text(a.thumbnail, "Miniatura", 4096) }),
       ...(a.role === undefined ? {} : { role: mediaRole(a.role) }),
+      ...(a.category === undefined ? {} : { category: text(a.category, "Categoria", 80) }),
     } as Project["assets"][number];
   });
   if (new Set(assets.map((a) => a.id)).size !== assets.length)
@@ -137,6 +138,7 @@ export function project(value: unknown): Project {
       ),
       volume: number(c.volume, 0, 2, false),
       ...(c.trimBefore === undefined ? {} : { trimBefore: number(c.trimBefore, 0, 2_592_000) }),
+      ...(c.animation === undefined ? {} : { animation: clipAnimation(c.animation) }),
     };
   });
   if (new Set(clips.map((c) => c.id)).size !== clips.length)
@@ -163,6 +165,29 @@ export function project(value: unknown): Project {
     scenes: (() => { if (p.scenes === undefined) return []; if (!Array.isArray(p.scenes) || p.scenes.length > 10000) throw new Error("Cenas inválidas."); const scenes = p.scenes.map((s) => scene(s, settings.durationInFrames)); if (new Set(scenes.map((s) => s.id)).size !== scenes.length) throw new Error("IDs de cenas repetidos."); return scenes; })(),
     captions: (() => { if (p.captions === undefined) return []; if (!Array.isArray(p.captions) || p.captions.length > 50000) throw new Error("Legendas inválidas."); return p.captions.map((item) => { const c = record(item); const startMs = number(c.startMs, 0, 86_400_000, false); if (typeof c.text !== "string" || c.text.length > 6000) throw new Error("Texto de legenda inválido."); return { text: c.text, startMs, endMs: number(c.endMs, startMs + 0.001, 86_400_000, false), timestampMs: null, confidence: null }; }); })(),
     exportSettings: p.exportSettings === undefined ? defaultRender({width: settings.width, height: settings.height, fps: settings.fps}) : renderSettings(p.exportSettings),
+    ...(p.generation === undefined ? {} : { generation: generation(p.generation) }),
+  };
+}
+function clipAnimation(value: unknown): "none" | "fade" | "zoom" {
+  if (value !== "none" && value !== "fade" && value !== "zoom") throw new Error("Animação de clipe inválida.");
+  return value;
+}
+function multiline(value: unknown, max: number): string {
+  if (typeof value !== "string" || value.length > max || value.includes("\0")) throw new Error("Instruções inválidas ou muito extensas.");
+  return value;
+}
+export function generation(value: unknown): import("./model").GenerationSettings {
+  const g = record(value);
+  if (!Array.isArray(g.references) || g.references.length > 20 || typeof g.autoRender !== "boolean") throw new Error("Referências inválidas.");
+  const references = g.references.map((item) => {
+    const ref = record(item);
+    return { name: text(ref.name, "Referência", 255), content: multiline(ref.content, 100_000) };
+  });
+  if (references.reduce((sum, r) => sum + r.content.length, 0) > 300_000) throw new Error("Referências excedem 300 mil caracteres.");
+  return {
+    prompt: multiline(g.prompt, 30_000), references, autoRender: g.autoRender,
+    ...(g.model === undefined ? {} : { model: text(g.model, "Modelo", 160) }),
+    ...(g.effort === undefined ? {} : { effort: text(g.effort, "Raciocínio", 40) }),
   };
 }
 export function mediaRole(value: unknown): import("./model").MediaRole {

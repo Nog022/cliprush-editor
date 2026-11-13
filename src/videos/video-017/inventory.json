@@ -1,0 +1,27 @@
+[
+  {
+    "file": "public/videos/video-017/audio/narracao.mp3",
+    "bytes": 785563,
+    "sha256": "69a61ea00b0290049d073d3263cd72a974174e53ef9df484395e69ad00aa8ea0"
+  },
+  {
+    "file": "public/videos/biblioteca/gta6/videos/video_instagram.mp4",
+    "bytes": 3400548,
+    "sha256": "c4798fc415044ec06ce22b57c960bbdcdd1c292aec52e3afa326c319806af159"
+  },
+  {
+    "file": "public/videos/video-017/footage/only-in-dade-vice-city-02.mp4",
+    "bytes": 5091438,
+    "sha256": "d3c595d9f7785036a10dcb9d2966a7d29f86cf0313c95a396529a048b7850ad4"
+  },
+  {
+    "file": "public/videos/video-017/footage/comparacao-miami-gta6.mp4",
+    "bytes": 8701385,
+    "sha256": "a3b67cb03e872222cd8f94fc3ce470300f1332af0582a4f26e93de397f902509"
+  },
+  {
+    "file": "public/videos/video-017/fonts/Arial-Bold.ttf",
+    "bytes": 980756,
+    "sha256": "766f06ac8761f82f25d032a220e89438f6064591af9915061f20b949efdedf69"
+  }
+]

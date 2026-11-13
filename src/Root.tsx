@@ -1,3 +1,4 @@
+import { ClipRush017 } from "./videos/video-017/ClipRush017";
 import { ClipRush016 } from "./videos/video-016/ClipRush016";
 import { ClipRush015 } from "./videos/video-015/ClipRush015";
 import { ClipRush014 } from "./videos/video-014/ClipRush014";
@@ -32,6 +33,7 @@ export const RemotionRoot: React.FC = () => {
   return (
     <>
       <MyComposition />
+      <Composition id="ClipRush017" component={ClipRush017} durationInFrames={1442} fps={30} width={1080} height={1920} />
       <Composition id="ClipRush016" component={ClipRush016} durationInFrames={1207} fps={30} width={1080} height={1920} />
       <Composition id="ClipRush015" component={ClipRush015} durationInFrames={1192} fps={30} width={1080} height={1920} />
       <Composition id="ClipRush014" component={ClipRush014} durationInFrames={1840} fps={30} width={1080} height={1920} />

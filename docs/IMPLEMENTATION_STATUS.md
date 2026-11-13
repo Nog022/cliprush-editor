@@ -1,5 +1,28 @@
 # Estado da implementação
 
+## Produção local automatizada em 12 de novembro de 2026
+
+O fluxo local agora inclui Codex app-server no processo principal, autenticação oficial iniciada pela interface, descoberta de modelos/esforços, preferências por projeto e workspace, sessões persistentes, referências TXT/MD/JSON e geração por dados tipados de composição. O Player e o exportador usam o mesmo componente Remotion. Há validação estrutural e render de quadros antes da promoção da revisão, uma tentativa de reparo, cancelamento, logs, recuperação da montagem anterior e MP4 manual ou automático.
+
+A biblioteca permite categorias personalizadas, filtro e reutilização de mídias gerenciadas entre projetos do mesmo canal. A busca de cenas reutiliza o catálogo e o script Python existentes, com até cinco resultados e timestamps aplicados sobre o vídeo original por referência.
+
+Verificações executadas passaram em TypeScript/lint desktop, lint original, build desktop, bundle Remotion e seis testes de domínio. Dois testes Electron novos passaram com dados próprios. Cobriram mídia ausente e relink, categorias e reutilização, pacote e referências, persistência após reinício, ausência de Codex, MP4 com áudio, importação/render de vídeo com trim, cancelamento e geração/edição reais no modelo retornado `gpt-6.1-sol`. A sessão real foi retomada após fechar e reabrir o aplicativo. O primeiro turno também exportou MP4 automaticamente.
+
+A suíte Electron completa teve três falhas em testes antigos por mídias ausentes dos vídeos 002, 005 e 006. Esses arquivos precisam ser restaurados para validar seus previews originais. A distribuição empacotada dos serviços novos, o login interativo e os diálogos de aprovação do Codex ainda exigem validação específica. O acesso remoto permanece pendente e requer um backend autenticado para substituir o bridge IPC em outro dispositivo.
+
+O motor atual gera cenas, formas, textos, legendas, clipes, cortes, fade e zoom. Efeitos adicionais exigem ampliar o componente compartilhado. Inicialização e dependências externas estão no README. A especificação está em `docs/sdd/automated-production.md`.
+
+### Arquivos desta implementação
+
+- Serviços e IPC em `desktop/catalog.ts`, `desktop/codex.ts`, `desktop/production.ts`, `desktop/render.ts`, `desktop/main.ts`, `desktop/preload.ts` e `desktop/store.ts`.
+- Contratos e validação em `shared/model.ts`, `shared/validation.ts` e `shared/production.ts`.
+- Composição e preview em `studio/ProjectComposition.tsx`, `studio/render-entry.tsx` e `studio/Preview.tsx`.
+- Interface em `studio/App.tsx`, `studio/style.css`, `studio/editor/ProductionPanel.tsx`, `studio/editor/CatalogSearch.tsx`, `studio/editor/Library.tsx`, `studio/editor/MediaPanel.tsx`, `studio/editor/ClipList.tsx` e `studio/editor/ProjectProperties.tsx`.
+- Build e verificações em `scripts/build-desktop.mjs`, `eslint.config.mjs`, `.gitignore`, `tests/desktop/core.test.ts`, `tests/desktop/production.e2e.ts` e `tests/desktop/codex-live.e2e.ts`.
+- Documentação no README, neste relatório e em `docs/sdd/automated-production.md`.
+
+## Registro anterior da fundação desktop
+
 Atualizado em 5 de novembro de 2026. Escopo desta entrega: **Fase 1 — fundação desktop**, com montagem básica adicional para testar novos projetos. As fases seguintes não estão concluídas.
 
 | Fase              | Estado                                          | Resultado                                                                        |

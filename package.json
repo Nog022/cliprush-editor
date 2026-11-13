@@ -33,7 +33,10 @@
     "typescript": "5.9.3"
   },
   "scripts": {
-    "dev": "remotion studio",
+    "render": "node scripts/production-render.mjs",
+    "retention:plan": "node scripts/production-retention.mjs plan",
+    "retention:test": "node --test tests/retention/lifecycle.test.mjs",
+    "dev": "node scripts/production-studio.mjs",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc",

@@ -17,6 +17,10 @@ import { extensions, inside } from "./files";
 import { importFiles, inspectAssets, prepareAsset } from "./media";
 import { exportPackage, importPackage } from "./packages";
 import { installProtocol } from "./protocol";
+import { CodexClient } from "./codex";
+import { ProductionService } from "./production";
+import { RenderService } from "./render";
+import { CatalogService } from "./catalog";
 
 app.setName("ClipRush Editor Studio");
 protocol.registerSchemesAsPrivileged([
@@ -38,6 +42,10 @@ const locked = app.requestSingleInstanceLock();
 if (!locked) app.quit();
 let mainWindow: BrowserWindow;
 let store: Store;
+let codex: CodexClient;
+let production: ProductionService;
+let renders: RenderService;
+let catalog: CatalogService;
 let queue: Promise<unknown> = Promise.resolve();
 const root = app.isPackaged
   ? process.resourcesPath
@@ -57,7 +65,11 @@ function log(event: string, details: Record<string, unknown>) {
       "\n",
   ).catch(() => undefined);
 }
-function handle(name: string, action: (...args: unknown[]) => unknown) {
+function handle(
+  name: string,
+  action: (...args: unknown[]) => unknown,
+  serialized = true,
+) {
   ipcMain.handle(`cliprush:${name}`, (event, ...args: unknown[]) => {
     if (
       event.sender !== mainWindow.webContents ||
@@ -66,8 +78,10 @@ function handle(name: string, action: (...args: unknown[]) => unknown) {
     )
       throw new Error("Origem IPC não autorizada.");
     // One serialized mutation boundary prevents import/save races and modal overlap.
-    const task = queue.then(() => action(...args));
-    queue = task.catch(() => undefined);
+    const task = (serialized ? queue : Promise.resolve()).then(() =>
+      action(...args),
+    );
+    if (serialized) queue = task.catch(() => undefined);
     return task.catch((error: unknown) => {
       log("operation.error", {
         operation: name,
@@ -100,6 +114,130 @@ async function exportsList(): Promise<ExportInfo[]> {
   return result.sort((a, b) => b.modifiedAt.localeCompare(a.modifiedAt));
 }
 function registerHandlers() {
+  handle(
+    "searchCatalog",
+    (query) => catalog.search(validate.text(query, "Busca", 160)),
+    false,
+  );
+  handle("useCatalogScene", (id, candidate) =>
+    catalog.use(validate.id(id), validate.id(candidate)),
+  );
+  handle("codexStatus", () => codex.status(), false);
+  handle(
+    "codexLogin",
+    async () => {
+      await codex.connect();
+      const result = await codex.request<{ authUrl: string }>(
+        "account/login/start",
+        { type: "chatgpt" },
+      );
+      const url = new URL(result.authUrl);
+      if (url.protocol !== "https:" || url.hostname !== "auth.openai.com")
+        throw new Error("Endereço de autenticação Codex inválido.");
+      await shell.openExternal(url.href);
+    },
+    false,
+  );
+  handle("chooseCodex", async () => {
+    const result = await dialog.showOpenDialog(mainWindow, {
+      title: "Selecionar executável oficial Codex",
+      properties: ["openFile"],
+      filters: [
+        {
+          name: "Codex",
+          extensions: process.platform === "win32" ? ["exe"] : ["*"],
+        },
+      ],
+    });
+    if (!result.canceled) await codex.configure(result.filePaths[0]);
+  });
+  handle("productionStatus", (id) => production.status(validate.id(id)), false);
+  handle("generate", (id) => production.start(validate.id(id)));
+  handle("cancelProduction", (id) => production.cancel(validate.id(id)), false);
+  handle(
+    "answerApproval",
+    (id, approved) => {
+      if (typeof id !== "string" || typeof approved !== "boolean")
+        throw new Error("Aprovação inválida.");
+      codex.answer(id, approved);
+    },
+    false,
+  );
+  handle("restoreProduction", (id) => production.restore(validate.id(id)));
+  handle("attachReferences", async (id) => {
+    const project = store.get(id);
+    const result = await dialog.showOpenDialog(mainWindow, {
+      title: "Anexar roteiro ou storyboard",
+      properties: ["openFile", "multiSelections"],
+      filters: [{ name: "Referências", extensions: ["txt", "md", "json"] }],
+    });
+    if (result.canceled) return null;
+    if (result.filePaths.length > 20)
+      throw new Error("Anexe até 20 referências.");
+    const references = [];
+    for (const file of result.filePaths) {
+      if (!/\.(txt|md|json)$/i.test(file) || (await stat(file)).size > 400_000)
+        throw new Error("Referência inválida ou muito extensa.");
+      const content = await readFile(file, "utf8");
+      if (/\.json$/i.test(file)) JSON.parse(content);
+      references.push({ name: path.basename(file), content });
+    }
+    return store.save({
+      ...project,
+      generation: {
+        prompt: "",
+        autoRender: false,
+        ...project.generation,
+        references: [...(project.generation?.references ?? []), ...references],
+      },
+    });
+  });
+  handle("reuseAsset", (projectId, sourceId, assetId) => {
+    const project = store.get(projectId);
+    const source = store.get(sourceId);
+    if (project.channelId !== source.channelId)
+      throw new Error("Selecione uma mídia do mesmo canal.");
+    const asset = source.assets.find((a) => a.id === validate.id(assetId));
+    if (!asset) throw new Error("Mídia não encontrada.");
+    if (project.assets.some((a) => a.hash === asset.hash)) return project;
+    return store.save(
+      {
+        ...project,
+        assets: [...project.assets, { ...asset, id: randomUUID() }],
+      },
+      true,
+    );
+  });
+  handle("categorizeAsset", (projectId, assetId, category) => {
+    const project = store.get(projectId);
+    const value = validate.text(category, "Categoria", 80);
+    if (!project.assets.some((a) => a.id === validate.id(assetId)))
+      throw new Error("Mídia não encontrada.");
+    return store.save(
+      {
+        ...project,
+        assets: project.assets.map((a) =>
+          a.id === assetId ? { ...a, category: value } : a,
+        ),
+      },
+      true,
+    );
+  });
+  handle("startRender", (id, settings) =>
+    renders.start(store.get(id), validate.renderSettings(settings)),
+  );
+  handle("listRenders", () => renders.list(), false);
+  handle("cancelRender", (id) => renders.cancel(validate.id(id)), false);
+  handle("revealRender", (id) =>
+    shell.showItemInFolder(renders.get(validate.id(id)).outputPath),
+  );
+  handle("openRender", async (id) => {
+    const render = renders.get(validate.id(id));
+    if (render.status !== "completed")
+      throw new Error("A exportação ainda não foi concluída.");
+    const error = await shell.openPath(render.outputPath);
+    if (error) throw new Error(error);
+  });
   handle("workspace", async () => ({
     channels: store.channels(),
     projects: store.list(),
@@ -109,9 +247,58 @@ function registerHandlers() {
     exports: await exportsList(),
     dataDirectory: store.directory,
     version: app.getVersion(),
+    renders: renders.list(),
   }));
-  handle("createProject", (input) => store.create(validate.newProject(input)));
-  handle("saveProject", (input) => store.save(validate.project(input)));
+  handle("createProject", async (input) => {
+    const project = store.create(validate.newProject(input));
+    try {
+      const preferences = validate.record(
+        JSON.parse(
+          await readFile(
+            path.join(store.directory, "generation-preferences.json"),
+            "utf8",
+          ),
+        ),
+      );
+      return store.save({
+        ...project,
+        generation: validate.generation({
+          prompt: "",
+          references: [],
+          autoRender: false,
+          model: preferences.model,
+          effort: preferences.effort,
+        }),
+      });
+    } catch (error) {
+      if ((error as NodeJS.ErrnoException).code !== "ENOENT")
+        log("generation.preferences.error", { message: String(error) });
+      return project;
+    }
+  });
+  handle("saveProject", async (input) => {
+    const project = validate.project(input);
+    if (production.busy(project.id))
+      throw new Error(
+        "Aguarde ou cancele a produção antes de salvar alterações.",
+      );
+    const saved = store.save(project);
+    if (saved.generation?.model || saved.generation?.effort) {
+      try {
+        await writeFile(
+          path.join(store.directory, "generation-preferences.json"),
+          JSON.stringify({
+            model: saved.generation.model,
+            effort: saved.generation.effort,
+          }),
+          "utf8",
+        );
+      } catch (error) {
+        log("generation.preferences.error", { message: String(error) });
+      }
+    }
+    return saved;
+  });
   handle("createChannel", (name, language) =>
     store.createChannel(name, language),
   );
@@ -132,7 +319,7 @@ function registerHandlers() {
     if (typeof archived !== "boolean") throw new Error("Estado inválido.");
     store.save({ ...store.get(id), archived });
   });
-  handle("importMedia", async (id, mode) => {
+  handle("importMedia", async (id, mode, category) => {
     const project = store.get(id);
     if (mode !== "copy" && mode !== "reference")
       throw new Error("Modo de importação inválido.");
@@ -150,6 +337,20 @@ function registerHandlers() {
       result.filePaths,
       mode,
     );
+    if (category !== undefined) {
+      const value = validate.text(category, "Categoria", 80);
+      imported.project = store.save(
+        {
+          ...imported.project,
+          assets: imported.project.assets.map((a) =>
+            project.assets.some((old) => old.id === a.id)
+              ? a
+              : { ...a, category: value },
+          ),
+        },
+        true,
+      );
+    }
     log("media.imported", {
       projectId: project.id,
       imported: imported.imported,
@@ -244,6 +445,8 @@ function registerHandlers() {
     shell.showItemInFolder(await inside(path.join(root, "out"), name));
   });
   handle("chooseDataDirectory", async () => {
+    if (production.busy() || renders.busy())
+      throw new Error("Aguarde a produção antes de trocar o workspace.");
     const result = await dialog.showOpenDialog(mainWindow, {
       title: "Abrir ou criar workspace em outra pasta",
       properties: ["openDirectory", "createDirectory"],
@@ -262,9 +465,18 @@ function registerHandlers() {
       throw error;
     }
     store.close();
+    codex.close();
     store = next;
+    await initializeServices();
     return true;
   });
+}
+async function initializeServices() {
+  codex = new CodexClient(store.directory, root);
+  renders = new RenderService(store, root);
+  await renders.load();
+  production = new ProductionService(store, codex, renders, root);
+  catalog = new CatalogService(store, root, publicRoot);
 }
 async function start() {
   await app.whenReady();
@@ -283,6 +495,7 @@ async function start() {
   }
   await mkdir(app.getPath("userData"), { recursive: true });
   store = new Store(directory);
+  await initializeServices();
   installProtocol(() => store, uiRoot, publicRoot);
   session.defaultSession.setPermissionRequestHandler(
     (_contents, _permission, callback) => callback(false),
@@ -344,7 +557,10 @@ app.on("second-instance", () => {
   }
 });
 app.on("window-all-closed", () => app.quit());
-app.on("will-quit", () => store?.close());
+app.on("will-quit", () => {
+  codex?.close();
+  store?.close();
+});
 if (locked)
   void start().catch((error: unknown) => {
     dialog.showErrorBox(

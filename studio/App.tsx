@@ -1,6 +1,9 @@
 import { MediaPanel } from "./editor/MediaPanel";
 import { ProjectProperties } from "./editor/ProjectProperties";
 import { ClipList } from "./editor/ClipList";
+import { Library } from "./editor/Library";
+import { CatalogSearch } from "./editor/CatalogSearch";
+import { ProductionPanel } from "./editor/ProductionPanel";
 import { probeMedia } from "./probeMedia";
 import {
   lazy,
@@ -70,11 +73,14 @@ export function App() {
   const [archived, setArchived] = useState(false);
   const [selected, setSelected] = useState<Project>();
   const [legacy, setLegacy] = useState<LegacyInfo>();
-  const [busy, setBusy] = useState(false);
+  const [working, setBusy] = useState(false);
+  const [productionBusy, setProductionBusy] = useState(false);
+  const busy = working || productionBusy;
   const [notice, setNotice] = useState("");
   const [error, setError] = useState("");
   const [modal, setModal] = useState<"project" | "channel" | null>(null);
   const [importMode, setImportMode] = useState<"copy" | "reference">("copy");
+  const [mediaCategory, setMediaCategory] = useState("GTA 6");
   const [dirty, setDirty] = useState(false);
   const [limit, setLimit] = useState(24);
   const pending = useRef(false);
@@ -208,7 +214,11 @@ export function App() {
     void run(async () => {
       const p = await savePending();
       if (!p) return;
-      const result = await window.cliprush.importMedia(p.id, importMode);
+      const result = await window.cliprush.importMedia(
+        p.id,
+        importMode,
+        mediaCategory,
+      );
       if (!result) return;
       let importedProject = result.project;
       for (const asset of importedProject.assets) {
@@ -477,7 +487,7 @@ export function App() {
           <span className="local-icon">▣</span>
           <strong>Seu estúdio, no seu PC</strong>
           <p>Edição local · arquivos sob seu controle</p>
-          <small>DESKTOP · FASE 1</small>
+          <small>DESKTOP · PRODUÇÃO LOCAL</small>
         </div>
       </aside>
       <main>
@@ -724,6 +734,35 @@ export function App() {
                           if (p) remember(p);
                         })
                       }
+                      category={mediaCategory}
+                      onCategory={setMediaCategory}
+                      library={workspace?.projects ?? []}
+                      onReuse={(source, asset) =>
+                        void run(async () => {
+                          const p = await savePending();
+                          if (p)
+                            remember(
+                              await window.cliprush.reuseAsset(
+                                p.id,
+                                source,
+                                asset,
+                              ),
+                            );
+                        })
+                      }
+                      onCategorize={(asset, category) =>
+                        void run(async () => {
+                          const p = await savePending();
+                          if (p)
+                            remember(
+                              await window.cliprush.categorizeAsset(
+                                p.id,
+                                asset,
+                                category,
+                              ),
+                            );
+                        })
+                      }
                     />
                   )}
                   <Suspense
@@ -746,38 +785,68 @@ export function App() {
                 {selected && (
                   <ClipList project={selected} busy={busy} onEdit={edit} />
                 )}
+                {selected && (
+                  <ProductionPanel
+                    key={selected.id}
+                    project={selected}
+                    onEdit={edit}
+                    save={savePending}
+                    onSaved={remember}
+                    onBusy={setProductionBusy}
+                  />
+                )}
+                {selected && (
+                  <section className="panel production-panel">
+                    <CatalogSearch
+                      key={selected.id}
+                      projectId={selected.id}
+                      busy={busy}
+                      save={savePending}
+                      onSaved={remember}
+                    />
+                  </section>
+                )}
               </>
             ))}
           {page === "Biblioteca" && (
-            <>
-              <h2>Mídias do canal</h2>
-              <p className="muted">
-                Cada mídia permanece vinculada ao projeto de origem.
-              </p>
-              <div className="asset-grid">
-                {workspace?.projects
-                  .filter((p) => p.channelId === channel)
-                  .flatMap((p) =>
-                    p.assets.map((asset) => (
-                      <button
-                        className="panel library-asset"
-                        key={`${p.id}-${asset.id}`}
-                        onClick={() => openProject(p)}
-                      >
-                        {asset.thumbnail || asset.kind === "image" ? (
-                          <img src={url(p.id, asset)} loading="lazy" alt="" />
-                        ) : (
-                          <span className="asset-icon">
-                            {asset.kind === "audio" ? "♫" : "▸"}
-                          </span>
-                        )}
-                        <strong>{asset.name}</strong>
-                        <small>{p.name}</small>
-                      </button>
-                    )),
-                  )}
-              </div>
-            </>
+            <Library
+              projects={
+                workspace?.projects.filter((p) => p.channelId === channel) ?? []
+              }
+              selected={selected?.channelId === channel ? selected : undefined}
+              busy={busy}
+              onSelect={(p) =>
+                void run(async () => {
+                  await savePending();
+                  remember(await window.cliprush.inspectAssets(p.id));
+                })
+              }
+              onOpen={openProject}
+              onImport={importMedia}
+              category={mediaCategory}
+              onCategory={setMediaCategory}
+              onReuse={(source, asset) =>
+                void run(async () => {
+                  const p = await savePending();
+                  if (p)
+                    remember(
+                      await window.cliprush.reuseAsset(p.id, source, asset),
+                    );
+                })
+              }
+              onCategorize={(source, asset, category) =>
+                void run(async () => {
+                  await savePending();
+                  const p = await window.cliprush.categorizeAsset(
+                    source,
+                    asset,
+                    category,
+                  );
+                  await refresh();
+                  if (selected?.id === p.id) remember(p);
+                })
+              }
+            />
           )}
           {page === "Configurações" && (
             <>
@@ -834,14 +903,8 @@ export function App() {
                 ))}
               </section>
               <section className="panel settings">
-                <h2>Versão e próximos módulos</h2>
-                <p>ClipRush Editor Studio {workspace?.version} · Fase 1</p>
-                <p className="muted">
-                  Timeline avançada, renderização MP4, Copiloto, estúdio de
-                  animações e publicação ainda não estão implementados. Nenhuma
-                  conta externa está conectada e nenhum consumo de IA é
-                  registrado nesta versão.
-                </p>
+                <h2>Versão</h2>
+                <p>ClipRush Editor Studio {workspace?.version}</p>
               </section>
             </>
           )}

@@ -42,6 +42,7 @@ export interface Asset {
   thumbnail?: string;
   missing?: boolean;
   role?: MediaRole;
+  category?: string;
 }
 export interface Clip {
   id: string;
@@ -50,6 +51,7 @@ export interface Clip {
   durationInFrames: number;
   volume: number;
   trimBefore?: number;
+  animation?: "none" | "fade" | "zoom";
 }
 export interface Project {
   schemaVersion: 2;
@@ -72,6 +74,34 @@ export interface Project {
   scenes: Scene[];
   captions: Caption[];
   exportSettings: RenderSettings;
+  generation?: GenerationSettings;
+}
+export interface GenerationSettings {
+  prompt: string;
+  references: { name: string; content: string }[];
+  model?: string;
+  effort?: string;
+  autoRender: boolean;
+}
+export interface CodexModel {
+  id: string; model: string; displayName: string; isDefault: boolean;
+  defaultReasoningEffort: string;
+  supportedReasoningEfforts: { reasoningEffort: string; description: string }[];
+}
+export interface CodexStatus {
+  connected: boolean; authenticated: boolean; models: CodexModel[];
+  configuredModel?: string; error?: string;
+}
+export interface ProductionJob {
+  projectId: string;
+  status: "preparing" | "generating" | "validating" | "rendering" | "completed" | "failed" | "cancelled";
+  logs: string[]; error?: string; threadId?: string; turnId?: string;
+  progress: number; renderId?: string;
+}
+export interface CodexApproval { id: string; method: string; description: string }
+export interface CatalogScene {
+  id: string; name: string; description: string; startSeconds: number; endSeconds: number;
+  thumbnail?: string;
 }
 export interface NewProject {
   name: string;
@@ -116,13 +146,26 @@ export interface ImportResult {
   errors: string[];
 }
 export interface DesktopAPI {
+  searchCatalog(query: string): Promise<CatalogScene[]>;
+  useCatalogScene(projectId: string, candidateId: string): Promise<Project>;
+  codexStatus(): Promise<CodexStatus>;
+  codexLogin(): Promise<void>;
+  chooseCodex(): Promise<void>;
+  productionStatus(projectId: string): Promise<{ job?: ProductionJob; approvals: CodexApproval[] }>;
+  generate(projectId: string): Promise<void>;
+  cancelProduction(projectId: string): Promise<void>;
+  answerApproval(id: string, approved: boolean): Promise<void>;
+  attachReferences(projectId: string): Promise<Project | null>;
+  reuseAsset(projectId: string, sourceProjectId: string, assetId: string): Promise<Project>;
+  categorizeAsset(projectId: string, assetId: string, category: string): Promise<Project>;
+  restoreProduction(projectId: string): Promise<Project>;
   workspace(): Promise<Workspace>;
   createProject(input: NewProject): Promise<Project>;
   saveProject(project: Project): Promise<Project>;
   duplicateProject(id: string): Promise<Project>;
   archiveProject(id: string, archived: boolean): Promise<void>;
   createChannel(name: string, language: string): Promise<Channel>;
-  importMedia(id: string, mode: ImportMode, role?: MediaRole): Promise<ImportResult | null>;
+  importMedia(id: string, mode: ImportMode, category?: string): Promise<ImportResult | null>;
   relinkAsset(projectId: string, assetId: string): Promise<Project | null>;
   inspectAssets(projectId: string): Promise<Project>;
   updateAssetMetadata(

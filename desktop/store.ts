@@ -102,7 +102,7 @@ export class Store {
     const now = new Date().toISOString();
     return this.insert({
       ...settings,
-      schemaVersion: 1,
+      schemaVersion: 2,
       id: randomUUID(),
       revision: 0,
       createdAt: now,
@@ -110,6 +110,14 @@ export class Store {
       archived: false,
       assets: [],
       clips: [],
+      type: settings.type ?? "blank",
+      scenes: [],
+      captions: [],
+      exportSettings: validate.defaultRender({
+        width: settings.width,
+        height: settings.height,
+        fps: settings.fps,
+      }),
     });
   }
   insert(input: Project): Project {

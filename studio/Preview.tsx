@@ -1,84 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Player, type PlayerRef } from "@remotion/player";
-import { AbsoluteFill, Img, Sequence } from "remotion";
-import { Audio, Video } from "@remotion/media";
-import type { Asset, Project } from "../shared/model";
+import type { Project } from "../shared/model";
 import type { LegacyComposition } from "./legacy";
-
-export const mediaURL = (projectId: string, asset: Asset, thumbnail = false) =>
-  `cliprush://app/media/${projectId}/${asset.id}${thumbnail ? "/thumbnail" : ""}`;
-
-function ProjectComposition({ project }: { project: Project }) {
-  return (
-    <AbsoluteFill style={{ backgroundColor: "#10141d" }}>
-      {project.clips.length === 0 && (
-        <AbsoluteFill
-          style={{
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#e6eaf1",
-            fontFamily: "Segoe UI, sans-serif",
-            padding: 70,
-            textAlign: "center",
-            fontSize: project.width / 20,
-          }}
-        >
-          <div
-            style={{
-              color: "#b5f36b",
-              fontSize: project.width / 50,
-              letterSpacing: 8,
-              marginBottom: 25,
-            }}
-          >
-            CLIPRUSH STUDIO
-          </div>
-          {project.name}
-        </AbsoluteFill>
-      )}
-      {project.clips.map((clip) => {
-        const asset = project.assets.find((item) => item.id === clip.assetId);
-        if (!asset) return null;
-        const style = {
-          width: "100%",
-          height: "100%",
-          objectFit: "contain" as const,
-        };
-        return (
-          <Sequence
-            key={clip.id}
-            from={clip.from}
-            durationInFrames={clip.durationInFrames}
-          >
-            {asset.missing ? (
-              <AbsoluteFill
-                style={{
-                  background: "#302024",
-                  color: "white",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 35,
-                }}
-              >
-                Mídia ausente: {asset.name}
-              </AbsoluteFill>
-            ) : asset.kind === "image" ? (
-              <Img src={mediaURL(project.id, asset)} style={style} />
-            ) : asset.kind === "video" ? (
-              <Video
-                src={mediaURL(project.id, asset)}
-                style={style}
-                volume={clip.volume}
-              />
-            ) : asset.kind === "audio" ? (
-              <Audio src={mediaURL(project.id, asset)} volume={clip.volume} />
-            ) : null}
-          </Sequence>
-        );
-      })}
-    </AbsoluteFill>
-  );
-}
+import { ProjectComposition } from "./ProjectComposition";
+export { mediaURL } from "./ProjectComposition";
 
 export default function Preview({
   project,

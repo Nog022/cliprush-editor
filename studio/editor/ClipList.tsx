@@ -71,6 +71,25 @@ export function ClipList({
             />
           </label>
           <label>
+            Trecho de origem
+            <input
+              disabled={busy}
+              aria-label={`Timestamp ${clip.id}`}
+              type="number"
+              min="0"
+              step={1 / project.fps}
+              value={(clip.trimBefore ?? 0) / project.fps}
+              onChange={(e) =>
+                update(clip, {
+                  trimBefore: Math.max(
+                    0,
+                    Math.round(Number(e.target.value) * project.fps),
+                  ),
+                })
+              }
+            />
+          </label>
+          <label>
             Volume
             <input
               disabled={busy}

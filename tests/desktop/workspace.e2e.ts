@@ -5,7 +5,6 @@ import {
   type ElectronApplication,
 } from "@playwright/test";
 import {
-  copyFile,
   mkdir,
   readFile,
   readdir,
@@ -15,6 +14,24 @@ import {
 } from "node:fs/promises";
 import path from "node:path";
 import type { DesktopAPI } from "../../shared/model";
+
+const fixtureImage = Buffer.from("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+afo0AAAAASUVORK5CYII=", "base64");
+function fixtureAudio(seconds: number) {
+  const wav = Buffer.alloc(44 + 16000 * 2 * seconds);
+  wav.write("RIFF", 0);
+  wav.writeUInt32LE(wav.length - 8, 4);
+  wav.write("WAVEfmt ", 8);
+  wav.writeUInt32LE(16, 16);
+  wav.writeUInt16LE(1, 20);
+  wav.writeUInt16LE(1, 22);
+  wav.writeUInt32LE(16000, 24);
+  wav.writeUInt32LE(32000, 28);
+  wav.writeUInt16LE(2, 32);
+  wav.writeUInt16LE(16, 34);
+  wav.write("data", 36);
+  wav.writeUInt32LE(wav.length - 44, 40);
+  return wav;
+}
 
 const directory = path.resolve("out/desktop-e2e-workspace");
 const launch = async (dataDirectory = directory, withoutFFprobe = false) => {
@@ -52,23 +69,10 @@ test("real desktop workflow: legacy previews, native import, save, package and r
   // This directory is dedicated to this test and resolved inside out/.
   await rm(directory, { recursive: true, force: true });
   await mkdir(path.join(directory, "fixtures"), { recursive: true });
-  const image = path.join(directory, "fixtures", "imagem com espaço.jpg");
-  await copyFile("public/videos/video-005/imagens/lucia_algemada.jpg", image);
+  const image = path.join(directory, "fixtures", "imagem com espaço.png");
+  await writeFile(image, fixtureImage);
   const audio = path.join(directory, "fixtures", "narração.wav");
-  const wav = Buffer.alloc(44 + 16000 * 2);
-  wav.write("RIFF", 0);
-  wav.writeUInt32LE(wav.length - 8, 4);
-  wav.write("WAVEfmt ", 8);
-  wav.writeUInt32LE(16, 16);
-  wav.writeUInt16LE(1, 20);
-  wav.writeUInt16LE(1, 22);
-  wav.writeUInt32LE(16000, 24);
-  wav.writeUInt32LE(32000, 28);
-  wav.writeUInt16LE(2, 32);
-  wav.writeUInt16LE(16, 34);
-  wav.write("data", 36);
-  wav.writeUInt32LE(wav.length - 44, 40);
-  await writeFile(audio, wav);
+  await writeFile(audio, fixtureAudio(1));
   let app = await launch();
   try {
     let page = await app.firstWindow();
@@ -79,7 +83,7 @@ test("real desktop workflow: legacy previews, native import, save, package and r
     ).toBeVisible();
     await expect(
       page.getByRole("button", {
-        name: "Abrir ClipRushAI002NarradoV2",
+        name: "Abrir MyComp",
         exact: true,
       }),
     ).toBeVisible();
@@ -101,16 +105,7 @@ test("real desktop workflow: legacy previews, native import, save, package and r
       fullPage: true,
     });
     // Every authored registration loads, including dynamic audio metadata.
-    const ids = [
-      "MyComp",
-      "ClipRushAI002",
-      "ClipRushAI002Narrado",
-      "ClipRushAI002NarradoV2",
-      "ClipRushVideo001",
-      "ClipRushVideo003",
-      "ClipRushVideo004",
-      "ClipRushVideo005",
-    ];
+    const ids = await page.evaluate(async () => (await window.cliprush.workspace()).legacy.map(p => p.id));
     for (const id of ids) {
       await page
         .getByRole("button", { name: "Meus projetos", exact: true })
@@ -288,11 +283,11 @@ test("offline metadata, missing references, archive and portable custom channels
   const dataDirectory = path.resolve("out/desktop-e2e-recovery");
   await rm(dataDirectory, { recursive: true, force: true });
   await mkdir(dataDirectory, { recursive: true });
-  const image = path.join(dataDirectory, "original.jpg");
-  const moved = path.join(dataDirectory, "relocated.jpg");
-  const audio = path.join(dataDirectory, "voice.mp3");
-  await copyFile("public/videos/video-005/imagens/lucia_algemada.jpg", image);
-  await copyFile("public/videos/video-002/narracao.mp3", audio);
+  const image = path.join(dataDirectory, "original.png");
+  const moved = path.join(dataDirectory, "relocated.png");
+  const audio = path.join(dataDirectory, "voice.wav");
+  await writeFile(image, fixtureImage);
+  await writeFile(audio, fixtureAudio(25));
   const app = await launch(dataDirectory, true);
   try {
     const page = await app.firstWindow();
@@ -352,7 +347,7 @@ test("offline metadata, missing references, archive and portable custom channels
     ).toBeVisible();
     await selectFiles(app, [moved]);
     await page
-      .getByRole("button", { name: "Localizar original.jpg", exact: true })
+      .getByRole("button", { name: "Localizar original.png", exact: true })
       .click();
     await expect(
       page.getByText("Arquivo ausente", { exact: true }),

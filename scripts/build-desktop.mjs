@@ -19,7 +19,7 @@ await build({
   bundle: true,
   platform: "node",
   format: "cjs",
-  external: ["electron"],
+  external: ["electron", "@remotion/renderer", "@remotion/bundler", "typescript", "esbuild"],
   target: "node22",
   sourcemap: true,
 });
@@ -61,7 +61,12 @@ for (const {
   let thumbnail, createdAt, updatedAt;
   if (match) {
     const folder = `videos/video-${match[1]}`;
-    const files = await readdir(`public/${folder}`, { recursive: true });
+    const files = await readdir(`public/${folder}`, { recursive: true }).catch(
+      (error) => {
+        if (error.code === "ENOENT") return [];
+        throw error;
+      },
+    );
     const first = files.find((file) =>
       /\.(png|jpg|jpeg|webp|jfif)$/i.test(file),
     );
@@ -90,6 +95,12 @@ for (const {
 }
 await writeFile("dist/ui/legacy.json", JSON.stringify(manifest, null, 2));
 const pkg = JSON.parse(await readFile("package.json", "utf8"));
+const { bundle } = await import("@remotion/bundler");
+await bundle({
+  entryPoint: path.resolve("studio/render-entry.tsx"),
+  outDir: path.resolve("dist/render"),
+  publicDir: null,
+});
 // Self-contained app package: runtime JS is bundled; no dev node_modules in the executable.
 await writeFile(
   "dist/package.json",

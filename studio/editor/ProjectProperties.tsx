@@ -51,8 +51,8 @@ export function ProjectProperties({
         <dd>{new Date(project.createdAt).toLocaleDateString("pt-BR")}</dd>
       </dl>
       <p className="hint">
-        A montagem básica já controla o Player. A timeline avançada e a
-        exportação MP4 pertencem à Fase 2.
+        A montagem controla o Player e a exportação MP4. Use o prompt para
+        ajustar cenas e animações.
       </p>
     </section>
   );

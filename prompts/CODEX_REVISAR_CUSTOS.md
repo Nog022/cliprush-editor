@@ -1,0 +1,1 @@
+Use `$cliprush-auditoria` para avaliar os CSVs V3 do Codex. Identifique as tarefas e operações com maior potencial de economia e proponha um experimento A/B sem modificar código ou gastar tokens lendo logs inteiros.

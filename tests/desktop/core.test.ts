@@ -7,6 +7,7 @@ import { DatabaseSync } from "node:sqlite";
 import { Store } from "../../desktop/store";
 import { hashFile, inside, kindOf } from "../../desktop/files";
 import * as validate from "../../shared/validation";
+import { applyComposition } from "../../shared/production";
 
 const input = {
   name: "Projeto de teste",
@@ -18,6 +19,92 @@ const input = {
   fps: 30,
   durationInFrames: 900,
 };
+test("generation instructions and categories survive storage and composition validation", async () => {
+  const directory = await mkdtemp(path.resolve("out/production-domain-"));
+  const store = new Store(directory);
+  try {
+    let p = store.create(input);
+    p = store.save({
+      ...p,
+      generation: {
+        prompt: "Primeira linha\nSegunda linha",
+        references: [{ name: "roteiro.md", content: "# Roteiro\nCena real" }],
+        model: "returned-model",
+        effort: "medium",
+        autoRender: true,
+      },
+    });
+    assert.equal(
+      store.get(p.id).generation?.references[0].content,
+      "# Roteiro\nCena real",
+    );
+    const scene = {
+      id: "scene-1",
+      name: "Cena",
+      from: 0,
+      durationInFrames: 30,
+      title: "Título",
+      subtitle: "",
+      background: "#101827",
+      accent: "#b5f36b",
+      shape: "none",
+      animation: "fade",
+    };
+    const generated = applyComposition(p, {
+      durationInFrames: 30,
+      clips: [],
+      scenes: [scene],
+      captions: [],
+    });
+    assert.equal(generated.generation?.prompt, p.generation?.prompt);
+    assert.equal(generated.scenes[0].title, "Título");
+    assert.throws(
+      () =>
+        applyComposition(p, {
+          durationInFrames: 30,
+          clips: [],
+          scenes: [],
+          captions: [],
+        }),
+      /vazia/,
+    );
+    assert.throws(
+      () =>
+        applyComposition(p, {
+          durationInFrames: 30,
+          clips: [
+            {
+              id: "clip",
+              assetId: "missing",
+              from: 0,
+              durationInFrames: 30,
+              volume: 1,
+            },
+          ],
+          scenes: [],
+          captions: [],
+        }),
+      /mídia/,
+    );
+    assert.throws(
+      () =>
+        validate.project({
+          ...p,
+          generation: {
+            ...p.generation,
+            references: [{ name: "large.md", content: "x".repeat(100001) }],
+          },
+        }),
+      /extensas/,
+    );
+    const original = store.get(p.id);
+    store.save(generated);
+    assert.throws(() => store.save(original), /mudou/);
+  } finally {
+    store.close();
+    await rm(directory, { recursive: true, force: true });
+  }
+});
 test("SQLite persists projects, channels, revisions and rejects stale saves", async () => {
   const directory = await mkdtemp(path.join(os.tmpdir(), "cliprush-store-"));
   let store = new Store(directory);

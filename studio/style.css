@@ -905,6 +905,19 @@ footer {
 .fatal {
   padding: 60px;
 }
+.production-panel { margin-top: 20px; }
+.production-panel textarea { width: 100%; min-height: 110px; resize: vertical; background: #111720; color: #e6eaf1; border: 1px solid #303845; border-radius: 8px; padding: 12px; font: inherit; }
+.production-controls { flex-wrap: wrap; align-items: end; gap: 12px; margin-block: 16px; }
+.production-controls label { display: grid; gap: 6px; }
+.production-controls label.row { display: flex; align-items: center; }
+.production-panel progress { width: 100%; accent-color: #b5f36b; margin-block: 10px; }
+.production-panel pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 220px; overflow: auto; }
+.production-panel .error { overflow-wrap: anywhere; }
+.reference-row { display: flex; justify-content: space-between; gap: 12px; margin-block: 8px; }
+.media-panel input, .media-panel select { max-width: 100%; width: 100%; }
+.media-panel details button { width: 100%; white-space: normal; margin-block: 4px; }
+.catalog-candidate { display: inline-grid; width: 260px; vertical-align: top; gap: 8px; padding: 12px; }
+.catalog-candidate img { width: 100%; height: 130px; object-fit: cover; }
 @media (min-width: 1650px) {
   .project-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
