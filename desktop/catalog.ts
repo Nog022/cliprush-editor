@@ -35,6 +35,8 @@ export class CatalogService {
           path.join(this.root, "scripts/buscar_cenas_gta6.py"),
           "--limite",
           "5",
+          "--catalogo",
+          path.join(this.publicRoot, "videos/biblioteca/catalogo/gta6/cenas-descritas.json"),
           "--",
           text,
         ],

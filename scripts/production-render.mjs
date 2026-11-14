@@ -1,6 +1,7 @@
 // Common manual entrypoint: npm run render -- ClipRushNNN [version]
 import path from 'node:path';
 import * as fs from 'node:fs/promises';
+import { randomUUID } from 'node:crypto';
 import { bundle } from '@remotion/bundler';
 import { selectComposition, renderMedia } from '@remotion/renderer';
 import { completeProduction, safePath } from './video-retention.mjs';
@@ -13,7 +14,7 @@ if (!match || !/^[a-z0-9-]+$/i.test(version)) throw new Error('Use: npm run rend
 const output = await safePath(root, `deliveries/video-${match[1]}-${version}.mp4`, true);
 try { await fs.stat(output); throw new Error('Output exists'); } catch(e) { if (e.code !== 'ENOENT') throw e; }
 await fs.mkdir(path.dirname(output), { recursive: true });
-const bundled = await bundle({ entryPoint: path.join(root, 'src/index.ts'), outDir: path.join(root, 'out/retention/manual-bundle'), publicDir: null });
+const bundled = await bundle({ entryPoint: path.join(root, 'src/index.ts'), outDir: path.join(root, 'out/retention/manual-bundle'), publicDir: path.join(root, `out/retention/tmp/no-public-${randomUUID()}`) });
 const server = await serveProduction(root,bundled);
 const browserExecutable = process.env.CLIPRUSH_BROWSER || (process.platform === 'win32' ? path.join(process.env.ProgramFiles || '', 'Google/Chrome/Application/chrome.exe') : undefined);
 let composition;

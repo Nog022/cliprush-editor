@@ -66,6 +66,7 @@ export function ProductionPanel({
   useEffect(() => {
     let disposed = false;
     let timer: ReturnType<typeof setTimeout>;
+    let shouldPoll = running || renders.some((r) => ["queued", "rendering"].includes(r.status));
     const poll = async () => {
       try {
         const [status, jobs] = await Promise.all([
@@ -80,7 +81,10 @@ export function ProductionPanel({
         const active = Boolean(
           state && !["completed", "failed", "cancelled"].includes(state),
         );
-        onBusy(active);
+        shouldPoll = active || jobs.some((r) =>
+          r.projectId === project.id && ["queued", "rendering"].includes(r.status),
+        );
+        onBusy(shouldPoll);
         if (lastStatus.current && lastStatus.current !== state && !active) {
           const workspace = await window.cliprush.workspace();
           if (!disposed) {
@@ -92,7 +96,7 @@ export function ProductionPanel({
       } catch (reason) {
         if (!disposed) setError(String(reason));
       } finally {
-        if (!disposed) timer = setTimeout(() => void poll(), 1000);
+        if (!disposed && shouldPoll) timer = setTimeout(() => void poll(), 1000);
       }
     };
     void poll();
@@ -101,9 +105,9 @@ export function ProductionPanel({
       clearTimeout(timer);
       onBusy(false);
     };
-    // The panel is keyed by project ID. Snapshot callbacks stay scoped to that project.
+    // Refresh after local actions. Continue polling only while production/export is active.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [project.id]);
+  }, [project.id, working]);
   const preferred = settings.model ?? connection?.configuredModel;
   const model = preferred
     ? connection?.models.find(

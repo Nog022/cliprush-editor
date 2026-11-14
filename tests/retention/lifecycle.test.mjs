@@ -26,7 +26,11 @@ async function fixture(t) {
 }
 const check = async () => {};
 const validate = async () => ({});
-const applyInventory=(root,plan,options={})=>applyTransaction(root,plan,{initial:true,...options});
+const applyInventory=async(root,plan,options={})=>{
+  const output=path.join(root,'fixture-current.mp4');
+  await fs.writeFile(output,'fixture MP4 validated by test double');
+  return applyTransaction(root,plan,{initial:true,completion:{output,expected:{width:32,height:48,fps:10,durationInFrames:5}},...options});
+};
 
 test('whole-root ownership, current resources, tools and library; AST registry edits', async t => {
   const { root } = await fixture(t);
@@ -58,7 +62,8 @@ test('compressed recoverable backup, distinct delivery paths and restoration', a
   const report=await applyInventory(root,p,{check,validate});
   assert.ok(report.removed.includes('scripts/prepare-video-001.py'));
   await assert.rejects(fs.stat(path.join(root,'scripts/prepare-video-001.py')));
-  assert.equal(await fs.readFile(path.join(root,report.deliveries[0].file),'utf8'),'fixture');
+  const delivery = report.deliveries.find(d => d.source === 'out/video-001/video-001-final.mp4');
+  assert.equal(await fs.readFile(path.join(root,delivery.file),'utf8'),'fixture');
   await restore(root,report.backup);
   assert.equal(await fs.readFile(path.join(root,'scripts/prepare-video-001.py'),'utf8'),'print("video-001")');
   assert.equal(await fs.readFile(path.join(root,'src/Root.tsx'),'utf8'),p.edits[0].before);
@@ -127,4 +132,36 @@ test('Studio observes a simulated manual export and calls the completion flow',a
   const timeout=setTimeout(()=>done('timeout'),3000);
   try{await put('out/video-018-final.mp4','simulated');assert.notEqual(await observed,'timeout');}
   finally{clearTimeout(timeout);await observer.close();}
+});
+
+test('backup trees are excluded and unresolved retained LFS media blocks cleanup', async t => {
+  const {root,put}=await fixture(t);
+  await put('out/retention/backups/legacy/video-001.gz','backup');
+  await put('public/videos/biblioteca/source.mp4','version https://git-lfs.github.com/spec/v1\noid sha256:'+'a'.repeat(64)+'\nsize 1000\n');
+  const plan=await inventory(root,17);
+  assert.ok(!plan.records.some(r=>r.file.startsWith('out/retention/backups/')));
+  await assert.rejects(applyInventory(root,plan,{check,validate}),/Unresolved LFS/);
+  assert.ok(await fs.stat(path.join(root,'scripts/prepare-video-001.py')));
+});
+
+test('corrupt backup refuses restoration before changing any destination', async t => {
+  const {root}=await fixture(t);
+  const result=await applyInventory(root,await inventory(root,17),{check,validate});
+  const manifest=JSON.parse(await fs.readFile(path.join(root,result.backup,'manifest.json'),'utf8'));
+  await fs.writeFile(path.join(root,result.backup,`${manifest.files.at(-1).sha256}.gz`),'corrupt');
+  await assert.rejects(restore(root,result.backup));
+  await assert.rejects(fs.stat(path.join(root,'scripts/prepare-video-001.py')));
+  assert.ok(!(await fs.readFile(path.join(root,'src/Root.tsx'),'utf8')).includes('component={Old}'));
+});
+
+test('partial deletion failure rolls back files and registry', async t => {
+  const {root}=await fixture(t);
+  const plan=await inventory(root,17);
+  let removed=0;
+  await assert.rejects(applyInventory(root,plan,{check,validate,remove:async file=>{
+    if (++removed===2) throw Error('simulated deletion failure');
+    await fs.unlink(file);
+  }}),/simulated deletion failure/);
+  for(const record of plan.records.filter(r=>r.action==='remove')) assert.ok(await fs.stat(path.join(root,record.file)));
+  assert.equal(await fs.readFile(path.join(root,'src/Root.tsx'),'utf8'),plan.edits[0].before);
 });

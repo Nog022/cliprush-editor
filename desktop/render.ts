@@ -19,6 +19,7 @@ export class RenderService {
   constructor(
     private store: Store,
     private root: string,
+    private renderBundle = path.join(root, "dist/render"),
   ) {}
   async load() {
     try {
@@ -154,7 +155,6 @@ export class RenderService {
       const expectsAudio = job.settings.audio && rendered.clips.some(c =>
         c.volume !== 0 && project.assets.some(a => a.id === c.assetId && a.kind === "audio"),
       );
-      await validateMp4(job.outputPath, { ...rendered, audio: expectsAudio });
       controller.signal.throwIfAborted();
       // Both manual export and autoRender pass here. Never delete desktop databases/assets.
       // A UUID or arbitrary project title is not proof of numbered production ownership.
@@ -174,7 +174,7 @@ export class RenderService {
             await this.validate(rendered, controller.signal);
           },
         });
-      }
+      } else await validateMp4(job.outputPath, { ...rendered, audio: expectsAudio });
       job.bytes = info.size;
       job.status = "completed";
       job.progress = 1;
@@ -276,15 +276,19 @@ export class RenderService {
           )
         : undefined);
     const browserExecutable = chrome && existsSync(chrome) ? chrome : undefined;
+    // Native processes need a real filesystem path outside the ASAR archive.
+    const unpackedBinaries = path.join(this.root, "app.asar.unpacked/node_modules/@remotion/compositor-win32-x64-msvc");
+    const binariesDirectory = process.platform === "win32" && existsSync(unpackedBinaries) ? unpackedBinaries : undefined;
     try {
       signal.throwIfAborted();
-      const serveUrl = path.join(this.root, "dist/render");
+      const serveUrl = this.renderBundle;
       const inputProps = { project, sources };
       const composition = await renderer.selectComposition({
         serveUrl,
         id: "ClipRushProject",
         inputProps,
         browserExecutable,
+        binariesDirectory,
       });
       if (output)
         await renderer.renderMedia({
@@ -299,6 +303,7 @@ export class RenderService {
           overwrite: false,
           concurrency: 2,
           browserExecutable,
+          binariesDirectory,
           cancelSignal,
           onProgress: (p) => progress?.(p.progress),
         });
@@ -323,6 +328,7 @@ export class RenderService {
             imageFormat: "png",
             scale: 0.25,
             browserExecutable,
+            binariesDirectory,
             cancelSignal,
           });
         }

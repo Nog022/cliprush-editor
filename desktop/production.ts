@@ -277,12 +277,26 @@ export class ProductionService {
     await this.persist(project.id, session);
     const contextAssets = await Promise.all(
       project.assets.map(async (asset) => ({
-        ...asset,
-        thumbnail: undefined,
+        id: asset.id,
+        name: asset.name,
+        kind: asset.kind,
+        width: asset.width,
+        height: asset.height,
+        duration: asset.duration,
+        role: asset.role,
+        category: asset.category,
+        missing: asset.missing,
         path: asset.missing ? undefined : await assetPath(this.store, asset),
       })),
     );
-    let prompt = `Produza os dados de uma composição Remotion para ClipRush. Respeite AGENTS.md e consulte as skills relevantes em .agents/skills, especialmente cliprush-edicao e remotion-markup. O motor existente suporta clips (animation none/fade/zoom), scenes com textos e formas animadas, captions em milissegundos. Scenes são telas completas, clips visuais são desenhados sobre elas, captions ficam sobre as mídias. Use apenas os IDs das mídias fornecidas. Tempos de clips e scenes são quadros no FPS do projeto. trimBefore é o timestamp de origem em quadros. Preserve narração, roteiro, áudio e partes existentes que o pedido não altera. A duração real da narração orienta a montagem. Não invente fatos nem descreva visual que não inspecionou. Retorne somente JSON conforme o schema. Os dados serão validados e renderizados pelo app.\nPedido\n${settings.prompt}\nProjeto e mídia\n${JSON.stringify({ ...project, generation: undefined, assets: contextAssets })}\nReferências\n${JSON.stringify(settings.references)}`;
+    const context = {
+      name: project.name, language: project.language, category: project.category,
+      type: project.type, width: project.width, height: project.height,
+      fps: project.fps, durationInFrames: project.durationInFrames,
+      clips: project.clips, scenes: project.scenes, captions: project.captions,
+      exportSettings: project.exportSettings, assets: contextAssets,
+    };
+    let prompt = `Produza os dados de uma composição Remotion para ClipRush. Respeite AGENTS.md e consulte as skills relevantes em .agents/skills, especialmente cliprush-edicao e remotion-markup. Use o contexto abaixo e as referencias anexadas. Leia arquivos adicionais somente quando necessarios ao pedido. Evite varrer o repositorio, bibliotecas, bundles e logs. O motor existente suporta clips (animation none/fade/zoom), scenes com textos e formas animadas, captions em milissegundos. Scenes são telas completas, clips visuais são desenhados sobre elas, captions ficam sobre as mídias. Use apenas os IDs das mídias fornecidas. Tempos de clips e scenes são quadros no FPS do projeto. trimBefore é o timestamp de origem em quadros. Preserve narração, roteiro, áudio e partes existentes que o pedido não altera. A duração real da narração orienta a montagem. Não invente fatos nem descreva visual que não inspecionou. Retorne somente JSON conforme o schema. Os dados serão validados e renderizados pelo app.\nPedido\n${settings.prompt}\nProjeto e mídia\n${JSON.stringify(context)}\nReferências\n${JSON.stringify(settings.references)}`;
     let candidate: Project | undefined;
     for (let attempt = 0; attempt < 2; attempt++) {
       const result = await this.turn(

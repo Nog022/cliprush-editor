@@ -1,0 +1,926 @@
+[
+  {
+    "startMs": 0,
+    "endMs": 1600,
+    "words": [
+      {
+        "text": " Imagina",
+        "startMs": 0,
+        "endMs": 460,
+        "timestampMs": 230,
+        "confidence": 0.7692
+      },
+      {
+        "text": " juntar",
+        "startMs": 460,
+        "endMs": 880,
+        "timestampMs": 670,
+        "confidence": 0.987
+      },
+      {
+        "text": " os",
+        "startMs": 880,
+        "endMs": 1000,
+        "timestampMs": 940,
+        "confidence": 0.984
+      },
+      {
+        "text": " mapas",
+        "startMs": 1000,
+        "endMs": 1440,
+        "timestampMs": 1220,
+        "confidence": 0.9821
+      },
+      {
+        "text": " de",
+        "startMs": 1440,
+        "endMs": 1600,
+        "timestampMs": 1520,
+        "confidence": 0.9587
+      }
+    ]
+  },
+  {
+    "startMs": 1600,
+    "endMs": 4060,
+    "words": [
+      {
+        "text": " GTA",
+        "startMs": 1600,
+        "endMs": 1940,
+        "timestampMs": 1770,
+        "confidence": 0.9911
+      },
+      {
+        "text": " IV,",
+        "startMs": 1940,
+        "endMs": 2560,
+        "timestampMs": 2250,
+        "confidence": 0.7461
+      },
+      {
+        "text": " GTA",
+        "startMs": 2880,
+        "endMs": 3160,
+        "timestampMs": 3020,
+        "confidence": 0.9891
+      },
+      {
+        "text": " V",
+        "startMs": 3160,
+        "endMs": 3620,
+        "timestampMs": 3390,
+        "confidence": 0.8885
+      },
+      {
+        "text": " e",
+        "startMs": 3620,
+        "endMs": 4060,
+        "timestampMs": 3840,
+        "confidence": 0.9626
+      }
+    ]
+  },
+  {
+    "startMs": 4060,
+    "endMs": 6120,
+    "words": [
+      {
+        "text": " Red",
+        "startMs": 4060,
+        "endMs": 4380,
+        "timestampMs": 4220,
+        "confidence": 0.9241
+      },
+      {
+        "text": " Dead",
+        "startMs": 4380,
+        "endMs": 4600,
+        "timestampMs": 4490,
+        "confidence": 0.9935
+      },
+      {
+        "text": " Redemption",
+        "startMs": 4600,
+        "endMs": 5020,
+        "timestampMs": 4810,
+        "confidence": 0.9962
+      },
+      {
+        "text": " 2",
+        "startMs": 5020,
+        "endMs": 5480,
+        "timestampMs": 5250,
+        "confidence": 0.9639
+      },
+      {
+        "text": " em",
+        "startMs": 5480,
+        "endMs": 6120,
+        "timestampMs": 5800,
+        "confidence": 0.8067
+      }
+    ]
+  },
+  {
+    "startMs": 6120,
+    "endMs": 7220,
+    "words": [
+      {
+        "text": " um",
+        "startMs": 6120,
+        "endMs": 6300,
+        "timestampMs": 6210,
+        "confidence": 0.9933
+      },
+      {
+        "text": " único",
+        "startMs": 6300,
+        "endMs": 6640,
+        "timestampMs": 6470,
+        "confidence": 0.9515
+      },
+      {
+        "text": " jogo,",
+        "startMs": 6640,
+        "endMs": 7120,
+        "timestampMs": 6880,
+        "confidence": 0.9955
+      }
+    ]
+  },
+  {
+    "startMs": 7680,
+    "endMs": 8900,
+    "words": [
+      {
+        "text": " parece",
+        "startMs": 7680,
+        "endMs": 7960,
+        "timestampMs": 7820,
+        "confidence": 0.9468
+      },
+      {
+        "text": " absurdo,",
+        "startMs": 7960,
+        "endMs": 8640,
+        "timestampMs": 8300,
+        "confidence": 0.98
+      },
+      {
+        "text": " né?",
+        "startMs": 8780,
+        "endMs": 8800,
+        "timestampMs": 8790,
+        "confidence": 0.8437
+      }
+    ]
+  },
+  {
+    "startMs": 9340,
+    "endMs": 10620,
+    "words": [
+      {
+        "text": " Mas",
+        "startMs": 9340,
+        "endMs": 9480,
+        "timestampMs": 9410,
+        "confidence": 0.8799
+      },
+      {
+        "text": " a",
+        "startMs": 9480,
+        "endMs": 9580,
+        "timestampMs": 9530,
+        "confidence": 0.9572
+      },
+      {
+        "text": " Rockstar",
+        "startMs": 9580,
+        "endMs": 9960,
+        "timestampMs": 9770,
+        "confidence": 0.9323
+      },
+      {
+        "text": " revelou",
+        "startMs": 9960,
+        "endMs": 10460,
+        "timestampMs": 10210,
+        "confidence": 0.9976
+      },
+      {
+        "text": " que",
+        "startMs": 10460,
+        "endMs": 10620,
+        "timestampMs": 10540,
+        "confidence": 0.9928
+      }
+    ]
+  },
+  {
+    "startMs": 10620,
+    "endMs": 11860,
+    "words": [
+      {
+        "text": " o",
+        "startMs": 10620,
+        "endMs": 10720,
+        "timestampMs": 10670,
+        "confidence": 0.99
+      },
+      {
+        "text": " mapa",
+        "startMs": 10720,
+        "endMs": 10900,
+        "timestampMs": 10810,
+        "confidence": 0.9939
+      },
+      {
+        "text": " de",
+        "startMs": 10900,
+        "endMs": 11100,
+        "timestampMs": 11000,
+        "confidence": 0.9891
+      },
+      {
+        "text": " GTA",
+        "startMs": 11100,
+        "endMs": 11460,
+        "timestampMs": 11280,
+        "confidence": 0.9966
+      },
+      {
+        "text": " VI",
+        "startMs": 11460,
+        "endMs": 11860,
+        "timestampMs": 11660,
+        "confidence": 0.657
+      }
+    ]
+  },
+  {
+    "startMs": 11860,
+    "endMs": 13500,
+    "words": [
+      {
+        "text": " chega",
+        "startMs": 11860,
+        "endMs": 12220,
+        "timestampMs": 12040,
+        "confidence": 0.9609
+      },
+      {
+        "text": " muito",
+        "startMs": 12220,
+        "endMs": 12740,
+        "timestampMs": 12480,
+        "confidence": 0.9902
+      },
+      {
+        "text": " perto",
+        "startMs": 12740,
+        "endMs": 13220,
+        "timestampMs": 12980,
+        "confidence": 0.9992
+      },
+      {
+        "text": " dessa",
+        "startMs": 13220,
+        "endMs": 13500,
+        "timestampMs": 13360,
+        "confidence": 0.9396
+      }
+    ]
+  },
+  {
+    "startMs": 13500,
+    "endMs": 14180,
+    "words": [
+      {
+        "text": " combinação,",
+        "startMs": 13500,
+        "endMs": 14080,
+        "timestampMs": 13790,
+        "confidence": 0.9875
+      }
+    ]
+  },
+  {
+    "startMs": 14640,
+    "endMs": 15960,
+    "words": [
+      {
+        "text": " estamos",
+        "startMs": 14640,
+        "endMs": 15000,
+        "timestampMs": 14820,
+        "confidence": 0.9335
+      },
+      {
+        "text": " falando",
+        "startMs": 15000,
+        "endMs": 15380,
+        "timestampMs": 15190,
+        "confidence": 0.9972
+      },
+      {
+        "text": " de",
+        "startMs": 15380,
+        "endMs": 15620,
+        "timestampMs": 15500,
+        "confidence": 0.9948
+      },
+      {
+        "text": " um",
+        "startMs": 15620,
+        "endMs": 15760,
+        "timestampMs": 15690,
+        "confidence": 0.9984
+      },
+      {
+        "text": " mundo",
+        "startMs": 15760,
+        "endMs": 15960,
+        "timestampMs": 15860,
+        "confidence": 0.9954
+      }
+    ]
+  },
+  {
+    "startMs": 15960,
+    "endMs": 17820,
+    "words": [
+      {
+        "text": " aproximadamente",
+        "startMs": 15960,
+        "endMs": 16640,
+        "timestampMs": 16300,
+        "confidence": 0.9528
+      },
+      {
+        "text": " duas",
+        "startMs": 16640,
+        "endMs": 17340,
+        "timestampMs": 16990,
+        "confidence": 0.8175
+      },
+      {
+        "text": " vezes",
+        "startMs": 17340,
+        "endMs": 17820,
+        "timestampMs": 17580,
+        "confidence": 0.9993
+      }
+    ]
+  },
+  {
+    "startMs": 17820,
+    "endMs": 18980,
+    "words": [
+      {
+        "text": " maior",
+        "startMs": 17820,
+        "endMs": 18260,
+        "timestampMs": 18040,
+        "confidence": 0.9965
+      },
+      {
+        "text": " que",
+        "startMs": 18260,
+        "endMs": 18500,
+        "timestampMs": 18380,
+        "confidence": 0.9128
+      },
+      {
+        "text": " o",
+        "startMs": 18500,
+        "endMs": 18560,
+        "timestampMs": 18530,
+        "confidence": 0.9904
+      },
+      {
+        "text": " de",
+        "startMs": 18560,
+        "endMs": 18660,
+        "timestampMs": 18610,
+        "confidence": 0.9613
+      },
+      {
+        "text": " GTA",
+        "startMs": 18660,
+        "endMs": 18980,
+        "timestampMs": 18820,
+        "confidence": 0.9989
+      }
+    ]
+  },
+  {
+    "startMs": 18980,
+    "endMs": 19580,
+    "words": [
+      {
+        "text": " V,",
+        "startMs": 18980,
+        "endMs": 19480,
+        "timestampMs": 19230,
+        "confidence": 0.9571
+      }
+    ]
+  },
+  {
+    "startMs": 19980,
+    "endMs": 21040,
+    "words": [
+      {
+        "text": " só",
+        "startMs": 19980,
+        "endMs": 20220,
+        "timestampMs": 20100,
+        "confidence": 0.9605
+      },
+      {
+        "text": " que",
+        "startMs": 20220,
+        "endMs": 20340,
+        "timestampMs": 20280,
+        "confidence": 0.9978
+      },
+      {
+        "text": " agora",
+        "startMs": 20340,
+        "endMs": 20660,
+        "timestampMs": 20500,
+        "confidence": 0.9918
+      },
+      {
+        "text": " vem",
+        "startMs": 20660,
+        "endMs": 20940,
+        "timestampMs": 20800,
+        "confidence": 0.9632
+      },
+      {
+        "text": " a",
+        "startMs": 20940,
+        "endMs": 21040,
+        "timestampMs": 20990,
+        "confidence": 0.9751
+      }
+    ]
+  },
+  {
+    "startMs": 21040,
+    "endMs": 22560,
+    "words": [
+      {
+        "text": " parte",
+        "startMs": 21040,
+        "endMs": 21300,
+        "timestampMs": 21170,
+        "confidence": 0.9974
+      },
+      {
+        "text": " mais",
+        "startMs": 21300,
+        "endMs": 21680,
+        "timestampMs": 21490,
+        "confidence": 0.9973
+      },
+      {
+        "text": " impressionante.",
+        "startMs": 21680,
+        "endMs": 22460,
+        "timestampMs": 22070,
+        "confidence": 0.9958
+      }
+    ]
+  },
+  {
+    "startMs": 22900,
+    "endMs": 24020,
+    "words": [
+      {
+        "text": " Não",
+        "startMs": 22900,
+        "endMs": 23080,
+        "timestampMs": 22990,
+        "confidence": 0.9891
+      },
+      {
+        "text": " é",
+        "startMs": 23080,
+        "endMs": 23180,
+        "timestampMs": 23130,
+        "confidence": 0.9972
+      },
+      {
+        "text": " apenas",
+        "startMs": 23180,
+        "endMs": 23500,
+        "timestampMs": 23340,
+        "confidence": 0.9986
+      },
+      {
+        "text": " um",
+        "startMs": 23500,
+        "endMs": 23700,
+        "timestampMs": 23600,
+        "confidence": 0.9725
+      },
+      {
+        "text": " mapa",
+        "startMs": 23700,
+        "endMs": 24020,
+        "timestampMs": 23860,
+        "confidence": 0.9958
+      }
+    ]
+  },
+  {
+    "startMs": 24020,
+    "endMs": 25720,
+    "words": [
+      {
+        "text": " gigantesco,",
+        "startMs": 24020,
+        "endMs": 24800,
+        "timestampMs": 24410,
+        "confidence": 0.9965
+      },
+      {
+        "text": " a",
+        "startMs": 25120,
+        "endMs": 25300,
+        "timestampMs": 25210,
+        "confidence": 0.9784
+      },
+      {
+        "text": " Rockstar",
+        "startMs": 25300,
+        "endMs": 25720,
+        "timestampMs": 25510,
+        "confidence": 0.9954
+      }
+    ]
+  },
+  {
+    "startMs": 25720,
+    "endMs": 27460,
+    "words": [
+      {
+        "text": " afirma",
+        "startMs": 25720,
+        "endMs": 26260,
+        "timestampMs": 25990,
+        "confidence": 0.9944
+      },
+      {
+        "text": " que",
+        "startMs": 26260,
+        "endMs": 26400,
+        "timestampMs": 26330,
+        "confidence": 0.9981
+      },
+      {
+        "text": " GTA",
+        "startMs": 26400,
+        "endMs": 26660,
+        "timestampMs": 26530,
+        "confidence": 0.9921
+      },
+      {
+        "text": " VI",
+        "startMs": 26660,
+        "endMs": 27100,
+        "timestampMs": 26880,
+        "confidence": 0.8774
+      },
+      {
+        "text": " terá",
+        "startMs": 27100,
+        "endMs": 27460,
+        "timestampMs": 27280,
+        "confidence": 0.9832
+      }
+    ]
+  },
+  {
+    "startMs": 27460,
+    "endMs": 29420,
+    "words": [
+      {
+        "text": " muito",
+        "startMs": 27460,
+        "endMs": 27960,
+        "timestampMs": 27710,
+        "confidence": 0.9718
+      },
+      {
+        "text": " mais",
+        "startMs": 27960,
+        "endMs": 28280,
+        "timestampMs": 28120,
+        "confidence": 0.9984
+      },
+      {
+        "text": " interiores",
+        "startMs": 28280,
+        "endMs": 28980,
+        "timestampMs": 28630,
+        "confidence": 0.9677
+      },
+      {
+        "text": " com",
+        "startMs": 28980,
+        "endMs": 29420,
+        "timestampMs": 29200,
+        "confidence": 0.7467
+      }
+    ]
+  },
+  {
+    "startMs": 29420,
+    "endMs": 30520,
+    "words": [
+      {
+        "text": " lugares",
+        "startMs": 29420,
+        "endMs": 29700,
+        "timestampMs": 29560,
+        "confidence": 0.9889
+      },
+      {
+        "text": " pensados",
+        "startMs": 29700,
+        "endMs": 30300,
+        "timestampMs": 30000,
+        "confidence": 0.9968
+      },
+      {
+        "text": " nos",
+        "startMs": 30300,
+        "endMs": 30520,
+        "timestampMs": 30410,
+        "confidence": 0.9804
+      }
+    ]
+  },
+  {
+    "startMs": 30520,
+    "endMs": 31920,
+    "words": [
+      {
+        "text": " mínimos",
+        "startMs": 30520,
+        "endMs": 31160,
+        "timestampMs": 30840,
+        "confidence": 0.9852
+      },
+      {
+        "text": " detalhes.",
+        "startMs": 31160,
+        "endMs": 31820,
+        "timestampMs": 31490,
+        "confidence": 0.9972
+      }
+    ]
+  },
+  {
+    "startMs": 32260,
+    "endMs": 33640,
+    "words": [
+      {
+        "text": " Agora",
+        "startMs": 32260,
+        "endMs": 32520,
+        "timestampMs": 32390,
+        "confidence": 0.9935
+      },
+      {
+        "text": " imagina",
+        "startMs": 32520,
+        "endMs": 33000,
+        "timestampMs": 32760,
+        "confidence": 0.8449
+      },
+      {
+        "text": " explorar",
+        "startMs": 33000,
+        "endMs": 33520,
+        "timestampMs": 33260,
+        "confidence": 0.9985
+      },
+      {
+        "text": " um",
+        "startMs": 33520,
+        "endMs": 33640,
+        "timestampMs": 33580,
+        "confidence": 0.9508
+      }
+    ]
+  },
+  {
+    "startMs": 33640,
+    "endMs": 35380,
+    "words": [
+      {
+        "text": " mundo",
+        "startMs": 33640,
+        "endMs": 33860,
+        "timestampMs": 33750,
+        "confidence": 0.9982
+      },
+      {
+        "text": " desse",
+        "startMs": 33860,
+        "endMs": 34280,
+        "timestampMs": 34070,
+        "confidence": 0.9826
+      },
+      {
+        "text": " tamanho",
+        "startMs": 34280,
+        "endMs": 34760,
+        "timestampMs": 34520,
+        "confidence": 0.9973
+      },
+      {
+        "text": " e",
+        "startMs": 34760,
+        "endMs": 35220,
+        "timestampMs": 34990,
+        "confidence": 0.9269
+      },
+      {
+        "text": " ainda",
+        "startMs": 35220,
+        "endMs": 35380,
+        "timestampMs": 35300,
+        "confidence": 0.9885
+      }
+    ]
+  },
+  {
+    "startMs": 35380,
+    "endMs": 37060,
+    "words": [
+      {
+        "text": " descobrir",
+        "startMs": 35380,
+        "endMs": 35780,
+        "timestampMs": 35580,
+        "confidence": 0.992
+      },
+      {
+        "text": " coisas",
+        "startMs": 35780,
+        "endMs": 36240,
+        "timestampMs": 36010,
+        "confidence": 0.9969
+      },
+      {
+        "text": " escondidas",
+        "startMs": 36240,
+        "endMs": 37060,
+        "timestampMs": 36650,
+        "confidence": 0.9972
+      }
+    ]
+  },
+  {
+    "startMs": 37060,
+    "endMs": 38100,
+    "words": [
+      {
+        "text": " dentro",
+        "startMs": 37060,
+        "endMs": 37320,
+        "timestampMs": 37190,
+        "confidence": 0.9859
+      },
+      {
+        "text": " dos",
+        "startMs": 37320,
+        "endMs": 37580,
+        "timestampMs": 37450,
+        "confidence": 0.9949
+      },
+      {
+        "text": " prédios.",
+        "startMs": 37580,
+        "endMs": 38000,
+        "timestampMs": 37790,
+        "confidence": 0.995
+      }
+    ]
+  },
+  {
+    "startMs": 38540,
+    "endMs": 40460,
+    "words": [
+      {
+        "text": " A",
+        "startMs": 38540,
+        "endMs": 38600,
+        "timestampMs": 38570,
+        "confidence": 0.9608
+      },
+      {
+        "text": " pergunta",
+        "startMs": 38600,
+        "endMs": 38900,
+        "timestampMs": 38750,
+        "confidence": 0.9981
+      },
+      {
+        "text": " é,",
+        "startMs": 38900,
+        "endMs": 39240,
+        "timestampMs": 39070,
+        "confidence": 0.9988
+      },
+      {
+        "text": " quantas",
+        "startMs": 39540,
+        "endMs": 40060,
+        "timestampMs": 39800,
+        "confidence": 0.9699
+      },
+      {
+        "text": " horas",
+        "startMs": 40060,
+        "endMs": 40460,
+        "timestampMs": 40260,
+        "confidence": 0.9982
+      }
+    ]
+  },
+  {
+    "startMs": 40460,
+    "endMs": 41580,
+    "words": [
+      {
+        "text": " a",
+        "startMs": 40460,
+        "endMs": 40660,
+        "timestampMs": 40560,
+        "confidence": 0.9767
+      },
+      {
+        "text": " gente",
+        "startMs": 40660,
+        "endMs": 40780,
+        "timestampMs": 40720,
+        "confidence": 0.9989
+      },
+      {
+        "text": " vai",
+        "startMs": 40780,
+        "endMs": 40920,
+        "timestampMs": 40850,
+        "confidence": 0.9942
+      },
+      {
+        "text": " precisar",
+        "startMs": 40920,
+        "endMs": 41480,
+        "timestampMs": 41200,
+        "confidence": 0.9995
+      },
+      {
+        "text": " para",
+        "startMs": 41480,
+        "endMs": 41580,
+        "timestampMs": 41530,
+        "confidence": 0.6978
+      }
+    ]
+  },
+  {
+    "startMs": 41580,
+    "endMs": 42800,
+    "words": [
+      {
+        "text": " conhecer",
+        "startMs": 41580,
+        "endMs": 41880,
+        "timestampMs": 41730,
+        "confidence": 0.9941
+      },
+      {
+        "text": " tudo",
+        "startMs": 41880,
+        "endMs": 42320,
+        "timestampMs": 42100,
+        "confidence": 0.9908
+      },
+      {
+        "text": " isso?",
+        "startMs": 42320,
+        "endMs": 42700,
+        "timestampMs": 42510,
+        "confidence": 0.9935
+      }
+    ]
+  }
+]

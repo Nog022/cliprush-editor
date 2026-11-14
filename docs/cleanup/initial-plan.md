@@ -1,5 +1,7 @@
 # Inventário de retenção — produção 17
 
+Inventário histórico. A revisão de 2026-11-13 recuperou mídias LFS e alterou o código de retenção. Gere uma lista atualizada com `npm run retention:plan` antes de aprovar ou aplicar limpeza. O código recusa este manifesto de versão anterior.
+
 Nenhuma exclusão executada. remove = candidato à exclusão após backup; deliver = MP4 candidato à entrega (será decodificado antes de qualquer exclusão); preserve = conservado. Propriedade incerta é conservada. Dependências preservadas podem conservar uma produção inteira. Artefatos genéricos sem proprietário são conservados. Diretórios de dependências, ferramentas protegidas e links não são percorridos.
 
 Registros a alterar: src/Root.tsx.

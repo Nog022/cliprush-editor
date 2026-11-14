@@ -9,6 +9,7 @@ import {
 } from "node:fs/promises";
 import { createRequire } from "node:module";
 import path from "node:path";
+import { randomUUID } from "node:crypto";
 
 await mkdir("dist/desktop", { recursive: true });
 await mkdir("dist/ui", { recursive: true });
@@ -99,9 +100,11 @@ const { bundle } = await import("@remotion/bundler");
 await bundle({
   entryPoint: path.resolve("studio/render-entry.tsx"),
   outDir: path.resolve("dist/render"),
-  publicDir: null,
+  // In this Remotion version null selects the full public directory.
+  // Assets are served by the desktop media server. Use an absent, unique path.
+  publicDir: path.resolve(`out/retention/tmp/no-public-${randomUUID()}`),
 });
-// Self-contained app package: runtime JS is bundled; no dev node_modules in the executable.
+// Main/UI code is bundled. The renderer resolves runtime modules and native binaries.
 await writeFile(
   "dist/package.json",
   JSON.stringify(
@@ -112,7 +115,11 @@ await writeFile(
       description: "Estúdio audiovisual local ClipRush",
       author: "ClipRush",
       main: "desktop/main.cjs",
-      dependencies: {},
+      dependencies: {
+        "@remotion/renderer": pkg.dependencies["@remotion/renderer"],
+        react: pkg.dependencies.react,
+        "react-dom": pkg.dependencies["react-dom"],
+      },
     },
     null,
     2,

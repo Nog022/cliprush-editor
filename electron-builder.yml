@@ -1,5 +1,6 @@
 appId: studio.cliprush.editor
 productName: ClipRush Editor Studio
+electronDist: node_modules/electron/dist
 directories:
   app: dist
   output: out/desktop-release
@@ -7,13 +8,21 @@ files:
   - desktop/**
   - ui/**
   - package.json
-  - "!node_modules/**/*"
 extraResources:
+  - from: scripts/buscar_cenas_gta6.py
+    to: scripts/buscar_cenas_gta6.py
+  - from: dist/render
+    to: render
+    filter:
+      - "**/*"
+      - "!public/**/*"
   - from: public/videos
     to: legacy-public/videos
     filter:
       - "**/*"
 asar: true
+asarUnpack:
+  - node_modules/@remotion/compositor-*/**
 win:
   target: dir
   signAndEditExecutable: false

@@ -1,7 +1,9 @@
 /** Conservative production retention. No deletion is enabled until initial approval. */
 import path from 'node:path';
 import { createHash, randomUUID } from 'node:crypto';
-import { createReadStream, constants } from 'node:fs';
+import { createReadStream, createWriteStream, constants } from 'node:fs';
+import { pipeline } from 'node:stream/promises';
+import { createGzip, createGunzip } from 'node:zlib';
 import * as fs from 'node:fs/promises';
 import { spawn } from 'node:child_process';
 
@@ -10,8 +12,8 @@ const textExtensions = /\.(?:tsx?|jsx?|mjs|cjs|py|json|ya?ml|md|txt|srt|vtt|csv|
 const runtimeExtensions = /\.(?:tsx?|jsx?|mjs|cjs|py|json|ya?ml|toml|ini|ps1|sh)$/i;
 const ids = (s) => [...new Set([...s.matchAll(/(?:video[-_ ]?|cliprush[-_]?(?:(?:video|ai)[-_]?)?|narracao-)(\d{3})(?!\d)/gi)].map(m => Number(m[1])))];
 const slash = s => s.replaceAll('\\', '/');
-export const RETENTION_POLICY = 'permanent-delete-v1';
-const disposableRetention = p => /^out\/retention\/(?:backups\/|tests\/fixture-[^/]+\/|check-bundle\/|manual-bundle\/)/.test(p);
+export const RETENTION_POLICY = 'recoverable-v1';
+const disposableRetention = p => /^out\/retention\/(?:tests\/fixture-[^/]+\/|check-bundle\/|manual-bundle\/)/.test(p);
 const protectedPath = p => /(?:^|\/)AGENTS\.md$/i.test(p) || /^(?:docs\/|\.agents\/|\.codegraph\/|tools\/|skills\/|templates\/|public\/videos\/biblioteca\/)/i.test(p) || /(?:^|\/)RTK\.md$/i.test(p) || /^(?:scripts\/video-retention|scripts\/production-|tests\/retention)/.test(p);
 
 export async function safePath(root, relative, missing = false) {
@@ -41,7 +43,7 @@ async function walk(root, dir = '') {
     const rel = slash(path.join(dir, entry.name));
     if (entry.isSymbolicLink()) continue;
     if (entry.isDirectory()) {
-      if (!excluded.has(entry.name) && !/^deliveries(?:\/|$)/.test(rel) && !/^out\/retention\/(?:reports|tmp)(?:\/|$)/.test(rel)) found.push(...await walk(root, rel));
+      if (!excluded.has(entry.name) && !/^deliveries(?:\/|$)/.test(rel) && !/^out\/retention\/(?:backups|reports|tmp)(?:\/|$)/.test(rel)) found.push(...await walk(root, rel));
     } else if (entry.isFile()) found.push(rel);
   }
   return found;
@@ -108,6 +110,21 @@ export async function inventory(root, current, { references = [] } = {}) {
     if (!protectedPath(file) && (disposableRetention(file) || snapshot)) Object.assign(records.at(-1), { owners: [], action: 'remove', reason: snapshot ? 'Snapshot obsoleto de registros antigos, sem uso no render atual' : 'Cache ou artefato de testes da retenção, reconstruível; inclui backups legados' });
   }
   const rootSource = texts.get('src/Root.tsx');
+  // Resolve each relative import in constant time across fixed-point iterations.
+  const dependencyOwners = new Map();
+  for (const record of records.filter(r => r.owners.length)) {
+    const targets = [record.file, record.file.replace(/\.[^.]+$/, '')];
+    let directory = path.posix.dirname(record.file);
+    while (directory !== '.') {
+      targets.push(directory);
+      directory = path.posix.dirname(directory);
+    }
+    for (const target of targets) {
+      const owners = dependencyOwners.get(target) ?? new Set();
+      record.owners.forEach(id => owners.add(id));
+      dependencyOwners.set(target, owners);
+    }
+  }
   // Fixed point: retained scripts, configuration, current sources and desktop projects pin old owners.
   let changed = true;
   let rewritten = rootSource;
@@ -123,9 +140,7 @@ export async function inventory(root, current, { references = [] } = {}) {
       // Relative imports without video IDs: resolve to the referenced file and pin its owner.
       for (const m of text.matchAll(/(?:from\s*|import\s*(?:\(\s*)?|require\s*\()\s*["'](\.[^"']+)["']/g)) {
         const target = slash(path.normalize(path.join(path.dirname(r.file), m[1])));
-        for (const dependency of records.filter(x => x.file === target || x.file.replace(/\.[^.]+$/, '') === target || x.file.startsWith(target + '/'))) {
-          for (const id of dependency.owners) pinned.set(id, r.file);
-        }
+        for (const id of dependencyOwners.get(target) ?? []) pinned.set(id, r.file);
       }
     }
     for (const ref of references) for (const id of ids(ref)) pinned.set(id, 'Projeto desktop ou referência externa à produção');
@@ -134,7 +149,7 @@ export async function inventory(root, current, { references = [] } = {}) {
     }
   }
   for (const r of records.filter(r => r.action !== 'preserve')) r.sha256 = await digest(await safePath(root, r.file));
-  const edits = rewritten !== undefined && rewritten !== rootSource ? [{ file: 'src/Root.tsx', after: rewritten, sha256: await digest(await safePath(root, 'src/Root.tsx')) }] : [];
+  const edits = rewritten !== undefined && rewritten !== rootSource ? [{ file: 'src/Root.tsx', before: rootSource, after: rewritten, sha256: await digest(await safePath(root, 'src/Root.tsx')) }] : [];
   return { version: 2, policy: RETENTION_POLICY, root, current, references, createdAt: new Date().toISOString(), records, edits, bytes: records.filter(r => r.action === 'remove').reduce((n,r) => n+r.bytes,0) };
 }
 
@@ -160,9 +175,9 @@ export async function validateMp4(file, expected) {
   await run('ffmpeg', ['-v', 'error', '-xerror', '-protocol_whitelist', 'file,pipe', '-i', file, '-map', '0:v:0', '-map', '0:a?', '-f', 'null', '-']);
   return { sha256: await digest(file), bytes: (await fs.stat(file)).size };
 }
-export async function archiveDelivery(root, source) {
+export async function archiveDelivery(root, source, verified) {
   const absolute = await safePath(root,slash(path.relative(root,source)));
-  const sha256 = await digest(absolute);
+  const sha256 = verified?.sha256 ?? await digest(absolute);
   const bytes=(await fs.stat(absolute)).size;
   if (slash(path.relative(root,absolute)).startsWith('deliveries/')) return {file:slash(path.relative(root,absolute)),sha256,bytes,created:false};
   let file = `deliveries/${path.basename(source,'.mp4')}-${sha256.slice(0,12)}.mp4`;
@@ -209,7 +224,7 @@ export async function checkProject(root, current, edits = []) {
     let server;
     try {
       const proposedRoot=overlay.get(path.resolve(root,'src/Root.tsx').toLowerCase());
-      const bundled=await bundle({entryPoint:path.join(root,'src/index.ts'),outDir,publicDir:null,enableCaching:false,webpackOverride:config=>proposedRoot===undefined?config:({...config,module:{...config.module,rules:[...(config.module?.rules??[]),{test:/[\\/]src[\\/]Root\.tsx$/,enforce:'pre',use:[{loader:path.join(root,'scripts/production-root-loader.cjs'),options:{source:proposedRoot}}]}]}})});
+      const bundled=await bundle({entryPoint:path.join(root,'src/index.ts'),outDir,publicDir:path.join(root,`out/retention/tmp/no-public-${randomUUID()}`),enableCaching:true,webpackOverride:config=>proposedRoot===undefined?config:({...config,module:{...config.module,rules:[...(config.module?.rules??[]),{test:/[\\/]src[\\/]Root\.tsx$/,enforce:'pre',use:[{loader:path.join(root,'scripts/production-root-loader.cjs'),options:{source:proposedRoot}}]}]}})});
       server=await serveProduction(root,bundled);
       const browserExecutable = process.env.CLIPRUSH_BROWSER || (process.platform === 'win32' ? path.join(process.env.ProgramFiles || '', 'Google/Chrome/Application/chrome.exe') : undefined);
       const source = proposedRoot ?? await fs.readFile(await safePath(root,'src/Root.tsx'),'utf8');
@@ -243,7 +258,11 @@ async function readEnabled(root) {
 async function storeJson(root, relative, value) {
   const file=await safePath(root,relative,true);
   await fs.mkdir(path.dirname(file),{recursive:true});
-  await fs.writeFile(file,JSON.stringify(value,null,2));
+  const temporary = `${file}.${randomUUID()}.tmp`;
+  try {
+    await fs.writeFile(temporary, JSON.stringify(value,null,2), { flag: 'wx' });
+    await fs.rename(temporary, file);
+  } finally { await fs.unlink(temporary).catch(error => { if (error.code !== 'ENOENT') throw error; }); }
 }
 async function projectBytes(root) {
   let bytes=0;
@@ -257,9 +276,92 @@ async function projectBytes(root) {
   };
   await visit('');return bytes;
 }
+async function blobDigest(file) {
+  const hash = createHash('sha256');
+  await pipeline(createReadStream(file), createGunzip(), async chunks => {
+    for await (const chunk of chunks) hash.update(chunk);
+  });
+  return hash.digest('hex');
+}
+
+async function backupInventory(root, plan, candidates) {
+  const backup = `out/retention/backups/${Date.now()}-${randomUUID()}`;
+  await fs.mkdir(await safePath(root, backup, true), { recursive: true });
+  const manifest = { version: 1, root, current: plan.current, files: [], enabledBefore: null };
+  try {
+    manifest.enabledBefore = await fs.readFile(await safePath(root, 'out/retention/enabled.json'), 'utf8');
+  } catch (error) { if (error.code !== 'ENOENT') throw error; }
+  const blobs = new Set();
+  let bytes = 0;
+  for (const item of [...candidates, ...plan.edits]) {
+    const source = await safePath(root, item.file);
+    const blob = await safePath(root, `${backup}/${item.sha256}.gz`, true);
+    if (!blobs.has(item.sha256)) {
+      await pipeline(createReadStream(source), createGzip(), createWriteStream(blob, { flags: 'wx' }));
+      if (await blobDigest(blob) !== item.sha256) throw Error(`Backup hash mismatch: ${item.file}`);
+      bytes += (await fs.stat(blob)).size;
+      blobs.add(item.sha256);
+    }
+    manifest.files.push({ file: item.file, sha256: item.sha256,
+      ...(item.after === undefined ? {} : { afterSha256: createHash('sha256').update(item.after).digest('hex') }) });
+  }
+  await storeJson(root, `${backup}/manifest.json`, manifest);
+  bytes += (await fs.stat(await safePath(root, `${backup}/manifest.json`))).size;
+  return { backup, bytes };
+}
+
+async function restoreBackup(root, backup) {
+  if (!/^out\/retention\/backups\/[\w-]+$/.test(backup)) throw Error('Invalid backup path');
+  const manifest = JSON.parse(await fs.readFile(await safePath(root, `${backup}/manifest.json`), 'utf8'));
+  if (manifest.version !== 1 || manifest.root !== root) throw Error('Backup belongs to another root or version');
+  const enabledState = await readEnabled(root);
+  if (enabledState && enabledState.current > manifest.current) throw Error('Restore conflict: a newer production completed');
+  // Preflight every hash and destination before writing any restored file.
+  const verified = new Set();
+  for (const item of manifest.files) {
+    if (!/^[a-f0-9]{64}$/.test(item.sha256)) throw Error('Invalid backup hash');
+    const file = await safePath(root, item.file, true);
+    if (!verified.has(item.sha256)) {
+      if (await blobDigest(await safePath(root, `${backup}/${item.sha256}.gz`)) !== item.sha256) throw Error(`Backup hash mismatch: ${item.file}`);
+      verified.add(item.sha256);
+    }
+    try {
+      const current = await digest(file);
+      if (current !== item.sha256 && current !== item.afterSha256) throw Error(`Restore conflict: ${item.file}`);
+    } catch (error) { if (error.code !== 'ENOENT') throw error; }
+  }
+  for (const item of manifest.files) {
+    const file = await safePath(root, item.file, true);
+    let current;
+    try { current = await digest(file); } catch (error) { if (error.code !== 'ENOENT') throw error; }
+    if (current === item.sha256) continue;
+    if (current && current !== item.afterSha256) throw Error(`Restore conflict: ${item.file}`);
+    await fs.mkdir(path.dirname(file), { recursive: true });
+    const temporary = `${file}.${randomUUID()}.restoring`;
+    try {
+      await pipeline(createReadStream(await safePath(root, `${backup}/${item.sha256}.gz`)), createGunzip(), createWriteStream(temporary, { flags: 'wx' }));
+      if (await digest(temporary) !== item.sha256) throw Error(`Restore hash mismatch: ${item.file}`);
+      if (current) await fs.rename(temporary, file);
+      else await fs.copyFile(temporary, file, constants.COPYFILE_EXCL);
+    } finally { await fs.unlink(temporary).catch(error => { if (error.code !== 'ENOENT') throw error; }); }
+  }
+  const enabled = await safePath(root, 'out/retention/enabled.json', true);
+  if (manifest.enabledBefore === null) await fs.unlink(enabled).catch(error => { if (error.code !== 'ENOENT') throw error; });
+  else await fs.writeFile(enabled, manifest.enabledBefore);
+}
+
+export async function restore(root, backup) {
+  root = await fs.realpath(root);
+  const lock = await safePath(root, 'out/retention/lock', true);
+  await fs.mkdir(path.dirname(lock), { recursive: true });
+  const handle = await fs.open(lock, 'wx');
+  try { await restoreBackup(root, backup); }
+  finally { await handle.close(); await fs.unlink(lock); }
+}
+
 export class CleanupFailure extends Error {
   constructor(cause,report){
-    super(`Limpeza interrompida (${report.phase}); ${report.removed.length} arquivo(s) excluído(s). Sem rollback. Relatório: ${report.reportFile}. Causa: ${cause.message}`,{cause});
+    super(`Retenção interrompida (${report.phase}); estado ${report.status}. Relatório: ${report.reportFile}. Causa: ${cause.message}`,{cause});
     this.report=report;
   }
 }
@@ -270,7 +372,7 @@ export async function applyInventory(root, plan, { check=checkProject, validate=
   const lock=await safePath(root,'out/retention/lock',true);
   await fs.mkdir(path.dirname(lock),{recursive:true});
   let handle;
-  try{handle=await fs.open(lock,'wx');}catch(error){if(error.code==='EEXIST')throw Error('Retenção bloqueada por limpeza em andamento ou falha anterior. Revise out/retention/reports e o lock; nenhuma restauração automática.');throw error;}
+  try{handle=await fs.open(lock,'wx');}catch(error){if(error.code==='EEXIST')throw Error('Retenção bloqueada por transação em andamento ou recuperação pendente. Revise out/retention/reports e o lock.');throw error;}
   const candidates=plan.records.filter(r=>r.action!=='preserve');
   const report={policy:RETENTION_POLICY,current:plan.current,initial,status:'validating',phase:'validation',reportFile:`out/retention/reports/${Date.now()}-${randomUUID()}.json`,removed:[],modified:[],deliveries:[],pending:candidates.map(r=>r.file),attempted:null,sourceBytesRemoved:0,startedAt:new Date().toISOString()};
   let projectBefore;
@@ -278,46 +380,59 @@ export async function applyInventory(root, plan, { check=checkProject, validate=
   let preserveLock=false;
   try{
     const enabled=await readEnabled(root);
-    if(!initial && !enabled)throw Error('Initial approval required for definitive deletion');
+    if(!initial && !enabled)throw Error('Initial approval required');
     if(initial && enabled)throw Error('Initial cleanup already confirmed');
     if(enabled && plan.current<enabled.current)return {skippedOlderProduction:true};
     if(!completion?.output || !completion.expected)throw Error('Validated current MP4 and expected composition required');
     const currentOutput=await safePath(root,slash(path.relative(root,completion.output)));
     const verified=await validate(currentOutput,completion.expected);
-    await check(root,plan.current,[]);
     const fresh=await inventory(root,plan.current,{references:plan.references});
     const signature=p=>JSON.stringify({records:p.records.filter(r=>r.action!=='preserve'),edits:p.edits});
     if(signature(fresh)!==signature(plan))throw Error('Plan stale: dependencies or files changed; regenerate review');
+    const verifiedDeliveries = new Map();
     for(const item of [...candidates,...plan.edits]){
       if(protectedPath(item.file))throw Error(`Protected file: ${item.file}`);
       const source=await safePath(root,item.file);
-      if(await digest(source)!==item.sha256)throw Error(`Plan stale: ${item.file}`);
-      if(item.action==='deliver')await validate(source);
+      // Fresh inventory above already hashed these exact candidates and registry edits.
+      if(item.action==='deliver')verifiedDeliveries.set(item.file, await validate(source));
     }
-    // Validate the exact proposed registry before the first irreversible operation.
+    for (const item of fresh.records.filter(r => r.action === 'preserve' && r.file.startsWith('public/') && r.bytes < 1024)) {
+      if ((await fs.readFile(await safePath(root, item.file))).subarray(0, 42).toString().startsWith('version https://git-lfs.github.com/spec/v1')) throw Error(`Unresolved LFS media: ${item.file}`);
+    }
+    // Validate the exact proposed registry before mutating production files.
     await check(root,plan.current,plan.edits);
     projectBefore=await projectBytes(root);
     await storeJson(root,report.reportFile,report);
-    report.deliveries.push({source:slash(path.relative(root,currentOutput)),...await archiveDelivery(root,currentOutput)});
+    report.deliveries.push({source:slash(path.relative(root,currentOutput)),...await archiveDelivery(root,currentOutput,verified)});
     for(const item of candidates.filter(r=>r.action==='deliver')){
-      const delivery=await archiveDelivery(root,await safePath(root,item.file));
+      const delivery=await archiveDelivery(root,await safePath(root,item.file),verifiedDeliveries.get(item.file));
       if(delivery.sha256!==item.sha256)throw Error(`Delivery changed: ${item.file}`);
       report.deliveries.push({source:item.file,...delivery});
     }
+    const backup = await backupInventory(root, plan, candidates);
+    report.backup = backup.backup;
+    report.backupBytes = backup.bytes;
     // Complete delivery and source checks before touching any code or deleting files.
     for(const item of [...candidates,...plan.edits])if(await digest(await safePath(root,item.file))!==item.sha256)throw Error(`Changed before cleanup: ${item.file}`);
     if(verified?.sha256 && await digest(currentOutput)!==verified.sha256)throw Error('Current MP4 changed before cleanup');
     report.status='running';report.phase='registry';
+    await storeJson(root,report.reportFile,report);
     for(const edit of plan.edits){
-      report.attempted=edit.file;await storeJson(root,report.reportFile,report);
+      report.attempted=edit.file;
       mutationStarted=true;
-      await fs.writeFile(await safePath(root,edit.file),edit.after);
+      const file = await safePath(root, edit.file);
+      const temporary = `${file}.${randomUUID()}.retaining`;
+      try {
+        await fs.writeFile(temporary, edit.after, { flag: 'wx' });
+        await fs.rename(temporary, file);
+      } finally { await fs.unlink(temporary).catch(error => { if (error.code !== 'ENOENT') throw error; }); }
       report.modified.push(edit.file);
-      report.attempted=null;await storeJson(root,report.reportFile,report);
+      report.attempted=null;
     }
     report.phase='deletion';
+    await storeJson(root,report.reportFile,report);
     for(const item of candidates){
-      report.attempted=item.file;await storeJson(root,report.reportFile,report);
+      report.attempted=item.file;
       const file=await safePath(root,item.file);
       if(await digest(file)!==item.sha256)throw Error(`Changed during cleanup: ${item.file}`);
       const bytes=(await fs.stat(file)).size;
@@ -325,9 +440,10 @@ export async function applyInventory(root, plan, { check=checkProject, validate=
       await remove(file);
       report.removed.push(item.file);report.sourceBytesRemoved+=bytes;
       report.pending=report.pending.filter(file=>file!==item.file);
-      report.attempted=null;await storeJson(root,report.reportFile,report);
+      report.attempted=null;
     }
     report.phase='post-validation';
+    await storeJson(root,report.reportFile,report);
     await check(root,plan.current,[]);
     if(refresh)await refresh(root);
     else if(candidates.length && await fs.stat(path.join(root,'scripts/build-desktop.mjs')).catch(()=>null))await run(process.execPath,['scripts/build-desktop.mjs'],root);
@@ -338,8 +454,11 @@ export async function applyInventory(root, plan, { check=checkProject, validate=
     await storeJson(root,report.reportFile,report);
     return report;
   }catch(error){
-    preserveLock=mutationStarted;
-    report.status=mutationStarted?'partial-failure':'validation-failed';report.error=error.message;
+    report.status='validation-failed';report.error=error.message;
+    if (mutationStarted && report.backup) {
+      try { await restoreBackup(root, report.backup); report.status='rolled-back'; }
+      catch (restoreError) { preserveLock=true; report.status='recovery-required'; report.restoreError=restoreError.message; }
+    }
     report.interruptedAt=new Date().toISOString();
     if(projectBefore!==undefined)report.netBytesReclaimed=projectBefore-await projectBytes(root);
     await storeJson(root,report.reportFile,report).catch(writeError=>{report.reportWriteError=writeError.message;});

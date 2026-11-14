@@ -154,10 +154,7 @@ export async function importFiles(
         result.duplicates++;
         continue;
       }
-      project = store.save(
-        { ...project, assets: [...project.assets, asset] },
-        true,
-      );
+      project = { ...project, assets: [...project.assets, asset] };
       result.imported++;
     } catch (error) {
       result.errors.push(
@@ -165,6 +162,7 @@ export async function importFiles(
       );
     }
   }
+  if (result.imported) project = store.save(project, true);
   return { ...result, project };
 }
 export async function inspectAssets(

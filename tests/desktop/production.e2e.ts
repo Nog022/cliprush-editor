@@ -128,6 +128,8 @@ test("production UI preserves references, reuses library, reports absent Codex a
       );
       if (!imported?.imported)
         throw new Error(imported?.errors.join("\n") ?? "Importação cancelada.");
+      if (imported.project.revision !== source.revision + 1)
+        throw new Error("A importação deve persistir uma revisão por lote.");
       const asset = imported!.project.assets[0];
       let target = await window.cliprush.reuseAsset(id, source.id, asset.id);
       target = await window.cliprush.reuseAsset(
@@ -288,6 +290,32 @@ test("production UI preserves references, reuses library, reports absent Codex a
       project.id,
     );
     expect(stillSaved?.scenes[0].title).toBe("ClipRush");
+    // Observe real IPC invocations after the panel reaches its terminal state.
+    await app.evaluate(({ ipcMain }) => {
+      const handlers = (ipcMain as unknown as {
+        _invokeHandlers: Map<string, (...args: unknown[]) => unknown>;
+      })._invokeHandlers;
+      const metrics = globalThis as typeof globalThis & { idleStatusCalls: number };
+      metrics.idleStatusCalls = 0;
+      for (const method of ["productionStatus", "listRenders"]) {
+        const channel = `cliprush:${method}`;
+        const original = handlers.get(channel)!;
+        ipcMain.removeHandler(channel);
+        ipcMain.handle(channel, (...args) => {
+          metrics.idleStatusCalls++;
+          return original(...args);
+        });
+      }
+    });
+    // Allow one in-flight terminal update to settle, then measure two idle seconds.
+    await page.waitForTimeout(1200);
+    const idleBefore = await app.evaluate(() =>
+      (globalThis as typeof globalThis & { idleStatusCalls: number }).idleStatusCalls,
+    );
+    await page.waitForTimeout(2200);
+    expect(await app.evaluate(() =>
+      (globalThis as typeof globalThis & { idleStatusCalls: number }).idleStatusCalls,
+    )).toBe(idleBefore);
     await page
       .getByRole("button", { name: "Exportar MP4", exact: true })
       .click();

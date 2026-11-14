@@ -473,7 +473,7 @@ function registerHandlers() {
 }
 async function initializeServices() {
   codex = new CodexClient(store.directory, root);
-  renders = new RenderService(store, root);
+  renders = new RenderService(store, root, app.isPackaged ? path.join(root, "render") : undefined);
   await renders.load();
   production = new ProductionService(store, codex, renders, root);
   catalog = new CatalogService(store, root, publicRoot);

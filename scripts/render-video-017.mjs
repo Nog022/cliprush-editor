@@ -8,7 +8,7 @@ import {
 import { createServer } from "node:http";
 import { createReadStream, existsSync } from "node:fs";
 import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
-import { createHash } from "node:crypto";
+import { createHash, randomUUID } from "node:crypto";
 import path from "node:path";
 import { completeProduction } from "./video-retention.mjs";
 
@@ -22,7 +22,7 @@ await mkdir(review, { recursive: true });
 const servePath = await bundle({
   entryPoint: path.join(root, "src/index.ts"),
   outDir: path.join(out, "bundle"),
-  publicDir: null,
+  publicDir: path.join(root, `out/retention/tmp/no-public-${randomUUID()}`),
 });
 const server = createServer((request, response) => {
   void (async () => {
