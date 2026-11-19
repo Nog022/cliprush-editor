@@ -469,9 +469,11 @@ export async function applyInventory(root, plan, { check=checkProject, validate=
   }
 }
 
-export async function completeProduction({ root, current, output, expected, references=[], check=checkProject }) {
+export async function completeProduction({ root, current, output, expected, references=[], check=checkProject, validationOnly=false }) {
   root=await fs.realpath(root);
   const file=await safePath(root,slash(path.relative(root,output)));
+  // Template tests/previews validate their MP4 without authorizing production cleanup.
+  if(validationOnly)return {validationOnly:true,verified:await validateMp4(file,expected)};
   const enabled=await readEnabled(root);
   if(!enabled){
     const verified=await validateMp4(file,expected);

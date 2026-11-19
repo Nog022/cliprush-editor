@@ -1,12 +1,17 @@
 import type { Clip, Project } from "../../shared/model";
+import { ClipAnalysis } from "./ClipAnalysis";
+import {framingFromAnalysis, LIVE_PRESET} from '../../shared/live-preset';
+import {GameplayFraming} from './GameplayFraming';
 export function ClipList({
   project,
   busy,
   onEdit,
+  save,
 }: {
   project: Project;
   busy: boolean;
   onEdit: (project: Project) => void;
+  save: () => Promise<Project | undefined>;
 }) {
   const update = (clip: Clip, patch: Partial<Clip>) => {
     const next = { ...clip, ...patch };
@@ -21,6 +26,12 @@ export function ClipList({
   };
   return (
     <section className="panel clip-panel">
+      {project.visualPreset === LIVE_PRESET && <label>
+        Legenda personalizada
+        <textarea aria-label="Legenda personalizada" maxLength={300} disabled={busy}
+          value={project.customCaption ?? ''}
+          onChange={e => onEdit({...project, customCaption: e.target.value})} />
+      </label>}
       <div className="section-heading">
         <h3>Montagem do preview</h3>
         <span className="muted">
@@ -118,6 +129,21 @@ export function ClipList({
           >
             Remover
           </button>
+          {project.assets.find(a => a.id === clip.assetId)?.kind === "video" && (
+            <ClipAnalysis key={`${clip.id}-${clip.trimBefore}-${clip.durationInFrames}-${project.fps}`}
+              project={project} clip={clip} busy={busy} save={save}
+              onApply={project.visualPreset === LIVE_PRESET ? result => {
+                const asset = project.assets.find(a => a.id === clip.assetId)!;
+                update(clip, {liveFraming: framingFromAnalysis(result, asset, clip, project)});
+              } : undefined} />
+          )}
+          {project.visualPreset === LIVE_PRESET && clip.liveFraming &&
+            <GameplayFraming project={project} clip={clip} busy={busy} save={save}
+              onChange={(focus, saved) => {
+                const base = saved ?? project;
+                onEdit({...base, clips: base.clips.map(c => c.id === clip.id
+                  ? {...c, liveFraming: {...c.liveFraming!, gameplayFocus: focus}} : c)});
+              }} />}
         </div>
       ))}
       {!project.clips.length && (

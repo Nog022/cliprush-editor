@@ -1,0 +1,863 @@
+[
+  {
+    "text": " GTA",
+    "startMs": 0,
+    "endMs": 380,
+    "timestampMs": 190,
+    "confidence": 0.2632
+  },
+  {
+    "text": " seis",
+    "startMs": 380,
+    "endMs": 900,
+    "timestampMs": 640,
+    "confidence": 0.0006
+  },
+  {
+    "text": " vai",
+    "startMs": 900,
+    "endMs": 1140,
+    "timestampMs": 1020,
+    "confidence": 0.9585
+  },
+  {
+    "text": " ter",
+    "startMs": 1140,
+    "endMs": 1360,
+    "timestampMs": 1250,
+    "confidence": 0.9908
+  },
+  {
+    "text": " tempestades",
+    "startMs": 1360,
+    "endMs": 2180,
+    "timestampMs": 1770,
+    "confidence": 0.9925
+  },
+  {
+    "text": " climáticas,",
+    "startMs": 2180,
+    "endMs": 2980,
+    "timestampMs": 2580,
+    "confidence": 0.9963
+  },
+  {
+    "text": " mas",
+    "startMs": 3480,
+    "endMs": 3720,
+    "timestampMs": 3600,
+    "confidence": 0.9906
+  },
+  {
+    "text": " essas",
+    "startMs": 3720,
+    "endMs": 3940,
+    "timestampMs": 3830,
+    "confidence": 0.9868
+  },
+  {
+    "text": " seis",
+    "startMs": 3940,
+    "endMs": 4280,
+    "timestampMs": 4110,
+    "confidence": 0.7712
+  },
+  {
+    "text": " novas",
+    "startMs": 4280,
+    "endMs": 4660,
+    "timestampMs": 4470,
+    "confidence": 0.9904
+  },
+  {
+    "text": " imagens",
+    "startMs": 4660,
+    "endMs": 5180,
+    "timestampMs": 4920,
+    "confidence": 0.9988
+  },
+  {
+    "text": " revelam",
+    "startMs": 5180,
+    "endMs": 5620,
+    "timestampMs": 5400,
+    "confidence": 0.9866
+  },
+  {
+    "text": " algo",
+    "startMs": 5620,
+    "endMs": 5900,
+    "timestampMs": 5760,
+    "confidence": 0.9955
+  },
+  {
+    "text": " ainda",
+    "startMs": 5900,
+    "endMs": 6160,
+    "timestampMs": 6030,
+    "confidence": 0.9789
+  },
+  {
+    "text": " mais",
+    "startMs": 6160,
+    "endMs": 6700,
+    "timestampMs": 6430,
+    "confidence": 0.9945
+  },
+  {
+    "text": " impressionante.",
+    "startMs": 6700,
+    "endMs": 7520,
+    "timestampMs": 7110,
+    "confidence": 0.9953
+  },
+  {
+    "text": " No",
+    "startMs": 7920,
+    "endMs": 8100,
+    "timestampMs": 8010,
+    "confidence": 0.9546
+  },
+  {
+    "text": " GTA",
+    "startMs": 8100,
+    "endMs": 8360,
+    "timestampMs": 8230,
+    "confidence": 0.997
+  },
+  {
+    "text": " 5,",
+    "startMs": 8360,
+    "endMs": 8900,
+    "timestampMs": 8630,
+    "confidence": 0.4641
+  },
+  {
+    "text": " a",
+    "startMs": 9160,
+    "endMs": 9240,
+    "timestampMs": 9200,
+    "confidence": 0.9916
+  },
+  {
+    "text": " chuva",
+    "startMs": 9240,
+    "endMs": 9600,
+    "timestampMs": 9420,
+    "confidence": 0.9977
+  },
+  {
+    "text": " transformava",
+    "startMs": 9600,
+    "endMs": 10280,
+    "timestampMs": 9940,
+    "confidence": 0.9697
+  },
+  {
+    "text": " Los",
+    "startMs": 10280,
+    "endMs": 10480,
+    "timestampMs": 10380,
+    "confidence": 0.3096
+  },
+  {
+    "text": " Santos.",
+    "startMs": 10480,
+    "endMs": 10880,
+    "timestampMs": 10680,
+    "confidence": 0.9957
+  },
+  {
+    "text": " Em",
+    "startMs": 11440,
+    "endMs": 11580,
+    "timestampMs": 11510,
+    "confidence": 0.9629
+  },
+  {
+    "text": " Red",
+    "startMs": 11580,
+    "endMs": 11760,
+    "timestampMs": 11670,
+    "confidence": 0.8503
+  },
+  {
+    "text": " Dead",
+    "startMs": 11760,
+    "endMs": 11900,
+    "timestampMs": 11830,
+    "confidence": 0.9396
+  },
+  {
+    "text": " 2,",
+    "startMs": 11900,
+    "endMs": 12220,
+    "timestampMs": 12060,
+    "confidence": 0.9872
+  },
+  {
+    "text": " as",
+    "startMs": 12600,
+    "endMs": 12700,
+    "timestampMs": 12650,
+    "confidence": 0.9949
+  },
+  {
+    "text": " tempestades",
+    "startMs": 12700,
+    "endMs": 13300,
+    "timestampMs": 13000,
+    "confidence": 0.9972
+  },
+  {
+    "text": " eram",
+    "startMs": 13300,
+    "endMs": 13540,
+    "timestampMs": 13420,
+    "confidence": 0.9917
+  },
+  {
+    "text": " absurdas.",
+    "startMs": 13540,
+    "endMs": 14440,
+    "timestampMs": 13990,
+    "confidence": 0.9803
+  },
+  {
+    "text": " Agora",
+    "startMs": 14820,
+    "endMs": 15060,
+    "timestampMs": 14940,
+    "confidence": 0.9809
+  },
+  {
+    "text": " olha",
+    "startMs": 15060,
+    "endMs": 15420,
+    "timestampMs": 15240,
+    "confidence": 0.6019
+  },
+  {
+    "text": " isso,",
+    "startMs": 15420,
+    "endMs": 15820,
+    "timestampMs": 15620,
+    "confidence": 0.9855
+  },
+  {
+    "text": " a",
+    "startMs": 16240,
+    "endMs": 16400,
+    "timestampMs": 16320,
+    "confidence": 0.9664
+  },
+  {
+    "text": " neblina",
+    "startMs": 16400,
+    "endMs": 16880,
+    "timestampMs": 16640,
+    "confidence": 0.9091
+  },
+  {
+    "text": " engolha",
+    "startMs": 16880,
+    "endMs": 17440,
+    "timestampMs": 17160,
+    "confidence": 0.6149
+  },
+  {
+    "text": " os",
+    "startMs": 17440,
+    "endMs": 17580,
+    "timestampMs": 17510,
+    "confidence": 0.9931
+  },
+  {
+    "text": " prédios",
+    "startMs": 17580,
+    "endMs": 18020,
+    "timestampMs": 17800,
+    "confidence": 0.9945
+  },
+  {
+    "text": " de",
+    "startMs": 18020,
+    "endMs": 18160,
+    "timestampMs": 18090,
+    "confidence": 0.9853
+  },
+  {
+    "text": " Vice",
+    "startMs": 18160,
+    "endMs": 18380,
+    "timestampMs": 18270,
+    "confidence": 0.884
+  },
+  {
+    "text": " City.",
+    "startMs": 18380,
+    "endMs": 18820,
+    "timestampMs": 18600,
+    "confidence": 0.918
+  },
+  {
+    "text": " Em",
+    "startMs": 19280,
+    "endMs": 19520,
+    "timestampMs": 19400,
+    "confidence": 0.9371
+  },
+  {
+    "text": " Gambit",
+    "startMs": 19520,
+    "endMs": 19820,
+    "timestampMs": 19670,
+    "confidence": 0.9926
+  },
+  {
+    "text": " Bay",
+    "startMs": 19820,
+    "endMs": 20100,
+    "timestampMs": 19960,
+    "confidence": 0.9818
+  },
+  {
+    "text": " fica",
+    "startMs": 20100,
+    "endMs": 20520,
+    "timestampMs": 20310,
+    "confidence": 0.6024
+  },
+  {
+    "text": " rasteira",
+    "startMs": 20520,
+    "endMs": 21180,
+    "timestampMs": 20850,
+    "confidence": 0.9414
+  },
+  {
+    "text": " entre",
+    "startMs": 21180,
+    "endMs": 21340,
+    "timestampMs": 21260,
+    "confidence": 0.9905
+  },
+  {
+    "text": " as",
+    "startMs": 21340,
+    "endMs": 21520,
+    "timestampMs": 21430,
+    "confidence": 0.9955
+  },
+  {
+    "text": " árvores.",
+    "startMs": 21520,
+    "endMs": 21880,
+    "timestampMs": 21700,
+    "confidence": 0.9915
+  },
+  {
+    "text": " Nos",
+    "startMs": 22320,
+    "endMs": 22440,
+    "timestampMs": 22380,
+    "confidence": 0.9815
+  },
+  {
+    "text": " pântanos,",
+    "startMs": 22440,
+    "endMs": 22920,
+    "timestampMs": 22680,
+    "confidence": 0.8661
+  },
+  {
+    "text": " o",
+    "startMs": 23180,
+    "endMs": 23260,
+    "timestampMs": 23220,
+    "confidence": 0.9975
+  },
+  {
+    "text": " céu",
+    "startMs": 23260,
+    "endMs": 23400,
+    "timestampMs": 23330,
+    "confidence": 0.9975
+  },
+  {
+    "text": " fica",
+    "startMs": 23400,
+    "endMs": 23660,
+    "timestampMs": 23530,
+    "confidence": 0.9931
+  },
+  {
+    "text": " ameaçador.",
+    "startMs": 23660,
+    "endMs": 24400,
+    "timestampMs": 24030,
+    "confidence": 0.992
+  },
+  {
+    "text": " Na",
+    "startMs": 25000,
+    "endMs": 25160,
+    "timestampMs": 25080,
+    "confidence": 0.9946
+  },
+  {
+    "text": " marina,",
+    "startMs": 25160,
+    "endMs": 25600,
+    "timestampMs": 25380,
+    "confidence": 0.6804
+  },
+  {
+    "text": " a",
+    "startMs": 25880,
+    "endMs": 25980,
+    "timestampMs": 25930,
+    "confidence": 0.9977
+  },
+  {
+    "text": " chuva",
+    "startMs": 25980,
+    "endMs": 26220,
+    "timestampMs": 26100,
+    "confidence": 0.9997
+  },
+  {
+    "text": " reflete",
+    "startMs": 26220,
+    "endMs": 26780,
+    "timestampMs": 26500,
+    "confidence": 0.9334
+  },
+  {
+    "text": " as",
+    "startMs": 26780,
+    "endMs": 26900,
+    "timestampMs": 26840,
+    "confidence": 0.9906
+  },
+  {
+    "text": " luzes",
+    "startMs": 26900,
+    "endMs": 27240,
+    "timestampMs": 27070,
+    "confidence": 0.9422
+  },
+  {
+    "text": " no",
+    "startMs": 27240,
+    "endMs": 27340,
+    "timestampMs": 27290,
+    "confidence": 0.9961
+  },
+  {
+    "text": " asfalto.",
+    "startMs": 27340,
+    "endMs": 27860,
+    "timestampMs": 27600,
+    "confidence": 0.9924
+  },
+  {
+    "text": " No",
+    "startMs": 27860,
+    "endMs": 28300,
+    "timestampMs": 28080,
+    "confidence": 0.4709
+  },
+  {
+    "text": " litoral,",
+    "startMs": 28300,
+    "endMs": 28860,
+    "timestampMs": 28580,
+    "confidence": 0.9781
+  },
+  {
+    "text": " um",
+    "startMs": 29040,
+    "endMs": 29140,
+    "timestampMs": 29090,
+    "confidence": 0.9872
+  },
+  {
+    "text": " raio",
+    "startMs": 29140,
+    "endMs": 29600,
+    "timestampMs": 29370,
+    "confidence": 0.9054
+  },
+  {
+    "text": " corta",
+    "startMs": 29600,
+    "endMs": 30140,
+    "timestampMs": 29870,
+    "confidence": 0.9903
+  },
+  {
+    "text": " o",
+    "startMs": 30140,
+    "endMs": 30180,
+    "timestampMs": 30160,
+    "confidence": 0.9988
+  },
+  {
+    "text": " céu,",
+    "startMs": 30180,
+    "endMs": 30460,
+    "timestampMs": 30320,
+    "confidence": 0.995
+  },
+  {
+    "text": " e",
+    "startMs": 31000,
+    "endMs": 31040,
+    "timestampMs": 31020,
+    "confidence": 0.9929
+  },
+  {
+    "text": " na",
+    "startMs": 31040,
+    "endMs": 31140,
+    "timestampMs": 31090,
+    "confidence": 0.9753
+  },
+  {
+    "text": " estrada,",
+    "startMs": 31140,
+    "endMs": 31600,
+    "timestampMs": 31370,
+    "confidence": 0.9807
+  },
+  {
+    "text": " vento",
+    "startMs": 32000,
+    "endMs": 32380,
+    "timestampMs": 32190,
+    "confidence": 0.9917
+  },
+  {
+    "text": " e",
+    "startMs": 32380,
+    "endMs": 32400,
+    "timestampMs": 32390,
+    "confidence": 0.9992
+  },
+  {
+    "text": " chuva",
+    "startMs": 32400,
+    "endMs": 32780,
+    "timestampMs": 32590,
+    "confidence": 0.9973
+  },
+  {
+    "text": " dificultam",
+    "startMs": 32780,
+    "endMs": 33460,
+    "timestampMs": 33120,
+    "confidence": 0.9784
+  },
+  {
+    "text": " a",
+    "startMs": 33460,
+    "endMs": 33540,
+    "timestampMs": 33500,
+    "confidence": 0.9923
+  },
+  {
+    "text": " viagem.",
+    "startMs": 33540,
+    "endMs": 33980,
+    "timestampMs": 33760,
+    "confidence": 0.9891
+  },
+  {
+    "text": " Curtiu?",
+    "startMs": 34320,
+    "endMs": 34660,
+    "timestampMs": 34490,
+    "confidence": 0.943
+  },
+  {
+    "text": " Deixa",
+    "startMs": 35120,
+    "endMs": 35280,
+    "timestampMs": 35200,
+    "confidence": 0.6978
+  },
+  {
+    "text": " o",
+    "startMs": 35280,
+    "endMs": 35400,
+    "timestampMs": 35340,
+    "confidence": 0.9848
+  },
+  {
+    "text": " like",
+    "startMs": 35400,
+    "endMs": 35580,
+    "timestampMs": 35490,
+    "confidence": 0.9031
+  },
+  {
+    "text": " e",
+    "startMs": 35580,
+    "endMs": 35760,
+    "timestampMs": 35670,
+    "confidence": 0.9802
+  },
+  {
+    "text": " segue.",
+    "startMs": 35760,
+    "endMs": 35940,
+    "timestampMs": 35850,
+    "confidence": 0.9662
+  },
+  {
+    "text": " Mas",
+    "startMs": 36400,
+    "endMs": 36520,
+    "timestampMs": 36460,
+    "confidence": 0.9824
+  },
+  {
+    "text": " a",
+    "startMs": 36520,
+    "endMs": 36640,
+    "timestampMs": 36580,
+    "confidence": 0.9854
+  },
+  {
+    "text": " verdadeira",
+    "startMs": 36640,
+    "endMs": 37240,
+    "timestampMs": 36940,
+    "confidence": 0.9986
+  },
+  {
+    "text": " evolução",
+    "startMs": 37240,
+    "endMs": 37740,
+    "timestampMs": 37490,
+    "confidence": 0.9985
+  },
+  {
+    "text": " é",
+    "startMs": 37740,
+    "endMs": 37920,
+    "timestampMs": 37830,
+    "confidence": 0.9965
+  },
+  {
+    "text": " outra.",
+    "startMs": 37920,
+    "endMs": 38240,
+    "timestampMs": 38080,
+    "confidence": 0.9975
+  },
+  {
+    "text": " Em",
+    "startMs": 38680,
+    "endMs": 38800,
+    "timestampMs": 38740,
+    "confidence": 0.993
+  },
+  {
+    "text": " GTA",
+    "startMs": 38800,
+    "endMs": 39020,
+    "timestampMs": 38910,
+    "confidence": 0.9745
+  },
+  {
+    "text": " 6,",
+    "startMs": 39020,
+    "endMs": 39560,
+    "timestampMs": 39290,
+    "confidence": 0.5068
+  },
+  {
+    "text": " pode",
+    "startMs": 39760,
+    "endMs": 40000,
+    "timestampMs": 39880,
+    "confidence": 0.9861
+  },
+  {
+    "text": " fazer",
+    "startMs": 40000,
+    "endMs": 40280,
+    "timestampMs": 40140,
+    "confidence": 0.9973
+  },
+  {
+    "text": " sol",
+    "startMs": 40280,
+    "endMs": 40680,
+    "timestampMs": 40480,
+    "confidence": 0.2994
+  },
+  {
+    "text": " onde",
+    "startMs": 40680,
+    "endMs": 40900,
+    "timestampMs": 40790,
+    "confidence": 0.9938
+  },
+  {
+    "text": " você",
+    "startMs": 40900,
+    "endMs": 41180,
+    "timestampMs": 41040,
+    "confidence": 0.9929
+  },
+  {
+    "text": " está",
+    "startMs": 41180,
+    "endMs": 41540,
+    "timestampMs": 41360,
+    "confidence": 0.9935
+  },
+  {
+    "text": " e",
+    "startMs": 41540,
+    "endMs": 41840,
+    "timestampMs": 41690,
+    "confidence": 0.9038
+  },
+  {
+    "text": " chover",
+    "startMs": 41840,
+    "endMs": 42180,
+    "timestampMs": 42010,
+    "confidence": 0.9819
+  },
+  {
+    "text": " lá",
+    "startMs": 42180,
+    "endMs": 42460,
+    "timestampMs": 42320,
+    "confidence": 0.9529
+  },
+  {
+    "text": " longe.",
+    "startMs": 42460,
+    "endMs": 42860,
+    "timestampMs": 42660,
+    "confidence": 0.997
+  },
+  {
+    "text": " E",
+    "startMs": 43300,
+    "endMs": 43380,
+    "timestampMs": 43340,
+    "confidence": 0.9248
+  },
+  {
+    "text": " quando",
+    "startMs": 43380,
+    "endMs": 43500,
+    "timestampMs": 43440,
+    "confidence": 0.9429
+  },
+  {
+    "text": " a",
+    "startMs": 43500,
+    "endMs": 43620,
+    "timestampMs": 43560,
+    "confidence": 0.9966
+  },
+  {
+    "text": " tempestade",
+    "startMs": 43620,
+    "endMs": 44020,
+    "timestampMs": 43820,
+    "confidence": 0.9854
+  },
+  {
+    "text": " passa,",
+    "startMs": 44020,
+    "endMs": 44400,
+    "timestampMs": 44210,
+    "confidence": 0.9924
+  },
+  {
+    "text": " as",
+    "startMs": 44820,
+    "endMs": 44920,
+    "timestampMs": 44870,
+    "confidence": 0.9945
+  },
+  {
+    "text": " poças",
+    "startMs": 44920,
+    "endMs": 45240,
+    "timestampMs": 45080,
+    "confidence": 0.84
+  },
+  {
+    "text": " continuam.",
+    "startMs": 45240,
+    "endMs": 45920,
+    "timestampMs": 45580,
+    "confidence": 0.9963
+  },
+  {
+    "text": " Será",
+    "startMs": 46320,
+    "endMs": 46540,
+    "timestampMs": 46430,
+    "confidence": 0.9971
+  },
+  {
+    "text": " que",
+    "startMs": 46540,
+    "endMs": 46740,
+    "timestampMs": 46640,
+    "confidence": 0.997
+  },
+  {
+    "text": " Red",
+    "startMs": 46740,
+    "endMs": 46940,
+    "timestampMs": 46840,
+    "confidence": 0.8106
+  },
+  {
+    "text": " Dead",
+    "startMs": 46940,
+    "endMs": 47080,
+    "timestampMs": 47010,
+    "confidence": 0.9681
+  },
+  {
+    "text": " 2",
+    "startMs": 47080,
+    "endMs": 47380,
+    "timestampMs": 47230,
+    "confidence": 0.9911
+  },
+  {
+    "text": " finalmente",
+    "startMs": 47380,
+    "endMs": 47900,
+    "timestampMs": 47640,
+    "confidence": 0.9616
+  },
+  {
+    "text": " foi",
+    "startMs": 47900,
+    "endMs": 48420,
+    "timestampMs": 48160,
+    "confidence": 0.9963
+  },
+  {
+    "text": " superado?",
+    "startMs": 48420,
+    "endMs": 49000,
+    "timestampMs": 48710,
+    "confidence": 0.9817
+  }
+]

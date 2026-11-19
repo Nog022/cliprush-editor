@@ -8,6 +8,12 @@ import {
   Video,
 } from "remotion";
 import type { Clip, Project, Scene } from "../shared/model";
+import {WebcamTopGameplayBottom} from '../src/templates/webcam_top_gameplay_bottom';
+import {LIVE_PRESET, LIVE_LAYOUT, liveSourceKeys} from '../shared/live-preset';
+import {DEFAULT_GAMEPLAY_FOCUS} from '../shared/gameplay-focus';
+import {LiveOverlay} from './LiveOverlay';
+import {NARRATED_PRESET} from '../shared/narrated-preset';
+import {NarratedFootage, NarratedOverlay, NarratedScene} from './ClipRushNarrated';
 
 export const mediaURL = (
   projectId: string,
@@ -39,6 +45,24 @@ function ClipContent({
     return (
       <Audio src={src} volume={clip.volume} trimBefore={clip.trimBefore ?? 0} />
     );
+  if (project.visualPreset === NARRATED_PRESET && asset.kind === 'video')
+    return <NarratedFootage clip={clip} asset={asset} src={src}/>;
+  if (project.visualPreset === LIVE_PRESET && asset.kind === 'video') {
+    const framing = clip.liveFraming;
+    if (!framing || framing.startFrame !== (clip.trimBefore ?? 0) ||
+        framing.durationInFrames !== clip.durationInFrames || framing.fps !== project.fps) {
+      return <AbsoluteFill style={{color: 'white', padding: 180, fontSize: 42}}>
+        Analise o trecho e aplique o enquadramento ao preset.
+      </AbsoluteFill>;
+    }
+    const keys = liveSourceKeys(clip.id);
+    const prepared = sources?.[keys.video];
+    return <WebcamTopGameplayBottom {...framing} src={prepared ?? src} audioSrc={sources?.[keys.audio]}
+      gameplayFocus={framing.gameplayFocus ?? DEFAULT_GAMEPLAY_FOCUS}
+      startSeconds={prepared ? 0 : (clip.trimBefore ?? 0) / project.fps}
+      durationSeconds={clip.durationInFrames / project.fps} webcamHeightRatio={0.4}
+      layout={LIVE_LAYOUT} volume={clip.volume} />;
+  }
   return (
     <AbsoluteFill
       style={{
@@ -211,7 +235,7 @@ export function ProjectComposition({
           {project.name}
         </AbsoluteFill>
       )}
-      {project.scenes.map((scene) => (
+      {project.visualPreset !== NARRATED_PRESET && project.scenes.map((scene) => (
         <Sequence
           key={scene.id}
           from={scene.from}
@@ -225,11 +249,20 @@ export function ProjectComposition({
           key={clip.id}
           from={clip.from}
           durationInFrames={clip.durationInFrames}
+          premountFor={project.visualPreset === NARRATED_PRESET ? 12 : 0}
         >
           <ClipContent clip={clip} project={project} sources={sources} />
         </Sequence>
       ))}
-      <Captions project={project} />
+      {project.visualPreset === NARRATED_PRESET && <>
+        <NarratedOverlay project={project}/>
+        {project.scenes.map(scene => <Sequence key={scene.id} name={scene.name} from={scene.from} durationInFrames={scene.durationInFrames}>
+          <NarratedScene scene={scene}/>
+        </Sequence>)}
+      </>}
+      {project.visualPreset === NARRATED_PRESET ? null : project.visualPreset === LIVE_PRESET
+        ? <LiveOverlay caption={project.customCaption ?? ''} />
+        : <Captions project={project} />}
     </AbsoluteFill>
   );
 }

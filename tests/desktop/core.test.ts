@@ -1,4 +1,9 @@
 import { test } from "node:test";
+import "./editorial.test";
+import "./elevenlabs.test";
+import "./cli.test";
+import './live-preset.test';
+import './narrated-preset.test';
 import assert from "node:assert/strict";
 import { mkdtemp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";

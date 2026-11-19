@@ -5,10 +5,18 @@ directories:
   app: dist
   output: out/desktop-release
 files:
+  - "!**/.env*"
+  - "!**/*credentials*"
   - desktop/**
   - ui/**
   - package.json
 extraResources:
+  - from: desktop/models
+    to: desktop/models
+  - from: scripts/analyze-segment.py
+    to: scripts/analyze-segment.py
+  - from: scripts/transcribe-narration.py
+    to: scripts/transcribe-narration.py
   - from: scripts/buscar_cenas_gta6.py
     to: scripts/buscar_cenas_gta6.py
   - from: dist/render

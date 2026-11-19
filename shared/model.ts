@@ -7,6 +7,7 @@ export interface Scene {
   title: string; subtitle: string; background: string; accent: string;
   shape: "circle" | "square" | "none";
   animation: "fade" | "zoom" | "slide" | "none";
+  narratedRole?: "heading" | "cta";
 }
 export interface RenderSettings {
   preset: "portrait" | "landscape" | "square" | "custom";
@@ -52,6 +53,8 @@ export interface Clip {
   volume: number;
   trimBefore?: number;
   animation?: "none" | "fade" | "zoom";
+  liveFraming?: import("./live-preset").LiveFraming;
+  narratedFraming?: import("./narrated-preset").NarratedFraming;
 }
 export interface Project {
   schemaVersion: 2;
@@ -75,8 +78,12 @@ export interface Project {
   captions: Caption[];
   exportSettings: RenderSettings;
   generation?: GenerationSettings;
+  visualPreset?: "corte-live-cliprush" | "narrado-cliprush";
+  customCaption?: string;
 }
 export interface GenerationSettings {
+  narrationScript?: string;
+  narrationAssetId?: string;
   prompt: string;
   references: { name: string; content: string }[];
   model?: string;
@@ -113,6 +120,7 @@ export interface NewProject {
   fps: number;
   durationInFrames: number;
   type?: ProjectType;
+  visualPreset?: Project['visualPreset'];
 }
 export interface LegacyInfo {
   id: string;
@@ -146,6 +154,9 @@ export interface ImportResult {
   errors: string[];
 }
 export interface DesktopAPI {
+  importElevenCredentials(): Promise<boolean>;
+  testElevenVoice(): Promise<{ audio: Uint8Array; cached: boolean }>;
+  analyzeClip(projectId: string, clipId: string, options?: import("./visual-analysis").AnalysisOptions): Promise<import("./visual-analysis").VisualAnalysis>;
   searchCatalog(query: string): Promise<CatalogScene[]>;
   useCatalogScene(projectId: string, candidateId: string): Promise<Project>;
   codexStatus(): Promise<CodexStatus>;

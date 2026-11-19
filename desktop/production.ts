@@ -1,16 +1,19 @@
-import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
+import { mkdir, readFile, rename, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import type { ProductionJob, Project } from "../shared/model";
-import { applyComposition, compositionSchema } from "../shared/production";
+import { catalogQueries, compileEditorialPlan, editorialLimitations, editorialSchema, narrationBlocks, narrationClips } from "../shared/editorial";
+import { prepareNarration } from "./narration";
 import type { Store } from "./store";
 import { assetPath, inspectAssets } from "./media";
 import { CodexClient, type CodexEvent } from "./codex";
 import type { RenderService } from "./render";
+import type { CatalogService } from "./catalog";
 
 interface Session {
   threadId?: string;
   job?: ProductionJob;
   previous?: Project;
+  plan?: unknown;
 }
 const active = (job?: ProductionJob) =>
   job && !["completed", "cancelled", "failed"].includes(job.status);
@@ -25,6 +28,9 @@ export class ProductionService {
     readonly codex: CodexClient,
     private renders: RenderService,
     private root: string,
+    private catalog?: CatalogService,
+    private alignNarration = prepareNarration,
+    private generateNarration?: (project: Project, signal: AbortSignal, log: (message: string) => void) => Promise<Project>,
   ) {}
   busy(id?: string) {
     return [...this.sessions].some(
@@ -139,11 +145,14 @@ export class ProductionService {
     const current = this.store.get(id);
     return this.store.save({
       ...current,
+      assets: [...current.assets.filter(a => a.id !== current.generation?.narrationAssetId || previous.assets.some(p => p.id === a.id)),
+        ...previous.assets.filter(a => !current.assets.some(c => c.id === a.id))],
+      ...(current.generation ? { generation: { ...current.generation, narrationAssetId: previous.generation?.narrationAssetId } } : {}),
       clips: previous.clips,
       scenes: previous.scenes,
       captions: previous.captions,
       durationInFrames: previous.durationInFrames,
-    });
+    }, true);
   }
   private async turn(
     threadId: string,
@@ -152,6 +161,7 @@ export class ProductionService {
     effort: string,
     job: ProductionJob,
     signal: AbortSignal,
+    images: string[] = [],
   ) {
     signal.throwIfAborted();
     return new Promise<string>((resolve, reject) => {
@@ -205,13 +215,13 @@ export class ProductionService {
       void this.codex
         .request<{ turn: { id: string } }>("turn/start", {
           threadId,
-          input: [{ type: "text", text: prompt }],
+          input: [{ type: "text", text: prompt }, ...images.map(image => ({ type: "localImage", path: image }))],
           model,
           effort,
           cwd: this.root,
           approvalPolicy: "on-request",
           sandboxPolicy: { type: "readOnly" },
-          outputSchema: compositionSchema,
+          outputSchema: editorialSchema,
         })
         .then((result) => {
           job.turnId = result.turn.id;
@@ -230,10 +240,11 @@ export class ProductionService {
   ) {
     const job = session.job!;
     const signal = controller.signal;
+    const original = project;
     const status = await this.codex.status();
     if (!status.connected || !status.authenticated)
       throw new Error(status.error ?? "Autentique o Codex para gerar.");
-    const settings = project.generation!;
+    let settings = project.generation!;
     const preferred = settings.model ?? status.configuredModel;
     const model = preferred
       ? status.models.find((m) => m.model === preferred || m.id === preferred)
@@ -275,6 +286,11 @@ export class ProductionService {
     job.status = "generating";
     job.progress = 0.15;
     await this.persist(project.id, session);
+    if (this.generateNarration) {
+      project = await this.generateNarration(project, signal, message => job.logs.push(message));
+      settings = project.generation!;
+    }
+    const preservedNarration = narrationClips(project);
     const contextAssets = await Promise.all(
       project.assets.map(async (asset) => ({
         id: asset.id,
@@ -289,29 +305,80 @@ export class ProductionService {
         path: asset.missing ? undefined : await assetPath(this.store, asset),
       })),
     );
+    const references = [...settings.references];
+    for (const asset of contextAssets.filter(a => a.kind === "caption" && a.path)) {
+      if ((await stat(asset.path!)).size > 100_000) throw new Error(`Legenda muito extensa: ${asset.name}. Forneça somente os trechos relevantes.`);
+      references.push({ name: asset.name, content: await readFile(asset.path!, "utf8") });
+    }
+    const aligned = await this.alignNarration({ ...project, generation: { ...settings, references } }, this.store, this.root, signal, message => job.logs.push(message));
+    references.splice(0, references.length, ...aligned.generation!.references);
+    const timedBlocks = narrationBlocks(aligned);
+    const images = contextAssets.filter(a => a.kind === "image" && a.path).slice(0, 5);
+    if (images.length) job.logs.push(`${images.length} imagens fornecidas ao modelo para inspeção; outros detalhes visuais serão omitidos se não confirmados.`);
     const context = {
       name: project.name, language: project.language, category: project.category,
       type: project.type, width: project.width, height: project.height,
       fps: project.fps, durationInFrames: project.durationInFrames,
       clips: project.clips, scenes: project.scenes, captions: project.captions,
-      exportSettings: project.exportSettings, assets: contextAssets,
+      exportSettings: project.exportSettings, assets: contextAssets, preservedNarration,
+      narrationBlocks: timedBlocks, imageInputs: images.map(a => a.id),
     };
-    let prompt = `Produza os dados de uma composição Remotion para ClipRush. Respeite AGENTS.md e consulte as skills relevantes em .agents/skills, especialmente cliprush-edicao e remotion-markup. Use o contexto abaixo e as referencias anexadas. Leia arquivos adicionais somente quando necessarios ao pedido. Evite varrer o repositorio, bibliotecas, bundles e logs. O motor existente suporta clips (animation none/fade/zoom), scenes com textos e formas animadas, captions em milissegundos. Scenes são telas completas, clips visuais são desenhados sobre elas, captions ficam sobre as mídias. Use apenas os IDs das mídias fornecidas. Tempos de clips e scenes são quadros no FPS do projeto. trimBefore é o timestamp de origem em quadros. Preserve narração, roteiro, áudio e partes existentes que o pedido não altera. A duração real da narração orienta a montagem. Não invente fatos nem descreva visual que não inspecionou. Retorne somente JSON conforme o schema. Os dados serão validados e renderizados pelo app.\nPedido\n${settings.prompt}\nProjeto e mídia\n${JSON.stringify(context)}\nReferências\n${JSON.stringify(settings.references)}`;
+    const instructions = `Planeje a edicao ClipRush por blocos de narracao ANTES da montagem. Retorne somente o plano JSON. O app compilara os blocos no schema Remotion existente e validara antes de salvar/exportar. Respeite AGENTS.md.
+Cada bloco associa narrationText, evidence (fonte concreta do texto e timestamps: referencia/legenda/midia inspecionada), from/durationInFrames e trechos visuais. Tempos de clips/scenes sao absolutos na timeline, em quadros do FPS do projeto; trimBefore e o quadro de origem. Captions usam milissegundos absolutos e correspondem a fala do bloco. Nao invente transcricao, timestamps de fala nem cenas nao inspecionadas. Se faltarem dados para cumprir o pedido, retorne errors especificos. Nao basta sobrepor o video inteiro: selecione trechos e cortes conforme a fala e o pedido.
+O app preserva automaticamente preservedNarration com posicao, trim, duracao e volume originais: NAO repita esses assets em audioClips ou blocks. Outros audios existentes ficam em audioClips. A duracao deve terminar junto a narracao preservada quando existir. Cubra toda a duracao com clips visuais ou scenes. Preserve partes existentes que o pedido nao altera.
+Use somente assetId fornecidos. Crie IDs novos e globalmente unicos para cada clipe/cena planejado; nunca reutilize IDs de preservedNarration, nem repita um ID entre blocos ou audioClips. Clips suportam none/fade/zoom, scenes suportam textos/formas none/fade/zoom/slide. Scenes ficam SOB clips visuais: nao esconda textos importantes atras de video opaco. Inclua cortes, trims, zooms e captions solicitados e declare requirements com o minimo de trechos e efeitos exigidos (inclusive referencias). Nao use false para evitar requisitos. Sem alinhamento temporal suficiente para legendas, retorne erro especifico.
+Use catalogQueries SOMENTE quando faltarem cenas nas midias importadas. Nao obrigue catalogo. Retorne ate duas buscas especificas; candidatos serao fornecidos antes da montagem final. Nao reindexe nem varra bibliotecas. Normalmente catalogQueries e [].`;
+    const originalPrompt = `${instructions}
+O alinhamento foi preparado pelo app, mesmo sem legendas: use narrationBlocks como base e somente fronteiras de palavras/cues medidas. Pode combinar blocos mantendo texto e tempos. Quando houver narracao alinhada, o app constroi e divide captions automaticamente pelas palavras medidas: retorne captions: [] e declare requirements.captions conforme o pedido. Nao estime timestamps de legendas.
+errors contem SOMENTE falhas criticas que impedem a edicao essencial. Registre efeitos opcionais incompativeis em limitations com code, detail, essential e resolution (adapted/omitted/blocked). Adapte enquadramento para cortes/zoom global existentes quando adequado; simulacao sem suporte deve ser omitida, nunca declarada implementada. Requisito essencial omitido ou bloqueado impede gerar; efeito opcional bloqueado e omitido sem impedir o restante. Nao declare zoom/fade/captions como obrigatorios quando forem apenas alternativas opcionais descartadas.
+Inspecione as imagens anexadas ANTES de afirmar detalhes visuais. Todo texto grafico que destaque um detalhe especifico deve constar em highlights com assetId, sceneIds e confirmed (true SOMENTE se o detalhe foi confirmado na imagem anexada). Sem imagem inspecionada/confirmacao, omita esse destaque e registre VALIDACAO_VISUAL_PENDENTE como limitacao opcional; continue os cortes e a narracao. Nao confirme detalhes por nome de arquivo ou descricao de catalogo. Nao ha inspecao automatica de frames de video neste fluxo: omita destaques especificos nao confirmados. Nao acrescente afirmacoes a narracao.
+Pedido\n${settings.prompt}\nProjeto e midia\n${JSON.stringify(context)}\nReferencias\n${JSON.stringify(references)}`;
+    let prompt = originalPrompt;
+    let working = project;
+    let searchedCatalog = false;
+    let catalogContext = "";
     let candidate: Project | undefined;
     for (let attempt = 0; attempt < 2; attempt++) {
-      const result = await this.turn(
+      let result = await this.turn(
         session.threadId!,
         prompt,
         model.model,
         effort,
         job,
         signal,
+        images.map(a => a.path!),
       );
       signal.throwIfAborted();
       job.status = "validating";
       job.progress = 0.65;
       try {
-        candidate = applyComposition(project, JSON.parse(result));
+        let plan: unknown = JSON.parse(result);
+        const queries = catalogQueries(plan);
+        if (queries.length) {
+          if (searchedCatalog || !this.catalog) throw new Error("Cenas adicionais indisponiveis; use as midias importadas ou indique o material necessario.");
+          searchedCatalog = true;
+          const candidates = [];
+          for (const query of queries) {
+            const scenes = await this.catalog.search(query);
+            for (const scene of scenes) {
+              signal.throwIfAborted();
+              working = await this.catalog.use(project.id, scene.id, working);
+              candidates.push({ ...scene, clip: working.clips.at(-1) });
+            }
+          }
+          catalogContext = `\nCandidatos opcionais do catalogo (use apenas trechos adequados; catalogQueries deve ser []):\n${JSON.stringify(candidates)}\nAssets disponiveis: ${JSON.stringify(working.assets)}`;
+          result = await this.turn(session.threadId!, originalPrompt + catalogContext, model.model, effort, job, signal, images.map(a => a.path!));
+          plan = JSON.parse(result);
+        }
+        session.plan = plan;
+        await this.persist(project.id, session);
+        // Keep the original timeline as the preservation baseline; catalog clips are only suggestions.
+        candidate = compileEditorialPlan({ ...project, assets: working.assets, generation: { ...settings, references } }, plan, images.map(a => a.id));
+        if (preservedNarration.length && candidate.captions.length)
+          job.logs.push("Legendas sincronizadas automaticamente com o alinhamento real; limites de blocos ajustados sem nova chamada ao Codex.");
+        job.logs.push(...editorialLimitations(plan));
+        candidate.generation = project.generation;
+        candidate.assets = candidate.assets.filter(a => project.assets.some(original => original.id === a.id) || candidate!.clips.some(c => c.assetId === a.id));
         await this.renders.validate(candidate, signal);
         break;
       } catch (error) {
@@ -319,14 +386,15 @@ export class ProductionService {
         if (attempt === 1) throw error;
         job.logs.push("Validação falhou. Solicitando uma correção ao Codex.");
         job.status = "generating";
-        prompt = `Corrija apenas o erro de validação e retorne a composição JSON completa. ${error instanceof Error ? error.message : String(error)}`;
+        candidate = undefined;
+        prompt = `${originalPrompt}${catalogContext}\nPlano anterior\n${result}\nCorrija o plano completo sem remover requisitos. Erro: ${error instanceof Error ? error.message : String(error)}`;
       }
     }
     signal.throwIfAborted();
     if (!candidate) throw new Error("Composição ausente.");
-    session.previous = project;
+    session.previous = original;
     await this.persist(project.id, session);
-    const saved = this.store.save(candidate);
+    const saved = this.store.save(candidate, true);
     job.logs.push(`Composição validada e salva na revisão ${saved.revision}.`);
     if (settings.autoRender) {
       const render = await this.renders.start(saved, saved.exportSettings);

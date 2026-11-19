@@ -36,6 +36,9 @@ export function ProductionPanel({
   const [renders, setRenders] = useState<RenderJob[]>([]);
   const [error, setError] = useState("");
   const [working, setWorking] = useState(false);
+  const [voicePreview, setVoicePreview] = useState("");
+  const [voiceMessage, setVoiceMessage] = useState("");
+  useEffect(() => () => { if (voicePreview) URL.revokeObjectURL(voicePreview); }, [voicePreview]);
   const lastStatus = useRef<string | undefined>(undefined);
   const settings = project.generation ?? {
     prompt: "",
@@ -53,7 +56,7 @@ export function ProductionPanel({
     try {
       await action();
     } catch (reason) {
-      setError(reason instanceof Error ? reason.message : String(reason));
+      setError(reason instanceof Error ? reason.message.replace(/^Error invoking remote method '[^']+': Error: /, "") : String(reason));
     } finally {
       setWorking(false);
     }
@@ -141,6 +144,26 @@ export function ProductionPanel({
         onChange={(e) => update({ prompt: e.target.value })}
       />
       <div className="row production-controls">
+        <button disabled={working || running} onClick={() => void act(async () => {
+          const result = await window.cliprush.testElevenVoice();
+          setVoicePreview(URL.createObjectURL(new Blob([new Uint8Array(result.audio)], { type: "audio/mpeg" })));
+          setVoiceMessage(result.cached ? "Teste recuperado do cache." : "Teste gerado com ElevenLabs.");
+        })}>Testar voz Augusto Norte</button>
+        <button disabled={working || running} onClick={() => void act(async () => {
+          if (await window.cliprush.importElevenCredentials()) setVoiceMessage("Credenciais salvas no armazenamento seguro do sistema.");
+        })}>Importar credenciais ElevenLabs</button>
+      </div>
+      {/* Independent voice preview, outside the Remotion timeline. */}
+      {/* eslint-disable-next-line @remotion/warn-native-media-tag */}
+      {voicePreview && <audio aria-label="Teste da voz ClipRush" controls src={voicePreview} />}
+      {voiceMessage && <p role="status">{voiceMessage}</p>}
+      <label>
+        Roteiro para narração — Augusto Norte · eleven_v4
+        <textarea aria-label="Roteiro para narração" value={settings.narrationScript ?? ""} maxLength={10000} disabled={running}
+          placeholder="Cole e revise o texto exato que será narrado. Ao aprovar e gerar, este texto será enviado ao ElevenLabs. Deixe vazio para usar o áudio existente."
+          onChange={e => update({ narrationScript: e.target.value })} />
+      </label>
+      <div className="row production-controls">
         <label>
           Modelo
           <select
@@ -221,7 +244,7 @@ export function ProductionPanel({
             })
           }
         >
-          Gerar vídeo
+          {settings.narrationScript?.trim() ? "Aprovar roteiro e gerar vídeo" : "Gerar vídeo"}
         </button>
         <button
           disabled={!running}

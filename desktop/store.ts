@@ -113,6 +113,7 @@ export class Store {
       type: settings.type ?? "blank",
       scenes: [],
       captions: [],
+      ...(settings.visualPreset ? {customCaption: ''} : {}),
       exportSettings: validate.defaultRender({
         width: settings.width,
         height: settings.height,

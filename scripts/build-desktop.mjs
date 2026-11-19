@@ -6,6 +6,7 @@ import {
   stat,
   writeFile,
   copyFile,
+  cp,
 } from "node:fs/promises";
 import { createRequire } from "node:module";
 import path from "node:path";
@@ -104,6 +105,10 @@ await bundle({
   // Assets are served by the desktop media server. Use an absent, unique path.
   publicDir: path.resolve(`out/retention/tmp/no-public-${randomUUID()}`),
 });
+// The Player and MP4 composition resolve the exact same preset artwork.
+for (const target of ['dist/ui/templates/corte-live', 'dist/render/templates/corte-live']) {
+  await cp('public/templates/corte-live', target, {recursive: true});
+}
 // Main/UI code is bundled. The renderer resolves runtime modules and native binaries.
 await writeFile(
   "dist/package.json",

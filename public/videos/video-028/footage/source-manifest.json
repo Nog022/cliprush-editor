@@ -1,0 +1,60 @@
+{
+  "source": "public\\videos\\biblioteca\\gta6\\videos\\davy\\GTA 6 - O que tem no FIM DO MUNDO (decepcionante).mp4",
+  "crop": [
+    450,
+    70,
+    1380,
+    960
+  ],
+  "webcamExcluded": "Original webcam ends before x=450; crop starts x=450",
+  "clips": [
+    {
+      "name": "boarding",
+      "start": 182,
+      "duration": 10,
+      "audio": false
+    },
+    {
+      "name": "ocean",
+      "start": 555,
+      "duration": 15,
+      "audio": false
+    },
+    {
+      "name": "map",
+      "start": 796,
+      "duration": 8,
+      "audio": false
+    },
+    {
+      "name": "edge",
+      "start": 870,
+      "duration": 18,
+      "audio": false
+    },
+    {
+      "name": "motor",
+      "start": 890,
+      "duration": 10,
+      "audio": false
+    },
+    {
+      "name": "jump",
+      "start": 901,
+      "duration": 15,
+      "audio": false
+    },
+    {
+      "name": "death",
+      "start": 916,
+      "duration": 9,
+      "audio": false
+    },
+    {
+      "name": "closing",
+      "start": 848,
+      "duration": 10,
+      "audio": false
+    }
+  ]
+}

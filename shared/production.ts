@@ -63,7 +63,8 @@ export function applyComposition(previous: Project, input: unknown): Project {
       throw new Error(`Mídia ausente ${asset.name}`);
     if (
       asset.duration &&
-      (clip.trimBefore ?? 0) + clip.durationInFrames >
+      (clip.trimBefore ?? 0) + clip.durationInFrames *
+        (project.visualPreset === 'narrado-cliprush' ? clip.narratedFraming?.playbackRate ?? 1 : 1) >
         Math.ceil(asset.duration * project.fps) + 1
     )
       throw new Error(`Trecho excede a duração de ${asset.name}.`);

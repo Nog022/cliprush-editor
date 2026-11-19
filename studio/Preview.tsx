@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Player, type PlayerRef } from "@remotion/player";
 import type { Project } from "../shared/model";
 import type { LegacyComposition } from "./legacy";
@@ -16,6 +16,14 @@ export default function Preview({
   const [legacy, setLegacy] = useState<LegacyComposition>();
   const [error, setError] = useState("");
   const [frame, setFrame] = useState(0);
+  const onFrame = useCallback((event: {detail: {frame: number}}) => setFrame(event.detail.frame), []);
+  // Player can assign its ref after its asynchronous initialization. Subscribe
+  // when the instance is assigned, rather than once before it is available.
+  const bindPlayer = useCallback((player: PlayerRef | null) => {
+    ref.current?.removeEventListener('frameupdate', onFrame);
+    ref.current = player;
+    player?.addEventListener('frameupdate', onFrame);
+  }, [onFrame]);
   useEffect(() => {
     const controller = new AbortController();
     setLegacy(undefined);
@@ -51,14 +59,6 @@ export default function Preview({
     return () => controller.abort();
   }, [legacyId]);
   const spec = project ?? legacy;
-  useEffect(() => {
-    const player = ref.current;
-    if (!player) return;
-    const listener = (event: { detail: { frame: number } }) =>
-      setFrame(event.detail.frame);
-    player.addEventListener("frameupdate", listener);
-    return () => player.removeEventListener("frameupdate", listener);
-  }, [spec?.id]);
   if (error)
     return (
       <div className="error" role="alert">
@@ -68,7 +68,7 @@ export default function Preview({
   if (!spec)
     return <div className="empty">Carregando composição e metadados…</div>;
   const common = {
-    ref,
+    ref: bindPlayer,
     durationInFrames: spec.durationInFrames,
     compositionWidth: spec.width,
     compositionHeight: spec.height,

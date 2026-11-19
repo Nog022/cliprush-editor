@@ -1,0 +1,772 @@
+[
+  {
+    "text": " No",
+    "startMs": 0,
+    "endMs": 180,
+    "timestampMs": 90,
+    "confidence": 0.4775
+  },
+  {
+    "text": " GTA",
+    "startMs": 180,
+    "endMs": 480,
+    "timestampMs": 330,
+    "confidence": 0.9321
+  },
+  {
+    "text": " seis,",
+    "startMs": 480,
+    "endMs": 1000,
+    "timestampMs": 740,
+    "confidence": 0.0005
+  },
+  {
+    "text": " o",
+    "startMs": 1360,
+    "endMs": 1420,
+    "timestampMs": 1390,
+    "confidence": 0.9853
+  },
+  {
+    "text": " Jason",
+    "startMs": 1420,
+    "endMs": 1680,
+    "timestampMs": 1550,
+    "confidence": 0.9683
+  },
+  {
+    "text": " roubou",
+    "startMs": 1680,
+    "endMs": 2120,
+    "timestampMs": 1900,
+    "confidence": 0.9957
+  },
+  {
+    "text": " um",
+    "startMs": 2120,
+    "endMs": 2280,
+    "timestampMs": 2200,
+    "confidence": 0.9941
+  },
+  {
+    "text": " avião",
+    "startMs": 2280,
+    "endMs": 2520,
+    "timestampMs": 2400,
+    "confidence": 0.9966
+  },
+  {
+    "text": " comercial",
+    "startMs": 2520,
+    "endMs": 3080,
+    "timestampMs": 2800,
+    "confidence": 0.9986
+  },
+  {
+    "text": " e",
+    "startMs": 3080,
+    "endMs": 3420,
+    "timestampMs": 3250,
+    "confidence": 0.9319
+  },
+  {
+    "text": " decolou",
+    "startMs": 3420,
+    "endMs": 3800,
+    "timestampMs": 3610,
+    "confidence": 0.9903
+  },
+  {
+    "text": " com",
+    "startMs": 3800,
+    "endMs": 3980,
+    "timestampMs": 3890,
+    "confidence": 0.9946
+  },
+  {
+    "text": " quatro",
+    "startMs": 3980,
+    "endMs": 4560,
+    "timestampMs": 4270,
+    "confidence": 0.512
+  },
+  {
+    "text": " estrelas",
+    "startMs": 4560,
+    "endMs": 5100,
+    "timestampMs": 4830,
+    "confidence": 0.9924
+  },
+  {
+    "text": " de",
+    "startMs": 5100,
+    "endMs": 5200,
+    "timestampMs": 5150,
+    "confidence": 0.9917
+  },
+  {
+    "text": " procurado,",
+    "startMs": 5200,
+    "endMs": 5820,
+    "timestampMs": 5510,
+    "confidence": 0.9785
+  },
+  {
+    "text": " mas",
+    "startMs": 6240,
+    "endMs": 6500,
+    "timestampMs": 6370,
+    "confidence": 0.9814
+  },
+  {
+    "text": " olha",
+    "startMs": 6500,
+    "endMs": 6840,
+    "timestampMs": 6670,
+    "confidence": 0.984
+  },
+  {
+    "text": " como",
+    "startMs": 6840,
+    "endMs": 7080,
+    "timestampMs": 6960,
+    "confidence": 0.9926
+  },
+  {
+    "text": " terminou",
+    "startMs": 7080,
+    "endMs": 7460,
+    "timestampMs": 7270,
+    "confidence": 0.9897
+  },
+  {
+    "text": " essa",
+    "startMs": 7460,
+    "endMs": 7640,
+    "timestampMs": 7550,
+    "confidence": 0.9155
+  },
+  {
+    "text": " fuga.",
+    "startMs": 7640,
+    "endMs": 8000,
+    "timestampMs": 7820,
+    "confidence": 0.9928
+  },
+  {
+    "text": " Tudo",
+    "startMs": 8540,
+    "endMs": 8700,
+    "timestampMs": 8620,
+    "confidence": 0.9726
+  },
+  {
+    "text": " começa",
+    "startMs": 8700,
+    "endMs": 9080,
+    "timestampMs": 8890,
+    "confidence": 0.9983
+  },
+  {
+    "text": " no",
+    "startMs": 9080,
+    "endMs": 9320,
+    "timestampMs": 9200,
+    "confidence": 0.9828
+  },
+  {
+    "text": " aeroporto,",
+    "startMs": 9320,
+    "endMs": 10040,
+    "timestampMs": 9680,
+    "confidence": 0.9882
+  },
+  {
+    "text": " quando",
+    "startMs": 10160,
+    "endMs": 10380,
+    "timestampMs": 10270,
+    "confidence": 0.9816
+  },
+  {
+    "text": " ele",
+    "startMs": 10380,
+    "endMs": 10520,
+    "timestampMs": 10450,
+    "confidence": 0.9958
+  },
+  {
+    "text": " entra",
+    "startMs": 10520,
+    "endMs": 10840,
+    "timestampMs": 10680,
+    "confidence": 0.9968
+  },
+  {
+    "text": " na",
+    "startMs": 10840,
+    "endMs": 11040,
+    "timestampMs": 10940,
+    "confidence": 0.9724
+  },
+  {
+    "text": " aeronave",
+    "startMs": 11040,
+    "endMs": 11580,
+    "timestampMs": 11310,
+    "confidence": 0.9959
+  },
+  {
+    "text": " e",
+    "startMs": 11580,
+    "endMs": 11800,
+    "timestampMs": 11690,
+    "confidence": 0.9114
+  },
+  {
+    "text": " começa",
+    "startMs": 11800,
+    "endMs": 12140,
+    "timestampMs": 11970,
+    "confidence": 0.9934
+  },
+  {
+    "text": " a",
+    "startMs": 12140,
+    "endMs": 12320,
+    "timestampMs": 12230,
+    "confidence": 0.9863
+  },
+  {
+    "text": " manobrar",
+    "startMs": 12320,
+    "endMs": 12800,
+    "timestampMs": 12560,
+    "confidence": 0.988
+  },
+  {
+    "text": " aquele",
+    "startMs": 12800,
+    "endMs": 13080,
+    "timestampMs": 12940,
+    "confidence": 0.9966
+  },
+  {
+    "text": " gigante",
+    "startMs": 13080,
+    "endMs": 13800,
+    "timestampMs": 13440,
+    "confidence": 0.9903
+  },
+  {
+    "text": " entre",
+    "startMs": 13800,
+    "endMs": 14020,
+    "timestampMs": 13910,
+    "confidence": 0.991
+  },
+  {
+    "text": " os",
+    "startMs": 14020,
+    "endMs": 14180,
+    "timestampMs": 14100,
+    "confidence": 0.8449
+  },
+  {
+    "text": " outros",
+    "startMs": 14180,
+    "endMs": 14360,
+    "timestampMs": 14270,
+    "confidence": 0.9963
+  },
+  {
+    "text": " aviões.",
+    "startMs": 14360,
+    "endMs": 14900,
+    "timestampMs": 14630,
+    "confidence": 0.9969
+  },
+  {
+    "text": " Mesmo",
+    "startMs": 15420,
+    "endMs": 15840,
+    "timestampMs": 15630,
+    "confidence": 0.9981
+  },
+  {
+    "text": " sendo",
+    "startMs": 15840,
+    "endMs": 16040,
+    "timestampMs": 15940,
+    "confidence": 0.9991
+  },
+  {
+    "text": " procurado",
+    "startMs": 16040,
+    "endMs": 16520,
+    "timestampMs": 16280,
+    "confidence": 0.9973
+  },
+  {
+    "text": " pela",
+    "startMs": 16520,
+    "endMs": 16720,
+    "timestampMs": 16620,
+    "confidence": 0.9956
+  },
+  {
+    "text": " polícia,",
+    "startMs": 16720,
+    "endMs": 17220,
+    "timestampMs": 16970,
+    "confidence": 0.9592
+  },
+  {
+    "text": " Jason",
+    "startMs": 17580,
+    "endMs": 17780,
+    "timestampMs": 17680,
+    "confidence": 0.9967
+  },
+  {
+    "text": " alcança",
+    "startMs": 17780,
+    "endMs": 18360,
+    "timestampMs": 18070,
+    "confidence": 0.9872
+  },
+  {
+    "text": " a",
+    "startMs": 18360,
+    "endMs": 18540,
+    "timestampMs": 18450,
+    "confidence": 0.9588
+  },
+  {
+    "text": " pista,",
+    "startMs": 18540,
+    "endMs": 18840,
+    "timestampMs": 18690,
+    "confidence": 0.9985
+  },
+  {
+    "text": " acelera",
+    "startMs": 19200,
+    "endMs": 19800,
+    "timestampMs": 19500,
+    "confidence": 0.996
+  },
+  {
+    "text": " e",
+    "startMs": 19800,
+    "endMs": 20300,
+    "timestampMs": 20050,
+    "confidence": 0.7867
+  },
+  {
+    "text": " consegue",
+    "startMs": 20300,
+    "endMs": 20800,
+    "timestampMs": 20550,
+    "confidence": 0.9942
+  },
+  {
+    "text": " decolar.",
+    "startMs": 20800,
+    "endMs": 21300,
+    "timestampMs": 21050,
+    "confidence": 0.9842
+  },
+  {
+    "text": " E",
+    "startMs": 21820,
+    "endMs": 22000,
+    "timestampMs": 21910,
+    "confidence": 0.9208
+  },
+  {
+    "text": " olha",
+    "startMs": 22000,
+    "endMs": 22200,
+    "timestampMs": 22100,
+    "confidence": 0.9843
+  },
+  {
+    "text": " a",
+    "startMs": 22200,
+    "endMs": 22340,
+    "timestampMs": 22270,
+    "confidence": 0.6167
+  },
+  {
+    "text": " ousadia,",
+    "startMs": 22340,
+    "endMs": 22760,
+    "timestampMs": 22550,
+    "confidence": 0.9545
+  },
+  {
+    "text": " ele",
+    "startMs": 23340,
+    "endMs": 23460,
+    "timestampMs": 23400,
+    "confidence": 0.99
+  },
+  {
+    "text": " começa",
+    "startMs": 23460,
+    "endMs": 23740,
+    "timestampMs": 23600,
+    "confidence": 0.9971
+  },
+  {
+    "text": " a",
+    "startMs": 23740,
+    "endMs": 23880,
+    "timestampMs": 23810,
+    "confidence": 0.9879
+  },
+  {
+    "text": " fazer",
+    "startMs": 23880,
+    "endMs": 24080,
+    "timestampMs": 23980,
+    "confidence": 0.9974
+  },
+  {
+    "text": " curvas",
+    "startMs": 24080,
+    "endMs": 24520,
+    "timestampMs": 24300,
+    "confidence": 0.9839
+  },
+  {
+    "text": " enorme",
+    "startMs": 24520,
+    "endMs": 25100,
+    "timestampMs": 24810,
+    "confidence": 0.7676
+  },
+  {
+    "text": " sobre",
+    "startMs": 25100,
+    "endMs": 25400,
+    "timestampMs": 25250,
+    "confidence": 0.9794
+  },
+  {
+    "text": " a",
+    "startMs": 25400,
+    "endMs": 25520,
+    "timestampMs": 25460,
+    "confidence": 0.9899
+  },
+  {
+    "text": " cidade,",
+    "startMs": 25520,
+    "endMs": 25920,
+    "timestampMs": 25720,
+    "confidence": 0.9982
+  },
+  {
+    "text": " passando",
+    "startMs": 26140,
+    "endMs": 26480,
+    "timestampMs": 26310,
+    "confidence": 0.9918
+  },
+  {
+    "text": " até",
+    "startMs": 26480,
+    "endMs": 26760,
+    "timestampMs": 26620,
+    "confidence": 0.9977
+  },
+  {
+    "text": " pelo",
+    "startMs": 26760,
+    "endMs": 27020,
+    "timestampMs": 26890,
+    "confidence": 0.9923
+  },
+  {
+    "text": " meio",
+    "startMs": 27020,
+    "endMs": 27320,
+    "timestampMs": 27170,
+    "confidence": 0.9989
+  },
+  {
+    "text": " das",
+    "startMs": 27320,
+    "endMs": 27520,
+    "timestampMs": 27420,
+    "confidence": 0.9686
+  },
+  {
+    "text": " nuvens.",
+    "startMs": 27520,
+    "endMs": 27940,
+    "timestampMs": 27730,
+    "confidence": 0.992
+  },
+  {
+    "text": " Curtiu",
+    "startMs": 27940,
+    "endMs": 28760,
+    "timestampMs": 28350,
+    "confidence": 0.5094
+  },
+  {
+    "text": " essa",
+    "startMs": 28760,
+    "endMs": 28880,
+    "timestampMs": 28820,
+    "confidence": 0.9
+  },
+  {
+    "text": " loucura?",
+    "startMs": 28880,
+    "endMs": 29320,
+    "timestampMs": 29100,
+    "confidence": 0.9932
+  },
+  {
+    "text": " Segue",
+    "startMs": 29820,
+    "endMs": 30000,
+    "timestampMs": 29910,
+    "confidence": 0.9687
+  },
+  {
+    "text": " o",
+    "startMs": 30000,
+    "endMs": 30120,
+    "timestampMs": 30060,
+    "confidence": 0.9787
+  },
+  {
+    "text": " ClipRush.",
+    "startMs": 30120,
+    "endMs": 30620,
+    "timestampMs": 30370,
+    "confidence": 0.7548
+  },
+  {
+    "text": " Só",
+    "startMs": 31040,
+    "endMs": 31240,
+    "timestampMs": 31140,
+    "confidence": 0.9404
+  },
+  {
+    "text": " que",
+    "startMs": 31240,
+    "endMs": 31380,
+    "timestampMs": 31310,
+    "confidence": 0.9941
+  },
+  {
+    "text": " o",
+    "startMs": 31380,
+    "endMs": 31460,
+    "timestampMs": 31420,
+    "confidence": 0.988
+  },
+  {
+    "text": " mais",
+    "startMs": 31460,
+    "endMs": 31740,
+    "timestampMs": 31600,
+    "confidence": 0.9956
+  },
+  {
+    "text": " impressionante",
+    "startMs": 31740,
+    "endMs": 32540,
+    "timestampMs": 32140,
+    "confidence": 0.9957
+  },
+  {
+    "text": " acontece",
+    "startMs": 32540,
+    "endMs": 32980,
+    "timestampMs": 32760,
+    "confidence": 0.9947
+  },
+  {
+    "text": " no",
+    "startMs": 32980,
+    "endMs": 33180,
+    "timestampMs": 33080,
+    "confidence": 0.9946
+  },
+  {
+    "text": " final.",
+    "startMs": 33180,
+    "endMs": 33540,
+    "timestampMs": 33360,
+    "confidence": 0.9975
+  },
+  {
+    "text": " Em",
+    "startMs": 34140,
+    "endMs": 34240,
+    "timestampMs": 34190,
+    "confidence": 0.9955
+  },
+  {
+    "text": " pleno",
+    "startMs": 34240,
+    "endMs": 34620,
+    "timestampMs": 34430,
+    "confidence": 0.9555
+  },
+  {
+    "text": " voo,",
+    "startMs": 34620,
+    "endMs": 35160,
+    "timestampMs": 34890,
+    "confidence": 0.8617
+  },
+  {
+    "text": " Jason",
+    "startMs": 35320,
+    "endMs": 35480,
+    "timestampMs": 35400,
+    "confidence": 0.9613
+  },
+  {
+    "text": " simplesmente",
+    "startMs": 35480,
+    "endMs": 36040,
+    "timestampMs": 35760,
+    "confidence": 0.994
+  },
+  {
+    "text": " abandona",
+    "startMs": 36040,
+    "endMs": 36920,
+    "timestampMs": 36480,
+    "confidence": 0.8992
+  },
+  {
+    "text": " o",
+    "startMs": 36920,
+    "endMs": 37040,
+    "timestampMs": 36980,
+    "confidence": 0.965
+  },
+  {
+    "text": " avião",
+    "startMs": 37040,
+    "endMs": 37380,
+    "timestampMs": 37210,
+    "confidence": 0.9983
+  },
+  {
+    "text": " e",
+    "startMs": 37380,
+    "endMs": 37700,
+    "timestampMs": 37540,
+    "confidence": 0.9769
+  },
+  {
+    "text": " abre",
+    "startMs": 37700,
+    "endMs": 37960,
+    "timestampMs": 37830,
+    "confidence": 0.9864
+  },
+  {
+    "text": " o",
+    "startMs": 37960,
+    "endMs": 38060,
+    "timestampMs": 38010,
+    "confidence": 0.8045
+  },
+  {
+    "text": " paraquedas.",
+    "startMs": 38060,
+    "endMs": 38760,
+    "timestampMs": 38410,
+    "confidence": 0.9201
+  },
+  {
+    "text": " Imagina",
+    "startMs": 39180,
+    "endMs": 39620,
+    "timestampMs": 39400,
+    "confidence": 0.9738
+  },
+  {
+    "text": " quantas",
+    "startMs": 39620,
+    "endMs": 40220,
+    "timestampMs": 39920,
+    "confidence": 0.9829
+  },
+  {
+    "text": " outras",
+    "startMs": 40220,
+    "endMs": 40400,
+    "timestampMs": 40310,
+    "confidence": 0.9363
+  },
+  {
+    "text": " situações",
+    "startMs": 40400,
+    "endMs": 40980,
+    "timestampMs": 40690,
+    "confidence": 0.9968
+  },
+  {
+    "text": " absurdas",
+    "startMs": 40980,
+    "endMs": 41780,
+    "timestampMs": 41380,
+    "confidence": 0.9321
+  },
+  {
+    "text": " ainda",
+    "startMs": 41780,
+    "endMs": 41920,
+    "timestampMs": 41850,
+    "confidence": 0.7563
+  },
+  {
+    "text": " podemos",
+    "startMs": 41920,
+    "endMs": 42320,
+    "timestampMs": 42120,
+    "confidence": 0.9793
+  },
+  {
+    "text": " descobrir",
+    "startMs": 42320,
+    "endMs": 42820,
+    "timestampMs": 42570,
+    "confidence": 0.9733
+  },
+  {
+    "text": " no",
+    "startMs": 42820,
+    "endMs": 42980,
+    "timestampMs": 42900,
+    "confidence": 0.9191
+  },
+  {
+    "text": " GTA",
+    "startMs": 42980,
+    "endMs": 43200,
+    "timestampMs": 43090,
+    "confidence": 0.9813
+  },
+  {
+    "text": " 6.",
+    "startMs": 43200,
+    "endMs": 43720,
+    "timestampMs": 43460,
+    "confidence": 0.4501
+  }
+]

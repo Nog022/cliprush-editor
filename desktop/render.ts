@@ -1,4 +1,4 @@
-import { randomUUID } from "node:crypto";
+import { randomUUID, createHash } from "node:crypto";
 import { createReadStream, existsSync } from "node:fs";
 import { copyFile, mkdir, readFile, rename, stat, writeFile } from "node:fs/promises";
 import { constants } from "node:fs";
@@ -9,6 +9,9 @@ import type { Store } from "./store";
 import { assetPath } from "./media";
 import { mime } from "./files";
 import { applyComposition } from "../shared/production";
+import {assertLiveProjectReady, liveSourceKeys} from '../shared/live-preset';
+import {assertNarratedProjectReady} from '../shared/narrated-preset';
+import {prepareTemplateMedia} from '../scripts/prepare-template-media.mjs';
 import { checkProject, completeProduction, validateMp4 } from "../scripts/video-retention.mjs";
 
 export class RenderService {
@@ -62,6 +65,8 @@ export class RenderService {
     return this.running;
   }
   async start(project: Project, settings: RenderSettings): Promise<RenderJob> {
+    assertLiveProjectReady(project, settings);
+    assertNarratedProjectReady({...project, width: settings.width, height: settings.height, fps: settings.fps});
     if (this.running) throw new Error("Aguarde a exportação atual.");
     if (!project.clips.length && !project.scenes.length)
       throw new Error("Adicione cenas ou clipes antes de exportar.");
@@ -153,7 +158,8 @@ export class RenderService {
       if (info.size < 100) throw new Error("MP4 vazio.");
       job.phase = "Validando MP4";
       const expectsAudio = job.settings.audio && rendered.clips.some(c =>
-        c.volume !== 0 && project.assets.some(a => a.id === c.assetId && a.kind === "audio"),
+        c.volume !== 0 && project.assets.some(a => a.id === c.assetId &&
+          (a.kind === "audio" || (project.visualPreset === 'corte-live-cliprush' && a.kind === 'video'))),
       );
       controller.signal.throwIfAborted();
       // Both manual export and autoRender pass here. Never delete desktop databases/assets.
@@ -189,8 +195,10 @@ export class RenderService {
       await this.persist();
     }
   }
-  async validate(project: Project, signal: AbortSignal) {
-    await this.render(project, signal);
+  async validate(project: Project, signal: AbortSignal, previewDirectory?: string) {
+    assertNarratedProjectReady(project);
+    if (previewDirectory) await mkdir(previewDirectory, {recursive: true});
+    await this.render(project, signal, undefined, undefined, 'balanced', previewDirectory);
   }
   private async render(
     project: Project,
@@ -198,6 +206,7 @@ export class RenderService {
     output?: string,
     progress?: (p: number) => void,
     quality = "balanced",
+    previewDirectory?: string,
   ) {
     const renderer = await import("@remotion/renderer");
     signal.throwIfAborted();
@@ -208,6 +217,22 @@ export class RenderService {
       const file = await assetPath(this.store, asset);
       await stat(file);
       files.set(asset.id, file);
+    }
+    if (project.visualPreset === 'corte-live-cliprush') {
+      for (const clip of project.clips) {
+        const asset = project.assets.find(a => a.id === clip.assetId);
+        if (asset?.kind !== 'video') continue;
+        const source = files.get(asset.id)!;
+        const stamp = await stat(source);
+        const key = createHash('sha256').update(JSON.stringify({source, bytes: stamp.size,
+          mtime: stamp.mtimeMs, start: clip.trimBefore ?? 0, duration: clip.durationInFrames, fps: project.fps})).digest('hex');
+        const prepared = await prepareTemplateMedia({source, startSeconds: (clip.trimBefore ?? 0) / project.fps,
+          durationSeconds: clip.durationInFrames / project.fps,
+          directory: path.join(this.store.directory, 'production/live-media', key), signal});
+        const keys = liveSourceKeys(clip.id);
+        files.set(keys.video, prepared.video);
+        files.set(keys.audio, prepared.audio);
+      }
     }
     const token = randomUUID();
     const server = createServer((request, response) => {
@@ -326,7 +351,8 @@ export class RenderService {
             inputProps,
             frame,
             imageFormat: "png",
-            scale: 0.25,
+            scale: previewDirectory ? 0.5 : 0.25,
+            ...(previewDirectory ? {output: path.join(previewDirectory, `${frame}.png`)} : {}),
             browserExecutable,
             binariesDirectory,
             cancelSignal,

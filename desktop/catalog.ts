@@ -82,10 +82,10 @@ export class CatalogService {
       this.candidates.delete(this.candidates.keys().next().value!);
     return scenes;
   }
-  async use(projectId: string, candidateId: string) {
+  async use(projectId: string, candidateId: string, snapshot?: import("../shared/model").Project) {
     const candidate = this.candidates.get(candidateId);
     if (!candidate) throw new Error("Resultado expirado. Repita a busca.");
-    const project = this.store.get(projectId);
+    const project = snapshot ?? this.store.get(projectId);
     const file = await inside(this.publicRoot, candidate.source);
     const prepared = await prepareAsset(this.store, project, file, "reference");
     const asset = project.assets.find((a) => a.hash === prepared.hash) ?? {
@@ -115,8 +115,7 @@ export class CatalogService {
       trimBefore: Math.round(candidate.scene.startSeconds * project.fps),
       volume: 1,
     };
-    return this.store.save(
-      {
+    const result = {
         ...project,
         assets: project.assets.some((a) => a.id === asset.id)
           ? project.assets
@@ -126,8 +125,8 @@ export class CatalogService {
           from + clip.durationInFrames,
         ),
         clips: [...project.clips, clip],
-      },
-      true,
-    );
+      };
+    // Production stages candidates in its snapshot; only the validated montage is promoted.
+    return snapshot ? result : this.store.save(result, true);
   }
 }

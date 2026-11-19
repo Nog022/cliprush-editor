@@ -16,6 +16,15 @@
 6. Após duas tentativas de correção sem avanço, investigar a causa antes de repetir. Não criar agentes paralelos para tarefas simples.
 
 ## Roteamento sob demanda
+
+### Produção automática por CLI (Codex)
+- Para enviar apenas narração e instruções, criar JSON privado sob `out/` com `{"narration":"texto exato aprovado","instructions":"instruções de edição"}` e executar `npm run produce -- --input out/pedido.json` (PowerShell com política restrita: `npm.cmd run produce -- --input out/pedido.json`). Enviar o pedido autoriza a narração e o MP4. Não incluir credenciais no JSON.
+- Também aceita `node scripts/produce.mjs --input -` com JSON pelo stdin. Opcionais: `name`, `projectId` para usar um projeto existente e suas configurações, `media` com até 40 caminhos locais de mídia. Sem projeto/mídias explícitos, reutiliza até 40 mídias visuais já importadas do canal ClipRush e permite a busca normal no catálogo existente.
+- O comando aciona os mesmos serviços do processo principal, sem janela quando o app está fechado, ou encaminha à instância aberta. Reutiliza credenciais seguras/`.env.local` de desenvolvimento, voz Augusto Norte, eleven_v4, cache, preferências Codex, Whisper, edição, legendas e render. Não executar outra CLI de produção dentro de um turno do planejador editorial: esse planejador retorna somente o JSON exigido pelo app.
+- Saída JSONL: `progress` com estágio, progresso e logs; `completed` com `outputPath` absoluto; `error` e código de saída não zero nas falhas. Artefatos privados de controle e `result.json` ficam em `out/cli/<id>/`. Ctrl+C solicita cancelamento cooperativo. Não assumir sucesso antes de `completed`.
+- Pré-requisitos: Codex já autenticado/configurado, ElevenLabs com Text to Speech e Voices: Read, Whisper/modelo local, FFmpeg/FFprobe e bundle Remotion desktop válido (`dist/render/index.html`). Cenas precisam existir na biblioteca importada, no catálogo local ou em `media`; não baixar ou reindexar automaticamente. Pedidos de aprovação interativa são recusados e reportados, sem abrir diálogos. Uma instância aberta de versão anterior à CLI precisa ser reiniciada após a atualização.
+
+### Outros fluxos
 - Vídeos em `src/videos/`: seguir `src/videos/AGENTS.md`; usar a skill `cliprush-edicao` somente para criar/editar vídeo.
 - Biblioteca de cenas e timestamps: skill `cliprush-catalogo`; mídia/`ffprobe`: `cliprush-midia`.
 - Mudança de arquitetura, recursos grandes ou automação: skill `cliprush-sdd`. Correção pequena: agir diretamente, sem SDD completo.
@@ -32,3 +41,77 @@
 - Produção solicitada de vídeo autoriza render MP4; pedido de diagnóstico, ajuste pontual, AGENTS ou documentação **não** autoriza render, indexar, apagar, publicar ou alterar outros vídeos.
 - Verificar apenas o escopo alterado, escalando de testes rápidos para render/previews quando pertinente; relatórios curtos com arquivos, validações e bloqueios.
 - Nenhum arquivo `AGENTS.md` substitui as instruções explícitas da tarefa, a segurança nem a verificação no código real.
+
+## CTA — Curtir e Seguir
+
+Durante a edição dos vídeos, avaliar oportunidades de inserir chamadas para ação (CTA) de maneira criativa e natural.
+
+### Curtir
+- Preferencialmente após uma revelação surpreendente.
+- Inserir uma animação visual de curtida.
+- Utilizar ícone animado, movimento de clique, partículas discretas e efeito sonoro curto.
+- Duração visual de aproximadamente 1 a 2 segundos.
+- Não interromper a narração nem ocultar detalhes importantes.
+
+### Seguir
+- Preferencialmente próximo do encerramento.
+- Inserir uma animação de seguir/inscrever-se.
+- Utilizar movimento fluido, destaque visual e feedback de confirmação.
+- Adaptar o CTA à plataforma de publicação.
+
+### Regras de retenção
+- Nunca inserir CTA nos primeiros 3 segundos.
+- Não usar obrigatoriamente os dois CTAs.
+- Priorizar a retenção e o ritmo da narrativa.
+- Variar as animações para evitar repetição.
+- Integrar os efeitos à composição do vídeo.
+- Não adicionar segundos desnecessários ao vídeo.
+- Se o CTA prejudicar a narrativa, não inserir.
+
+### Validação
+- Verificar se as animações realmente aparecem no MP4.
+- Não considerar um CTA implementado apenas por constar no roteiro ou na narração.
+
+## Regra de eficiência — Correções ClipRush
+
+**Objetivo:** corrigir defeitos com o menor custo possível de tempo, tokens, alterações e renderizações, sem comprometer a qualidade, segurança ou funcionamento do projeto.
+
+### Diagnóstico
+- Identificar o componente responsável antes de alterar código.
+- Priorizar logs, diffs, componentes existentes e reproduções mínimas.
+- Não investigar codecs, streaming, protocolos ou serviços externos sem evidências de falha.
+- Após duas tentativas sem avanço, revisar a hipótese antes de continuar.
+- Evitar investigações paralelas de causas não relacionadas.
+
+### Implementação
+- Aplicar a menor correção suficiente para resolver a causa raiz.
+- Reutilizar presets, composições, serviços, cache e funções existentes.
+- Não recriar componentes nem introduzir abstrações desnecessárias.
+- Preservar o padrão visual e cinematográfico do ClipRush.
+- Não alterar outros projetos ou vídeos sem necessidade comprovada.
+
+### Validação progressiva
+1. Executar primeiro testes rápidos dos componentes alterados.
+2. Para problemas visuais, conferir frames representativos antes de renderizar.
+3. Executar testes E2E quando o defeito envolver reprodução, timeline, sincronização ou integração.
+4. Executar testes gerais quando houver risco real de regressão em componentes compartilhados.
+5. Renderizar o MP4 completo somente após as verificações preliminares.
+6. Repetir renderizações apenas quando uma correção posterior justificar nova validação.
+
+### Economia de execução
+- Evitar leituras, análises, transcrições e comandos redundantes.
+- Não criar infraestrutura temporária complexa para correções simples.
+- Reutilizar artefatos já validados.
+- Registrar brevemente causas descartadas para evitar repetir investigações.
+- Dimensionar SDD, documentação e testes conforme a complexidade e o risco da alteração.
+
+### Entrega
+Informar resumidamente:
+- Causa raiz identificada.
+- Correção aplicada.
+- Testes executados e seus resultados.
+- Arquivos modificados.
+- Retrabalho relevante, caso exista.
+- Caminho do MP4 final, quando solicitado.
+
+**Prioridade:** qualidade final > correção comprovada > eficiência de execução. Nunca economizar recursos sacrificando a confiabilidade do resultado.

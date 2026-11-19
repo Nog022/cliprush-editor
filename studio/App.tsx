@@ -194,15 +194,17 @@ export function App() {
       await savePending();
       const [width, height] = String(data.get("format")).split("x").map(Number);
       const fps = Number(data.get("fps"));
+      const live = data.get('visualPreset') === 'corte-live-cliprush';
       const p = await window.cliprush.createProject({
         name: String(data.get("name")),
         channelId: channel,
         language: String(data.get("language")),
         category: String(data.get("category")),
-        width,
-        height,
-        fps,
-        durationInFrames: Math.round(Number(data.get("duration")) * fps),
+        width: live ? 1080 : width,
+        height: live ? 1920 : height,
+        fps: live ? 30 : fps,
+        ...(live ? {visualPreset: 'corte-live-cliprush' as const, type: 'clips' as const} : {}),
+        durationInFrames: Math.round(Number(data.get("duration")) * (live ? 30 : fps)),
       });
       remember(p);
       setLegacy(undefined);
@@ -783,7 +785,7 @@ export function App() {
                   )}
                 </div>
                 {selected && (
-                  <ClipList project={selected} busy={busy} onEdit={edit} />
+                  <ClipList project={selected} busy={busy} onEdit={edit} save={savePending} />
                 )}
                 {selected && (
                   <ProductionPanel
@@ -917,6 +919,13 @@ export function App() {
       {modal === "project" && (
         <Modal title="Novo projeto" onClose={() => setModal(null)}>
           <form onSubmit={createProject}>
+            <label>
+              Preset visual
+              <select name="visualPreset" defaultValue="">
+                <option value="">Padrão</option>
+                <option value="corte-live-cliprush">Corte de Live - ClipRush</option>
+              </select>
+            </label>
             <label>
               Nome do projeto
               <input

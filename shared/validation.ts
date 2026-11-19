@@ -1,4 +1,6 @@
 import type { NewProject, Project, ProjectType, RenderSettings, Scene } from "./model";
+import {assertLiveFraming, LIVE_PRESET, type LiveFraming} from './live-preset';
+import {assertNarratedFraming, NARRATED_PRESET, type NarratedFraming} from './narrated-preset';
 
 export function renderSettings(value: unknown): RenderSettings {
   const r = record(value);
@@ -20,7 +22,8 @@ export function scene(value: unknown, duration: number): Scene {
   const s = record(value);
   const from = number(s.from, 0, duration - 1);
   if (!["circle", "square", "none"].includes(String(s.shape)) || !["fade", "zoom", "slide", "none"].includes(String(s.animation))) throw new Error("Animação ou objeto inválido.");
-  return { id: id(s.id), name: text(s.name, "Cena"), from, durationInFrames: number(s.durationInFrames, 1, duration - from), title: s.title === "" ? "" : text(s.title, "Texto da cena", 500), subtitle: s.subtitle === "" ? "" : text(s.subtitle, "Subtítulo", 500), background: color(s.background), accent: color(s.accent), shape: s.shape as Scene["shape"], animation: s.animation as Scene["animation"] };
+  if (s.narratedRole !== undefined && !['heading', 'cta'].includes(String(s.narratedRole))) throw new Error('Overlay narrado inválido.');
+  return { id: id(s.id), name: text(s.name, "Cena"), from, durationInFrames: number(s.durationInFrames, 1, duration - from), title: s.title === "" ? "" : text(s.title, "Texto da cena", 500), subtitle: s.subtitle === "" ? "" : text(s.subtitle, "Subtítulo", 500), background: color(s.background), accent: color(s.accent), shape: s.shape as Scene["shape"], animation: s.animation as Scene["animation"], ...(s.narratedRole === undefined ? {} : {narratedRole: s.narratedRole as Scene['narratedRole']}) };
 }
 
 export function record(value: unknown): Record<string, unknown> {
@@ -62,6 +65,11 @@ export function number(
 }
 export function newProject(value: unknown): NewProject {
   const p = record(value);
+  if (p.visualPreset !== undefined && p.visualPreset !== LIVE_PRESET && p.visualPreset !== NARRATED_PRESET) throw new Error('Preset visual inválido.');
+  if (p.visualPreset === NARRATED_PRESET && (p.width !== 1080 || p.height !== 1920 || p.fps !== 30))
+    throw new Error('Narrado ClipRush exige 1080×1920 a 30 FPS.');
+  if (p.visualPreset === LIVE_PRESET && (p.width !== 1080 || p.height !== 1920 || p.fps !== 30))
+    throw new Error('Corte de Live - ClipRush exige 1080×1920 a 30 FPS.');
   return {
     name: text(p.name, "Nome"),
     channelId: id(p.channelId),
@@ -72,6 +80,7 @@ export function newProject(value: unknown): NewProject {
     fps: number(p.fps, 1, 120),
     durationInFrames: number(p.durationInFrames, 1, 2_592_000),
     type: projectType(p.type),
+    ...(p.visualPreset === undefined ? {} : {visualPreset: p.visualPreset as Project['visualPreset']}),
   };
 }
 export function project(value: unknown): Project {
@@ -139,6 +148,16 @@ export function project(value: unknown): Project {
       volume: number(c.volume, 0, 2, false),
       ...(c.trimBefore === undefined ? {} : { trimBefore: number(c.trimBefore, 0, 2_592_000) }),
       ...(c.animation === undefined ? {} : { animation: clipAnimation(c.animation) }),
+      ...(c.narratedFraming === undefined ? {} : {narratedFraming: (() => {
+        const framing = c.narratedFraming as NarratedFraming;
+        assertNarratedFraming(framing);
+        return framing;
+      })()}),
+      ...(c.liveFraming === undefined ? {} : {liveFraming: (() => {
+        const framing = c.liveFraming as LiveFraming;
+        assertLiveFraming(framing);
+        return framing;
+      })()}),
     };
   });
   if (new Set(clips.map((c) => c.id)).size !== clips.length)
@@ -166,6 +185,7 @@ export function project(value: unknown): Project {
     captions: (() => { if (p.captions === undefined) return []; if (!Array.isArray(p.captions) || p.captions.length > 50000) throw new Error("Legendas inválidas."); return p.captions.map((item) => { const c = record(item); const startMs = number(c.startMs, 0, 86_400_000, false); if (typeof c.text !== "string" || c.text.length > 6000) throw new Error("Texto de legenda inválido."); return { text: c.text, startMs, endMs: number(c.endMs, startMs + 0.001, 86_400_000, false), timestampMs: null, confidence: null }; }); })(),
     exportSettings: p.exportSettings === undefined ? defaultRender({width: settings.width, height: settings.height, fps: settings.fps}) : renderSettings(p.exportSettings),
     ...(p.generation === undefined ? {} : { generation: generation(p.generation) }),
+    ...(p.customCaption === undefined ? {} : {customCaption: multiline(p.customCaption, 300)}),
   };
 }
 function clipAnimation(value: unknown): "none" | "fade" | "zoom" {
@@ -186,6 +206,8 @@ export function generation(value: unknown): import("./model").GenerationSettings
   if (references.reduce((sum, r) => sum + r.content.length, 0) > 300_000) throw new Error("Referências excedem 300 mil caracteres.");
   return {
     prompt: multiline(g.prompt, 30_000), references, autoRender: g.autoRender,
+    ...(g.narrationScript === undefined ? {} : { narrationScript: multiline(g.narrationScript, 10_000) }),
+    ...(g.narrationAssetId === undefined ? {} : { narrationAssetId: id(g.narrationAssetId) }),
     ...(g.model === undefined ? {} : { model: text(g.model, "Modelo", 160) }),
     ...(g.effort === undefined ? {} : { effort: text(g.effort, "Raciocínio", 40) }),
   };

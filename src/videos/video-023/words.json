@@ -1,0 +1,786 @@
+[
+  {
+    "text": "GTA",
+    "startMs": 0,
+    "endMs": 360,
+    "timestampMs": 180,
+    "confidence": null
+  },
+  {
+    "text": "6",
+    "startMs": 360,
+    "endMs": 900,
+    "timestampMs": 630,
+    "confidence": null
+  },
+  {
+    "text": "pode",
+    "startMs": 900,
+    "endMs": 1220,
+    "timestampMs": 1060,
+    "confidence": null
+  },
+  {
+    "text": "trazer",
+    "startMs": 1220,
+    "endMs": 1540,
+    "timestampMs": 1380,
+    "confidence": null
+  },
+  {
+    "text": "de",
+    "startMs": 1540,
+    "endMs": 1760,
+    "timestampMs": 1650,
+    "confidence": null
+  },
+  {
+    "text": "volta",
+    "startMs": 1760,
+    "endMs": 2040,
+    "timestampMs": 1900,
+    "confidence": null
+  },
+  {
+    "text": "uma",
+    "startMs": 2040,
+    "endMs": 2260,
+    "timestampMs": 2150,
+    "confidence": null
+  },
+  {
+    "text": "mecânica",
+    "startMs": 2260,
+    "endMs": 2700,
+    "timestampMs": 2480,
+    "confidence": null
+  },
+  {
+    "text": "esquecida",
+    "startMs": 2700,
+    "endMs": 3300,
+    "timestampMs": 3000,
+    "confidence": null
+  },
+  {
+    "text": "de",
+    "startMs": 3300,
+    "endMs": 3520,
+    "timestampMs": 3410,
+    "confidence": null
+  },
+  {
+    "text": "Bully,",
+    "startMs": 3520,
+    "endMs": 3820,
+    "timestampMs": 3670,
+    "confidence": null
+  },
+  {
+    "text": "escapar",
+    "startMs": 4140,
+    "endMs": 4780,
+    "timestampMs": 4460,
+    "confidence": null
+  },
+  {
+    "text": "da",
+    "startMs": 4780,
+    "endMs": 4940,
+    "timestampMs": 4860,
+    "confidence": null
+  },
+  {
+    "text": "polícia",
+    "startMs": 4940,
+    "endMs": 5380,
+    "timestampMs": 5160,
+    "confidence": null
+  },
+  {
+    "text": "só",
+    "startMs": 5380,
+    "endMs": 5820,
+    "timestampMs": 5600,
+    "confidence": null
+  },
+  {
+    "text": "na",
+    "startMs": 5820,
+    "endMs": 5940,
+    "timestampMs": 5880,
+    "confidence": null
+  },
+  {
+    "text": "conversa.",
+    "startMs": 5940,
+    "endMs": 6600,
+    "timestampMs": 6270,
+    "confidence": null
+  },
+  {
+    "text": "Em",
+    "startMs": 6980,
+    "endMs": 7180,
+    "timestampMs": 7080,
+    "confidence": null
+  },
+  {
+    "text": "Bully,",
+    "startMs": 7180,
+    "endMs": 7500,
+    "timestampMs": 7340,
+    "confidence": null
+  },
+  {
+    "text": "completar",
+    "startMs": 7740,
+    "endMs": 8120,
+    "timestampMs": 7930,
+    "confidence": null
+  },
+  {
+    "text": "a",
+    "startMs": 8120,
+    "endMs": 8240,
+    "timestampMs": 8180,
+    "confidence": null
+  },
+  {
+    "text": "quinta",
+    "startMs": 8240,
+    "endMs": 8560,
+    "timestampMs": 8400,
+    "confidence": null
+  },
+  {
+    "text": "aula",
+    "startMs": 8560,
+    "endMs": 8820,
+    "timestampMs": 8690,
+    "confidence": null
+  },
+  {
+    "text": "de",
+    "startMs": 8820,
+    "endMs": 8980,
+    "timestampMs": 8900,
+    "confidence": null
+  },
+  {
+    "text": "inglês",
+    "startMs": 8980,
+    "endMs": 9340,
+    "timestampMs": 9160,
+    "confidence": null
+  },
+  {
+    "text": "não",
+    "startMs": 9340,
+    "endMs": 9520,
+    "timestampMs": 9430,
+    "confidence": null
+  },
+  {
+    "text": "servia",
+    "startMs": 9520,
+    "endMs": 10000,
+    "timestampMs": 9760,
+    "confidence": null
+  },
+  {
+    "text": "só",
+    "startMs": 10000,
+    "endMs": 10200,
+    "timestampMs": 10100,
+    "confidence": null
+  },
+  {
+    "text": "para",
+    "startMs": 10200,
+    "endMs": 10340,
+    "timestampMs": 10270,
+    "confidence": null
+  },
+  {
+    "text": "tirar",
+    "startMs": 10340,
+    "endMs": 10560,
+    "timestampMs": 10450,
+    "confidence": null
+  },
+  {
+    "text": "nota.",
+    "startMs": 10560,
+    "endMs": 10980,
+    "timestampMs": 10770,
+    "confidence": null
+  },
+  {
+    "text": "Jimmy",
+    "startMs": 11440,
+    "endMs": 11720,
+    "timestampMs": 11580,
+    "confidence": null
+  },
+  {
+    "text": "aprendia",
+    "startMs": 11720,
+    "endMs": 12200,
+    "timestampMs": 11960,
+    "confidence": null
+  },
+  {
+    "text": "a",
+    "startMs": 12200,
+    "endMs": 12340,
+    "timestampMs": 12270,
+    "confidence": null
+  },
+  {
+    "text": "pedir",
+    "startMs": 12340,
+    "endMs": 12400,
+    "timestampMs": 12370,
+    "confidence": null
+  },
+  {
+    "text": "desculpas",
+    "startMs": 12400,
+    "endMs": 13000,
+    "timestampMs": 12700,
+    "confidence": null
+  },
+  {
+    "text": "tão",
+    "startMs": 13000,
+    "endMs": 13340,
+    "timestampMs": 13170,
+    "confidence": null
+  },
+  {
+    "text": "bem",
+    "startMs": 13340,
+    "endMs": 13640,
+    "timestampMs": 13490,
+    "confidence": null
+  },
+  {
+    "text": "que",
+    "startMs": 13640,
+    "endMs": 13900,
+    "timestampMs": 13770,
+    "confidence": null
+  },
+  {
+    "text": "podia",
+    "startMs": 13900,
+    "endMs": 14180,
+    "timestampMs": 14040,
+    "confidence": null
+  },
+  {
+    "text": "até",
+    "startMs": 14180,
+    "endMs": 14540,
+    "timestampMs": 14360,
+    "confidence": null
+  },
+  {
+    "text": "convencer",
+    "startMs": 14540,
+    "endMs": 14960,
+    "timestampMs": 14750,
+    "confidence": null
+  },
+  {
+    "text": "policiais",
+    "startMs": 14960,
+    "endMs": 15620,
+    "timestampMs": 15290,
+    "confidence": null
+  },
+  {
+    "text": "a",
+    "startMs": 15620,
+    "endMs": 15700,
+    "timestampMs": 15660,
+    "confidence": null
+  },
+  {
+    "text": "deixar",
+    "startMs": 15700,
+    "endMs": 15920,
+    "timestampMs": 15810,
+    "confidence": null
+  },
+  {
+    "text": "passar",
+    "startMs": 15920,
+    "endMs": 16240,
+    "timestampMs": 16080,
+    "confidence": null
+  },
+  {
+    "text": "pequenas",
+    "startMs": 16240,
+    "endMs": 16820,
+    "timestampMs": 16530,
+    "confidence": null
+  },
+  {
+    "text": "infrações,",
+    "startMs": 16820,
+    "endMs": 17480,
+    "timestampMs": 17150,
+    "confidence": null
+  },
+  {
+    "text": "e",
+    "startMs": 17940,
+    "endMs": 18120,
+    "timestampMs": 18030,
+    "confidence": null
+  },
+  {
+    "text": "olha",
+    "startMs": 18120,
+    "endMs": 18320,
+    "timestampMs": 18220,
+    "confidence": null
+  },
+  {
+    "text": "que",
+    "startMs": 18320,
+    "endMs": 18520,
+    "timestampMs": 18420,
+    "confidence": null
+  },
+  {
+    "text": "isso",
+    "startMs": 18520,
+    "endMs": 18700,
+    "timestampMs": 18610,
+    "confidence": null
+  },
+  {
+    "text": "já",
+    "startMs": 18700,
+    "endMs": 18960,
+    "timestampMs": 18830,
+    "confidence": null
+  },
+  {
+    "text": "existia",
+    "startMs": 18960,
+    "endMs": 19460,
+    "timestampMs": 19210,
+    "confidence": null
+  },
+  {
+    "text": "em",
+    "startMs": 19460,
+    "endMs": 19560,
+    "timestampMs": 19510,
+    "confidence": null
+  },
+  {
+    "text": "2006.",
+    "startMs": 19560,
+    "endMs": 20120,
+    "timestampMs": 19840,
+    "confidence": null
+  },
+  {
+    "text": "Curtiu",
+    "startMs": 20720,
+    "endMs": 21020,
+    "timestampMs": 20870,
+    "confidence": null
+  },
+  {
+    "text": "esse",
+    "startMs": 21020,
+    "endMs": 21180,
+    "timestampMs": 21100,
+    "confidence": null
+  },
+  {
+    "text": "detalhe?",
+    "startMs": 21180,
+    "endMs": 21640,
+    "timestampMs": 21410,
+    "confidence": null
+  },
+  {
+    "text": "Deixe",
+    "startMs": 21960,
+    "endMs": 22220,
+    "timestampMs": 22090,
+    "confidence": null
+  },
+  {
+    "text": "o",
+    "startMs": 22220,
+    "endMs": 22360,
+    "timestampMs": 22290,
+    "confidence": null
+  },
+  {
+    "text": "like",
+    "startMs": 22360,
+    "endMs": 22500,
+    "timestampMs": 22430,
+    "confidence": null
+  },
+  {
+    "text": "e",
+    "startMs": 22500,
+    "endMs": 22740,
+    "timestampMs": 22620,
+    "confidence": null
+  },
+  {
+    "text": "segue.",
+    "startMs": 22740,
+    "endMs": 22940,
+    "timestampMs": 22840,
+    "confidence": null
+  },
+  {
+    "text": "Agora",
+    "startMs": 23400,
+    "endMs": 23680,
+    "timestampMs": 23540,
+    "confidence": null
+  },
+  {
+    "text": "olha",
+    "startMs": 23680,
+    "endMs": 24120,
+    "timestampMs": 23900,
+    "confidence": null
+  },
+  {
+    "text": "GTA",
+    "startMs": 24120,
+    "endMs": 24440,
+    "timestampMs": 24280,
+    "confidence": null
+  },
+  {
+    "text": "6.",
+    "startMs": 24440,
+    "endMs": 24960,
+    "timestampMs": 24700,
+    "confidence": null
+  },
+  {
+    "text": "A",
+    "startMs": 24960,
+    "endMs": 25640,
+    "timestampMs": 25300,
+    "confidence": null
+  },
+  {
+    "text": "Rockstar",
+    "startMs": 25640,
+    "endMs": 26020,
+    "timestampMs": 25830,
+    "confidence": null
+  },
+  {
+    "text": "já",
+    "startMs": 26020,
+    "endMs": 26260,
+    "timestampMs": 26140,
+    "confidence": null
+  },
+  {
+    "text": "mostrou",
+    "startMs": 26260,
+    "endMs": 26720,
+    "timestampMs": 26490,
+    "confidence": null
+  },
+  {
+    "text": "opções",
+    "startMs": 26720,
+    "endMs": 27060,
+    "timestampMs": 26890,
+    "confidence": null
+  },
+  {
+    "text": "de",
+    "startMs": 27060,
+    "endMs": 27220,
+    "timestampMs": 27140,
+    "confidence": null
+  },
+  {
+    "text": "diálogo",
+    "startMs": 27220,
+    "endMs": 27680,
+    "timestampMs": 27450,
+    "confidence": null
+  },
+  {
+    "text": "para",
+    "startMs": 27680,
+    "endMs": 27900,
+    "timestampMs": 27790,
+    "confidence": null
+  },
+  {
+    "text": "interagir",
+    "startMs": 27900,
+    "endMs": 28440,
+    "timestampMs": 28170,
+    "confidence": null
+  },
+  {
+    "text": "com",
+    "startMs": 28440,
+    "endMs": 28560,
+    "timestampMs": 28500,
+    "confidence": null
+  },
+  {
+    "text": "personagens,",
+    "startMs": 28560,
+    "endMs": 29240,
+    "timestampMs": 28900,
+    "confidence": null
+  },
+  {
+    "text": "mas",
+    "startMs": 29740,
+    "endMs": 29880,
+    "timestampMs": 29810,
+    "confidence": null
+  },
+  {
+    "text": "será",
+    "startMs": 29880,
+    "endMs": 30120,
+    "timestampMs": 30000,
+    "confidence": null
+  },
+  {
+    "text": "que",
+    "startMs": 30120,
+    "endMs": 30300,
+    "timestampMs": 30210,
+    "confidence": null
+  },
+  {
+    "text": "também",
+    "startMs": 30300,
+    "endMs": 30660,
+    "timestampMs": 30480,
+    "confidence": null
+  },
+  {
+    "text": "vamos",
+    "startMs": 30660,
+    "endMs": 30960,
+    "timestampMs": 30810,
+    "confidence": null
+  },
+  {
+    "text": "conseguir",
+    "startMs": 30960,
+    "endMs": 31360,
+    "timestampMs": 31160,
+    "confidence": null
+  },
+  {
+    "text": "escapar",
+    "startMs": 31360,
+    "endMs": 31820,
+    "timestampMs": 31590,
+    "confidence": null
+  },
+  {
+    "text": "de",
+    "startMs": 31820,
+    "endMs": 31960,
+    "timestampMs": 31890,
+    "confidence": null
+  },
+  {
+    "text": "problemas",
+    "startMs": 31960,
+    "endMs": 32400,
+    "timestampMs": 32180,
+    "confidence": null
+  },
+  {
+    "text": "só",
+    "startMs": 32400,
+    "endMs": 32740,
+    "timestampMs": 32570,
+    "confidence": null
+  },
+  {
+    "text": "conversando?",
+    "startMs": 32740,
+    "endMs": 33400,
+    "timestampMs": 33070,
+    "confidence": null
+  },
+  {
+    "text": "Isso",
+    "startMs": 33880,
+    "endMs": 34120,
+    "timestampMs": 34000,
+    "confidence": null
+  },
+  {
+    "text": "ainda",
+    "startMs": 34120,
+    "endMs": 34360,
+    "timestampMs": 34240,
+    "confidence": null
+  },
+  {
+    "text": "não",
+    "startMs": 34360,
+    "endMs": 34660,
+    "timestampMs": 34510,
+    "confidence": null
+  },
+  {
+    "text": "foi",
+    "startMs": 34660,
+    "endMs": 34860,
+    "timestampMs": 34760,
+    "confidence": null
+  },
+  {
+    "text": "confirmado.",
+    "startMs": 34860,
+    "endMs": 35500,
+    "timestampMs": 35180,
+    "confidence": null
+  },
+  {
+    "text": "Imagina",
+    "startMs": 35920,
+    "endMs": 36400,
+    "timestampMs": 36160,
+    "confidence": null
+  },
+  {
+    "text": "se",
+    "startMs": 36400,
+    "endMs": 36520,
+    "timestampMs": 36460,
+    "confidence": null
+  },
+  {
+    "text": "a",
+    "startMs": 36520,
+    "endMs": 36580,
+    "timestampMs": 36550,
+    "confidence": null
+  },
+  {
+    "text": "Rockstar",
+    "startMs": 36580,
+    "endMs": 36900,
+    "timestampMs": 36740,
+    "confidence": null
+  },
+  {
+    "text": "pegar",
+    "startMs": 36900,
+    "endMs": 37200,
+    "timestampMs": 37050,
+    "confidence": null
+  },
+  {
+    "text": "essa",
+    "startMs": 37200,
+    "endMs": 37500,
+    "timestampMs": 37350,
+    "confidence": null
+  },
+  {
+    "text": "ideia",
+    "startMs": 37500,
+    "endMs": 37760,
+    "timestampMs": 37630,
+    "confidence": null
+  },
+  {
+    "text": "de",
+    "startMs": 37760,
+    "endMs": 37900,
+    "timestampMs": 37830,
+    "confidence": null
+  },
+  {
+    "text": "Bully",
+    "startMs": 37900,
+    "endMs": 38240,
+    "timestampMs": 38070,
+    "confidence": null
+  },
+  {
+    "text": "e",
+    "startMs": 38240,
+    "endMs": 38480,
+    "timestampMs": 38360,
+    "confidence": null
+  },
+  {
+    "text": "levar",
+    "startMs": 38480,
+    "endMs": 38660,
+    "timestampMs": 38570,
+    "confidence": null
+  },
+  {
+    "text": "para",
+    "startMs": 38660,
+    "endMs": 38880,
+    "timestampMs": 38770,
+    "confidence": null
+  },
+  {
+    "text": "outro",
+    "startMs": 38880,
+    "endMs": 39220,
+    "timestampMs": 39050,
+    "confidence": null
+  },
+  {
+    "text": "nível",
+    "startMs": 39220,
+    "endMs": 39600,
+    "timestampMs": 39410,
+    "confidence": null
+  },
+  {
+    "text": "em",
+    "startMs": 39600,
+    "endMs": 39760,
+    "timestampMs": 39680,
+    "confidence": null
+  },
+  {
+    "text": "Vice",
+    "startMs": 39760,
+    "endMs": 39980,
+    "timestampMs": 39870,
+    "confidence": null
+  },
+  {
+    "text": "City.",
+    "startMs": 39980,
+    "endMs": 40380,
+    "timestampMs": 40180,
+    "confidence": null
+  }
+]

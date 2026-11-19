@@ -1,0 +1,1042 @@
+[
+  {
+    "startMs": 0,
+    "endMs": 1160,
+    "words": [
+      {
+        "text": " Essa",
+        "startMs": 0,
+        "endMs": 280,
+        "timestampMs": 140,
+        "confidence": 0.8911
+      },
+      {
+        "text": " missão",
+        "startMs": 280,
+        "endMs": 680,
+        "timestampMs": 480,
+        "confidence": 0.9906
+      },
+      {
+        "text": " de",
+        "startMs": 680,
+        "endMs": 840,
+        "timestampMs": 760,
+        "confidence": 0.9869
+      },
+      {
+        "text": " GTA",
+        "startMs": 840,
+        "endMs": 1160,
+        "timestampMs": 1000,
+        "confidence": 0.8244
+      }
+    ]
+  },
+  {
+    "startMs": 1160,
+    "endMs": 2320,
+    "words": [
+      {
+        "text": " 6",
+        "startMs": 1160,
+        "endMs": 1580,
+        "timestampMs": 1370,
+        "confidence": 0.5379
+      },
+      {
+        "text": " tem",
+        "startMs": 1580,
+        "endMs": 1860,
+        "timestampMs": 1720,
+        "confidence": 0.9596
+      },
+      {
+        "text": " tigres",
+        "startMs": 1860,
+        "endMs": 2320,
+        "timestampMs": 2090,
+        "confidence": 0.9647
+      }
+    ]
+  },
+  {
+    "startMs": 2320,
+    "endMs": 3380,
+    "words": [
+      {
+        "text": " enjaulados,",
+        "startMs": 2320,
+        "endMs": 3040,
+        "timestampMs": 2680,
+        "confidence": 0.8296
+      },
+      {
+        "text": " um",
+        "startMs": 3300,
+        "endMs": 3380,
+        "timestampMs": 3340,
+        "confidence": 0.9864
+      }
+    ]
+  },
+  {
+    "startMs": 3380,
+    "endMs": 4620,
+    "words": [
+      {
+        "text": " jacaré",
+        "startMs": 3380,
+        "endMs": 3820,
+        "timestampMs": 3600,
+        "confidence": 0.8723
+      },
+      {
+        "text": " albino",
+        "startMs": 3820,
+        "endMs": 4380,
+        "timestampMs": 4100,
+        "confidence": 0.9593
+      },
+      {
+        "text": " e",
+        "startMs": 4380,
+        "endMs": 4620,
+        "timestampMs": 4500,
+        "confidence": 0.7942
+      }
+    ]
+  },
+  {
+    "startMs": 4620,
+    "endMs": 5680,
+    "words": [
+      {
+        "text": " até",
+        "startMs": 4620,
+        "endMs": 4860,
+        "timestampMs": 4740,
+        "confidence": 0.964
+      },
+      {
+        "text": " combate",
+        "startMs": 4860,
+        "endMs": 5480,
+        "timestampMs": 5170,
+        "confidence": 0.938
+      },
+      {
+        "text": " com",
+        "startMs": 5480,
+        "endMs": 5680,
+        "timestampMs": 5580,
+        "confidence": 0.9975
+      }
+    ]
+  },
+  {
+    "startMs": 5680,
+    "endMs": 7020,
+    "words": [
+      {
+        "text": " martelo.",
+        "startMs": 5680,
+        "endMs": 6340,
+        "timestampMs": 6010,
+        "confidence": 0.83
+      },
+      {
+        "text": " Tudo",
+        "startMs": 6780,
+        "endMs": 7020,
+        "timestampMs": 6900,
+        "confidence": 0.9736
+      }
+    ]
+  },
+  {
+    "startMs": 7020,
+    "endMs": 7960,
+    "words": [
+      {
+        "text": " começa",
+        "startMs": 7020,
+        "endMs": 7380,
+        "timestampMs": 7200,
+        "confidence": 0.9983
+      },
+      {
+        "text": " com",
+        "startMs": 7380,
+        "endMs": 7680,
+        "timestampMs": 7530,
+        "confidence": 0.9962
+      },
+      {
+        "text": " Jason",
+        "startMs": 7680,
+        "endMs": 7960,
+        "timestampMs": 7820,
+        "confidence": 0.9614
+      }
+    ]
+  },
+  {
+    "startMs": 7960,
+    "endMs": 9320,
+    "words": [
+      {
+        "text": " navegando",
+        "startMs": 7960,
+        "endMs": 8680,
+        "timestampMs": 8320,
+        "confidence": 0.9933
+      },
+      {
+        "text": " pelos",
+        "startMs": 8680,
+        "endMs": 8940,
+        "timestampMs": 8810,
+        "confidence": 0.9906
+      },
+      {
+        "text": " canais",
+        "startMs": 8940,
+        "endMs": 9320,
+        "timestampMs": 9130,
+        "confidence": 0.9933
+      }
+    ]
+  },
+  {
+    "startMs": 9320,
+    "endMs": 10680,
+    "words": [
+      {
+        "text": " de",
+        "startMs": 9320,
+        "endMs": 9480,
+        "timestampMs": 9400,
+        "confidence": 0.9962
+      },
+      {
+        "text": " Leônida.",
+        "startMs": 9480,
+        "endMs": 9920,
+        "timestampMs": 9700,
+        "confidence": 0.8725
+      },
+      {
+        "text": " A",
+        "startMs": 10380,
+        "endMs": 10480,
+        "timestampMs": 10430,
+        "confidence": 0.9762
+      },
+      {
+        "text": " água",
+        "startMs": 10480,
+        "endMs": 10680,
+        "timestampMs": 10580,
+        "confidence": 0.9663
+      }
+    ]
+  },
+  {
+    "startMs": 10680,
+    "endMs": 12040,
+    "words": [
+      {
+        "text": " impressiona,",
+        "startMs": 10680,
+        "endMs": 11480,
+        "timestampMs": 11080,
+        "confidence": 0.9671
+      },
+      {
+        "text": " mas",
+        "startMs": 11720,
+        "endMs": 11880,
+        "timestampMs": 11800,
+        "confidence": 0.9972
+      },
+      {
+        "text": " o",
+        "startMs": 11880,
+        "endMs": 12040,
+        "timestampMs": 11960,
+        "confidence": 0.9569
+      }
+    ]
+  },
+  {
+    "startMs": 12040,
+    "endMs": 13160,
+    "words": [
+      {
+        "text": " mapa",
+        "startMs": 12040,
+        "endMs": 12240,
+        "timestampMs": 12140,
+        "confidence": 0.9989
+      },
+      {
+        "text": " que",
+        "startMs": 12240,
+        "endMs": 12440,
+        "timestampMs": 12340,
+        "confidence": 0.9754
+      },
+      {
+        "text": " aparece",
+        "startMs": 12440,
+        "endMs": 12780,
+        "timestampMs": 12610,
+        "confidence": 0.9939
+      },
+      {
+        "text": " logo",
+        "startMs": 12780,
+        "endMs": 13160,
+        "timestampMs": 12970,
+        "confidence": 0.9917
+      }
+    ]
+  },
+  {
+    "startMs": 13160,
+    "endMs": 14340,
+    "words": [
+      {
+        "text": " depois",
+        "startMs": 13160,
+        "endMs": 13660,
+        "timestampMs": 13410,
+        "confidence": 0.9993
+      },
+      {
+        "text": " revela",
+        "startMs": 13660,
+        "endMs": 14140,
+        "timestampMs": 13900,
+        "confidence": 0.9601
+      },
+      {
+        "text": " ainda",
+        "startMs": 14140,
+        "endMs": 14340,
+        "timestampMs": 14240,
+        "confidence": 0.9966
+      }
+    ]
+  },
+  {
+    "startMs": 14340,
+    "endMs": 15340,
+    "words": [
+      {
+        "text": " mais",
+        "startMs": 14340,
+        "endMs": 14820,
+        "timestampMs": 14580,
+        "confidence": 0.9989
+      },
+      {
+        "text": " da",
+        "startMs": 14820,
+        "endMs": 14960,
+        "timestampMs": 14890,
+        "confidence": 0.9843
+      },
+      {
+        "text": " região.",
+        "startMs": 14960,
+        "endMs": 15340,
+        "timestampMs": 15150,
+        "confidence": 0.9981
+      }
+    ]
+  },
+  {
+    "startMs": 15760,
+    "endMs": 16780,
+    "words": [
+      {
+        "text": " Só",
+        "startMs": 15760,
+        "endMs": 16020,
+        "timestampMs": 15890,
+        "confidence": 0.9856
+      },
+      {
+        "text": " que",
+        "startMs": 16020,
+        "endMs": 16140,
+        "timestampMs": 16080,
+        "confidence": 0.9995
+      },
+      {
+        "text": " a",
+        "startMs": 16140,
+        "endMs": 16180,
+        "timestampMs": 16160,
+        "confidence": 0.9834
+      },
+      {
+        "text": " exploração",
+        "startMs": 16180,
+        "endMs": 16780,
+        "timestampMs": 16480,
+        "confidence": 0.9981
+      }
+    ]
+  },
+  {
+    "startMs": 16780,
+    "endMs": 17760,
+    "words": [
+      {
+        "text": " vira",
+        "startMs": 16780,
+        "endMs": 17120,
+        "timestampMs": 16950,
+        "confidence": 0.9762
+      },
+      {
+        "text": " investigação.",
+        "startMs": 17120,
+        "endMs": 17760,
+        "timestampMs": 17440,
+        "confidence": 0.9537
+      }
+    ]
+  },
+  {
+    "startMs": 18400,
+    "endMs": 19780,
+    "words": [
+      {
+        "text": " Jason",
+        "startMs": 18400,
+        "endMs": 18660,
+        "timestampMs": 18530,
+        "confidence": 0.998
+      },
+      {
+        "text": " usa",
+        "startMs": 18660,
+        "endMs": 18940,
+        "timestampMs": 18800,
+        "confidence": 0.9947
+      },
+      {
+        "text": " binóculos",
+        "startMs": 18940,
+        "endMs": 19540,
+        "timestampMs": 19240,
+        "confidence": 0.982
+      },
+      {
+        "text": " para",
+        "startMs": 19540,
+        "endMs": 19780,
+        "timestampMs": 19660,
+        "confidence": 0.9745
+      }
+    ]
+  },
+  {
+    "startMs": 19780,
+    "endMs": 21060,
+    "words": [
+      {
+        "text": " observar",
+        "startMs": 19780,
+        "endMs": 20320,
+        "timestampMs": 20050,
+        "confidence": 0.9976
+      },
+      {
+        "text": " uma",
+        "startMs": 20320,
+        "endMs": 20440,
+        "timestampMs": 20380,
+        "confidence": 0.9969
+      },
+      {
+        "text": " negociação",
+        "startMs": 20440,
+        "endMs": 21060,
+        "timestampMs": 20750,
+        "confidence": 0.9788
+      }
+    ]
+  },
+  {
+    "startMs": 21060,
+    "endMs": 22380,
+    "words": [
+      {
+        "text": " suspeita",
+        "startMs": 21060,
+        "endMs": 21760,
+        "timestampMs": 21410,
+        "confidence": 0.9963
+      },
+      {
+        "text": " antes",
+        "startMs": 21760,
+        "endMs": 22240,
+        "timestampMs": 22000,
+        "confidence": 0.8525
+      },
+      {
+        "text": " de",
+        "startMs": 22240,
+        "endMs": 22380,
+        "timestampMs": 22310,
+        "confidence": 0.999
+      }
+    ]
+  },
+  {
+    "startMs": 22380,
+    "endMs": 23440,
+    "words": [
+      {
+        "text": " entrar",
+        "startMs": 22380,
+        "endMs": 22660,
+        "timestampMs": 22520,
+        "confidence": 0.9962
+      },
+      {
+        "text": " no",
+        "startMs": 22660,
+        "endMs": 22800,
+        "timestampMs": 22730,
+        "confidence": 0.5522
+      },
+      {
+        "text": " acampamento.",
+        "startMs": 22800,
+        "endMs": 23440,
+        "timestampMs": 23120,
+        "confidence": 0.9876
+      }
+    ]
+  },
+  {
+    "startMs": 23440,
+    "endMs": 24380,
+    "words": [
+      {
+        "text": " E",
+        "startMs": 23440,
+        "endMs": 24000,
+        "timestampMs": 23720,
+        "confidence": 0.635
+      },
+      {
+        "text": " olha",
+        "startMs": 24000,
+        "endMs": 24240,
+        "timestampMs": 24120,
+        "confidence": 0.6805
+      },
+      {
+        "text": " o",
+        "startMs": 24240,
+        "endMs": 24300,
+        "timestampMs": 24270,
+        "confidence": 0.9863
+      },
+      {
+        "text": " que",
+        "startMs": 24300,
+        "endMs": 24380,
+        "timestampMs": 24340,
+        "confidence": 0.9975
+      }
+    ]
+  },
+  {
+    "startMs": 24380,
+    "endMs": 25160,
+    "words": [
+      {
+        "text": " aparece",
+        "startMs": 24380,
+        "endMs": 24720,
+        "timestampMs": 24550,
+        "confidence": 0.9827
+      },
+      {
+        "text": " por",
+        "startMs": 24720,
+        "endMs": 24960,
+        "timestampMs": 24840,
+        "confidence": 0.9581
+      },
+      {
+        "text": " lá,",
+        "startMs": 24960,
+        "endMs": 25160,
+        "timestampMs": 25060,
+        "confidence": 0.9949
+      }
+    ]
+  },
+  {
+    "startMs": 25580,
+    "endMs": 26600,
+    "words": [
+      {
+        "text": " tigres",
+        "startMs": 25580,
+        "endMs": 25980,
+        "timestampMs": 25780,
+        "confidence": 0.9547
+      },
+      {
+        "text": " presos,",
+        "startMs": 25980,
+        "endMs": 26600,
+        "timestampMs": 26290,
+        "confidence": 0.9908
+      }
+    ]
+  },
+  {
+    "startMs": 26780,
+    "endMs": 28100,
+    "words": [
+      {
+        "text": " pitbulls,",
+        "startMs": 26780,
+        "endMs": 27520,
+        "timestampMs": 27150,
+        "confidence": 0.8721
+      },
+      {
+        "text": " galinhas",
+        "startMs": 27580,
+        "endMs": 28100,
+        "timestampMs": 27840,
+        "confidence": 0.9467
+      }
+    ]
+  },
+  {
+    "startMs": 28100,
+    "endMs": 29260,
+    "words": [
+      {
+        "text": " e",
+        "startMs": 28100,
+        "endMs": 28400,
+        "timestampMs": 28250,
+        "confidence": 0.9307
+      },
+      {
+        "text": " até",
+        "startMs": 28400,
+        "endMs": 28680,
+        "timestampMs": 28540,
+        "confidence": 0.9786
+      },
+      {
+        "text": " um",
+        "startMs": 28680,
+        "endMs": 28820,
+        "timestampMs": 28750,
+        "confidence": 0.9544
+      },
+      {
+        "text": " jacaré",
+        "startMs": 28820,
+        "endMs": 29260,
+        "timestampMs": 29040,
+        "confidence": 0.929
+      }
+    ]
+  },
+  {
+    "startMs": 29260,
+    "endMs": 30600,
+    "words": [
+      {
+        "text": " albino.",
+        "startMs": 29260,
+        "endMs": 29820,
+        "timestampMs": 29540,
+        "confidence": 0.9386
+      },
+      {
+        "text": " Curtiu",
+        "startMs": 30260,
+        "endMs": 30600,
+        "timestampMs": 30430,
+        "confidence": 0.9164
+      }
+    ]
+  },
+  {
+    "startMs": 30600,
+    "endMs": 31960,
+    "words": [
+      {
+        "text": " esse",
+        "startMs": 30600,
+        "endMs": 30740,
+        "timestampMs": 30670,
+        "confidence": 0.8049
+      },
+      {
+        "text": " detalhe?",
+        "startMs": 30740,
+        "endMs": 31220,
+        "timestampMs": 30980,
+        "confidence": 0.9942
+      },
+      {
+        "text": " Deixe",
+        "startMs": 31600,
+        "endMs": 31840,
+        "timestampMs": 31720,
+        "confidence": 0.7076
+      },
+      {
+        "text": " o",
+        "startMs": 31840,
+        "endMs": 31960,
+        "timestampMs": 31900,
+        "confidence": 0.9674
+      }
+    ]
+  },
+  {
+    "startMs": 31960,
+    "endMs": 32940,
+    "words": [
+      {
+        "text": " like",
+        "startMs": 31960,
+        "endMs": 32200,
+        "timestampMs": 32080,
+        "confidence": 0.9158
+      },
+      {
+        "text": " e",
+        "startMs": 32200,
+        "endMs": 32500,
+        "timestampMs": 32350,
+        "confidence": 0.9821
+      },
+      {
+        "text": " segue",
+        "startMs": 32500,
+        "endMs": 32760,
+        "timestampMs": 32630,
+        "confidence": 0.5954
+      },
+      {
+        "text": " o",
+        "startMs": 32760,
+        "endMs": 32940,
+        "timestampMs": 32850,
+        "confidence": 0.9713
+      }
+    ]
+  },
+  {
+    "startMs": 32940,
+    "endMs": 34280,
+    "words": [
+      {
+        "text": " ClipRush.",
+        "startMs": 32940,
+        "endMs": 33420,
+        "timestampMs": 33180,
+        "confidence": 0.6917
+      },
+      {
+        "text": " Mas",
+        "startMs": 33820,
+        "endMs": 33960,
+        "timestampMs": 33890,
+        "confidence": 0.9597
+      },
+      {
+        "text": " a",
+        "startMs": 33960,
+        "endMs": 34100,
+        "timestampMs": 34030,
+        "confidence": 0.9901
+      },
+      {
+        "text": " parte",
+        "startMs": 34100,
+        "endMs": 34280,
+        "timestampMs": 34190,
+        "confidence": 0.9949
+      }
+    ]
+  },
+  {
+    "startMs": 34280,
+    "endMs": 35360,
+    "words": [
+      {
+        "text": " mais",
+        "startMs": 34280,
+        "endMs": 34660,
+        "timestampMs": 34470,
+        "confidence": 0.9938
+      },
+      {
+        "text": " tensa",
+        "startMs": 34660,
+        "endMs": 35200,
+        "timestampMs": 34930,
+        "confidence": 0.9624
+      },
+      {
+        "text": " vem",
+        "startMs": 35200,
+        "endMs": 35360,
+        "timestampMs": 35280,
+        "confidence": 0.9957
+      }
+    ]
+  },
+  {
+    "startMs": 35360,
+    "endMs": 36600,
+    "words": [
+      {
+        "text": " depois.",
+        "startMs": 35360,
+        "endMs": 35780,
+        "timestampMs": 35570,
+        "confidence": 0.9975
+      },
+      {
+        "text": " Jason",
+        "startMs": 36300,
+        "endMs": 36600,
+        "timestampMs": 36450,
+        "confidence": 0.9592
+      }
+    ]
+  },
+  {
+    "startMs": 36600,
+    "endMs": 37960,
+    "words": [
+      {
+        "text": " precisa",
+        "startMs": 36600,
+        "endMs": 36920,
+        "timestampMs": 36760,
+        "confidence": 0.9732
+      },
+      {
+        "text": " eliminar",
+        "startMs": 36920,
+        "endMs": 37540,
+        "timestampMs": 37230,
+        "confidence": 0.9971
+      },
+      {
+        "text": " inimigos",
+        "startMs": 37540,
+        "endMs": 37960,
+        "timestampMs": 37750,
+        "confidence": 0.9347
+      }
+    ]
+  },
+  {
+    "startMs": 37960,
+    "endMs": 39340,
+    "words": [
+      {
+        "text": " silenciosamente",
+        "startMs": 37960,
+        "endMs": 39000,
+        "timestampMs": 38480,
+        "confidence": 0.9618
+      },
+      {
+        "text": " usando",
+        "startMs": 39000,
+        "endMs": 39340,
+        "timestampMs": 39170,
+        "confidence": 0.9235
+      }
+    ]
+  },
+  {
+    "startMs": 39340,
+    "endMs": 40780,
+    "words": [
+      {
+        "text": " um",
+        "startMs": 39340,
+        "endMs": 39560,
+        "timestampMs": 39450,
+        "confidence": 0.8906
+      },
+      {
+        "text": " martelo,",
+        "startMs": 39560,
+        "endMs": 40180,
+        "timestampMs": 39870,
+        "confidence": 0.9926
+      },
+      {
+        "text": " até",
+        "startMs": 40460,
+        "endMs": 40780,
+        "timestampMs": 40620,
+        "confidence": 0.9944
+      }
+    ]
+  },
+  {
+    "startMs": 40780,
+    "endMs": 42140,
+    "words": [
+      {
+        "text": " a",
+        "startMs": 40780,
+        "endMs": 40860,
+        "timestampMs": 40820,
+        "confidence": 0.9705
+      },
+      {
+        "text": " infiltração",
+        "startMs": 40860,
+        "endMs": 41400,
+        "timestampMs": 41130,
+        "confidence": 0.9505
+      },
+      {
+        "text": " se",
+        "startMs": 41400,
+        "endMs": 41620,
+        "timestampMs": 41510,
+        "confidence": 0.9853
+      },
+      {
+        "text": " transformar",
+        "startMs": 41620,
+        "endMs": 42140,
+        "timestampMs": 41880,
+        "confidence": 0.995
+      }
+    ]
+  },
+  {
+    "startMs": 42140,
+    "endMs": 43500,
+    "words": [
+      {
+        "text": " num",
+        "startMs": 42140,
+        "endMs": 42260,
+        "timestampMs": 42200,
+        "confidence": 0.7439
+      },
+      {
+        "text": " confronto",
+        "startMs": 42260,
+        "endMs": 42820,
+        "timestampMs": 42540,
+        "confidence": 0.978
+      },
+      {
+        "text": " direto.",
+        "startMs": 42820,
+        "endMs": 43500,
+        "timestampMs": 43160,
+        "confidence": 0.9733
+      }
+    ]
+  },
+  {
+    "startMs": 43900,
+    "endMs": 45140,
+    "words": [
+      {
+        "text": " E",
+        "startMs": 43900,
+        "endMs": 44040,
+        "timestampMs": 43970,
+        "confidence": 0.9736
+      },
+      {
+        "text": " você,",
+        "startMs": 44040,
+        "endMs": 44300,
+        "timestampMs": 44170,
+        "confidence": 0.9926
+      },
+      {
+        "text": " qual",
+        "startMs": 44720,
+        "endMs": 44860,
+        "timestampMs": 44790,
+        "confidence": 0.9611
+      },
+      {
+        "text": " desses",
+        "startMs": 44860,
+        "endMs": 45140,
+        "timestampMs": 45000,
+        "confidence": 0.9906
+      }
+    ]
+  },
+  {
+    "startMs": 45140,
+    "endMs": 46160,
+    "words": [
+      {
+        "text": " detalhes",
+        "startMs": 45140,
+        "endMs": 45740,
+        "timestampMs": 45440,
+        "confidence": 0.9979
+      },
+      {
+        "text": " mais",
+        "startMs": 45740,
+        "endMs": 46000,
+        "timestampMs": 45870,
+        "confidence": 0.9913
+      },
+      {
+        "text": " te",
+        "startMs": 46000,
+        "endMs": 46160,
+        "timestampMs": 46080,
+        "confidence": 0.9708
+      }
+    ]
+  },
+  {
+    "startMs": 46160,
+    "endMs": 46660,
+    "words": [
+      {
+        "text": " surpreendeu?",
+        "startMs": 46160,
+        "endMs": 46660,
+        "timestampMs": 46410,
+        "confidence": 0.9932
+      }
+    ]
+  }
+]

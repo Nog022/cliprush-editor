@@ -1,0 +1,702 @@
+[
+  {
+    "text": " As",
+    "startMs": 0,
+    "endMs": 180,
+    "timestampMs": 90,
+    "confidence": 0.5034
+  },
+  {
+    "text": " primeiras",
+    "startMs": 180,
+    "endMs": 540,
+    "timestampMs": 360,
+    "confidence": 0.9601
+  },
+  {
+    "text": " missões",
+    "startMs": 540,
+    "endMs": 960,
+    "timestampMs": 750,
+    "confidence": 0.9829
+  },
+  {
+    "text": " de",
+    "startMs": 960,
+    "endMs": 1140,
+    "timestampMs": 1050,
+    "confidence": 0.9616
+  },
+  {
+    "text": " GTA",
+    "startMs": 1140,
+    "endMs": 1460,
+    "timestampMs": 1300,
+    "confidence": 0.9911
+  },
+  {
+    "text": " 6",
+    "startMs": 1460,
+    "endMs": 1940,
+    "timestampMs": 1700,
+    "confidence": 0.4021
+  },
+  {
+    "text": " já",
+    "startMs": 1940,
+    "endMs": 2280,
+    "timestampMs": 2110,
+    "confidence": 0.9847
+  },
+  {
+    "text": " revelaram",
+    "startMs": 2280,
+    "endMs": 2760,
+    "timestampMs": 2520,
+    "confidence": 0.9907
+  },
+  {
+    "text": " um",
+    "startMs": 2760,
+    "endMs": 2860,
+    "timestampMs": 2810,
+    "confidence": 0.988
+  },
+  {
+    "text": " detalhe",
+    "startMs": 2860,
+    "endMs": 3220,
+    "timestampMs": 3040,
+    "confidence": 0.9969
+  },
+  {
+    "text": " absurdo",
+    "startMs": 3220,
+    "endMs": 4060,
+    "timestampMs": 3640,
+    "confidence": 0.9932
+  },
+  {
+    "text": " que",
+    "startMs": 4060,
+    "endMs": 4220,
+    "timestampMs": 4140,
+    "confidence": 0.7242
+  },
+  {
+    "text": " pode",
+    "startMs": 4220,
+    "endMs": 4400,
+    "timestampMs": 4310,
+    "confidence": 0.9978
+  },
+  {
+    "text": " complicar",
+    "startMs": 4400,
+    "endMs": 4900,
+    "timestampMs": 4650,
+    "confidence": 0.9941
+  },
+  {
+    "text": " qualquer",
+    "startMs": 4900,
+    "endMs": 5280,
+    "timestampMs": 5090,
+    "confidence": 0.9839
+  },
+  {
+    "text": " assalto.",
+    "startMs": 5280,
+    "endMs": 6240,
+    "timestampMs": 5760,
+    "confidence": 0.9945
+  },
+  {
+    "text": " Olha",
+    "startMs": 6620,
+    "endMs": 6920,
+    "timestampMs": 6770,
+    "confidence": 0.8756
+  },
+  {
+    "text": " o",
+    "startMs": 6920,
+    "endMs": 7020,
+    "timestampMs": 6970,
+    "confidence": 0.992
+  },
+  {
+    "text": " que",
+    "startMs": 7020,
+    "endMs": 7060,
+    "timestampMs": 7040,
+    "confidence": 0.9981
+  },
+  {
+    "text": " acontece",
+    "startMs": 7060,
+    "endMs": 7460,
+    "timestampMs": 7260,
+    "confidence": 0.9978
+  },
+  {
+    "text": " quando",
+    "startMs": 7460,
+    "endMs": 7760,
+    "timestampMs": 7610,
+    "confidence": 0.9884
+  },
+  {
+    "text": " a",
+    "startMs": 7760,
+    "endMs": 7940,
+    "timestampMs": 7850,
+    "confidence": 0.9884
+  },
+  {
+    "text": " Lúcia",
+    "startMs": 7940,
+    "endMs": 8180,
+    "timestampMs": 8060,
+    "confidence": 0.8579
+  },
+  {
+    "text": " rouba",
+    "startMs": 8180,
+    "endMs": 8520,
+    "timestampMs": 8350,
+    "confidence": 0.9942
+  },
+  {
+    "text": " dinheiro",
+    "startMs": 8520,
+    "endMs": 8840,
+    "timestampMs": 8680,
+    "confidence": 0.9795
+  },
+  {
+    "text": " e",
+    "startMs": 8840,
+    "endMs": 9180,
+    "timestampMs": 9010,
+    "confidence": 0.9646
+  },
+  {
+    "text": " tenta",
+    "startMs": 9180,
+    "endMs": 9560,
+    "timestampMs": 9370,
+    "confidence": 0.9924
+  },
+  {
+    "text": " fugir",
+    "startMs": 9560,
+    "endMs": 9860,
+    "timestampMs": 9710,
+    "confidence": 0.9958
+  },
+  {
+    "text": " da",
+    "startMs": 9860,
+    "endMs": 9980,
+    "timestampMs": 9920,
+    "confidence": 0.9816
+  },
+  {
+    "text": " polícia.",
+    "startMs": 9980,
+    "endMs": 10420,
+    "timestampMs": 10200,
+    "confidence": 0.9666
+  },
+  {
+    "text": " Depois",
+    "startMs": 10940,
+    "endMs": 11180,
+    "timestampMs": 11060,
+    "confidence": 0.9878
+  },
+  {
+    "text": " de",
+    "startMs": 11180,
+    "endMs": 11320,
+    "timestampMs": 11250,
+    "confidence": 0.9912
+  },
+  {
+    "text": " escapar",
+    "startMs": 11320,
+    "endMs": 11680,
+    "timestampMs": 11500,
+    "confidence": 0.9885
+  },
+  {
+    "text": " dos",
+    "startMs": 11680,
+    "endMs": 11840,
+    "timestampMs": 11760,
+    "confidence": 0.994
+  },
+  {
+    "text": " policiais,",
+    "startMs": 11840,
+    "endMs": 12560,
+    "timestampMs": 12200,
+    "confidence": 0.9916
+  },
+  {
+    "text": " os",
+    "startMs": 12840,
+    "endMs": 12960,
+    "timestampMs": 12900,
+    "confidence": 0.9772
+  },
+  {
+    "text": " maços",
+    "startMs": 12960,
+    "endMs": 13240,
+    "timestampMs": 13100,
+    "confidence": 0.6746
+  },
+  {
+    "text": " roubados",
+    "startMs": 13240,
+    "endMs": 13840,
+    "timestampMs": 13540,
+    "confidence": 0.9987
+  },
+  {
+    "text": " acionam",
+    "startMs": 13840,
+    "endMs": 14340,
+    "timestampMs": 14090,
+    "confidence": 0.9446
+  },
+  {
+    "text": " um",
+    "startMs": 14340,
+    "endMs": 14480,
+    "timestampMs": 14410,
+    "confidence": 0.9923
+  },
+  {
+    "text": " dispositivo",
+    "startMs": 14480,
+    "endMs": 15120,
+    "timestampMs": 14800,
+    "confidence": 0.9934
+  },
+  {
+    "text": " de",
+    "startMs": 15120,
+    "endMs": 15240,
+    "timestampMs": 15180,
+    "confidence": 0.998
+  },
+  {
+    "text": " segurança",
+    "startMs": 15240,
+    "endMs": 15660,
+    "timestampMs": 15450,
+    "confidence": 0.9958
+  },
+  {
+    "text": " e",
+    "startMs": 15660,
+    "endMs": 16220,
+    "timestampMs": 15940,
+    "confidence": 0.9677
+  },
+  {
+    "text": " simplesmente",
+    "startMs": 16220,
+    "endMs": 16720,
+    "timestampMs": 16470,
+    "confidence": 0.9594
+  },
+  {
+    "text": " explodem",
+    "startMs": 16720,
+    "endMs": 17640,
+    "timestampMs": 17180,
+    "confidence": 0.9004
+  },
+  {
+    "text": " tinta",
+    "startMs": 17640,
+    "endMs": 17980,
+    "timestampMs": 17810,
+    "confidence": 0.8929
+  },
+  {
+    "text": " rosa",
+    "startMs": 17980,
+    "endMs": 18400,
+    "timestampMs": 18190,
+    "confidence": 0.9974
+  },
+  {
+    "text": " na",
+    "startMs": 18400,
+    "endMs": 18600,
+    "timestampMs": 18500,
+    "confidence": 0.9904
+  },
+  {
+    "text": " personagem.",
+    "startMs": 18600,
+    "endMs": 19260,
+    "timestampMs": 18930,
+    "confidence": 0.9884
+  },
+  {
+    "text": " E",
+    "startMs": 19640,
+    "endMs": 19820,
+    "timestampMs": 19730,
+    "confidence": 0.8188
+  },
+  {
+    "text": " tem",
+    "startMs": 19820,
+    "endMs": 19960,
+    "timestampMs": 19890,
+    "confidence": 0.9933
+  },
+  {
+    "text": " mais.",
+    "startMs": 19960,
+    "endMs": 20280,
+    "timestampMs": 20120,
+    "confidence": 0.9977
+  },
+  {
+    "text": " O",
+    "startMs": 20760,
+    "endMs": 20880,
+    "timestampMs": 20820,
+    "confidence": 0.9854
+  },
+  {
+    "text": " jogo",
+    "startMs": 20880,
+    "endMs": 21140,
+    "timestampMs": 21010,
+    "confidence": 0.9963
+  },
+  {
+    "text": " ainda",
+    "startMs": 21140,
+    "endMs": 21380,
+    "timestampMs": 21260,
+    "confidence": 0.9969
+  },
+  {
+    "text": " avisa",
+    "startMs": 21380,
+    "endMs": 21840,
+    "timestampMs": 21610,
+    "confidence": 0.9889
+  },
+  {
+    "text": " que",
+    "startMs": 21840,
+    "endMs": 22000,
+    "timestampMs": 21920,
+    "confidence": 0.997
+  },
+  {
+    "text": " a",
+    "startMs": 22000,
+    "endMs": 22080,
+    "timestampMs": 22040,
+    "confidence": 0.9975
+  },
+  {
+    "text": " polícia",
+    "startMs": 22080,
+    "endMs": 22380,
+    "timestampMs": 22230,
+    "confidence": 0.9621
+  },
+  {
+    "text": " conhece",
+    "startMs": 22380,
+    "endMs": 22980,
+    "timestampMs": 22680,
+    "confidence": 0.9933
+  },
+  {
+    "text": " a",
+    "startMs": 22980,
+    "endMs": 23080,
+    "timestampMs": 23030,
+    "confidence": 0.9981
+  },
+  {
+    "text": " descrição",
+    "startMs": 23080,
+    "endMs": 23440,
+    "timestampMs": 23260,
+    "confidence": 0.9758
+  },
+  {
+    "text": " da",
+    "startMs": 23440,
+    "endMs": 23660,
+    "timestampMs": 23550,
+    "confidence": 0.9911
+  },
+  {
+    "text": " Lúcia.",
+    "startMs": 23660,
+    "endMs": 24060,
+    "timestampMs": 23860,
+    "confidence": 0.9946
+  },
+  {
+    "text": " Repara",
+    "startMs": 24420,
+    "endMs": 24900,
+    "timestampMs": 24660,
+    "confidence": 0.9376
+  },
+  {
+    "text": " no",
+    "startMs": 24900,
+    "endMs": 25100,
+    "timestampMs": 25000,
+    "confidence": 0.9553
+  },
+  {
+    "text": " nível",
+    "startMs": 25100,
+    "endMs": 25460,
+    "timestampMs": 25280,
+    "confidence": 0.9957
+  },
+  {
+    "text": " de",
+    "startMs": 25460,
+    "endMs": 25640,
+    "timestampMs": 25550,
+    "confidence": 0.9982
+  },
+  {
+    "text": " detalhe",
+    "startMs": 25640,
+    "endMs": 26120,
+    "timestampMs": 25880,
+    "confidence": 0.9675
+  },
+  {
+    "text": " que",
+    "startMs": 26120,
+    "endMs": 26240,
+    "timestampMs": 26180,
+    "confidence": 0.9926
+  },
+  {
+    "text": " a",
+    "startMs": 26240,
+    "endMs": 26280,
+    "timestampMs": 26260,
+    "confidence": 0.9831
+  },
+  {
+    "text": " Rockstar",
+    "startMs": 26280,
+    "endMs": 26640,
+    "timestampMs": 26460,
+    "confidence": 0.9021
+  },
+  {
+    "text": " colocou",
+    "startMs": 26640,
+    "endMs": 27120,
+    "timestampMs": 26880,
+    "confidence": 0.9979
+  },
+  {
+    "text": " nessa",
+    "startMs": 27120,
+    "endMs": 27300,
+    "timestampMs": 27210,
+    "confidence": 0.8529
+  },
+  {
+    "text": " sequência.",
+    "startMs": 27300,
+    "endMs": 27880,
+    "timestampMs": 27590,
+    "confidence": 0.9823
+  },
+  {
+    "text": " Agora",
+    "startMs": 27880,
+    "endMs": 28540,
+    "timestampMs": 28210,
+    "confidence": 0.8123
+  },
+  {
+    "text": " imagina",
+    "startMs": 28540,
+    "endMs": 29040,
+    "timestampMs": 28790,
+    "confidence": 0.9012
+  },
+  {
+    "text": " quantas",
+    "startMs": 29040,
+    "endMs": 29680,
+    "timestampMs": 29360,
+    "confidence": 0.9749
+  },
+  {
+    "text": " outras",
+    "startMs": 29680,
+    "endMs": 29860,
+    "timestampMs": 29770,
+    "confidence": 0.9877
+  },
+  {
+    "text": " surpresas",
+    "startMs": 29860,
+    "endMs": 30540,
+    "timestampMs": 30200,
+    "confidence": 0.9919
+  },
+  {
+    "text": " podem",
+    "startMs": 30540,
+    "endMs": 30760,
+    "timestampMs": 30650,
+    "confidence": 0.9803
+  },
+  {
+    "text": " estar",
+    "startMs": 30760,
+    "endMs": 30980,
+    "timestampMs": 30870,
+    "confidence": 0.9926
+  },
+  {
+    "text": " escondidas",
+    "startMs": 30980,
+    "endMs": 31640,
+    "timestampMs": 31310,
+    "confidence": 0.9974
+  },
+  {
+    "text": " nos",
+    "startMs": 31640,
+    "endMs": 31800,
+    "timestampMs": 31720,
+    "confidence": 0.9863
+  },
+  {
+    "text": " assaltos",
+    "startMs": 31800,
+    "endMs": 32420,
+    "timestampMs": 32110,
+    "confidence": 0.9895
+  },
+  {
+    "text": " de",
+    "startMs": 32420,
+    "endMs": 32520,
+    "timestampMs": 32470,
+    "confidence": 0.9662
+  },
+  {
+    "text": " GTA",
+    "startMs": 32520,
+    "endMs": 32760,
+    "timestampMs": 32640,
+    "confidence": 0.9874
+  },
+  {
+    "text": " 6.",
+    "startMs": 32760,
+    "endMs": 33220,
+    "timestampMs": 32990,
+    "confidence": 0.4321
+  },
+  {
+    "text": " Será",
+    "startMs": 33660,
+    "endMs": 33900,
+    "timestampMs": 33780,
+    "confidence": 0.9938
+  },
+  {
+    "text": " que",
+    "startMs": 33900,
+    "endMs": 34060,
+    "timestampMs": 33980,
+    "confidence": 0.998
+  },
+  {
+    "text": " isso",
+    "startMs": 34060,
+    "endMs": 34180,
+    "timestampMs": 34120,
+    "confidence": 0.9853
+  },
+  {
+    "text": " também",
+    "startMs": 34180,
+    "endMs": 34580,
+    "timestampMs": 34380,
+    "confidence": 0.9781
+  },
+  {
+    "text": " vai",
+    "startMs": 34580,
+    "endMs": 34760,
+    "timestampMs": 34670,
+    "confidence": 0.992
+  },
+  {
+    "text": " acontecer",
+    "startMs": 34760,
+    "endMs": 35160,
+    "timestampMs": 34960,
+    "confidence": 0.9949
+  },
+  {
+    "text": " nos",
+    "startMs": 35160,
+    "endMs": 35400,
+    "timestampMs": 35280,
+    "confidence": 0.9876
+  },
+  {
+    "text": " roubos",
+    "startMs": 35400,
+    "endMs": 35800,
+    "timestampMs": 35600,
+    "confidence": 0.9734
+  },
+  {
+    "text": " pelo",
+    "startMs": 35800,
+    "endMs": 35980,
+    "timestampMs": 35890,
+    "confidence": 0.9836
+  },
+  {
+    "text": " mundo",
+    "startMs": 35980,
+    "endMs": 36180,
+    "timestampMs": 36080,
+    "confidence": 0.9787
+  },
+  {
+    "text": " aberto?",
+    "startMs": 36180,
+    "endMs": 36620,
+    "timestampMs": 36400,
+    "confidence": 0.9971
+  }
+]

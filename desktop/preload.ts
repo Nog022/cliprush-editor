@@ -4,6 +4,9 @@ import type { DesktopAPI } from "../shared/model";
 const call = <T>(method: string, ...args: unknown[]): Promise<T> =>
   ipcRenderer.invoke(`cliprush:${method}`, ...args);
 const api: DesktopAPI = {
+  importElevenCredentials: () => call("importElevenCredentials"),
+  testElevenVoice: () => call("testElevenVoice"),
+  analyzeClip: (id, clip, options) => call("analyzeClip", id, clip, options),
   searchCatalog: (query) => call("searchCatalog", query),
   useCatalogScene: (id, candidate) => call("useCatalogScene", id, candidate),
   codexStatus: () => call("codexStatus"),

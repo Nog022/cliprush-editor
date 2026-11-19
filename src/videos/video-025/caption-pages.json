@@ -1,0 +1,446 @@
+[
+  {
+    "startMs": 0,
+    "endMs": 240,
+    "words": [
+      {
+        "text": " cabeça.",
+        "startMs": 0,
+        "endMs": 240,
+        "timestampMs": 120,
+        "confidence": 0.8264264464378357
+      }
+    ]
+  },
+  {
+    "startMs": 5520,
+    "endMs": 6000,
+    "words": [
+      {
+        "text": " Perigo.",
+        "startMs": 5520,
+        "endMs": 6000,
+        "timestampMs": 5760,
+        "confidence": 0.6548650562763214
+      }
+    ]
+  },
+  {
+    "startMs": 6620,
+    "endMs": 7540,
+    "words": [
+      {
+        "text": " Vocês",
+        "startMs": 6620,
+        "endMs": 7100,
+        "timestampMs": 6860,
+        "confidence": 0.8884354829788208
+      },
+      {
+        "text": " viram?",
+        "startMs": 7100,
+        "endMs": 7540,
+        "timestampMs": 7320,
+        "confidence": 0.9998226761817932
+      }
+    ]
+  },
+  {
+    "startMs": 7540,
+    "endMs": 8560,
+    "words": [
+      {
+        "text": " Eu",
+        "startMs": 7540,
+        "endMs": 7780,
+        "timestampMs": 7660,
+        "confidence": 0.9754963517189026
+      },
+      {
+        "text": " escorreguei,",
+        "startMs": 7780,
+        "endMs": 8320,
+        "timestampMs": 8050,
+        "confidence": 0.94427011013031
+      },
+      {
+        "text": " caiu",
+        "startMs": 8340,
+        "endMs": 8460,
+        "timestampMs": 8400,
+        "confidence": 0.9955935478210449
+      },
+      {
+        "text": " uma",
+        "startMs": 8460,
+        "endMs": 8560,
+        "timestampMs": 8510,
+        "confidence": 0.999626636505127
+      }
+    ]
+  },
+  {
+    "startMs": 8560,
+    "endMs": 8960,
+    "words": [
+      {
+        "text": " pedra",
+        "startMs": 8560,
+        "endMs": 8860,
+        "timestampMs": 8710,
+        "confidence": 0.9998546540737152
+      },
+      {
+        "text": " em",
+        "startMs": 8860,
+        "endMs": 8940,
+        "timestampMs": 8900,
+        "confidence": 0.9979997277259827
+      },
+      {
+        "text": " mim.",
+        "startMs": 8940,
+        "endMs": 8960,
+        "timestampMs": 8950,
+        "confidence": 0.9996857643127441
+      }
+    ]
+  },
+  {
+    "startMs": 9080,
+    "endMs": 9580,
+    "words": [
+      {
+        "text": " Tomei",
+        "startMs": 9080,
+        "endMs": 9240,
+        "timestampMs": 9160,
+        "confidence": 0.9686274329821268
+      },
+      {
+        "text": " dano.",
+        "startMs": 9240,
+        "endMs": 9580,
+        "timestampMs": 9410,
+        "confidence": 0.9996142387390137
+      }
+    ]
+  },
+  {
+    "startMs": 10080,
+    "endMs": 11060,
+    "words": [
+      {
+        "text": " Olha",
+        "startMs": 10080,
+        "endMs": 10560,
+        "timestampMs": 10320,
+        "confidence": 0.37416940927505493
+      },
+      {
+        "text": " se",
+        "startMs": 10560,
+        "endMs": 10720,
+        "timestampMs": 10640,
+        "confidence": 0.7798995971679688
+      },
+      {
+        "text": " eu",
+        "startMs": 10720,
+        "endMs": 10820,
+        "timestampMs": 10770,
+        "confidence": 0.9995676875114441
+      },
+      {
+        "text": " morro",
+        "startMs": 10820,
+        "endMs": 11060,
+        "timestampMs": 10940,
+        "confidence": 0.9994405806064606
+      }
+    ]
+  },
+  {
+    "startMs": 11060,
+    "endMs": 11700,
+    "words": [
+      {
+        "text": " por",
+        "startMs": 11060,
+        "endMs": 11120,
+        "timestampMs": 11090,
+        "confidence": 0.9423168301582336
+      },
+      {
+        "text": " causa",
+        "startMs": 11120,
+        "endMs": 11200,
+        "timestampMs": 11160,
+        "confidence": 0.9969214797019958
+      },
+      {
+        "text": " de",
+        "startMs": 11200,
+        "endMs": 11300,
+        "timestampMs": 11250,
+        "confidence": 0.9992107152938843
+      },
+      {
+        "text": " pedrada",
+        "startMs": 11300,
+        "endMs": 11700,
+        "timestampMs": 11500,
+        "confidence": 0.8891214728355408
+      }
+    ]
+  },
+  {
+    "startMs": 11700,
+    "endMs": 12720,
+    "words": [
+      {
+        "text": " aleatória.",
+        "startMs": 11700,
+        "endMs": 12720,
+        "timestampMs": 12210,
+        "confidence": 0.9964049657185873
+      }
+    ]
+  },
+  {
+    "startMs": 15800,
+    "endMs": 17360,
+    "words": [
+      {
+        "text": " Tem",
+        "startMs": 15800,
+        "endMs": 16280,
+        "timestampMs": 16040,
+        "confidence": 0.06129879876971245
+      },
+      {
+        "text": " um",
+        "startMs": 16280,
+        "endMs": 16460,
+        "timestampMs": 16370,
+        "confidence": 0.8249496817588806
+      },
+      {
+        "text": " assassinato",
+        "startMs": 16460,
+        "endMs": 17180,
+        "timestampMs": 16820,
+        "confidence": 0.9974479079246521
+      },
+      {
+        "text": " aqui?",
+        "startMs": 17180,
+        "endMs": 17360,
+        "timestampMs": 17270,
+        "confidence": 0.999685525894165
+      }
+    ]
+  },
+  {
+    "startMs": 17760,
+    "endMs": 19000,
+    "words": [
+      {
+        "text": " Essa",
+        "startMs": 17760,
+        "endMs": 18240,
+        "timestampMs": 18000,
+        "confidence": 0.3506735563278198
+      },
+      {
+        "text": " vila",
+        "startMs": 18240,
+        "endMs": 18540,
+        "timestampMs": 18390,
+        "confidence": 0.9784895181655884
+      },
+      {
+        "text": " queimada.",
+        "startMs": 18540,
+        "endMs": 19000,
+        "timestampMs": 18770,
+        "confidence": 0.8797382116317749
+      }
+    ]
+  },
+  {
+    "startMs": 19140,
+    "endMs": 19980,
+    "words": [
+      {
+        "text": " Nossa,",
+        "startMs": 19140,
+        "endMs": 19260,
+        "timestampMs": 19200,
+        "confidence": 0.9969457983970642
+      },
+      {
+        "text": " tem",
+        "startMs": 19280,
+        "endMs": 19380,
+        "timestampMs": 19330,
+        "confidence": 0.9990572333335876
+      },
+      {
+        "text": " defunto",
+        "startMs": 19380,
+        "endMs": 19760,
+        "timestampMs": 19570,
+        "confidence": 0.7329947054386139
+      },
+      {
+        "text": " aqui,",
+        "startMs": 19760,
+        "endMs": 19980,
+        "timestampMs": 19870,
+        "confidence": 0.9995707869529724
+      }
+    ]
+  },
+  {
+    "startMs": 20100,
+    "endMs": 20260,
+    "words": [
+      {
+        "text": " mano.",
+        "startMs": 20100,
+        "endMs": 20260,
+        "timestampMs": 20180,
+        "confidence": 0.9992372989654541
+      }
+    ]
+  },
+  {
+    "startMs": 22380,
+    "endMs": 23340,
+    "words": [
+      {
+        "text": " Pessoa",
+        "startMs": 22380,
+        "endMs": 22860,
+        "timestampMs": 22620,
+        "confidence": 0.9986797769864401
+      },
+      {
+        "text": " desconhecida.",
+        "startMs": 22860,
+        "endMs": 23340,
+        "timestampMs": 23100,
+        "confidence": 0.9999043345451355
+      }
+    ]
+  },
+  {
+    "startMs": 26420,
+    "endMs": 27640,
+    "words": [
+      {
+        "text": " Gente,",
+        "startMs": 26420,
+        "endMs": 26900,
+        "timestampMs": 26660,
+        "confidence": 0.9750818610191345
+      },
+      {
+        "text": " o",
+        "startMs": 26920,
+        "endMs": 27040,
+        "timestampMs": 26980,
+        "confidence": 0.9996769428253174
+      },
+      {
+        "text": " periquito",
+        "startMs": 27040,
+        "endMs": 27360,
+        "timestampMs": 27200,
+        "confidence": 0.8809743920962015
+      },
+      {
+        "text": " bateu",
+        "startMs": 27360,
+        "endMs": 27640,
+        "timestampMs": 27500,
+        "confidence": 0.9890464246273041
+      }
+    ]
+  },
+  {
+    "startMs": 27640,
+    "endMs": 29480,
+    "words": [
+      {
+        "text": " a",
+        "startMs": 27640,
+        "endMs": 27700,
+        "timestampMs": 27670,
+        "confidence": 0.9931893348693848
+      },
+      {
+        "text": " cabeça",
+        "startMs": 27700,
+        "endMs": 28100,
+        "timestampMs": 27900,
+        "confidence": 0.9998537302017212
+      },
+      {
+        "text": " na",
+        "startMs": 28100,
+        "endMs": 29200,
+        "timestampMs": 28650,
+        "confidence": 0.9846051931381226
+      },
+      {
+        "text": " casa",
+        "startMs": 29200,
+        "endMs": 29480,
+        "timestampMs": 29340,
+        "confidence": 0.999298095703125
+      }
+    ]
+  },
+  {
+    "startMs": 29480,
+    "endMs": 29980,
+    "words": [
+      {
+        "text": " e",
+        "startMs": 29480,
+        "endMs": 29560,
+        "timestampMs": 29520,
+        "confidence": 0.5684339553117752
+      },
+      {
+        "text": " morreu.",
+        "startMs": 29560,
+        "endMs": 29980,
+        "timestampMs": 29770,
+        "confidence": 0.9970268607139587
+      }
+    ]
+  },
+  {
+    "startMs": 31280,
+    "endMs": 32580,
+    "words": [
+      {
+        "text": " Tá",
+        "startMs": 31280,
+        "endMs": 32120,
+        "timestampMs": 31700,
+        "confidence": 0.7271031737327576
+      },
+      {
+        "text": " brincando",
+        "startMs": 32120,
+        "endMs": 32580,
+        "timestampMs": 32350,
+        "confidence": 0.9979813396930695
+      }
+    ]
+  }
+]

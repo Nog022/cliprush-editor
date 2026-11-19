@@ -1,0 +1,233 @@
+[
+  {
+    "text": " No",
+    "startMs": 0,
+    "endMs": 180,
+    "timestampMs": 90,
+    "confidence": 0.7768
+  },
+  {
+    "text": " GTA",
+    "startMs": 180,
+    "endMs": 480,
+    "timestampMs": 330,
+    "confidence": 0.9867
+  },
+  {
+    "text": " 6,",
+    "startMs": 480,
+    "endMs": 1000,
+    "timestampMs": 740,
+    "confidence": 0.5524
+  },
+  {
+    "text": " o",
+    "startMs": 1360,
+    "endMs": 1400,
+    "timestampMs": 1380,
+    "confidence": 0.9774
+  },
+  {
+    "text": " Jason",
+    "startMs": 1400,
+    "endMs": 1660,
+    "timestampMs": 1530,
+    "confidence": 0.9663
+  },
+  {
+    "text": " consegue",
+    "startMs": 1660,
+    "endMs": 2060,
+    "timestampMs": 1860,
+    "confidence": 0.9973
+  },
+  {
+    "text": " andar",
+    "startMs": 2060,
+    "endMs": 2400,
+    "timestampMs": 2230,
+    "confidence": 0.9943
+  },
+  {
+    "text": " de",
+    "startMs": 2400,
+    "endMs": 2600,
+    "timestampMs": 2500,
+    "confidence": 0.9958
+  },
+  {
+    "text": " jet",
+    "startMs": 2600,
+    "endMs": 2760,
+    "timestampMs": 2680,
+    "confidence": 0.6859
+  },
+  {
+    "text": " ski",
+    "startMs": 2760,
+    "endMs": 3100,
+    "timestampMs": 2930,
+    "confidence": 0.8344
+  },
+  {
+    "text": " com",
+    "startMs": 3100,
+    "endMs": 3320,
+    "timestampMs": 3210,
+    "confidence": 0.9948
+  },
+  {
+    "text": " um",
+    "startMs": 3320,
+    "endMs": 3460,
+    "timestampMs": 3390,
+    "confidence": 0.8312
+  },
+  {
+    "text": " cachorro.",
+    "startMs": 3460,
+    "endMs": 4120,
+    "timestampMs": 3790,
+    "confidence": 0.9923
+  },
+  {
+    "text": " E",
+    "startMs": 4580,
+    "endMs": 4700,
+    "timestampMs": 4640,
+    "confidence": 0.8771
+  },
+  {
+    "text": " olha",
+    "startMs": 4700,
+    "endMs": 4840,
+    "timestampMs": 4770,
+    "confidence": 0.9218
+  },
+  {
+    "text": " esse",
+    "startMs": 4840,
+    "endMs": 5020,
+    "timestampMs": 4930,
+    "confidence": 0.8737
+  },
+  {
+    "text": " detalhe,",
+    "startMs": 5020,
+    "endMs": 5500,
+    "timestampMs": 5260,
+    "confidence": 0.9982
+  },
+  {
+    "text": " o",
+    "startMs": 5800,
+    "endMs": 5920,
+    "timestampMs": 5860,
+    "confidence": 0.9869
+  },
+  {
+    "text": " bichinho",
+    "startMs": 5920,
+    "endMs": 6220,
+    "timestampMs": 6070,
+    "confidence": 0.9803
+  },
+  {
+    "text": " vai",
+    "startMs": 6220,
+    "endMs": 6380,
+    "timestampMs": 6300,
+    "confidence": 0.9909
+  },
+  {
+    "text": " na",
+    "startMs": 6380,
+    "endMs": 6520,
+    "timestampMs": 6450,
+    "confidence": 0.9777
+  },
+  {
+    "text": " frente,",
+    "startMs": 6520,
+    "endMs": 6980,
+    "timestampMs": 6750,
+    "confidence": 0.999
+  },
+  {
+    "text": " usando",
+    "startMs": 7200,
+    "endMs": 7420,
+    "timestampMs": 7310,
+    "confidence": 0.9967
+  },
+  {
+    "text": " óculos",
+    "startMs": 7420,
+    "endMs": 8000,
+    "timestampMs": 7710,
+    "confidence": 0.982
+  },
+  {
+    "text": " e",
+    "startMs": 8000,
+    "endMs": 8260,
+    "timestampMs": 8130,
+    "confidence": 0.9189
+  },
+  {
+    "text": " até",
+    "startMs": 8260,
+    "endMs": 8500,
+    "timestampMs": 8380,
+    "confidence": 0.9614
+  },
+  {
+    "text": " colete",
+    "startMs": 8500,
+    "endMs": 9020,
+    "timestampMs": 8760,
+    "confidence": 0.8348
+  },
+  {
+    "text": " salva-vidas.",
+    "startMs": 9020,
+    "endMs": 9920,
+    "timestampMs": 9470,
+    "confidence": null
+  },
+  {
+    "text": " A",
+    "startMs": 10280,
+    "endMs": 10360,
+    "timestampMs": 10320,
+    "confidence": 0.7505
+  },
+  {
+    "text": " Rockstar",
+    "startMs": 10360,
+    "endMs": 10720,
+    "timestampMs": 10540,
+    "confidence": 0.8994
+  },
+  {
+    "text": " pensou",
+    "startMs": 10720,
+    "endMs": 11180,
+    "timestampMs": 10950,
+    "confidence": 0.9886
+  },
+  {
+    "text": " até",
+    "startMs": 11180,
+    "endMs": 11440,
+    "timestampMs": 11310,
+    "confidence": 0.9255
+  },
+  {
+    "text": " nisso.",
+    "startMs": 11440,
+    "endMs": 11920,
+    "timestampMs": 11680,
+    "confidence": 0.9911
+  }
+]

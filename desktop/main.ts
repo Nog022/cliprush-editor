@@ -21,6 +21,11 @@ import { CodexClient } from "./codex";
 import { ProductionService } from "./production";
 import { RenderService } from "./render";
 import { CatalogService } from "./catalog";
+import { analyzeClip } from "./visual-analysis";
+import { ElevenLabs, VOICE_TEST } from "./elevenlabs";
+import { ElevenCredentialStore } from "./elevenlabs-credentials";
+import { generateNarration } from "./generated-narration";
+import { produceFromCLI, produceInput, type ProduceEvent } from "./cli";
 
 app.setName("ClipRush Editor Studio");
 protocol.registerSchemesAsPrivileged([
@@ -38,7 +43,7 @@ protocol.registerSchemesAsPrivileged([
 // Test runner uses its own data directory, never the user's production database.
 const dataHome = process.env.CLIPRUSH_DATA_HOME;
 if (dataHome) app.setPath("userData", path.resolve(dataHome));
-const locked = app.requestSingleInstanceLock();
+const locked = app.requestSingleInstanceLock({ produceRequest: cliArgument(process.argv) ?? null });
 if (!locked) app.quit();
 let mainWindow: BrowserWindow;
 let store: Store;
@@ -46,6 +51,8 @@ let codex: CodexClient;
 let production: ProductionService;
 let renders: RenderService;
 let catalog: CatalogService;
+let speech: ElevenLabs;
+let elevenCredentials: ElevenCredentialStore;
 let queue: Promise<unknown> = Promise.resolve();
 const root = app.isPackaged
   ? process.resourcesPath
@@ -56,6 +63,38 @@ const publicRoot = app.isPackaged
 const uiRoot = path.resolve(__dirname, "../ui");
 const preferenceFile = () =>
   path.join(app.getPath("userData"), "preferences.json");
+function cliArgument(args: string[]) {
+  const index = args.indexOf("--produce-request");
+  return index < 0 ? undefined : args[index + 1];
+}
+let resolveServices: () => void;
+const servicesReady = new Promise<void>(resolve => { resolveServices = resolve; });
+let cliRequests = 0;
+async function submitCLI(args: string[]) {
+  cliRequests++;
+  let events: string | undefined;
+  try {
+    const requested = cliArgument(args);
+    if (!requested) throw new Error("Pedido CLI ausente.");
+    const relative = path.relative(root, path.resolve(requested));
+    if (!/^out[\\/]cli[\\/][a-zA-Z0-9-]+[\\/]request\.json$/.test(relative)) throw new Error("Pedido CLI fora de out/cli.");
+    const request = await inside(root, relative);
+    events = await inside(root, path.relative(root, path.join(path.dirname(request), "events.jsonl")));
+    if ((await stat(request)).size > 100000) throw new Error("Pedido CLI maior que 100 KB.");
+    const input = produceInput(JSON.parse(await readFile(request, "utf8")));
+    const emit = async (event: ProduceEvent) => { await appendFile(events!, JSON.stringify(event) + "\n", "utf8"); };
+    await servicesReady;
+    const task = queue.then(() => produceFromCLI(input, store, production, renders, emit,
+      async () => stat(`${events}.cancel`).then(() => true, () => false)));
+    queue = task.catch(() => undefined);
+    await task;
+  } catch (error) {
+    if (events) await appendFile(events, JSON.stringify({ type: "error", error: error instanceof Error ? error.message : "Produção CLI falhou." }) + "\n", "utf8");
+  } finally {
+    cliRequests--;
+    if (!mainWindow && !cliRequests) app.quit();
+  }
+}
 
 function log(event: string, details: Record<string, unknown>) {
   if (!store) return;
@@ -114,6 +153,21 @@ async function exportsList(): Promise<ExportInfo[]> {
   return result.sort((a, b) => b.modifiedAt.localeCompare(a.modifiedAt));
 }
 function registerHandlers() {
+  handle("importElevenCredentials", async () => {
+    const result = await dialog.showOpenDialog(mainWindow, { title: "Importar .env ElevenLabs para armazenamento seguro", properties: ["openFile"] });
+    if (result.canceled) return false;
+    if ((await stat(result.filePaths[0])).size > 64000) throw new Error("Arquivo de credenciais muito extenso.");
+    await elevenCredentials.import(await readFile(result.filePaths[0], "utf8"));
+    return true;
+  });
+  handle("testElevenVoice", async () => {
+    const result = await speech.synthesize(VOICE_TEST, new AbortController().signal);
+    return { audio: new Uint8Array(await readFile(result.file)), cached: result.cached };
+  });
+  handle("analyzeClip", (id, clip, options) => analyzeClip(
+    store, root, store.get(validate.id(id)), validate.id(clip),
+    options === undefined ? {} : validate.record(options),
+  ), false);
   handle(
     "searchCatalog",
     (query) => catalog.search(validate.text(query, "Busca", 160)),
@@ -475,8 +529,11 @@ async function initializeServices() {
   codex = new CodexClient(store.directory, root);
   renders = new RenderService(store, root, app.isPackaged ? path.join(root, "render") : undefined);
   await renders.load();
-  production = new ProductionService(store, codex, renders, root);
   catalog = new CatalogService(store, root, publicRoot);
+  elevenCredentials = new ElevenCredentialStore(app.getPath("userData"), root, app.isPackaged);
+  speech = new ElevenLabs(path.join(store.directory, "production", "speech"), () => elevenCredentials.load());
+  production = new ProductionService(store, codex, renders, root, catalog, undefined,
+    (project, signal, log) => generateNarration(project, store, speech, signal, log));
 }
 async function start() {
   await app.whenReady();
@@ -496,6 +553,11 @@ async function start() {
   await mkdir(app.getPath("userData"), { recursive: true });
   store = new Store(directory);
   await initializeServices();
+  resolveServices();
+  if (cliArgument(process.argv)) {
+    await submitCLI(process.argv);
+    return;
+  }
   installProtocol(() => store, uiRoot, publicRoot);
   session.defaultSession.setPermissionRequestHandler(
     (_contents, _permission, callback) => callback(false),
@@ -550,7 +612,10 @@ async function start() {
   await mainWindow.loadURL("cliprush://app/");
   log("app.started", { version: app.getVersion() });
 }
-app.on("second-instance", () => {
+app.on("second-instance", (_event, args, _workingDirectory, additionalData) => {
+  const forwarded = additionalData as { produceRequest?: unknown } | undefined;
+  if (typeof forwarded?.produceRequest === "string") { void submitCLI(["--produce-request", forwarded.produceRequest]); return; }
+  if (cliArgument(args)) { void submitCLI(args); return; }
   if (mainWindow) {
     mainWindow.restore();
     mainWindow.focus();
@@ -563,6 +628,12 @@ app.on("will-quit", () => {
 });
 if (locked)
   void start().catch((error: unknown) => {
+    if (cliArgument(process.argv)) {
+      // A startup failure cannot use the UI; launcher reports a sanitized error.
+      process.stderr.write("ClipRush: não foi possível inicializar o modo CLI. Verifique preferências e acesso ao workspace.\n");
+      app.exit(1);
+      return;
+    }
     dialog.showErrorBox(
       "ClipRush não pôde iniciar",
       error instanceof Error ? error.message : String(error),

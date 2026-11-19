@@ -71,9 +71,8 @@ const NeonCaptionsInner = ({ captions }: { captions: Caption[] }) => {
           return (
             <span
               key={`${token.fromMs}-${token.text}`}
-              style={{ whiteSpace: "pre-wrap" }}
+              style={{ display: "inline-block", marginLeft: token.text.startsWith(" ") ? 18 : 0 }}
             >
-              {token.text.startsWith(" ") ? " " : ""}
               <span
                 style={{
                   display: "inline-block",
@@ -85,7 +84,7 @@ const NeonCaptionsInner = ({ captions }: { captions: Caption[] }) => {
                     ? interpolate(
                         time - token.fromMs,
                         [0, 80, 160],
-                        [1.08, 1.03, 1],
+                        [1.04, 1.02, 1],
                         {
                           extrapolateLeft: "clamp",
                           extrapolateRight: "clamp",
